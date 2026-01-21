@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health AI - Chat</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.05);
+            z-index: 10;
+        }
+
+        .sidebar-header {
+            padding: 15px 20px;
+            border-bottom: 2px solid #f7fafc;
+        }
+
+        .sidebar-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .new-chat-btn {
+            width: 100%;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .new-chat-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.3);
+        }
+
+        .chat-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .chat-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chat-list::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .chat-list::-webkit-scrollbar-thumb {
+            background: #cbd5e0;
+            border-radius: 10px;
+        }
+
+        .chat-divider {
+            padding: 8px 20px;
+            font-size: 0.75rem;
+            color: #a0aec0;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .chat-item {
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .chat-item:hover {
+            background: #f7fafc;
+            transform: translateX(5px);
+        }
+
+        .chat-item.active {
+            background: rgba(79, 172, 254, 0.1);
+            border-left: 3px solid #4facfe;
+        }
+
+        .chat-item a {
+            text-decoration: none;
+            color: #2d3748;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .chat-item-icon {
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        /* Main Chat Area */
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            margin: 10px;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            padding: 15px 25px;
+            border-bottom: 2px solid #f7fafc;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .bot-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .chat-header-info h2 {
+            font-size: 1.2rem;
+            color: #1a202c;
+            margin-bottom: 2px;
+        }
+
+        .chat-header-info p {
+            font-size: 0.8rem;
+            color: #48bb78;
+        }
+
+        /* Messages Container */
+        .messages-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #fafbfc;
+        }
+
+        .messages-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .messages-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .messages-container::-webkit-scrollbar-thumb {
+            background: #cbd5e0;
+            border-radius: 10px;
+        }
+
+        /* Message Bubbles */
+        .message-wrapper {
+            margin-bottom: 16px;
+            display: flex;
+            animation: messageSlide 0.3s ease;
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-wrapper.user {
+            justify-content: flex-end;
+        }
+
+        .message-wrapper.ai {
+            justify-content: flex-start;
+        }
+
+        .message {
+            max-width: 70%;
+            display: flex;
+            gap: 10px;
+        }
+
+        .message-wrapper.user .message {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .message-wrapper.user .message-avatar {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .message-wrapper.ai .message-avatar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .message-bubble {
+            padding: 12px 16px;
+            border-radius: 16px;
+            line-height: 1.6;
+            word-wrap: break-word;
+        }
+
+        .message-bubble h3 {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            color: inherit;
+        }
+
+        .message-bubble ul, .message-bubble ol {
+            margin-left: 20px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .message-bubble li {
+            margin-bottom: 5px;
+        }
+
+        .message-bubble p {
+            margin-bottom: 10px;
+        }
+
+        .message-bubble p:last-child {
+            margin-bottom: 0;
+        }
+
+        .message-bubble strong {
+            font-weight: 600;
+        }
+
+        .message-wrapper.user .message-bubble {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message-wrapper.ai .message-bubble {
+            background: white;
+            color: #2d3748;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .message-wrapper.ai .message-bubble h3 {
+            color: #1a202c;
+        }
+
+        .message-time {
+            font-size: 0.7rem;
+            color: #a0aec0;
+            margin-top: 4px;
+            padding: 0 10px;
+        }
+
+        .message-wrapper.user .message-time {
+            text-align: right;
+        }
+
+        /* Welcome State */
+        .welcome-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .welcome-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .welcome-state h3 {
+            font-size: 1.6rem;
+            color: #1a202c;
+            margin-bottom: 12px;
+        }
+
+        .welcome-state p {
+            font-size: 0.95rem;
+            color: #718096;
+            max-width: 500px;
+        }
+
+        /* Input Area */
+        .input-area {
+            padding: 18px 25px;
+            border-top: 2px solid #f7fafc;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .input-form {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .input-field {
+            flex: 1;
+            padding: 12px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #4facfe;
+            box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
+        }
+
+        .send-btn {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.3);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .delete-chat {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    text-decoration: none;
+}
+
+.chat-item:hover .delete-chat {
+    opacity: 1;
+}
+
+.delete-chat:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                max-height: 200px;
+            }
+
+            .chat-area {
+                margin: 10px;
+                height: calc(100vh - 220px);
+            }
+
+            .message {
+                max-width: 85%;
+            }
+        }
+
+        /* Mobile Toggle */
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(79, 172, 254, 0.4);
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .sidebar {
+                position: fixed;
+                left: -300px;
+                height: 100vh;
+                transition: left 0.3s ease;
+                max-height: none;
+            }
+
+            .sidebar.open {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">🏥 HealthAI</div>
+            <!-- Home Button -->
+    <a href="{% url 'home' %}" class="new-chat-btn" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); margin-bottom: 10px;">
+        <span>🏠</span>
+        <span>Home</span>
+    </a>
+            <a href="{% url 'chatbot' %}" class="new-chat-btn">
+                <span>➕</span>
+                <span>New Chat</span>
+            </a>
+        </div>
+
+        <div class="chat-divider">Recent Chats</div>
+
+        <div class="chat-list">
+    {% for c in chats %}
+    <div class="chat-item {% if chat.id == c.id %}active{% endif %}">
+        <a href="{% url 'chat_detail' c.id %}">
+            <span class="chat-item-icon">💬</span>{{ c.title }}
+        </a>
+
+       <a href="{% url 'delete_chat' c.id %}" 
+   class="delete-chat" 
+   onclick="return confirm('Delete this chat permanently?')">
+   🗑
+</a>
+
+    </div>
+    {% endfor %}
+</div>
+
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="chat-area">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="bot-avatar">🤖</div>
+            <div class="chat-header-info">
+                <h2>Health AI Assistant</h2>
+                <p>● Online & Ready</p>
+            </div>
+        </div>
+
+        <!-- Messages Container -->
+        <div class="messages-container" id="messagesContainer">
+            {% if chat.messages.all %}
+                {% for msg in chat.messages.all %}
+                <div class="message-wrapper {{ msg.role }}">
+                    <div class="message">
+                        <div class="message-avatar">
+                            {% if msg.role == 'user' %}👤{% else %}🤖{% endif %}
+                        </div>
+                        <div>
+                            <div class="message-bubble">{{ msg.text|safe }}</div>
+                            <div class="message-time">Just now</div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="welcome-state">
+                    <div class="welcome-icon">👋</div>
+                    <h3>Start a New Conversation</h3>
+                    <p>Ask me anything about your health, symptoms, or medical conditions. I'm here to help!</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <form method="POST" class="input-form" id="chatForm">
+                {% csrf_token %}
+                <input 
+                    type="text"
+                    name="message" 
+                    class="input-field" 
+                    placeholder="Type your message..." 
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" class="send-btn">
+                    <span>Send</span>
+                    <span>📤</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mobile Sidebar Toggle -->
+    <div class="mobile-toggle" id="mobileToggle">
+        ☰
+    </div>
+
+    <script>
+        // Auto-scroll to bottom
+        const messagesContainer = document.getElementById('messagesContainer');
+        if (messagesContainer) {
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // Mobile sidebar toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('open');
+            });
+
+            // Close sidebar when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!sidebar.contains(e.target) && !mobileToggle.contains(e.target)) {
+                    sidebar.classList.remove('open');
+                }
+            });
+        }
+
+        // Show loading state on submit
+        const chatForm = document.getElementById('chatForm');
+        chatForm.addEventListener('submit', function() {
+            const sendBtn = this.querySelector('.send-btn');
+            sendBtn.disabled = true;
+            sendBtn.innerHTML = '<span>Sending...</span><span>⏳</span>';
+        });
+
+        // Focus input on load
+        window.addEventListener('load', function() {
+            document.querySelector('.input-field').focus();
+        });
+    </script>
+</body>
+</html>

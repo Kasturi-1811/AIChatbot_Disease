@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - HealthAI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #f0f9ff 0%, #e0f2fe 50%, #fef3c7 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* Decorative elements */
+        .deco {
+            position: fixed;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .deco-1 {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #4facfe 0%, transparent 70%);
+            top: 10%;
+            right: 8%;
+            border-radius: 50%;
+            filter: blur(30px);
+        }
+
+        .deco-2 {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #f093fb 0%, transparent 70%);
+            bottom: 15%;
+            left: 10%;
+            border-radius: 50%;
+            filter: blur(25px);
+        }
+
+        .deco-3 {
+            width: 80px;
+            height: 80px;
+            border: 3px solid #4facfe;
+            border-radius: 20px;
+            top: 30%;
+            left: 15%;
+            transform: rotate(15deg);
+            opacity: 0.2;
+        }
+
+        .register-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header with gradient */
+        .register-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 40px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .register-header::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -80px;
+            right: -60px;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+        }
+
+        .header-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header-content p {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* Progress indicator */
+        .progress-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            margin-top: 25px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: white;
+            width: 0%;
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+
+        /* Form section */
+        .register-form {
+            padding: 45px 40px;
+            max-height: 550px;
+            overflow-y: auto;
+        }
+
+        .register-form::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .register-form::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 10px;
+        }
+
+        .register-form::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+            animation: fadeSlideIn 0.4s ease;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d3748;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .required {
+            color: #f56565;
+            margin-left: 3px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper input,
+        .input-wrapper select,
+        .input-wrapper textarea {
+            width: 100%;
+            padding: 13px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+            outline: none;
+            background: white;
+        }
+
+        .input-wrapper input:focus,
+        .input-wrapper select:focus,
+        .input-wrapper textarea:focus {
+            border-color: #667eea;
+            background: #faf5ff;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-wrapper textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .help-text {
+            font-size: 0.82rem;
+            color: #718096;
+            margin-top: 6px;
+            display: block;
+        }
+
+        .error-message {
+            color: #f56565;
+            font-size: 0.85rem;
+            margin-top: 6px;
+            display: block;
+        }
+
+        /* Password strength */
+        .password-strength {
+            margin-top: 10px;
+        }
+
+        .strength-meter {
+            height: 5px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .strength-meter-fill {
+            height: 100%;
+            width: 0%;
+            transition: all 0.3s;
+            border-radius: 10px;
+        }
+
+        .strength-weak { background: #f56565; width: 33%; }
+        .strength-medium { background: #ed8936; width: 66%; }
+        .strength-strong { background: #48bb78; width: 100%; }
+
+        .strength-text {
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        /* Checkbox styles */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 25px 0;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 12px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #667eea;
+            margin-top: 2px;
+        }
+
+        .checkbox-group label {
+            font-size: 0.88rem;
+            color: #4a5568;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .checkbox-group a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
+        /* Buttons */
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Footer links */
+        .form-divider {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+
+        .form-divider::before,
+        .form-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .login-link {
+            text-align: center;
+            color: #718096;
+            font-size: 0.95rem;
+        }
+
+        .login-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .login-link a:hover {
+            color: #764ba2;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #718096;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #667eea;
+        }
+
+        @media (max-width: 640px) {
+            .register-header {
+                padding: 40px 25px 30px;
+            }
+
+            .register-form {
+                padding: 35px 25px;
+            }
+
+            .header-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="deco deco-1"></div>
+    <div class="deco deco-2"></div>
+    <div class="deco deco-3"></div>
+
+    <div class="register-container">
+        <div class="register-header">
+            <div class="header-content">
+                <div class="header-icon">✨</div>
+                <h2>Join HealthAI</h2>
+                <p>Start your journey to better health awareness</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="register-form">
+            <form method="POST" id="registerForm">
+                {% csrf_token %}
+                
+                {% for field in form %}
+                <div class="input-group">
+                    <label for="{{ field.id_for_label }}">
+                        {{ field.label }}
+                        {% if field.field.required %}<span class="required">*</span>{% endif %}
+                    </label>
+                    <div class="input-wrapper">
+                        {{ field }}
+                    </div>
+                    {% if field.help_text %}
+                    <span class="help-text">{{ field.help_text }}</span>
+                    {% endif %}
+                    {% if field.errors %}
+                        {% for error in field.errors %}
+                        <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. I understand my data will be used to provide personalized health insights.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Create My Account</button>
+            </form>
+
+            <div class="form-divider">or</div>
+
+            <div class="login-link">
+                Already have an account? <a href="{% url 'login' %}">Sign in instead</a>
+            </div>
+
+            <a href="{% url 'home' %}" class="back-link">
+                ← Back to home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Progress bar animation
+        const form = document.getElementById('registerForm');
+        const progressFill = document.getElementById('progressFill');
+        const inputs = form.querySelectorAll('input, select, textarea');
+        
+        function updateProgress() {
+            let filledFields = 0;
+            inputs.forEach(input => {
+                if (input.type === 'checkbox') {
+                    if (input.checked) filledFields++;
+                } else if (input.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
+            const progress = (filledFields / inputs.length) * 100;
+            progressFill.style.width = progress + '%';
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener('input', updateProgress);
+            input.addEventListener('change', updateProgress);
+        });
+
+        // Password strength indicator
+        const passwordInputs = document.querySelectorAll('input[type="password"]');
+        passwordInputs.forEach((input, index) => {
+            if (index === 0) { // Only for main password field
+                input.addEventListener('input', function() {
+                    const password = this.value;
+                    let strength = 0;
+                    
+                    if (password.length >= 8) strength++;
+                    if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength++;
+                    if (password.match(/[0-9]/)) strength++;
+                    if (password.match(/[^a-zA-Z0-9]/)) strength++;
+                    
+                    // Add visual feedback if you want
+                    console.log('Password strength:', strength);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Tracker - HealthAI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Organic background shapes */
+        .bg-shapes {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 43% 57% 48% 52% / 59% 41% 59% 41%;
+            opacity: 0.1;
+        }
+
+        .shape1 {
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            top: -150px;
+            right: -150px;
+            animation: float 25s ease-in-out infinite;
+        }
+
+        .shape2 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            bottom: -100px;
+            left: -100px;
+            animation: float 20s ease-in-out infinite reverse;
+        }
+
+        .shape3 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            top: 40%;
+            left: 15%;
+            animation: float 22s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(40px, -40px) rotate(120deg); }
+            66% { transform: translate(-30px, 30px) rotate(240deg); }
+        }
+
+        nav {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 5%;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4facfe;
+        }
+
+        .main-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 5%;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            color: #1a202c;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.15rem;
+            color: #718096;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(40%, -40%);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-icon.completed {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+        }
+
+        .stat-icon.upcoming {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .stat-icon.overdue {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+
+        .stat-icon.total {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .stat-info {
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-info h3 {
+            font-size: 2.5rem;
+            color: #1a202c;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .stat-info p {
+            color: #718096;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+            animation: fadeIn 0.8s ease 0.4s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Vaccination List */
+        .vaccination-list {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .list-header h2 {
+            font-size: 2rem;
+            color: #1a202c;
+            font-weight: 700;
+        }
+
+        .add-btn {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+        }
+
+        .add-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 10px 22px;
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #4a5568;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .filter-tab:hover {
+            border-color: #4facfe;
+            background: rgba(79, 172, 254, 0.1);
+        }
+
+        .filter-tab.active {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+
+        /* Vaccine Cards */
+        .vaccine-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4facfe;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .vaccine-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .vaccine-card.completed {
+            border-left-color: #48bb78;
+        }
+
+        .vaccine-card.overdue {
+            border-left-color: #ef4444;
+        }
+
+        .vaccine-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .vaccine-info h3 {
+            color: #1a202c;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .vaccine-info p {
+            color: #718096;
+            font-size: 0.95rem;
+        }
+
+        .vaccine-status {
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-completed {
+            background: rgba(72, 187, 120, 0.15);
+            color: #276749;
+        }
+
+        .status-upcoming {
+            background: rgba(245, 158, 11, 0.15);
+            color: #92400e;
+        }
+
+        .status-overdue {
+            background: rgba(239, 68, 68, 0.15);
+            color: #991b1b;
+        }
+
+        .vaccine-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 18px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .vaccine-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .mark-done-btn {
+            background: #48bb78;
+            color: white;
+        }
+
+        .mark-done-btn:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(72, 187, 120, 0.3);
+        }
+
+        .edit-btn {
+            background: #4facfe;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background: #3b9aeb;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+        }
+
+        .delete-btn {
+            background: #ef4444;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: #1a202c;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card p {
+            color: #718096;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .reminder-list {
+            list-style: none;
+        }
+
+        .reminder-item {
+            padding: 18px;
+            background: linear-gradient(135deg, #fff5e6 0%, #ffffff 100%);
+            border-radius: 14px;
+            margin-bottom: 12px;
+            border-left: 4px solid #f59e0b;
+            transition: all 0.3s;
+        }
+
+        .reminder-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.2);
+        }
+
+        .reminder-item strong {
+            color: #1a202c;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .reminder-item span {
+            color: #718096;
+            font-size: 0.875rem;
+        }
+
+        .govt-vaccine-item {
+            padding: 18px;
+            background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
+            border-radius: 14px;
+            margin-bottom: 15px;
+            border-left: 4px solid #4facfe;
+            transition: all 0.3s;
+        }
+
+        .govt-vaccine-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.2);
+        }
+
+        .govt-vaccine-item strong {
+            color: #1a202c;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .govt-vaccine-item p {
+            color: #718096;
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        /* Health Tips Card */
+        .tips-list {
+            list-style: none;
+        }
+
+        .tip-item {
+            padding: 15px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            transition: all 0.3s;
+        }
+
+        .tip-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(79, 172, 254, 0.15);
+        }
+
+        .tip-icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .tip-item span {
+            color: #4a5568;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 24px;
+            padding: 45px;
+            max-width: 550px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .modal-header h2 {
+            color: #1a202c;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .close-modal {
+            font-size: 2rem;
+            cursor: pointer;
+            color: #718096;
+            transition: color 0.3s;
+            line-height: 1;
+        }
+
+        .close-modal:hover {
+            color: #ef4444;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: #f7fafc;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #4facfe;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #718096;
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                display: grid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vaccine-details {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .vaccination-list {
+                padding: 25px;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">🏥 HealthAI</a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">← Back</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="page-header">
+            <h1>💉 Vaccination Tracker</h1>
+            <p>Keep track of your vaccinations and never miss an important dose. Protect yourself and your community.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon total">📊</div>
+                <div class="stat-info">
+                    <h3 id="totalCount">7</h3>
+                    <p>Total Vaccines</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon completed">✓</div>
+                <div class="stat-info">
+                    <h3 id="completedCount">5</h3>
+                    <p>Completed</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon upcoming">📅</div>
+                <div class="stat-info">
+                    <h3 id="upcomingCount">2</h3>
+                    <p>Upcoming</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon overdue">⚠️</div>
+                <div class="stat-info">
+                    <h3 id="overdueCount">0</h3>
+                    <p>Overdue</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="vaccination-list">
+                <div class="list-header">
+                    <h2>My Vaccinations</h2>
+                    <button class="add-btn" onclick="openModal()">+ Add Vaccine</button>
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="completed">Completed</button>
+                    <button class="filter-tab" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-tab" data-filter="overdue">Overdue</button>
+                </div>
+
+                <div id="vaccineList"></div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3>🔔 Upcoming Reminders</h3>
+                    <ul class="reminder-list" id="reminderList">
+                        <li class="reminder-item">
+                            <strong>COVID-19 Booster</strong>
+                            <span>Due in 15 days • Feb 5, 2026</span>
+                        </li>
+                        <li class="reminder-item">
+                            <strong>Influenza</strong>
+                            <span>Due in 30 days • Feb 20, 2026</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>🏛️ Government Recommended</h3>
+                    <div class="govt-vaccine-item">
+                        <strong>COVID-19 Vaccination</strong>
+                        <p>Essential for preventing severe illness and reducing transmission in the community.</p>
+                    </div>
+                    <div class="govt-vaccine-item">
+                        <strong>Annual Influenza Vaccine</strong>
+                        <p>Recommended yearly, especially for elderly and immunocompromised individuals.</p>
+                    </div>
+                    <div class="govt-vaccine-item">
+                        <strong>Hepatitis B</strong>
+                        <p>Critical for healthcare workers and those at higher risk of infection.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>💡 Vaccination Tips</h3>
+                    <ul class="tips-list">
+                        <li class="tip-item">
+                            <span class="tip-icon">✓</span>
+                            <span>Keep your vaccination card in a safe, accessible place</span>
+                        </li>
+                        <li class="tip-item">
+                            <span class="tip-icon">📱</span>
+                            <span>Set reminders for upcoming vaccine appointments</span>
+                        </li>
+                        <li class="tip-item">
+                            <span class="tip-icon">🗣️</span>
+                            <span>Consult your doctor about vaccines specific to your health needs</span>
+                        </li>
+                        <li class="tip-item">
+                            <span class="tip-icon">🌍</span>
+                            <span>Check travel vaccination requirements before international trips</span>
+                        </li>
+                        <li class="tip-item">
+                            <span class="tip-icon">👶</span>
+                            <span>Follow recommended childhood immunization schedules</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="vaccineModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Vaccination</h2>
+                <span class="close-modal" onclick="closeModal()">×</span>
+            </div>
+            <form id="vaccineForm">
+                <div class="form-group">
+                    <label class="form-label">Vaccine Name *</label>
+                    <input type="text" class="form-input" id="vaccineName" placeholder="e.g., COVID-19, Hepatitis B" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Dose Number *</label>
+                    <input type="number" class="form-input" id="doseNumber" min="1" placeholder="1" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Scheduled Date *</label>
+                    <input type="date" class="form-input" id="scheduleDate" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Location/Provider</label>
+                    <input type="text" class="form-input" id="location" placeholder="Hospital or clinic name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Notes</label>
+                    <textarea class="form-input" id="notes" rows="3" placeholder="Any additional information..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Add Vaccination</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let vaccinations = [
+            {
+                id: 1,
+                name: "COVID-19",
+                dose: 2,
+                date: "2024-03-15",
+                location: "Apollo Hospital",
+                status: "completed",
+                notes: "Pfizer vaccine"
+            },
+            {
+                id: 2,
+                name: "Hepatitis B",
+                dose: 3,
+                date: "2024-02-10",
+                location: "City Health Center",
+                status: "completed",
+                notes: ""
+            },
+            {
+                id: 3,
+                name: "Tetanus",
+                dose: 1,
+                date: "2024-01-20",
+                location: "Max Hospital",
+                status: "completed",
+                notes: "Booster dose"
+            },
+            {
+                id: 4,
+                name: "Influenza",
+                dose: 1,
+                date: "2026-02-20",
+                location: "Fortis Clinic",
+                status: "upcoming",
+                notes: "Annual flu shot"
+            },
+            {
+                id: 5,
+                name: "COVID-19 Booster",
+                dose: 3,
+                date: "2026-02-05",
+                location: "Apollo Hospital",
+                status: "upcoming",
+                notes: "Second booster"
+            }
+        ];
+
+        function openModal() {
+            document.getElementById('vaccineModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('vaccineModal').classList.remove('active');
+            document.getElementById('vaccineForm').reset();
+        }
+
+        function getVaccineStatus(date) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const vaccineDate = new Date(date);
+            vaccineDate.setHours(0, 0, 0, 0);
+            
+            if (vaccineDate < today) {
+                return 'completed';
+            } else if (vaccineDate > today) {
+                return 'upcoming';
+            }
+            return 'upcoming';
+        }
+
+        function getDaysUntil(date) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const targetDate = new Date(date);
+            targetDate.setHours(0, 0, 0, 0);
+            const diff = targetDate - today;
+            return Math.ceil(diff / (1000 * 60 * 60 * 24));
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+        }
+
+        function renderVaccines(filter = 'all') {
+            const list = document.getElementById('vaccineList');
+            list.innerHTML = '';
+            
+            let filteredVaccines = vaccinations;
+            if (filter !== 'all') {
+                filteredVaccines = vaccinations.filter(v => v.status === filter);
+            }
+
+            if (filteredVaccines.length === 0) {
+                list.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">💉</div>
+                        <h3>No vaccines found</h3>
+                        <p>Add your first vaccination to get started!</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredVaccines.forEach(vaccine => {
+                const card = document.createElement('div');
+                card.className = `vaccine-card ${vaccine.status}`;
+                
+                const statusClass = vaccine.status === 'completed' ? 'status-completed' : 
+                                  vaccine.status === 'overdue' ? 'status-overdue' : 'status-upcoming';
+                
+                const statusText = vaccine.status.charAt(0).toUpperCase() + vaccine.status.slice(1);
+                
+                card.innerHTML = `
+                    <div class="vaccine-header">
+                        <div class="vaccine-info">
+                            <h3>${vaccine.name}</h3>
+                            <p>Dose ${vaccine.dose}</p>
+                        </div>
+                        <span class="vaccine-status ${statusClass}">${statusText}</span>
+                    </div>
+                    <div class="vaccine-details">
+                        <div class="detail-item">📅 ${formatDate(vaccine.date)}</div>
+                        <div class="detail-item">📍 ${vaccine.location || 'Not specified'}</div>
+                        ${vaccine.status === 'upcoming' ? `<div class="detail-item">⏰ In ${getDaysUntil(vaccine.date)} days</div>` : ''}
+                    </div>
+                    ${vaccine.notes ? `<p style="margin-top: 15px; color: #718096; font-size: 0.95rem; padding: 12px; background: rgba(255,255,255,0.6); border-radius: 10px;">📝 ${vaccine.notes}</p>` : ''}
+                    <div class="vaccine-actions">
+                        ${vaccine.status !== 'completed' ? '<button class="action-btn mark-done-btn" onclick="markComplete(' + vaccine.id + ')">✓ Mark Done</button>' : ''}
+                        <button class="action-btn delete-btn" onclick="deleteVaccine(' + vaccine.id + ')">🗑️ Delete</button>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+            
+            updateStats();
+        }
+
+        function updateStats() {
+            const completed = vaccinations.filter(v => v.status === 'completed').length;
+            const upcoming = vaccinations.filter(v => v.status === 'upcoming').length;
+            const overdue = vaccinations.filter(v => v.status === 'overdue').length;
+            
+            document.getElementById('totalCount').textContent = vaccinations.length;
+            document.getElementById('completedCount').textContent = completed;
+            document.getElementById('upcomingCount').textContent = upcoming;
+            document.getElementById('overdueCount').textContent = overdue;
+
+            // Update reminders
+            const reminderList = document.getElementById('reminderList');
+            const upcomingVaccines = vaccinations.filter(v => v.status === 'upcoming')
+                .sort((a, b) => new Date(a.date) - new Date(b.date))
+                .slice(0, 3);
+            
+            if (upcomingVaccines.length > 0) {
+                reminderList.innerHTML = upcomingVaccines.map(v => `
+                    <li class="reminder-item">
+                        <strong>${v.name} (Dose ${v.dose})</strong>
+                        <span>Due in ${getDaysUntil(v.date)} days • ${formatDate(v.date)}</span>
+                    </li>
+                `).join('');
+            } else {
+                reminderList.innerHTML = '<li class="reminder-item"><strong>No upcoming reminders</strong><span>All caught up! 🎉</span></li>';
+            }
+        }
+
+        function markComplete(id) {
+            const vaccine = vaccinations.find(v => v.id === id);
+            if (vaccine) {
+                vaccine.status = 'completed';
+                vaccine.date = new Date().toISOString().split('T')[0];
+                renderVaccines();
+            }
+        }
+
+        function deleteVaccine(id) {
+            if (confirm('Are you sure you want to delete this vaccination record?')) {
+                vaccinations = vaccinations.filter(v => v.id !== id);
+                renderVaccines();
+            }
+        }
+
+        document.getElementById('vaccineForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const newVaccine = {
+                id: vaccinations.length > 0 ? Math.max(...vaccinations.map(v => v.id)) + 1 : 1,
+                name: document.getElementById('vaccineName').value,
+                dose: parseInt(document.getElementById('doseNumber').value),
+                date: document.getElementById('scheduleDate').value,
+                location: document.getElementById('location').value,
+                status: getVaccineStatus(document.getElementById('scheduleDate').value),
+                notes: document.getElementById('notes').value
+            };
+            
+            vaccinations.push(newVaccine);
+            renderVaccines();
+            closeModal();
+        });
+
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                renderVaccines(this.getAttribute('data-filter'));
+            });
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('vaccineModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Initialize
+        renderVaccines();
+    </script>
+</body>
+</html>

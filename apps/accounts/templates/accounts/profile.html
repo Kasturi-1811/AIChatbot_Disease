@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - HealthAI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Organic background shapes */
+        .bg-shapes {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 43% 57% 48% 52% / 59% 41% 59% 41%;
+            opacity: 0.12;
+        }
+
+        .shape1 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            top: -100px;
+            right: -100px;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .shape2 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            bottom: -80px;
+            left: -80px;
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        .shape3 {
+            width: 280px;
+            height: 280px;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            top: 50%;
+            left: 10%;
+            animation: float 18s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        /* Navigation */
+        nav {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 5%;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4facfe;
+        }
+
+        /* Profile Wrapper */
+        .profile-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* Sidebar */
+        .profile-sidebar {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: sticky;
+            top: 100px;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+        }
+
+        .profile-sidebar h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 8px;
+        }
+
+        .profile-sidebar .email {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .logout-btn {
+            width: 100%;
+            padding: 14px 30px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .logout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
+        }
+
+        /* Main Content */
+        .profile-content {
+            background: white;
+            border-radius: 24px;
+            padding: 45px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .content-header {
+            margin-bottom: 40px;
+        }
+
+        .content-header h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 8px;
+        }
+
+        .content-header p {
+            color: #718096;
+            font-size: 1rem;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-item input,
+        .info-item select {
+            padding: 14px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+            background: #f7fafc;
+        }
+
+        .info-item input:focus,
+        .info-item select:focus {
+            outline: none;
+            border-color: #4facfe;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+        }
+
+        /* Preferences Section */
+        .preferences-section {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 35px;
+        }
+
+        .preferences-section h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 30px;
+        }
+
+        .preference-item {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .preference-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .preference-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .preference-label {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .preference-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .icon-blue { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .icon-green { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .icon-purple { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+
+        .preference-text h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+
+        .preference-text p {
+            font-size: 0.875rem;
+            color: #718096;
+        }
+
+        .preference-control select {
+            padding: 12px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            background: #f7fafc;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 150px;
+        }
+
+        .preference-control select:focus {
+            outline: none;
+            border-color: #4facfe;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+        }
+
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 32px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e0;
+            transition: 0.3s;
+            border-radius: 34px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 24px;
+            width: 24px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        input:checked + .toggle-slider {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(28px);
+        }
+
+        /* Save Button */
+        .save-btn {
+            width: 100%;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .profile-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .profile-content {
+                padding: 30px 20px;
+            }
+
+            .preferences-section {
+                padding: 25px 20px;
+            }
+
+            .preference-item {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+
+            .preference-control {
+                width: 100%;
+            }
+
+            .preference-control select {
+                width: 100%;
+            }
+
+            .content-header h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">🏥 HealthAI</div>
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'profile' %}">Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-wrapper">
+        <!-- SIDEBAR -->
+        <div class="profile-sidebar">
+            <div class="profile-avatar">
+                {{ user.username|slice:":1"|upper }}
+            </div>
+            <h2>{{ user.username }}</h2>
+            <p class="email">{{ user.email }}</p>
+
+            <form method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="logout-btn">Logout</button>
+            </form>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="profile-content">
+            <div class="content-header">
+                <h3>Account Information</h3>
+                <p>Manage your personal details and preferences</p>
+            </div>
+
+            <!-- FORM START -->
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Email Address</div>
+                        {{ form.email }}
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-label">Location</div>
+                        {{ form.location }}
+                    </div>
+                </div>
+
+                <!-- LANGUAGE & PREFERENCES -->
+                <div class="preferences-section">
+                    <h4>Language & Preferences</h4>
+
+                    <!-- LANGUAGE -->
+                    <div class="preference-item">
+                        <div class="preference-label">
+                            <div class="preference-icon icon-blue">🌐</div>
+                            <div class="preference-text">
+                                <h5>Language</h5>
+                                <p>Choose your preferred language</p>
+                            </div>
+                        </div>
+                        <div class="preference-control">
+                            <select name="language">
+                                <option value="en" {% if user.language == "en" %}selected{% endif %}>English</option>
+                                <option value="hi" {% if user.language == "hi" %}selected{% endif %}>Hindi</option>
+                                <option value="te" {% if user.language == "te" %}selected{% endif %}>Telugu</option>
+                                <option value="ta" {% if user.language == "ta" %}selected{% endif %}>Tamil</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- EMAIL NOTIFICATIONS -->
+                    <div class="preference-item">
+                        <div class="preference-label">
+                            <div class="preference-icon icon-green">📧</div>
+                            <div class="preference-text">
+                                <h5>Email Notifications</h5>
+                                <p>Receive health updates via email</p>
+                            </div>
+                        </div>
+                        <div class="preference-control">
+                            <label class="toggle-switch">
+                                <input type="checkbox"
+                                       name="email_notifications"
+                                       {% if user.email_notifications %}checked{% endif %}>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- VACCINATION REMINDERS -->
+                    <div class="preference-item">
+                        <div class="preference-label">
+                            <div class="preference-icon icon-purple">🔔</div>
+                            <div class="preference-text">
+                                <h5>Vaccination Reminders</h5>
+                                <p>Get notified about upcoming vaccines</p>
+                            </div>
+                        </div>
+                        <div class="preference-control">
+                            <label class="toggle-switch">
+                                <input type="checkbox"
+                                       name="vaccination_reminders"
+                                       {% if user.vaccination_reminders %}checked{% endif %}>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+            <!-- FORM END -->
+        </div>
+    </div>
+</body>
+</html>
