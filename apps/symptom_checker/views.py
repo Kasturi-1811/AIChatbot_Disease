@@ -76,6 +76,18 @@ def symptom_checker_view(request):
             },
             "emergency_alert": risk_level == "High"
         }
+        if request.user.is_authenticated:
+            UserActivity.objects.create(
+                user=request.user,
+                activity_type='chatbot_chat',
+                title='Symptom Check Completed',
+                description=(
+                    f"Predicted Disease: {prediction}, "
+                    f"Risk Level: {risk_level} ({risk_percentage}%)"
+                ),
+                related_app='symptom_checker'
+            )
+
 
     return render(
         request,

@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.utils import timezone
 from django.db.models import Q
+from apps.history.models import UserActivity
 
 from .models import Vaccination, GovtVaccination
 
@@ -43,7 +44,7 @@ def add_vaccination(request):
         return redirect('home')
 
     if request.method == 'POST':
-        Vaccination.objects.create(
+        vaccine = Vaccination.objects.create(
             user=request.user,
             name=request.POST.get('name'),
             hospital_name=request.POST.get('hospital_name'),
@@ -52,11 +53,19 @@ def add_vaccination(request):
             location=request.POST.get('location'),
             notes=request.POST.get('notes'),
             status='upcoming',
-
-            # 🔐 ADMIN CONTROL
             is_approved=False,
             is_personal=False
         )
+
+        UserActivity.objects.create(
+            user=request.user,
+            activity_type='vaccination_added',
+            title='Vaccination Added',
+            description=f"{vaccine.name} at {vaccine.hospital_name}",
+            related_object_id=vaccine.id,
+            related_app='vaccination'
+        )
+
 
         messages.success(
             request,
