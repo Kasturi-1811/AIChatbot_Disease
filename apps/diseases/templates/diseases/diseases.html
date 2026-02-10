@@ -475,6 +475,12 @@
             <div class="nav-links">
                 <a href="{% url 'home' %}">Home</a>
                 <a href="#">← Back</a>
+                {% if user.role == 'DOCTOR' and user.is_approved %}
+    <a href="{% url 'add_disease' %}" class="btn btn-danger">
+        + Add Disease Alert
+    </a>
+{% endif %}
+
             </div>
         </div>
     </nav>

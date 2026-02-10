@@ -29,4 +29,6 @@ urlpatterns = [
     path('vaccination/', include('apps.vaccination.urls')),
     path('quiz/', include('apps.quiz.urls')),
     path('history/', include('apps.history.urls')),
+    path('notifications/', include('notifications.urls')),
+
 ]

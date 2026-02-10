@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>💉 Government Approved Vaccinations</h2>
+
+{% if vaccinations %}
+    <div class="vaccination-grid">
+        {% for v in vaccinations %}
+            <div class="card">
+                <h3>{{ v.name }}</h3>
+                <p><strong>Age Group:</strong> {{ v.get_age_group_display }}</p>
+                <p><strong>Frequency:</strong> {{ v.frequency }}</p>
+                <p>{{ v.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>No vaccination information available.</p>
+{% endif %}
+
+{% endblock %}

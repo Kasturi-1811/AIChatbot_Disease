@@ -2,6 +2,7 @@ import os
 import joblib
 from django.conf import settings
 from django.shortcuts import render
+from apps.history.models import UserActivity
 
 # --------------------------------------------------
 # Load ML model safely using BASE_DIR (IMPORTANT)

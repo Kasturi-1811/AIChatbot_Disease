@@ -385,6 +385,11 @@
         .back-link:hover {
             color: #667eea;
         }
+        ::placeholder {
+    color: #a0aec0;
+    opacity: 0.6;
+    font-style: italic;
+}
 
         @media (max-width: 640px) {
             .register-header {
@@ -402,6 +407,7 @@
     </style>
 </head>
 <body>
+    
     <div class="deco deco-1"></div>
     <div class="deco deco-2"></div>
     <div class="deco deco-3"></div>
@@ -506,6 +512,21 @@
                 });
             }
         });
+         const roleField = document.querySelector('select[name="role"]');
+    const doctorFields = ['qualification', 'specialization', 'hospital_name', 'license_number'];
+
+    function toggleDoctorFields() {
+        doctorFields.forEach(name => {
+            const field = document.querySelector(`[name="${name}"]`);
+            if (field) {
+                field.closest('.input-group').style.display =
+                    roleField.value === 'DOCTOR' ? 'block' : 'none';
+            }
+        });
+    }
+
+    roleField.addEventListener('change', toggleDoctorFields);
+    toggleDoctorFields();
     </script>
 </body>
 </html>

@@ -143,23 +143,26 @@
 }
 
 
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            margin-top: 10px;
-            min-width: 180px;
-            overflow: hidden;
-            z-index: 100;
-        }
+    
 
-        .user-menu:hover .dropdown {
-            display: block;
-        }
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 5px;
+    min-width: 180px;
+    z-index: 100;
+}
+
+.user-menu:hover .dropdown,
+.user-menu .dropdown:hover {
+    display: block;
+}
+
 
         .dropdown a {
             display: block;
@@ -432,15 +435,39 @@
                 <a href="#features">Features</a>
                 <a href="#about">About</a>
                 {% if user.is_authenticated %}
-                    <div class="user-menu">
-                        <span class="username">👤 {{ user.username }}</span>
-                        <div class="dropdown">
-                            <a href="{% url 'profile' %}">My Profile</a>
-                            <a href="{% url 'logout' %}">Logout</a>
-                        </div>
-                    </div>
-                {% else %}
-                    <a href="{% url 'login' %}" class="btn-nav">Get Started</a>
+
+<!-- 🔔 Notification Bell -->
+<a href="{% url 'notifications:list' %}" style="position: relative; font-size: 1.4rem;">
+    🔔
+    {% if unread_notifications > 0 %}
+
+        <span style="
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 7px;
+            font-size: 0.7rem;">
+            {{ unread_notifications }}
+
+        </span>
+    {% endif %}
+</a>
+
+<div class="user-menu">
+    <span class="username">👤 {{ user.username }}</span>
+    <div class="dropdown">
+        <a href="{% url 'profile' %}">My Profile</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+</div>
+
+{% else %}
+
+                    <a href="{% url 'register' %}" class="btn-nav">Get Started</a>
+
                 {% endif %}
             </div>
         </div>
@@ -491,40 +518,54 @@
         </div>
 
         <div class="features-grid">
-            <a href="{% url 'chatbot' %}" style="text-decoration: none; color: inherit;">
-    <div class="feature-item">
-        <div class="feature-icon">🤖</div>
-        <h3>Smart Chatbot</h3>
-        <p>Chat with our AI assistant for instant health advice and information</p>
-    </div>
-</a>
+            
 
+    <!-- COMMON FEATURES -->
+    <a href="{% url 'chatbot' %}">
+        <div class="feature-item">
+            <div class="feature-icon">🤖</div>
+            <h3>Smart Chatbot</h3>
+            <p>Chat with our AI assistant for instant health advice</p>
+        </div>
+    </a>
 
-            <a href="{% url 'symptom_checker:symptom_checker' %}" style="text-decoration: none; color: inherit;">
-    <div class="feature-item">
-        <div class="feature-icon">🔍</div>
-        <h3>Symptom Checker</h3>
-        <p>Describe your symptoms and get preliminary health assessments</p>
-    </div>
-</a>
+    <a href="{% url 'symptom_checker:symptom_checker' %}">
+        <div class="feature-item">
+            <div class="feature-icon">🔍</div>
+            <h3>Symptom Checker</h3>
+            <p>Describe symptoms and get assessments</p>
+        </div>
+    </a>
 
+    <a href="{% url 'diseases' %}">
+        <div class="feature-item">
+            <div class="feature-icon">📚</div>
+            <h3>Disease Library</h3>
+            <p>Learn about health conditions</p>
+        </div>
+    </a>
 
-            <a href="{% url 'diseases' %}" style="text-decoration: none; color: inherit;">
-    <div class="feature-item">
-        <div class="feature-icon">📚</div>
-        <h3>Disease Library</h3>
-        <p>Access detailed information about thousands of health conditions</p>
-    </div>
-</a>
+    <!-- USER ONLY -->
+    {% if user.is_authenticated and user.role == 'USER' %}
+    <a href="{% url 'vaccination' %}">
+        <div class="feature-item">
+            <div class="feature-icon">💉</div>
+            <h3>Vaccination Information</h3>
+            <p>View vaccinations near your location</p>
+        </div>
+    </a>
+    {% endif %}
 
-
-            <a href="{% url 'vaccination' %}" style="text-decoration: none; color: inherit;">
-    <div class="feature-item">
-        <div class="feature-icon">💉</div>
-        <h3>Vaccine Reminders</h3>
-        <p>Keep track of immunizations and get timely reminders</p>
-    </div>
-</a>
+    <!-- DOCTOR ONLY (APPROVED) -->
+    {% if user.is_authenticated and user.role == 'DOCTOR' and user.is_approved %}
+    <a href="{% url 'add_vaccination' %}">
+        <div class="feature-item">
+            <div class="feature-icon">➕</div>
+            <h3>Add Vaccination</h3>
+            <p>Publish vaccination drives</p>
+        </div>
+    </a>
+    {% endif %}
 
 
             <a href="{% url 'quiz' %}" style="text-decoration: none; color: inherit;">

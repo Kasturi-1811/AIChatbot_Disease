@@ -356,210 +356,27 @@
             <p>Track your health journey and review past activities</p>
         </div>
 
-        <div class="stats-overview">
-            <div class="stat-box">
-                <div class="stat-icon">🏥</div>
-                <div class="stat-value">7</div>
-                <div class="stat-label">Total Activities</div>
-            </div>
-           
-            <div class="stat-box">
-                <div class="stat-icon">🎯</div>
-                <div class="stat-value">3</div>
-                <div class="stat-label">Quizzes Taken</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-icon">💉</div>
-                <div class="stat-value">4</div>
-                <div class="stat-label">Vaccinations</div>
-            </div>
-        </div>
+        <div class="timeline">
+{% for a in activities %}
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <span class="activity-type type-{{ a.activity_type|lower }}">
+        {{ a.activity_type }}
+      </span>
 
-        <div class="content-section">
-            <div class="section-header">
-                <h2>📅 Activity Timeline</h2>
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    
-                    <button class="filter-btn" data-filter="symptom">Symptoms</button>
-                    <button class="filter-btn" data-filter="quiz">Quizzes</button>
-                    <button class="filter-btn" data-filter="vaccine">Vaccines</button>
-                </div>
-            </div>
+      <div class="activity-title">{{ a.title }}</div>
+      <div class="activity-description">{{ a.description }}</div>
 
-            <input type="text" class="search-bar" id="searchBar" placeholder="🔍 Search your health history...">
-
-            <div class="timeline" id="timelineContent">
-                <!-- Timeline items will be inserted here -->
-            </div>
-
-            <div class="empty-state" id="emptyState" style="display: none;">
-                <div class="empty-state-icon">📭</div>
-                <h3>No activities found</h3>
-                <p>Try adjusting your filters or search terms</p>
-            </div>
-        </div>
+      <div class="activity-footer">
+        🕒 {{ a.created_at|timesince }} ago
+      </div>
     </div>
-
-    <script>
-        const activities = [
-           
-            {
-                id: 1,
-                type: 'symptom',
-                title: 'Symptom Check - Fever & Cough',
-                description: 'Checked symptoms: Fever (38.5°C), cough, and fatigue. Result: Possible viral infection. Recommendation: Rest and monitor.',
-                date: new Date('2026-01-12T14:20:00'),
-                details: '3 symptoms checked'
-            },
-            {
-                id: 2,
-                type: 'quiz',
-                title: 'Nutrition & Diet Quiz',
-                description: 'Completed nutrition knowledge quiz. Score: 8/10 (80%). Learned about vitamin D sources and daily water intake.',
-                date: new Date('2026-01-10T16:45:00'),
-                details: 'Score: 80%'
-            },
-            {
-                id: 3,
-                type: 'vaccine',
-                title: 'COVID-19 Booster Dose',
-                description: 'Received third dose of COVID-19 vaccine at Apollo Hospital. No adverse reactions reported.',
-                date: new Date('2026-01-08T11:00:00'),
-                details: 'Location: Apollo Hospital'
-            },
-            {
-                id: 4,
-                type: 'disease',
-                title: 'Disease Library - Diabetes',
-                description: 'Researched information about Type 2 Diabetes, symptoms, management strategies, and home remedies.',
-                date: new Date('2026-01-05T09:15:00'),
-                details: 'Reading time: 12 minutes'
-            },
-           
-            {
-                id: 5,
-                type: 'quiz',
-                title: 'Fitness & Exercise Quiz',
-                description: 'Tested knowledge about exercise and physical fitness. Score: 9/10 (90%). Excellent understanding of workout principles.',
-                date: new Date('2025-12-28T15:20:00'),
-                details: 'Score: 90%'
-            },
-            {
-                id: 6,
-                type: 'symptom',
-                title: 'Symptom Check - Digestive Issues',
-                description: 'Reported abdominal discomfort and bloating. Result: Possible dietary sensitivity. Recommended food diary and consultation.',
-                date: new Date('2025-12-25T10:45:00'),
-                details: '2 symptoms checked'
-            },
-            {
-                id: 7,
-                type: 'disease',
-                title: 'Disease Library - Hypertension',
-                description: 'Studied information about high blood pressure, risk factors, and prevention strategies for different age groups.',
-                date: new Date('2025-12-20T14:00:00'),
-                details: 'Reading time: 15 minutes'
-            },
-            {
-                id: 8,
-                type: 'vaccine',
-                title: 'Annual Flu Shot',
-                description: 'Received seasonal influenza vaccination at City Health Center. Appointment went smoothly.',
-                date: new Date('2025-12-15T11:30:00'),
-                details: 'Location: City Health Center'
-            }
-        ];
-
-        function formatDate(date) {
-            const now = new Date();
-            const diffTime = Math.abs(now - date);
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-            
-            if (diffDays === 0) return 'Today';
-            if (diffDays === 1) return 'Yesterday';
-            if (diffDays < 7) return `${diffDays} days ago`;
-            if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
-            if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
-            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-        }
-
-        function renderActivities(filter = 'all', searchTerm = '') {
-            const timeline = document.getElementById('timelineContent');
-            const emptyState = document.getElementById('emptyState');
-            
-            let filtered = activities;
-            
-            if (filter !== 'all') {
-                filtered = activities.filter(activity => activity.type === filter);
-            }
-            
-            if (searchTerm) {
-                filtered = filtered.filter(activity => 
-                    activity.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    activity.description.toLowerCase().includes(searchTerm.toLowerCase())
-                );
-            }
-            
-            if (filtered.length === 0) {
-                timeline.style.display = 'none';
-                emptyState.style.display = 'block';
-                return;
-            }
-            
-            timeline.style.display = 'block';
-            emptyState.style.display = 'none';
-            timeline.innerHTML = '';
-            
-            filtered.forEach(activity => {
-                const item = document.createElement('div');
-                item.className = 'timeline-item';
-                
-                const typeClass = `type-${activity.type}`;
-                const typeLabel = activity.type.charAt(0).toUpperCase() + activity.type.slice(1);
-                
-                item.innerHTML = `
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <span class="activity-type ${typeClass}">${typeLabel}</span>
-                                <div class="activity-title">${activity.title}</div>
-                            </div>
-                        </div>
-                        <div class="activity-description">${activity.description}</div>
-                        <div class="activity-footer">
-                            <div class="activity-time">
-                                <span>🕒</span>
-                                <span>${formatDate(activity.date)}</span>
-                                <span style="margin-left: 15px;">ℹ️</span>
-                                <span>${activity.details}</span>
-                            </div>
-                            <button class="view-details-btn">View Details</button>
-                        </div>
-                    </div>
-                `;
-                
-                timeline.appendChild(item);
-            });
-        }
-
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                const filter = this.getAttribute('data-filter');
-                const searchTerm = document.getElementById('searchBar').value;
-                renderActivities(filter, searchTerm);
-            });
-        });
-
-        document.getElementById('searchBar').addEventListener('input', function() {
-            const filter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-            renderActivities(filter, this.value);
-        });
-
-        renderActivities();
-    </script>
+  </div>
+{% empty %}
+  <p>No history yet</p>
+{% endfor %}
+</div>
+    </div>
 </body>
 </html>

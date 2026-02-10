@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'apps.symptom_checker.apps.SymptomCheckerConfig',
     'apps.vaccination.apps.VaccinationConfig',
     'apps.home.apps.HomeConfig',
-   
+    'notifications',
 
 
     'django.contrib.admin',
@@ -165,6 +165,6 @@ import os
 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_API_KEY = "your_gemini_api_key_here"
+GEMINI_API_KEY = "AIzaSyAPzWCPSu7F9yuDaLGsKiAHsF9hsej7juU"
 
 
