@@ -2,6 +2,7 @@
 from django.contrib import admin
 from django.utils import timezone
 from django.contrib.auth import get_user_model
+from .models import Disease
 
 from .models import DiseaseAlert
 from notifications.utils import create_notification
@@ -49,3 +50,20 @@ class DiseaseAlertAdmin(admin.ModelAdmin):
                 )
 
     approve_disease_alerts.short_description = "Approve disease alerts & notify users"
+@admin.register(Disease)
+class DiseaseAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category', 'severity', 'is_approved', 'created_at')
+    list_filter = ('category', 'severity', 'is_approved')
+    search_fields = ('name', 'symptoms', 'causes')
+
+    actions = ['approve_diseases']
+
+    def approve_diseases(self, request, queryset):
+        for disease in queryset:
+            if disease.is_approved:
+                continue
+
+            disease.is_approved = True
+            disease.save()
+
+    approve_diseases.short_description = "Approve selected diseases"

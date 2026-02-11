@@ -420,7 +420,7 @@
         </div>
 
         <div class="quiz-categories" id="categoriesSection">
-            <div class="category-card" data-category="nutrition">
+            <div class="category-card" onclick="startCategory('nutrition')">
                 <div class="category-icon">🥗</div>
                 <h3>Nutrition & Diet</h3>
                 <p>Test your knowledge about healthy eating and nutrition</p>
@@ -430,7 +430,8 @@
                 </div>
             </div>
 
-            <div class="category-card" data-category="fitness">
+            <div class="category-card" onclick="startCategory('fitness')">
+
                 <div class="category-icon">💪</div>
                 <h3>Fitness & Exercise</h3>
                 <p>Learn about exercise, workouts, and staying active</p>
@@ -440,7 +441,8 @@
                 </div>
             </div>
 
-            <div class="category-card" data-category="mental">
+            <div class="category-card" onclick="startCategory('mental')">
+
                 <div class="category-icon">🧠</div>
                 <h3>Mental Health</h3>
                 <p>Understand mental wellness and emotional health</p>
@@ -450,7 +452,8 @@
                 </div>
             </div>
 
-            <div class="category-card" data-category="diseases">
+            <div class="category-card" onclick="startCategory('diseases')">
+
                 <div class="category-icon">🩺</div>
                 <h3>Disease Prevention</h3>
                 <p>Learn about common diseases and prevention</p>
@@ -460,7 +463,7 @@
                 </div>
             </div>
 
-            <div class="category-card" data-category="general">
+            <div class="category-card" onclick="startCategory('general')">
                 <div class="category-icon">❤️</div>
                 <h3>General Health</h3>
                 <p>Overall health knowledge and wellness tips</p>
@@ -470,7 +473,7 @@
                 </div>
             </div>
 
-            <div class="category-card" data-category="firstaid">
+            <div class="category-card" onclick="startCategory('firstaid')">
                 <div class="category-icon">🚑</div>
                 <h3>First Aid</h3>
                 <p>Emergency response and first aid basics</p>
@@ -533,56 +536,12 @@
     </div>
 
     <script>
-        const quizData = {
-            nutrition: [
-                {
-                    question: "Which vitamin is primarily obtained from sunlight?",
-                    options: ["Vitamin A", "Vitamin D", "Vitamin C", "Vitamin K"],
-                    correct: 1,
-                    explanation: "Vitamin D is synthesized in the skin when exposed to sunlight. It's essential for bone health and immune function."
-                },
-                {
-                    question: "What is the recommended daily water intake for adults?",
-                    options: ["2-3 liters", "5-6 liters", "1 liter", "8-10 liters"],
-                    correct: 0,
-                    explanation: "Adults should drink approximately 2-3 liters (8-12 cups) of water daily, though needs vary based on activity level and climate."
-                },
-                {
-                    question: "Which nutrient is the primary source of energy for the body?",
-                    options: ["Protein", "Carbohydrates", "Fats", "Vitamins"],
-                    correct: 1,
-                    explanation: "Carbohydrates are the body's main energy source, broken down into glucose for immediate use or stored as glycogen."
-                }
-            ],
-            fitness: [
-                {
-                    question: "How many minutes of moderate exercise per week is recommended?",
-                    options: ["75 minutes", "150 minutes", "300 minutes", "50 minutes"],
-                    correct: 1,
-                    explanation: "The WHO recommends at least 150 minutes of moderate-intensity aerobic activity per week for adults."
-                },
-                {
-                    question: "What does BMI stand for?",
-                    options: ["Body Mass Index", "Basic Metabolic Indicator", "Body Muscle Intake", "Bone Mineral Index"],
-                    correct: 0,
-                    explanation: "BMI stands for Body Mass Index, calculated using weight and height to categorize body composition."
-                }
-            ],
-            mental: [
-                {
-                    question: "How many hours of sleep do adults need per night?",
-                    options: ["4-5 hours", "7-9 hours", "10-12 hours", "5-6 hours"],
-                    correct: 1,
-                    explanation: "Adults need 7-9 hours of quality sleep per night for optimal mental and physical health."
-                },
-                {
-                    question: "What is a proven way to reduce stress?",
-                    options: ["Skipping meals", "Regular exercise", "Avoiding social contact", "Working longer hours"],
-                    correct: 1,
-                    explanation: "Regular exercise releases endorphins, reduces stress hormones, and improves overall mental health."
-                }
-            ]
-        };
+        function startCategory(category) {
+    window.location.href = "?category=" + category;
+
+}
+const quizDataFromBackend = {{ questions|safe }};
+
 
         let currentCategory = '';
         let currentQuestionIndex = 0;
@@ -591,12 +550,6 @@
         let startTime;
         let timeLeft = 600;
 
-        document.querySelectorAll('.category-card').forEach(card => {
-            card.addEventListener('click', function() {
-                currentCategory = this.getAttribute('data-category');
-                startQuiz();
-            });
-        });
         
 
         function startQuiz() {
@@ -624,39 +577,42 @@
             }, 1000);
         }
 
-        function loadQuestion() {
-            const questions = quizData[currentCategory] || quizData.nutrition;
-            const question = questions[currentQuestionIndex % questions.length];
-            
-            document.getElementById('currentQuestion').textContent = currentQuestionIndex + 1;
-            document.getElementById('totalQuestions').textContent = '10';
-            document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
-            document.getElementById('questionText').textContent = question.question;
-            document.getElementById('explanationBox').classList.remove('active');
-            
-            const progress = ((currentQuestionIndex + 1) / 10) * 100;
-            document.getElementById('progressFill').style.width = progress + '%';
-            
-            const optionsContainer = document.getElementById('optionsContainer');
-            optionsContainer.innerHTML = '';
-            
-            question.options.forEach((option, index) => {
-                const optionDiv = document.createElement('div');
-                optionDiv.className = 'option';
-                if (userAnswers[currentQuestionIndex] === index) {
-                    optionDiv.classList.add('selected');
-                }
-                optionDiv.innerHTML = `
-                    <div class="option-letter">${String.fromCharCode(65 + index)}</div>
-                    <div class="option-text">${option}</div>
-                `;
-                optionDiv.addEventListener('click', () => selectOption(index));
-                optionsContainer.appendChild(optionDiv);
-            });
-            
-            document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
-            document.getElementById('nextBtn').disabled = userAnswers[currentQuestionIndex] === undefined;
+        
+         function loadQuestion() {
+    const question = quizDataFromBackend[currentQuestionIndex];
+
+    document.getElementById('currentQuestion').textContent = currentQuestionIndex + 1;
+    document.getElementById('totalQuestions').textContent = quizDataFromBackend.length;
+    document.getElementById('questionNumber').textContent = `Question ${currentQuestionIndex + 1}`;
+    document.getElementById('questionText').textContent = question.question;
+    document.getElementById('explanationBox').classList.remove('active');
+
+    const progress = ((currentQuestionIndex + 1) / quizDataFromBackend.length) * 100;
+    document.getElementById('progressFill').style.width = progress + '%';
+
+    const optionsContainer = document.getElementById('optionsContainer');
+    optionsContainer.innerHTML = '';
+
+    question.options.forEach((option, index) => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'option';
+
+        if (userAnswers[currentQuestionIndex] === index) {
+            optionDiv.classList.add('selected');
         }
+
+        optionDiv.innerHTML = `
+            <div class="option-letter">${String.fromCharCode(65 + index)}</div>
+            <div class="option-text">${option}</div>
+        `;
+
+        optionDiv.addEventListener('click', () => selectOption(index));
+        optionsContainer.appendChild(optionDiv);
+    });
+
+    document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+    document.getElementById('nextBtn').disabled = userAnswers[currentQuestionIndex] === undefined;
+}
 
         function selectOption(index) {
             userAnswers[currentQuestionIndex] = index;
@@ -667,7 +623,8 @@
         }
 
         document.getElementById('prevBtn').addEventListener('click', () => {
-            if (currentQuestionIndex > 0) {
+            if (currentQuestionIndex < quizDataFromBackend.length - 1)
+ {
                 currentQuestionIndex--;
                 loadQuestion();
             }
@@ -683,45 +640,56 @@
         });
 
         function finishQuiz() {
-            clearInterval(timerInterval);
-            const questions = quizData[currentCategory] || quizData.nutrition;
-            let correctCount = 0;
-            
-            userAnswers.forEach((answer, index) => {
-                if (answer === questions[index % questions.length].correct) {
-                    correctCount++;
-                }
-            });
-            
-            const accuracy = Math.round((correctCount / 10) * 100);
-            const timeElapsed = Math.floor((Date.now() - startTime) / 1000);
-            const minutes = Math.floor(timeElapsed / 60);
-            const seconds = timeElapsed % 60;
-            
-            document.getElementById('quizSection').classList.remove('active');
-            document.getElementById('resultsSection').classList.add('active');
-            
-            document.getElementById('resultsScore').textContent = `${correctCount}/10`;
-            document.getElementById('correctCount').textContent = correctCount;
-            document.getElementById('accuracyPercent').textContent = `${accuracy}%`;
-            document.getElementById('timeTaken').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-            
-            if (accuracy >= 80) {
-                document.getElementById('resultsIcon').textContent = '🏆';
-                document.getElementById('resultsMessage').textContent = 'Excellent! You\'re a health expert!';
-            } else if (accuracy >= 60) {
-                document.getElementById('resultsIcon').textContent = '🎉';
-                document.getElementById('resultsMessage').textContent = 'Great job! Keep learning!';
-            } else {
-                document.getElementById('resultsIcon').textContent = '📚';
-                document.getElementById('resultsMessage').textContent = 'Good effort! Try again to improve!';
-            }
+    clearInterval(timerInterval);
+
+    let correctCount = 0;
+
+    userAnswers.forEach((answer, index) => {
+        if (answer === quizDataFromBackend[index].correct) {
+            correctCount++;
         }
+    });
+
+    const accuracy = Math.round((correctCount / quizDataFromBackend.length) * 100);
+    const timeElapsed = Math.floor((Date.now() - startTime) / 1000);
+    const minutes = Math.floor(timeElapsed / 60);
+    const seconds = timeElapsed % 60;
+
+    document.getElementById('quizSection').classList.remove('active');
+    document.getElementById('resultsSection').classList.add('active');
+
+    document.getElementById('resultsScore').textContent = `${correctCount}/${quizDataFromBackend.length}`;
+    document.getElementById('correctCount').textContent = correctCount;
+    document.getElementById('accuracyPercent').textContent = `${accuracy}%`;
+    document.getElementById('timeTaken').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+    if (accuracy >= 80) {
+        document.getElementById('resultsIcon').textContent = '🏆';
+        document.getElementById('resultsMessage').textContent = 'Excellent! You\'re a health expert!';
+    } else if (accuracy >= 60) {
+        document.getElementById('resultsIcon').textContent = '🎉';
+        document.getElementById('resultsMessage').textContent = 'Great job! Keep learning!';
+    } else {
+        document.getElementById('resultsIcon').textContent = '📚';
+        document.getElementById('resultsMessage').textContent = 'Good effort! Try again to improve!';
+    }
+}
+
 
         document.getElementById('retakeBtn').addEventListener('click', () => {
             document.getElementById('resultsSection').classList.remove('active');
             document.getElementById('categoriesSection').style.display = 'grid';
         });
+        // Auto start quiz if category exists in URL
+window.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("category");
+
+    if (category && quizDataFromBackend.length > 0) {
+        startQuiz();
+    }
+});
+
     </script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<h2>Add Disease</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="name" placeholder="Disease Name" required><br><br>
+
+    <input type="text" name="body_system" placeholder="Body System"><br><br>
+
+    <textarea name="history" placeholder="History / Origin"></textarea><br><br>
+
+    <textarea name="causes" placeholder="Causes"></textarea><br><br>
+
+    <textarea name="symptoms" placeholder="Symptoms"></textarea><br><br>
+
+    <textarea name="treatment" placeholder="Treatment"></textarea><br><br>
+
+    <textarea name="home_remedies" placeholder="Home Remedies"></textarea><br><br>
+
+    <textarea name="prevention" placeholder="Prevention"></textarea><br><br>
+
+    <input type="text" name="specialist_required" placeholder="Specialist Doctor (e.g., Dermatologist)"><br><br>
+
+    <input type="text" name="hospital_phone" 
+       placeholder="Hospital Phone Number"><br><br>
+
+    <select name="is_contagious">
+        <option value="True">Contagious</option>
+        <option value="False">Not Contagious</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+</form>
