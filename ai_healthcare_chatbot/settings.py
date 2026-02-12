@@ -54,14 +54,16 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.middleware.locale.LocaleMiddleware', 
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware', 
+    'django.middleware.common.CommonMiddleware',  # 👈 first
+    'django.middleware.locale.LocaleMiddleware',              # 👈 then this
+    
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'ai_healthcare_chatbot.urls'
 
@@ -121,16 +123,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-USE_I18N = True
-USE_L10N = True
+from django.utils.translation import gettext_lazy as _
 
 LANGUAGE_CODE = 'en'
 
+USE_I18N = True
+
 LANGUAGES = [
-    ('en', 'English'),
-    ('hi', 'Hindi'),
-    ('te', 'Telugu'),
-    ('ta', 'Tamil'),
+    ('en', _('English')),
+    ('hi', _('Hindi')),
+    ('te', _('Telugu')),
 ]
 
 LOCALE_PATHS = [

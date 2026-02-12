@@ -340,6 +340,7 @@
     </style>
 </head>
 <body>
+{% load i18n %}
 
 <div class="container">
     <!-- HEADER -->
@@ -347,14 +348,14 @@
         <div class="header-title">
             <h1>
                 <span class="notification-icon">🔔</span>
-                Notifications
+                {% trans "Notifications" %}
             </h1>
         </div>
         <div class="header-actions">
-            <button class="filter-btn active" onclick="filterNotifications('all')">All</button>
-            <button class="filter-btn" onclick="filterNotifications('unread')">Unread</button>
-            <button class="filter-btn" onclick="filterNotifications('read')">Read</button>
-            <button class="mark-all-btn" onclick="markAllAsRead()">Mark All as Read</button>
+            <button class="filter-btn active" onclick="filterNotifications('all')">{% trans "All" %}</button>
+            <button class="filter-btn" onclick="filterNotifications('unread')">{% trans "Unread" %}</button>
+            <button class="filter-btn" onclick="filterNotifications('read')">{% trans "Read" %}</button>
+            <button class="mark-all-btn" onclick="markAllAsRead()">{% trans "Mark All as Read" %}</button>
         </div>
     </div>
 
@@ -385,9 +386,9 @@
                             </div>
                             <div class="notification-actions">
                                 {% if not n.is_read %}
-                                    <button class="action-btn" onclick="markAsRead({{ n.id }})">Mark as Read</button>
+                                    <button class="action-btn" onclick="markAsRead({{ n.id }})">{% trans "Mark as Read" %}</button>
                                 {% endif %}
-                                <button class="action-btn" onclick="deleteNotification({{ n.id }})">Delete</button>
+                                <button class="action-btn" onclick="deleteNotification({{ n.id }})">{% trans "Delete" %}</button>
                             </div>
                         </div>
                     </div>
@@ -396,8 +397,8 @@
         {% empty %}
             <div class="empty-state">
                 <div class="empty-state-icon">📭</div>
-                <div class="empty-state-title">No Notifications</div>
-                <div class="empty-state-message">You're all caught up! Check back later for updates.</div>
+                <div class="empty-state-title">{% trans "No Notifications" %}</div>
+                <div class="empty-state-message">{% trans "You're all caught up! Check back later for updates." %}</div>
             </div>
         {% endfor %}
     </div>

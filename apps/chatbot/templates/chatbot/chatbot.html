@@ -482,22 +482,24 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <div class="sidebar-logo">🏥 HealthAI</div>
+            <div class="sidebar-logo">{% trans "🏥 HealthAI" %}</div>
             <!-- Home Button -->
     <a href="{% url 'home' %}" class="new-chat-btn" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); margin-bottom: 10px;">
         <span>🏠</span>
-        <span>Home</span>
+        <span>{% trans "Home" %}</span>
     </a>
             <a href="{% url 'chatbot' %}" class="new-chat-btn">
                 <span>➕</span>
-                <span>New Chat</span>
+                <span>{% trans "New Chat" %}</span>
             </a>
         </div>
 
-        <div class="chat-divider">Recent Chats</div>
+        <div class="chat-divider">{% trans "Recent Chats" %}</div>
 
         <div class="chat-list">
     {% for c in chats %}
@@ -524,8 +526,8 @@
         <div class="chat-header">
             <div class="bot-avatar">🤖</div>
             <div class="chat-header-info">
-                <h2>Health AI Assistant</h2>
-                <p>● Online & Ready</p>
+                <h2>{% trans "Health AI Assistant" %}</h2>
+                <p>● {% trans "Online & Ready" %}</p>
             </div>
         </div>
 
@@ -548,8 +550,8 @@
             {% else %}
                 <div class="welcome-state">
                     <div class="welcome-icon">👋</div>
-                    <h3>Start a New Conversation</h3>
-                    <p>Ask me anything about your health, symptoms, or medical conditions. I'm here to help!</p>
+                    <h3>{% trans "Start a New Conversation" %}</h3>
+                    <p>{% trans "Ask me anything about your health, symptoms, or medical conditions. I'm here to help!" %}</p>
                 </div>
             {% endif %}
         </div>

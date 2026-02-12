@@ -1,9 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-from django.contrib.auth.models import AbstractUser
-from django.db import models
-
 class CustomUser(AbstractUser):
 
     USER_ROLES = (
@@ -17,13 +14,12 @@ class CustomUser(AbstractUser):
         default='USER'
     )
 
-    # Common fields
     location = models.CharField(max_length=100, blank=True, null=True)
+
     LANGUAGE_CHOICES = [
-    ('English', 'English'),
-    ('Hindi', 'Hindi'),
-    ('Telugu', 'Telugu'),
-   
+        ('English', 'English'),
+        ('Hindi', 'Hindi'),
+        ('Telugu', 'Telugu'),
     ]
 
     language = models.CharField(
@@ -32,11 +28,10 @@ class CustomUser(AbstractUser):
         default='English'
     )
 
-
     email_notifications = models.BooleanField(default=True)
     vaccination_reminders = models.BooleanField(default=True)
 
-    # Doctor-specific fields
+    # Doctor fields
     qualification = models.CharField(max_length=100, blank=True, null=True)
     specialization = models.CharField(max_length=100, blank=True, null=True)
     hospital_name = models.CharField(max_length=150, blank=True, null=True)

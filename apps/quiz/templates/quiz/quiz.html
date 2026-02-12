@@ -403,83 +403,85 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <nav>
         <div class="container">
-            <a href="#" class="logo">🏥 HealthAI</a>
+            <a href="#" class="logo">{% trans "🏥 HealthAI" %}</a>
             <div class="nav-links">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'home' %}">← Back</a>
+                <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                <a href="{% url 'home' %}">{% trans "← Back" %}</a>
             </div>
         </div>
     </nav>
 
     <div class="main-container">
         <div class="page-header">
-            <h1>🎯 Health Knowledge Quiz</h1>
-            <p>Test your health knowledge and learn something new!</p>
+            <h1>{% trans "🎯 Health Knowledge Quiz" %}</h1>
+            <p>{% trans "Test your health knowledge and learn something new!" %}</p>
         </div>
 
         <div class="quiz-categories" id="categoriesSection">
             <div class="category-card" onclick="startCategory('nutrition')">
                 <div class="category-icon">🥗</div>
-                <h3>Nutrition & Diet</h3>
-                <p>Test your knowledge about healthy eating and nutrition</p>
+                <h3>{% trans "Nutrition & Diet" %}</h3>
+                <p>{% trans "Test your knowledge about healthy eating and nutrition" %}</p>
                 <div class="quiz-stats">
-                    <span>📝 10 Questions</span>
-                    <span>⏱️ 10 min</span>
+                    <span>{% trans "📝 10 Questions" %}</span>
+                    <span>{% trans "⏱️ 10 min" %}</span>
                 </div>
             </div>
 
             <div class="category-card" onclick="startCategory('fitness')">
 
                 <div class="category-icon">💪</div>
-                <h3>Fitness & Exercise</h3>
-                <p>Learn about exercise, workouts, and staying active</p>
+                <h3>{% trans "Fitness & Exercise" %}</h3>
+                <p>{% trans "Learn about exercise, workouts, and staying active" %}</p>
                 <div class="quiz-stats">
-                    <span>📝 10 Questions</span>
-                    <span>⏱️ 10 min</span>
+                    <span>{% trans "📝 10 Questions" %}</span>
+                    <span>{% trans "⏱️ 10 min" %}</span>
                 </div>
             </div>
 
             <div class="category-card" onclick="startCategory('mental')">
 
                 <div class="category-icon">🧠</div>
-                <h3>Mental Health</h3>
-                <p>Understand mental wellness and emotional health</p>
+                <h3>{% trans "Mental Health" %}</h3>
+                <p>{% trans "Understand mental wellness and emotional health" %}</p>
                 <div class="quiz-stats">
-                    <span>📝 10 Questions</span>
-                    <span>⏱️ 10 min</span>
+                    <span>{% trans "📝 10 Questions" %}</span>
+                    <span>{% trans "⏱️ 10 min" %}</span>
                 </div>
             </div>
 
             <div class="category-card" onclick="startCategory('diseases')">
 
                 <div class="category-icon">🩺</div>
-                <h3>Disease Prevention</h3>
-                <p>Learn about common diseases and prevention</p>
+                <h3>{% trans "Disease Prevention" %}</h3>
+                <p>{% trans "Learn about common diseases and prevention" %}</p>
                 <div class="quiz-stats">
-                    <span>📝 10 Questions</span>
-                    <span>⏱️ 10 min</span>
+                    <span>{% trans "📝 10 Questions" %}</span>
+                    <span>{% trans "⏱️ 10 min" %}</span>
                 </div>
             </div>
 
             <div class="category-card" onclick="startCategory('general')">
                 <div class="category-icon">❤️</div>
-                <h3>General Health</h3>
-                <p>Overall health knowledge and wellness tips</p>
+                <h3>{% trans "General Health" %}</h3>
+                <p>{% trans "Overall health knowledge and wellness tips" %}</p>
                 <div class="quiz-stats">
-                    <span>📝 10 Questions</span>
-                    <span>⏱️ 10 min</span>
+                    <span>{% trans "📝 10 Questions" %}</span>
+                    <span>{% trans "⏱️ 10 min" %}</span>
                 </div>
             </div>
 
             <div class="category-card" onclick="startCategory('firstaid')">
                 <div class="category-icon">🚑</div>
-                <h3>First Aid</h3>
-                <p>Emergency response and first aid basics</p>
+                <h3>{% trans "First Aid" %}</h3>
+                <p>{% trans "Emergency response and first aid basics" %}</p>
                 <div class="quiz-stats">
-                    <span>📝 10 Questions</span>
-                    <span>⏱️ 10 min</span>
+                    <span>{% trans "📝 10 Questions" %}</span>
+                    <span>{% trans "⏱️ 10 min" %}</span>
                 </div>
             </div>
         </div>
@@ -487,7 +489,7 @@
         <div class="quiz-container" id="quizSection">
             <div class="quiz-header">
                 <div class="quiz-progress">
-                    <div class="progress-text">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span></div>
+                    <div class="progress-text">{% trans "Question " %}:  <span id="currentQuestion">1</span>{% trans " of " %}<span id="totalQuestions">10</span></div>
                     <div class="progress-bar">
                         <div class="progress-fill" id="progressFill" style="width: 10%"></div>
                     </div>
@@ -496,42 +498,42 @@
             </div>
 
             <div class="question-container">
-                <div class="question-number" id="questionNumber">Question 1</div>
-                <div class="question-text" id="questionText">Loading question...</div>
+                <div class="question-number" id="questionNumber">{% trans "Question 1" %}</div>
+                <div class="question-text" id="questionText">{% trans "Loading question..." %}</div>
                 <div class="options-container" id="optionsContainer"></div>
                 <div class="explanation-box" id="explanationBox">
-                    <div class="explanation-title">💡 Explanation</div>
+                    <div class="explanation-title">{% trans "💡 Explanation" %}</div>
                     <div class="explanation-text" id="explanationText"></div>
                 </div>
             </div>
 
             <div class="quiz-actions">
-                <button class="btn btn-secondary" id="prevBtn">← Previous</button>
-                <button class="btn btn-primary" id="nextBtn" disabled>Next →</button>
+                <button class="btn btn-secondary" id="prevBtn">← {% trans "Previous" %}</button>
+                <button class="btn btn-primary" id="nextBtn" disabled>{% trans "Next" %} →</button>
             </div>
         </div>
 
         <div class="results-container" id="resultsSection">
             <div class="results-icon" id="resultsIcon">🎉</div>
             <div class="results-score" id="resultsScore">0/10</div>
-            <div class="results-message" id="resultsMessage">Great job!</div>
+            <div class="results-message" id="resultsMessage">{% trans "Great job!" %}</div>
             
             <div class="results-stats">
                 <div class="stat-card">
                     <div class="stat-value" id="correctCount">0</div>
-                    <div class="stat-label">Correct Answers</div>
+                    <div class="stat-label">{% trans "Correct Answers" %}</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value" id="accuracyPercent">0%</div>
-                    <div class="stat-label">Accuracy</div>
+                    <div class="stat-label">{% trans "Accuracy" %}</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value" id="timeTaken">0:00</div>
-                    <div class="stat-label">Time Taken</div>
+                    <div class="stat-label">{% trans "Time Taken" %}</div>
                 </div>
             </div>
 
-            <button class="btn btn-primary" id="retakeBtn">Take Another Quiz</button>
+            <button class="btn btn-primary" id="retakeBtn">{% trans "Take Another Quiz" %}</button>
         </div>
     </div>
 

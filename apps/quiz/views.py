@@ -1335,6 +1335,7 @@ def quiz(request):
             all_questions,
             min(10, len(all_questions))
         )
+    
 
     return render(request, 'quiz/quiz.html', {
         "questions": selected_questions,

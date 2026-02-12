@@ -446,6 +446,8 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <div class="bg-shapes">
         <div class="shape shape1"></div>
         <div class="shape shape2"></div>
@@ -480,8 +482,8 @@
         <!-- MAIN CONTENT -->
         <div class="profile-content">
             <div class="content-header">
-                <h3>Account Information</h3>
-                <p>Manage your personal details and preferences</p>
+                <h3>{% trans "Account Information" %}</h3>
+                <p>{% trans "Manage your personal details and preferences" %}</p>
             </div>
 
             <!-- FORM START -->
@@ -490,35 +492,35 @@
 
                 <div class="info-grid">
                     <div class="info-item">
-                        <div class="info-label">Email Address</div>
+                        <div class="info-label">{% trans "Email Address" %}</div>
                         {{ form.email }}
                     </div>
 
                     <div class="info-item">
-                        <div class="info-label">Location</div>
+                        <div class="info-label">{% trans "Location" %}</div>
                         {{ form.location }}
                     </div>
                 </div>
 
                 <!-- LANGUAGE & PREFERENCES -->
                 <div class="preferences-section">
-                    <h4>Language & Preferences</h4>
+                    <h4>{% trans "Language & Preferences" %}</h4>
 
                     <!-- LANGUAGE -->
                     <div class="preference-item">
                         <div class="preference-label">
                             <div class="preference-icon icon-blue">🌐</div>
                             <div class="preference-text">
-                                <h5>Language</h5>
-                                <p>Choose your preferred language</p>
+                                <h5>{% trans "Language" %}</h5>
+                                <p>{% trans "Choose your preferred language" %}</p>
                             </div>
                         </div>
                         <div class="preference-control">
                             <select name="language">
-                                <option value="en" {% if user.language == "en" %}selected{% endif %}>English</option>
-                                <option value="hi" {% if user.language == "hi" %}selected{% endif %}>Hindi</option>
-                                <option value="te" {% if user.language == "te" %}selected{% endif %}>Telugu</option>
-                                <option value="ta" {% if user.language == "ta" %}selected{% endif %}>Tamil</option>
+                                <option value="en" {% if user.language == "en" %}selected{% endif %}>{% trans "English" %}</option>
+                                <option value="hi" {% if user.language == "hi" %}selected{% endif %}>{% trans "Hindi" %}</option>
+                                <option value="te" {% if user.language == "te" %}selected{% endif %}>{% trans "Telugu" %}</option>
+                                <option value="ta" {% if user.language == "ta" %}selected{% endif %}>{% trans "Tamil" %}</option>
                             </select>
                         </div>
                     </div>
@@ -528,8 +530,8 @@
                         <div class="preference-label">
                             <div class="preference-icon icon-green">📧</div>
                             <div class="preference-text">
-                                <h5>Email Notifications</h5>
-                                <p>Receive health updates via email</p>
+                                <h5>{% trans "Email Notifications" %}</h5>
+                                <p>{% trans "Receive health updates via email" %}</p>
                             </div>
                         </div>
                         <div class="preference-control">
@@ -547,8 +549,8 @@
                         <div class="preference-label">
                             <div class="preference-icon icon-purple">🔔</div>
                             <div class="preference-text">
-                                <h5>Vaccination Reminders</h5>
-                                <p>Get notified about upcoming vaccines</p>
+                                <h5>{% trans "Vaccination Reminders" %}</h5>
+                                <p>{% trans "Get notified about upcoming vaccines" %}</p>
                             </div>
                         </div>
                         <div class="preference-control">
@@ -562,7 +564,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="save-btn">Save Changes</button>
+                <button type="submit" class="save-btn">{% trans "Save Changes" %}</button>
             </form>
             <!-- FORM END -->
         </div>

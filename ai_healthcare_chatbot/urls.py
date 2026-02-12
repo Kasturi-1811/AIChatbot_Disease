@@ -18,17 +18,19 @@ from django.contrib import admin
 from django.urls import path,include
 from .views import home
 
+from django.conf.urls.i18n import i18n_patterns
+
+
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
+]
+
+urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
-   
     path('', include('apps.home.urls')),
     path('accounts/', include('apps.accounts.urls')),
-    path('chatbot/', include('apps.chatbot.urls')),
-    path("symptom-checker/", include("apps.symptom_checker.urls")),
     path('diseases/', include('apps.diseases.urls')),
-    path('vaccination/', include('apps.vaccination.urls')),
     path('quiz/', include('apps.quiz.urls')),
     path('history/', include('apps.history.urls')),
-    path('notifications/', include('notifications.urls')),
-
-]
+    path('vaccination/', include('apps.vaccination.urls')),
+)

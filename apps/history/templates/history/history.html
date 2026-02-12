@@ -340,20 +340,22 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <nav>
         <div class="container">
-            <a href="#" class="logo">🏥 HealthAI</a>
+            <a href="#" class="logo">{% trans "🏥 HealthAI" %}</a>
             <div class="nav-links">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'home' %}">← Back</a>
+                <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                <a href="{% url 'home' %}">{% trans "← Back" %}</a>
             </div>
         </div>
     </nav>
 
     <div class="main-container">
         <div class="page-header">
-            <h1>📊 My Health History</h1>
-            <p>Track your health journey and review past activities</p>
+            <h1>{% trans "📊 My Health History" %}</h1>
+            <p>{% trans "Track your health journey and review past activities" %}</p>
         </div>
 
         <div class="timeline">
@@ -370,12 +372,12 @@
       <div class="activity-description">{{ a.description }}</div>
 
       <div class="activity-footer">
-        🕒 {{ a.created_at|timesince }} ago
+        🕒 {{ a.created_at|timesince }} {% trans "ago" %}
       </div>
     </div>
   </div>
 {% empty %}
-  <p>No history yet</p>
+  <p>{% trans "No history yet" %}</p>
 {% endfor %}
 </div>
     </div>

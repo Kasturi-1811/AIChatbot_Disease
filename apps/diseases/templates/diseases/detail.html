@@ -1,21 +1,23 @@
-<h2>{{ disease.name }}</h2>
-<p><strong>Category:</strong> {{ disease.category }}</p>
-<p><strong>Body System:</strong> {{ disease.body_system }}</p>
+{% load i18n %}
 
-<h3>Causes</h3>
+<h2>{{ disease.name }}</h2>
+<p><strong>{% trans "Category:" %}</strong> {{ disease.category }}</p>
+<p><strong>{% trans "Body System:" %}</strong> {{ disease.body_system }}</p>
+
+<h3>{% trans "Causes" %}</h3>
 <p>{{ disease.causes }}</p>
 
-<h3>Symptoms</h3>
+<h3>{% trans "Symptoms" %}</h3>
 <p>{{ disease.symptoms }}</p>
 
-<h3>Treatment</h3>
+<h3>{% trans "Treatment" %}</h3>
 <p>{{ disease.treatment }}</p>
 
-<h3>Home Remedies</h3>
+<h3>{% trans "Home Remedies" %}</h3>
 <p>{{ disease.home_remedies }}</p>
 
-<h3>Prevention</h3>
+<h3>{% trans "Prevention" %}</h3>
 <p>{{ disease.prevention }}</p>
 
-<h3>Specialist Required</h3>
+<h3>{% trans "Specialist Required" %}</h3>
 <p>{{ disease.specialist_required }}</p>

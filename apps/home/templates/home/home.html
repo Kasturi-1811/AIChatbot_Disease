@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Disease Awareness System</title>
+    <title>{% trans "AI Disease Awareness System" %}</title>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -422,6 +423,8 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <div class="bg-shapes">
         <div class="shape shape1"></div>
         <div class="shape shape2"></div>
@@ -432,8 +435,9 @@
         <div class="container">
             <div class="logo">🏥 HealthAI</div>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#about">About</a>
+                <a href="#features">{% trans "Features" %}</a>
+
+                <a href="#about">{% trans "About" %}    </a>
                 {% if user.is_authenticated %}
 
 <!-- 🔔 Notification Bell -->
@@ -459,14 +463,14 @@
 <div class="user-menu">
     <span class="username">👤 {{ user.username }}</span>
     <div class="dropdown">
-        <a href="{% url 'profile' %}">My Profile</a>
-        <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'profile' %}">{% trans "Profile" %}</a>
+        <a href="{% url 'logout' %}">{% trans "Logout" %}</a>
     </div>
 </div>
 
 {% else %}
 
-                    <a href="{% url 'register' %}" class="btn-nav">Get Started</a>
+                    <a href="{% url 'register' %}" class="btn-nav">{% trans "Get Started" %}</a>
 
                 {% endif %}
             </div>
@@ -476,18 +480,18 @@
     <section class="hero">
         <div class="hero-content">
             {% if user.is_authenticated %}
-                <h1>Welcome back, <span class="highlight">{{ user.username }}!</span></h1>
-                <p>Continue your health journey with personalized AI-powered insights and comprehensive health management tools.</p>
+                <h1>{% trans "Welcome back," %} <span class="highlight">{{ user.username }}!</span></h1>
+                <p>{% trans "Continue your health journey with personalized AI-powered insights and comprehensive health management tools." %}</p>
                 <div class="hero-buttons">
-                    <a href="#features" class="btn-primary">Explore Features</a>
-                    <a href="{% url 'profile' %}" class="btn-secondary">My Dashboard</a>
+                    <a href="#features" class="btn-primary">{% trans "Explore Features" %}</a>
+                    <a href="{% url 'profile' %}" class="btn-secondary">{% trans "My Dashboard" %}</a>
                 </div>
             {% else %}
-                <h1>Your Health, <span class="highlight">Simplified</span></h1>
-                <p>Get instant AI-powered health insights, track symptoms, and stay informed about diseases with our intelligent healthcare companion.</p>
+                <h1>{% trans "Manage Your Health," %} <span class="highlight">{% trans "Simplified" %}</span></h1>
+                <p>{% trans "Get instant AI-powered health insights, track symptoms, and stay informed about diseases with our intelligent healthcare companion." %}</p>
                 <div class="hero-buttons">
-                    <a href="{% url 'register' %}" class="btn-primary">Start Free Today</a>
-                    <a href="{% url 'login' %}" class="btn-secondary">Sign In</a>
+                    <a href="{% url 'register' %}" class="btn-primary">{% trans "Start Free Today" %}</a>
+                    <a href="{% url 'login' %}" class="btn-secondary">{% trans "Sign In" %}</a>
                 </div>
             {% endif %}
         </div>
@@ -495,26 +499,26 @@
         <div class="hero-image">
             <div class="floating-card">
                 <div class="card-icon card-blue">🤖</div>
-                <h4>AI Chatbot Ready</h4>
-                <p>Ask anything about your health</p>
+                <h4>{% trans "AI Chatbot Ready" %}</h4>
+                <p>{% trans "Ask anything about your health" %}</p>
             </div>
             <div class="floating-card">
                 <div class="card-icon card-pink">💉</div>
-                <h4>Vaccination Tracker</h4>
-                <p>Never miss a shot again</p>
+                <h4>{% trans "Vaccination Tracker" %}</h4>
+                <p>{% trans "Never miss a shot again" %}</p>
             </div>
             <div class="floating-card">
                 <div class="card-icon card-green">📊</div>
-                <h4>Health Analytics</h4>
-                <p>Track your progress over time</p>
+                <h4>{% trans "Health Analytics" %}</h4>
+                <p>{% trans "Track your progress over time" %}</p>
             </div>
         </div>
     </section>
 
     <section class="features" id="features">
         <div class="section-header">
-            <h2>Everything You Need</h2>
-            <p>Comprehensive tools to manage and understand your health better</p>
+            <h2>{% trans "Everything You Need" %}</h2>
+            <p>{% trans "Comprehensive tools to manage and understand your health better" %}</p>
         </div>
 
         <div class="features-grid">
@@ -524,24 +528,24 @@
     <a href="{% url 'chatbot' %}">
         <div class="feature-item">
             <div class="feature-icon">🤖</div>
-            <h3>Smart Chatbot</h3>
-            <p>Chat with our AI assistant for instant health advice</p>
+            <h3>{% trans "Smart Chatbot" %}</h3>
+            <p>{% trans "Chat with our AI assistant for instant health advice" %}</p>
         </div>
     </a>
 
     <a href="{% url 'symptom_checker:symptom_checker' %}">
         <div class="feature-item">
             <div class="feature-icon">🔍</div>
-            <h3>Symptom Checker</h3>
-            <p>Describe symptoms and get assessments</p>
+            <h3>{% trans "Symptom Checker" %}</h3>
+            <p>{% trans "Describe symptoms and get assessments" %}</p>
         </div>
     </a>
 
     <a href="{% url 'diseases' %}">
         <div class="feature-item">
             <div class="feature-icon">📚</div>
-            <h3>Disease Library</h3>
-            <p>Learn about health conditions</p>
+            <h3>{% trans "Disease Library" %}</h3>
+            <p>{% trans "Learn about health conditions" %}</p>
         </div>
     </a>
 
@@ -550,8 +554,8 @@
     <a href="{% url 'vaccination' %}">
         <div class="feature-item">
             <div class="feature-icon">💉</div>
-            <h3>Vaccination Information</h3>
-            <p>View vaccinations near your location</p>
+            <h3>{% trans "Vaccination Information" %}</h3>
+            <p>{% trans "View vaccinations near your location" %}</p>
         </div>
     </a>
     {% endif %}
@@ -561,8 +565,8 @@
     <a href="{% url 'add_vaccination' %}">
         <div class="feature-item">
             <div class="feature-icon">➕</div>
-            <h3>Add Vaccination</h3>
-            <p>Publish vaccination drives</p>
+            <h3>{% trans "Add Vaccination" %}</h3>
+            <p>{% trans "Publish vaccination drives" %}</p>
         </div>
     </a>
     {% endif %}
@@ -571,16 +575,16 @@
             <a href="{% url 'quiz' %}" style="text-decoration: none; color: inherit;">
     <div class="feature-item">
         <div class="feature-icon">📝</div>
-        <h3>Health Quizzes</h3>
-        <p>Test and expand your medical knowledge with fun quizzes</p>
+        <h3>{% trans "Health Quizzes" %}</h3>
+        <p>{% trans "Test and expand your medical knowledge with fun quizzes" %}</p>
     </div>
 </a>
 
             <a href="{% url 'history' %}" style="text-decoration: none; color: inherit;">
     <div class="feature-item">
         <div class="feature-icon">📊</div>
-        <h3>Personal History</h3>
-        <p>Maintain comprehensive records of your health journey</p>
+        <h3>{% trans "Personal History" %}</h3>
+        <p>{% trans "Maintain comprehensive records of your health journey" %}</p>
     </div>
 </a>
 

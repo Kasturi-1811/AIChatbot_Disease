@@ -515,20 +515,22 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <nav>
         <div class="container">
-            <a href="{% url 'home' %}" class="logo">🏥 HealthAI</a>
+            <a href="{% url 'home' %}" class="logo">{% trans "🏥 HealthAI" %}</a>
             <div class="nav-links">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="#">← Back</a>
+                <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                <a href="#">← {% trans "Back" %}</a>
             </div>
         </div>
     </nav>
 
     <div class="main-container">
         <div class="page-header">
-            <h1>🔍 AI Symptom Checker</h1>
-            <p>Select your symptoms and get AI-powered health insights instantly</p>
+            <h1>{% trans " 🔍 AI Symptom Checker" %}</h1>
+            <p>{% trans "Select your symptoms and get AI-powered health insights instantly" %}</p>
         </div>
 
         <form method="POST" id="symptomForm">
@@ -538,7 +540,7 @@
                 <div class="symptom-card">
                     <div class="card-header">
                         <div class="card-icon">🩺</div>
-                        <h2>Select Symptoms</h2>
+                        <h2>{% trans "Select Symptoms" %}</h2>
                     </div>
 
                     <!-- Search Box -->
@@ -552,10 +554,10 @@
 
                     <!-- Category Tabs -->
                     <div class="category-tabs">
-                        <button type="button" class="category-tab active" data-category="all">All</button>
-                        <button type="button" class="category-tab" data-category="respiratory">Respiratory</button>
-                        <button type="button" class="category-tab" data-category="digestive">Digestive</button>
-                        <button type="button" class="category-tab" data-category="general">General</button>
+                        <button type="button" class="category-tab active" data-category="all">{% trans "All" %}</button>
+                        <button type="button" class="category-tab" data-category="respiratory">{% trans "Respiratory" %}</button>
+                        <button type="button" class="category-tab" data-category="digestive">{% trans "Digestive" %}</button>
+                        <button type="button" class="category-tab" data-category="general">{% trans "General" %}</button>
                     </div>
 
                     <!-- Symptom Grid -->
@@ -569,7 +571,7 @@
                     </div>
 
                     <button type="submit" class="check-btn" id="checkBtn" disabled>
-                        Check Disease
+                        {% trans "Check Disease" %}
                     </button>
                 </div>
 
@@ -577,8 +579,8 @@
                 <div class="result-card">
                     {% if result %}
                         <div class="result-header">
-                            <h2>🤖 AI Clinical Report</h2>
-                            <p>Based on your selected symptoms</p>
+                            <h2>{% trans "🤖 AI Clinical Report" %}</h2>
+                            <p>{% trans "Based on your selected symptoms" %}</p>
                         </div>
 
                         <!-- Disease Result -->
@@ -588,22 +590,22 @@
 
                         <!-- Risk Meter -->
                         <div class="risk-meter">
-                            <h3>Risk Assessment</h3>
+                            <h3>{% trans "Risk Assessment" %}</h3>
                             <div class="risk-bar">
                                 <div class="risk-fill {{ result.risk_level|lower }}" style="width: {{ result.risk_percentage }}%">
                                     {{ result.risk_level }} Risk - {{ result.risk_percentage }}%
                                 </div>
                             </div>
                             <div class="risk-label">
-                                <span>Low</span>
-                                <span>Medium</span>
-                                <span>High</span>
+                                <span>{% trans "Low Risk" %} </span>
+                                <span>{% trans "Medium Risk" %}</span>
+                                <span>{% trans "High Risk" %}</span>
                             </div>
                         </div>
 
                         <!-- Recommendations -->
                         <div class="recommendations">
-                            <h3>📋 Recommended Care</h3>
+                            <h3>📋 {% trans "Recommended Care" %}</h3>
                             <ul class="recommendation-list">
                                 {% for care_item in result.recommendations.care %}
                                 <li class="recommendation-item">{{ care_item }}</li>
@@ -612,7 +614,7 @@
                         </div>
 
                         <div class="recommendations">
-                            <h3>🌟 Lifestyle Changes</h3>
+                            <h3>🌟 {% trans "Lifestyle Changes" %}</h3>
                             <ul class="recommendation-list">
                                 {% for lifestyle_item in result.recommendations.lifestyle %}
                                 <li class="recommendation-item">{{ lifestyle_item }}</li>
@@ -623,23 +625,23 @@
                         <!-- Warning -->
                         {% if result.recommendations.warning %}
                         <div class="warning-box {% if result.risk_level == 'High' %}high{% endif %}">
-                            <h4>⚠️ Important Notice</h4>
+                            <h4>⚠️ {% trans "Important Notice" %}</h4>
                             <p>{{ result.recommendations.warning }}</p>
                         </div>
                         {% endif %}
 
                         {% if result.emergency_alert %}
                         <div class="warning-box high">
-                            <h4>🚨 Emergency Alert</h4>
-                            <p>Please consult a doctor immediately! Your symptoms indicate a high-risk condition that requires urgent medical attention.</p>
+                            <h4>🚨 {% trans "Emergency Alert" %}</h4>
+                            <p>{% trans "  Please consult a doctor immediately! Your symptoms indicate a high-risk condition that requires urgent medical attention." %}</p>
                         </div>
                         {% endif %}
 
                     {% else %}
                         <div class="no-result">
                             <div class="no-result-icon">📊</div>
-                            <h3>No Analysis Yet</h3>
-                            <p>Select your symptoms and click "Check Disease" to get AI-powered health insights</p>
+                            <h3>{% trans "No Analysis Yet" %}</h3>
+                            <p>{% trans "Select your symptoms and click \"Check Disease\" to get AI-powered health insights" %}</p>
                         </div>
                     {% endif %}
                 </div>

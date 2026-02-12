@@ -110,8 +110,10 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <div class="form-container">
-        <h2>💉 Add Vaccination</h2>
+        <h2>💉 {% trans "Add Vaccination" %}</h2>
 
         <form method="post">
             {% csrf_token %}
@@ -129,7 +131,7 @@
 </div>
 
             <div class="input-group">
-                <input type="number" name="dose" placeholder="Dose Number" required>
+                <input type="number" name="dose" placeholder="{% trans "Dose Number" %}" required>
             </div>
 
             <div class="input-group">
@@ -137,14 +139,14 @@
             </div>
 
             <div class="input-group">
-                <input type="text" name="location" placeholder="Location">
+                <input type="text" name="location" placeholder="{% trans "Location" %}">
             </div>
 
             <div class="input-group">
-                <textarea name="notes" placeholder="Notes (Optional)"></textarea>
+                <textarea name="notes" placeholder="{% trans "Notes (Optional)" %}"></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Add Vaccination</button>
+            <button type="submit" class="submit-btn">{% trans "Add Vaccination" %}</button>
         </form>
     </div>
 </body>

@@ -1,0 +1,938 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-12 23:44+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\apps\accounts\templates\accounts\login.html:356
+msgid "Welcome Back!"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:357
+msgid ""
+"Sign in to continue your health journey with personalized AI-powered "
+"insights."
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:359
+msgid "Track your health metrics"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:360
+msgid "Get instant AI consultations"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:361
+msgid "Access your medical history"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:362
+msgid "Manage vaccination schedules"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:369
+#: .\apps\accounts\templates\accounts\login.html:398
+#: .\apps\home\templates\home\home.html:494
+msgid "Sign In"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:370
+msgid "Enter your credentials to access your account"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:393
+msgid "Remember me"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:395
+msgid "Forgot password?"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:404
+msgid "Create an account"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\login.html:408
+#: .\apps\accounts\templates\accounts\register.html:470
+msgid "Back to home"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:485
+msgid "Account Information"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:486
+msgid "Manage your personal details and preferences"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:495
+msgid "Email Address"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:500
+#: .\apps\diseases\templates\diseases\add_disease.html:195
+#: .\apps\vaccination\templates\vaccination\add_vaccination.html:142
+msgid "Location"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:507
+msgid "Language & Preferences"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:514
+msgid "Language"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:515
+msgid "Choose your preferred language"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:520
+msgid "English"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:521
+msgid "Hindi"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:522
+msgid "Telugu"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:523
+msgid "Tamil"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:533
+msgid "Email Notifications"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:534
+msgid "Receive health updates via email"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:552
+msgid "Vaccination Reminders"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:553
+msgid "Get notified about upcoming vaccines"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\profile.html:567
+msgid "Save Changes"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:421
+msgid "Join HealthAI"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:422
+msgid "Start your journey to better health awareness"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:456
+msgid "I agree to the"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:456
+msgid "Terms of Service"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:456
+msgid "and"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:456
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:456
+msgid ""
+"I understand my data will be used to provide personalized health insights."
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:460
+msgid "Create My Account"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:466
+msgid "Already have an account?"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:466
+msgid "Sign in instead"
+msgstr ""
+
+#: .\apps\accounts\templates\accounts\register.html:470
+msgid "←"
+msgstr ""
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:490
+#: .\apps\diseases\templates\diseases\diseases.html:625
+#: .\apps\history\templates\history\history.html:347
+#: .\apps\quiz\templates\quiz\quiz.html:410
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:522
+msgid "🏥 HealthAI"
+msgstr ""
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:494
+#: .\apps\diseases\templates\diseases\diseases.html:627
+#: .\apps\history\templates\history\history.html:349
+#: .\apps\quiz\templates\quiz\quiz.html:412
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:524
+#: .\apps\vaccination\templates\vaccination\vaccination.html:785
+msgid "Home"
+msgstr ""
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:498
+msgid "New Chat"
+msgstr ""
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:502
+msgid "Recent Chats"
+msgstr ""
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:529
+msgid "Health AI Assistant"
+msgstr ""
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:530
+msgid "Online & Ready"
+msgstr ""
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:553
+msgid "Start a New Conversation"
+msgstr ""
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:554
+msgid ""
+"Ask me anything about your health, symptoms, or medical conditions. I'm here "
+"to help!"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_disease.html:168
+msgid "Add Disease Alert"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_disease.html:170
+msgid "Help keep your community informed and safe"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_disease.html:179
+msgid "Disease Title"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_disease.html:181
+msgid "e.g., Dengue Outbreak"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_disease.html:187
+msgid "Description"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_disease.html:189
+msgid "Provide detailed information about the disease alert..."
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_disease.html:197
+msgid "e.g., Guntur, Andhra Pradesh"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_disease.html:200
+msgid "Send Alert"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:3
+#: .\apps\diseases\templates\diseases\diseases.html:631
+msgid "Add Disease"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:8
+msgid "Disease Name"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:10
+msgid "Body System"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:12
+msgid "History / Origin"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:14
+#: .\apps\diseases\templates\diseases\detail.html:7
+msgid "Causes"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:16
+#: .\apps\diseases\templates\diseases\detail.html:10
+msgid "Symptoms"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:18
+#: .\apps\diseases\templates\diseases\detail.html:13
+msgid "Treatment"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:20
+#: .\apps\diseases\templates\diseases\detail.html:16
+msgid "Home Remedies"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:22
+#: .\apps\diseases\templates\diseases\detail.html:19
+msgid "Prevention"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:24
+msgid "Specialist Doctor (e.g., Dermatologist)"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:27
+msgid "Hospital Phone Number"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:30
+msgid "Contagious"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:31
+msgid "Not Contagious"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\add_library_disease.html:34
+msgid "Submit"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\detail.html:4
+msgid "Category:"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\detail.html:5
+msgid "Body System:"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\detail.html:22
+msgid "Specialist Required"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:628
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:525
+#: .\apps\vaccination\templates\vaccination\vaccination.html:786
+msgid "Back"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:636
+msgid "Add Disease (Library)"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:644
+msgid "📚 Disease Library"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:645
+msgid ""
+"Comprehensive health information about diseases, symptoms, treatments, and "
+"prevention strategies for better health awareness"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:653
+msgid "All Diseases"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:654
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:558
+msgid "Respiratory"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:655
+msgid "Cardiac"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:656
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:559
+msgid "Digestive"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:657
+msgid "Neurological"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:658
+msgid "Infectious"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:666
+msgid "📋 Browse Diseases"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:694
+msgid "No diseases added yet."
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:705
+msgid "Select a Disease"
+msgstr ""
+
+#: .\apps\diseases\templates\diseases\diseases.html:707
+msgid "Choose a disease from the sidebar"
+msgstr ""
+
+#: .\apps\history\templates\history\history.html:350
+#: .\apps\quiz\templates\quiz\quiz.html:413
+msgid "← Back"
+msgstr ""
+
+#: .\apps\history\templates\history\history.html:357
+msgid "📊 My Health History"
+msgstr ""
+
+#: .\apps\history\templates\history\history.html:358
+msgid "Track your health journey and review past activities"
+msgstr ""
+
+#: .\apps\history\templates\history\history.html:375
+msgid "ago"
+msgstr ""
+
+#: .\apps\history\templates\history\history.html:380
+msgid "No history yet"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:6
+msgid "AI Disease Awareness System"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:438
+msgid "Features"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:440
+msgid "About"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:466
+msgid "Profile"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:467
+msgid "Logout"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:473
+msgid "Get Started"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:483
+msgid "Welcome back,"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:484
+msgid ""
+"Continue your health journey with personalized AI-powered insights and "
+"comprehensive health management tools."
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:486
+msgid "Explore Features"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:487
+msgid "My Dashboard"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:490
+msgid "Manage Your Health,"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:490
+msgid "Simplified"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:491
+msgid ""
+"Get instant AI-powered health insights, track symptoms, and stay informed "
+"about diseases with our intelligent healthcare companion."
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:493
+msgid "Start Free Today"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:502
+msgid "AI Chatbot Ready"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:503
+msgid "Ask anything about your health"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:507
+#: .\apps\vaccination\templates\vaccination\vaccination.html:793
+msgid "Vaccination Tracker"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:508
+msgid "Never miss a shot again"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:512
+msgid "Health Analytics"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:513
+msgid "Track your progress over time"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:520
+msgid "Everything You Need"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:521
+msgid "Comprehensive tools to manage and understand your health better"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:531
+msgid "Smart Chatbot"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:532
+msgid "Chat with our AI assistant for instant health advice"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:539
+msgid "Symptom Checker"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:540
+msgid "Describe symptoms and get assessments"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:547
+msgid "Disease Library"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:548
+msgid "Learn about health conditions"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:557
+msgid "Vaccination Information"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:558
+msgid "View vaccinations near your location"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:568
+#: .\apps\vaccination\templates\vaccination\add_vaccination.html:116
+#: .\apps\vaccination\templates\vaccination\add_vaccination.html:149
+#: .\apps\vaccination\templates\vaccination\vaccination.html:908
+#: .\apps\vaccination\templates\vaccination\vaccination.html:932
+msgid "Add Vaccination"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:569
+msgid "Publish vaccination drives"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:578
+msgid "Health Quizzes"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:579
+msgid "Test and expand your medical knowledge with fun quizzes"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:586
+msgid "Personal History"
+msgstr ""
+
+#: .\apps\home\templates\home\home.html:587
+msgid "Maintain comprehensive records of your health journey"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:420
+msgid "🎯 Health Knowledge Quiz"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:421
+msgid "Test your health knowledge and learn something new!"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:427
+msgid "Nutrition & Diet"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:428
+msgid "Test your knowledge about healthy eating and nutrition"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:430
+#: .\apps\quiz\templates\quiz\quiz.html:441
+#: .\apps\quiz\templates\quiz\quiz.html:452
+#: .\apps\quiz\templates\quiz\quiz.html:463
+#: .\apps\quiz\templates\quiz\quiz.html:473
+#: .\apps\quiz\templates\quiz\quiz.html:483
+msgid "📝 10 Questions"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:431
+#: .\apps\quiz\templates\quiz\quiz.html:442
+#: .\apps\quiz\templates\quiz\quiz.html:453
+#: .\apps\quiz\templates\quiz\quiz.html:464
+#: .\apps\quiz\templates\quiz\quiz.html:474
+#: .\apps\quiz\templates\quiz\quiz.html:484
+msgid "⏱️ 10 min"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:438
+msgid "Fitness & Exercise"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:439
+msgid "Learn about exercise, workouts, and staying active"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:449
+msgid "Mental Health"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:450
+msgid "Understand mental wellness and emotional health"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:460
+msgid "Disease Prevention"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:461
+msgid "Learn about common diseases and prevention"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:470
+msgid "General Health"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:471
+msgid "Overall health knowledge and wellness tips"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:480
+msgid "First Aid"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:481
+msgid "Emergency response and first aid basics"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:492
+msgid "Question "
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:492
+msgid " of "
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:501
+msgid "Question 1"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:502
+msgid "Loading question..."
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:505
+msgid "💡 Explanation"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:511
+msgid "Previous"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:512
+msgid "Next"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:519
+msgid "Great job!"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:524
+msgid "Correct Answers"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:528
+msgid "Accuracy"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:532
+msgid "Time Taken"
+msgstr ""
+
+#: .\apps\quiz\templates\quiz\quiz.html:536
+msgid "Take Another Quiz"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:532
+msgid " 🔍 AI Symptom Checker"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:533
+msgid "Select your symptoms and get AI-powered health insights instantly"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:543
+msgid "Select Symptoms"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:557
+#: .\apps\vaccination\templates\vaccination\vaccination.html:836
+#: .\notifications\templates\notifications\notification_list.html:355
+msgid "All"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:560
+msgid "General"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:574
+msgid "Check Disease"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:582
+msgid "🤖 AI Clinical Report"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:583
+msgid "Based on your selected symptoms"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:593
+msgid "Risk Assessment"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:600
+msgid "Low Risk"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:601
+msgid "Medium Risk"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:602
+msgid "High Risk"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:608
+msgid "Recommended Care"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:617
+msgid "Lifestyle Changes"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:628
+msgid "Important Notice"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:635
+msgid "Emergency Alert"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:636
+msgid ""
+"  Please consult a doctor immediately! Your symptoms indicate a high-risk "
+"condition that requires urgent medical attention."
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:643
+msgid "No Analysis Yet"
+msgstr ""
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:644
+msgid "Select your symptoms and click \\"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\add_vaccination.html:134
+#: .\apps\vaccination\templates\vaccination\vaccination.html:917
+msgid "Dose Number"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\add_vaccination.html:146
+msgid "Notes (Optional)"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:783
+msgid "HealthAI"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:794
+msgid ""
+"Keep track of your vaccinations and never miss an important dose. Protect "
+"yourself and your community."
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:802
+msgid "Total Vaccines"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:809
+#: .\apps\vaccination\templates\vaccination\vaccination.html:837
+msgid "Completed"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:816
+#: .\apps\vaccination\templates\vaccination\vaccination.html:838
+msgid "Upcoming"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:823
+#: .\apps\vaccination\templates\vaccination\vaccination.html:839
+msgid "Overdue"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:831
+msgid "My Vaccinations"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:832
+msgid "Add Vaccine"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:847
+msgid "Upcoming Reminders"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:850
+msgid "COVID-19 Booster"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:851
+msgid "Due in 15 days • Feb 5, 2026"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:854
+msgid "Influenza"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:855
+msgid "Due in 30 days • Feb 20, 2026"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:861
+msgid "Government Recommended"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:863
+msgid "COVID-19 Vaccination"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:864
+msgid ""
+"Essential for preventing severe illness and reducing transmission in the "
+"community."
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:867
+msgid "Annual Influenza Vaccine"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:868
+msgid ""
+"Recommended yearly, especially for elderly and immunocompromised individuals."
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:871
+msgid "Hepatitis B"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:872
+msgid "Critical for healthcare workers and those at higher risk of infection."
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:877
+msgid "Vaccination Tips"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:881
+msgid "Keep your vaccination card in a safe, accessible place"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:885
+msgid "Set reminders for upcoming vaccine appointments"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:889
+msgid "Consult your doctor about vaccines specific to your health needs"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:893
+msgid "Check travel vaccination requirements before international trips"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:897
+msgid "Follow recommended childhood immunization schedules"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:913
+msgid "Vaccine Name"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:921
+msgid "Scheduled Date"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:925
+msgid "Location/Provider"
+msgstr ""
+
+#: .\apps\vaccination\templates\vaccination\vaccination.html:929
+msgid "Notes"
+msgstr ""
+
+#: .\notifications\templates\notifications\notification_list.html:351
+msgid "Notifications"
+msgstr ""
+
+#: .\notifications\templates\notifications\notification_list.html:356
+msgid "Unread"
+msgstr ""
+
+#: .\notifications\templates\notifications\notification_list.html:357
+msgid "Read"
+msgstr ""
+
+#: .\notifications\templates\notifications\notification_list.html:358
+msgid "Mark All as Read"
+msgstr ""
+
+#: .\notifications\templates\notifications\notification_list.html:389
+msgid "Mark as Read"
+msgstr ""
+
+#: .\notifications\templates\notifications\notification_list.html:391
+msgid "Delete"
+msgstr ""
+
+#: .\notifications\templates\notifications\notification_list.html:400
+msgid "No Notifications"
+msgstr ""
+
+#: .\notifications\templates\notifications\notification_list.html:401
+msgid "You're all caught up! Check back later for updates."
+msgstr ""

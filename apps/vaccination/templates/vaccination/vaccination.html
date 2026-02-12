@@ -770,6 +770,8 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <div class="bg-shapes">
         <div class="shape shape1"></div>
         <div class="shape shape2"></div>
@@ -778,18 +780,18 @@
 
     <nav>
         <div class="container">
-            <a href="#" class="logo">🏥 HealthAI</a>
+            <a href="#" class="logo">🏥 {% trans "HealthAI" %}</a>
             <div class="nav-links">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="#">← Back</a>
+                <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                <a href="#">← {% trans "Back" %}</a>
             </div>
         </div>
     </nav>
 
     <div class="main-container">
         <div class="page-header">
-            <h1>💉 Vaccination Tracker</h1>
-            <p>Keep track of your vaccinations and never miss an important dose. Protect yourself and your community.</p>
+            <h1>💉 {% trans "Vaccination Tracker" %}</h1>
+            <p>{% trans "Keep track of your vaccinations and never miss an important dose. Protect yourself and your community." %}</p>
         </div>
 
         <div class="stats-grid">
@@ -797,28 +799,28 @@
                 <div class="stat-icon total">📊</div>
                 <div class="stat-info">
                     <h3 id="totalCount">7</h3>
-                    <p>Total Vaccines</p>
+                    <p>{% trans "Total Vaccines" %}</p>
                 </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon completed">✓</div>
                 <div class="stat-info">
                     <h3 id="completedCount">5</h3>
-                    <p>Completed</p>
+                    <p>{% trans "Completed" %}</p>
                 </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon upcoming">📅</div>
                 <div class="stat-info">
                     <h3 id="upcomingCount">2</h3>
-                    <p>Upcoming</p>
+                    <p>{% trans "Upcoming" %}</p>
                 </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon overdue">⚠️</div>
                 <div class="stat-info">
                     <h3 id="overdueCount">0</h3>
-                    <p>Overdue</p>
+                    <p>{% trans "Overdue" %}</p>
                 </div>
             </div>
         </div>
@@ -826,15 +828,15 @@
         <div class="content-grid">
             <div class="vaccination-list">
                 <div class="list-header">
-                    <h2>My Vaccinations</h2>
-                    <button class="add-btn" onclick="openModal()">+ Add Vaccine</button>
+                    <h2>{% trans "My Vaccinations" %}</h2>
+                    <button class="add-btn" onclick="openModal()">+ {% trans "Add Vaccine" %}</button>
                 </div>
 
                 <div class="filter-tabs">
-                    <button class="filter-tab active" data-filter="all">All</button>
-                    <button class="filter-tab" data-filter="completed">Completed</button>
-                    <button class="filter-tab" data-filter="upcoming">Upcoming</button>
-                    <button class="filter-tab" data-filter="overdue">Overdue</button>
+                    <button class="filter-tab active" data-filter="all">{% trans "All" %}</button>
+                    <button class="filter-tab" data-filter="completed">{% trans "Completed" %}</button>
+                    <button class="filter-tab" data-filter="upcoming">{% trans "Upcoming" %}</button>
+                    <button class="filter-tab" data-filter="overdue">{% trans "Overdue" %}</button>
                 </div>
 
                 <div id="vaccineList"></div>
@@ -842,57 +844,57 @@
 
             <div class="sidebar">
                 <div class="info-card">
-                    <h3>🔔 Upcoming Reminders</h3>
+                    <h3>🔔 {% trans "Upcoming Reminders" %}</h3>
                     <ul class="reminder-list" id="reminderList">
                         <li class="reminder-item">
-                            <strong>COVID-19 Booster</strong>
-                            <span>Due in 15 days • Feb 5, 2026</span>
+                            <strong>{% trans "COVID-19 Booster" %}</strong>
+                            <span>{% trans "Due in 15 days • Feb 5, 2026" %}</span>
                         </li>
                         <li class="reminder-item">
-                            <strong>Influenza</strong>
-                            <span>Due in 30 days • Feb 20, 2026</span>
+                            <strong>{% trans "Influenza" %}</strong>
+                            <span>{% trans "Due in 30 days • Feb 20, 2026" %}</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="info-card">
-                    <h3>🏛️ Government Recommended</h3>
+                    <h3>🏛️ {% trans "Government Recommended" %}</h3>
                     <div class="govt-vaccine-item">
-                        <strong>COVID-19 Vaccination</strong>
-                        <p>Essential for preventing severe illness and reducing transmission in the community.</p>
+                        <strong>{% trans "COVID-19 Vaccination" %}</strong>
+                        <p>{% trans "Essential for preventing severe illness and reducing transmission in the community." %}</p>
                     </div>
                     <div class="govt-vaccine-item">
-                        <strong>Annual Influenza Vaccine</strong>
-                        <p>Recommended yearly, especially for elderly and immunocompromised individuals.</p>
+                        <strong>{% trans "Annual Influenza Vaccine" %}</strong>
+                        <p>{% trans "Recommended yearly, especially for elderly and immunocompromised individuals." %}</p>
                     </div>
                     <div class="govt-vaccine-item">
-                        <strong>Hepatitis B</strong>
-                        <p>Critical for healthcare workers and those at higher risk of infection.</p>
+                        <strong>{% trans "Hepatitis B" %}</strong>
+                        <p>{% trans "Critical for healthcare workers and those at higher risk of infection." %}</p>
                     </div>
                 </div>
 
                 <div class="info-card">
-                    <h3>💡 Vaccination Tips</h3>
+                    <h3>💡 {% trans "Vaccination Tips" %}</h3>
                     <ul class="tips-list">
                         <li class="tip-item">
                             <span class="tip-icon">✓</span>
-                            <span>Keep your vaccination card in a safe, accessible place</span>
+                            <span>{% trans "Keep your vaccination card in a safe, accessible place" %}</span>
                         </li>
                         <li class="tip-item">
                             <span class="tip-icon">📱</span>
-                            <span>Set reminders for upcoming vaccine appointments</span>
+                            <span>{% trans "Set reminders for upcoming vaccine appointments" %}</span>
                         </li>
                         <li class="tip-item">
                             <span class="tip-icon">🗣️</span>
-                            <span>Consult your doctor about vaccines specific to your health needs</span>
+                            <span>{% trans "Consult your doctor about vaccines specific to your health needs" %}</span>
                         </li>
                         <li class="tip-item">
                             <span class="tip-icon">🌍</span>
-                            <span>Check travel vaccination requirements before international trips</span>
+                            <span>{% trans "Check travel vaccination requirements before international trips" %}</span>
                         </li>
                         <li class="tip-item">
                             <span class="tip-icon">👶</span>
-                            <span>Follow recommended childhood immunization schedules</span>
+                            <span>{% trans "Follow recommended childhood immunization schedules" %}</span>
                         </li>
                     </ul>
                 </div>
@@ -903,31 +905,31 @@
     <div class="modal" id="vaccineModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Add Vaccination</h2>
+                <h2>{% trans "Add Vaccination" %}</h2>
                 <span class="close-modal" onclick="closeModal()">×</span>
             </div>
             <form id="vaccineForm">
                 <div class="form-group">
-                    <label class="form-label">Vaccine Name *</label>
+                    <label class="form-label">{% trans "Vaccine Name" %} *</label>
                     <input type="text" class="form-input" id="vaccineName" placeholder="e.g., COVID-19, Hepatitis B" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Dose Number *</label>
+                    <label class="form-label">{% trans "Dose Number" %} *</label>
                     <input type="number" class="form-input" id="doseNumber" min="1" placeholder="1" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Scheduled Date *</label>
+                    <label class="form-label">{% trans "Scheduled Date" %} *</label>
                     <input type="date" class="form-input" id="scheduleDate" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Location/Provider</label>
+                    <label class="form-label">{% trans "Location/Provider" %}</label>
                     <input type="text" class="form-input" id="location" placeholder="Hospital or clinic name">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Notes</label>
+                    <label class="form-label">{% trans "Notes" %}</label>
                     <textarea class="form-input" id="notes" rows="3" placeholder="Any additional information..."></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Add Vaccination</button>
+                <button type="submit" class="submit-btn">{% trans "Add Vaccination" %}</button>
             </form>
         </div>
     </div>

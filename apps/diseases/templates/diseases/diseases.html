@@ -618,20 +618,22 @@
     </style>
 </head>
 <body>
+    {% load i18n %}
+
     <nav>
         <div class="container">
-            <a href="{% url 'home' %}" class="logo">🏥 HealthAI</a>
+            <a href="{% url 'home' %}" class="logo">{% trans "🏥 HealthAI" %}</a>
             <div class="nav-links">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="#">← Back</a>
+                <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                <a href="#">← {% trans "Back" %}</a>
                 {% if user.role == 'DOCTOR' and user.is_approved %}
                     <a href="{% url 'add_disease' %}" class="btn-danger">
-                        + Add Disease Alert
+                       {% trans "Add Disease" %} 
                     </a>
                 {% endif %}
                 {% if user.role == 'DOCTOR' and user.is_approved %}
                     <a href="{% url 'add_library_disease' %}">
-                        + Add Disease (Library)
+                        + {% trans "Add Disease (Library)" %}
                     </a>
                 {% endif %}
             </div>
@@ -639,8 +641,8 @@
     </nav>
 
     <div class="page-header">
-        <h1>📚 Disease Library</h1>
-        <p>Comprehensive health information about diseases, symptoms, treatments, and prevention strategies for better health awareness</p>
+        <h1>{% trans "📚 Disease Library" %}</h1>
+        <p>{% trans "Comprehensive health information about diseases, symptoms, treatments, and prevention strategies for better health awareness" %}</p>
         
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Search for diseases..." id="searchInput">
@@ -648,12 +650,12 @@
         </div>
 
         <div class="filter-tabs">
-            <button class="filter-tab active" data-category="all">All Diseases</button>
-            <button class="filter-tab" data-category="respiratory">Respiratory</button>
-            <button class="filter-tab" data-category="cardiac">Cardiac</button>
-            <button class="filter-tab" data-category="digestive">Digestive</button>
-            <button class="filter-tab" data-category="neurological">Neurological</button>
-            <button class="filter-tab" data-category="infectious">Infectious</button>
+            <button class="filter-tab active" data-category="all">{% trans "All Diseases" %}</button>
+            <button class="filter-tab" data-category="respiratory">{% trans "Respiratory" %}</button>
+            <button class="filter-tab" data-category="cardiac">{% trans "Cardiac" %}</button>
+            <button class="filter-tab" data-category="digestive">{% trans "Digestive" %}</button>
+            <button class="filter-tab" data-category="neurological">{% trans "Neurological" %}</button>
+            <button class="filter-tab" data-category="infectious">{% trans "Infectious" %}</button>
         </div>
     </div>
 
@@ -661,7 +663,7 @@
         <!-- Disease Sidebar -->
         <div class="disease-sidebar">
             <div class="sidebar-header">
-                <h3>📋 Browse Diseases</h3>
+                <h3>{% trans "📋 Browse Diseases" %}</h3>
             </div>
             <ul class="disease-list" id="diseaseList">
                 {% for disease in diseases %}
@@ -689,7 +691,7 @@
                 {% empty %}
                 <div class="empty-state">
                     <div class="empty-state-icon">📭</div>
-                    <div class="empty-state-text">No diseases added yet.</div>
+                    <div class="empty-state-text">{% trans "No diseases added yet." %}</div>
                 </div>
                 {% endfor %}
             </ul>
@@ -700,9 +702,9 @@
             <div class="disease-details" id="diseaseDetails">
     <div class="empty-state" id="defaultState">
         <div class="empty-state-icon">🔍</div>
-        <h3>Select a Disease</h3>
+        <h3>{% trans "Select a Disease" %}</h3>
         <div class="empty-state-text">
-            Choose a disease from the sidebar
+            {% trans "Choose a disease from the sidebar" %}
         </div>
     </div>
 </div>
