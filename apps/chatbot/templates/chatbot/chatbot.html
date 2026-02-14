@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -482,7 +483,7 @@
     </style>
 </head>
 <body>
-    {% load i18n %}
+  
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
@@ -493,7 +494,7 @@
         <span>🏠</span>
         <span>{% trans "Home" %}</span>
     </a>
-            <a href="{% url 'chatbot' %}" class="new-chat-btn">
+            <a href="{% url 'chatbot:chatbot' %}" class="new-chat-btn">
                 <span>➕</span>
                 <span>{% trans "New Chat" %}</span>
             </a>
@@ -504,11 +505,11 @@
         <div class="chat-list">
     {% for c in chats %}
     <div class="chat-item {% if chat.id == c.id %}active{% endif %}">
-        <a href="{% url 'chat_detail' c.id %}">
+        <a href="{% url 'chatbot:chat_detail' c.id %}">
             <span class="chat-item-icon">💬</span>{{ c.title }}
         </a>
 
-       <a href="{% url 'delete_chat' c.id %}" 
+       <a href="{% url 'chatbot:delete_chat' c.id %}" 
    class="delete-chat" 
    onclick="return confirm('Delete this chat permanently?')">
    🗑

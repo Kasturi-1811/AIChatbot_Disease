@@ -17,15 +17,15 @@ class CustomUser(AbstractUser):
     location = models.CharField(max_length=100, blank=True, null=True)
 
     LANGUAGE_CHOICES = [
-        ('English', 'English'),
-        ('Hindi', 'Hindi'),
-        ('Telugu', 'Telugu'),
+        ('en', 'English'),
+        ('hi', 'Hindi'),
+        ('te', 'Telugu'),
     ]
 
     language = models.CharField(
         max_length=20,
         choices=LANGUAGE_CHOICES,
-        default='English'
+        default='en'
     )
 
     email_notifications = models.BooleanField(default=True)

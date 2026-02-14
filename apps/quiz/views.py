@@ -1,6 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 import random
+from django.utils.translation import gettext_lazy as _
+
 
 # -------------------------------
 # Question Bank (Add 50 each)
@@ -11,107 +13,205 @@ QUIZ_QUESTIONS = {
 
         "nutrition": [
 
-{"question":"Which vitamin is produced when skin is exposed to sunlight?",
-"options":["Vitamin A","Vitamin D","Vitamin C","Vitamin K"],
+{"question": _("Which vitamin is produced when skin is exposed to sunlight?"),
+"options":[
+    _("Vitamin A"),
+    _("Vitamin D"),
+    _("Vitamin C"),
+    _("Vitamin K")
+],
 "correct":1,
-"explanation":"Vitamin D is synthesized through sunlight exposure."},
+"explanation": _("Vitamin D is synthesized through sunlight exposure.")},
 
-{"question":"Which nutrient is the main source of energy for the body?",
-"options":["Protein","Carbohydrates","Vitamins","Minerals"],
+{"question": _("Which nutrient is the main source of energy for the body?"),
+"options":[
+    _("Protein"),
+    _("Carbohydrates"),
+    _("Vitamins"),
+    _("Minerals")
+],
 "correct":1,
-"explanation":"Carbohydrates are the body’s primary energy source."},
+"explanation": _("Carbohydrates are the body's primary energy source.")},
 
-{"question":"Which mineral is essential for oxygen transport in blood?",
-"options":["Iron","Calcium","Magnesium","Potassium"],
+{"question": _("Which mineral is essential for oxygen transport in blood?"),
+"options":[
+    _("Iron"),
+    _("Calcium"),
+    _("Magnesium"),
+    _("Potassium")
+],
 "correct":0,
-"explanation":"Iron helps form hemoglobin which carries oxygen."},
+"explanation": _("Iron helps form hemoglobin which carries oxygen.")},
 
-{"question":"Which food is highest in protein?",
-"options":["Rice","Eggs","Butter","Sugar"],
+{"question": _("Which food is highest in protein?"),
+"options":[
+    _("Rice"),
+    _("Eggs"),
+    _("Butter"),
+    _("Sugar")
+],
 "correct":1,
-"explanation":"Eggs are a rich source of protein."},
+"explanation": _("Eggs are a rich source of protein.")},
 
-{"question":"Which vitamin helps with vision?",
-"options":["Vitamin A","Vitamin B12","Vitamin C","Vitamin E"],
+{"question": _("Which vitamin helps with vision?"),
+"options":[
+    _("Vitamin A"),
+    _("Vitamin B12"),
+    _("Vitamin C"),
+    _("Vitamin E")
+],
 "correct":0,
-"explanation":"Vitamin A supports healthy vision."},
+"explanation": _("Vitamin A supports healthy vision.")},
 
-{"question":"Which nutrient helps build muscles?",
-"options":["Protein","Fat","Fiber","Sugar"],
+{"question": _("Which nutrient helps build muscles?"),
+"options":[
+    _("Protein"),
+    _("Fat"),
+    _("Fiber"),
+    _("Sugar")
+],
 "correct":0,
-"explanation":"Protein repairs and builds muscle tissue."},
+"explanation": _("Protein repairs and builds muscle tissue.")},
 
-{"question":"Which is a healthy fat source?",
-"options":["Fried chips","Olive oil","Butter","Processed snacks"],
+{"question": _("Which is a healthy fat source?"),
+"options":[
+    _("Fried chips"),
+    _("Olive oil"),
+    _("Butter"),
+    _("Processed snacks")
+],
 "correct":1,
-"explanation":"Olive oil contains healthy monounsaturated fats."},
+"explanation": _("Olive oil contains healthy monounsaturated fats.")},
 
-{"question":"Fiber mainly helps in?",
-"options":["Digestion","Breathing","Vision","Hearing"],
+{"question": _("Fiber mainly helps in?"),
+"options":[
+    _("Digestion"),
+    _("Breathing"),
+    _("Vision"),
+    _("Hearing")
+],
 "correct":0,
-"explanation":"Fiber improves digestion and prevents constipation."},
+"explanation": _("Fiber improves digestion and prevents constipation.")},
 
-{"question":"Which fruit is rich in Vitamin C?",
-"options":["Orange","Banana","Apple","Rice"],
+{"question": _("Which fruit is rich in Vitamin C?"),
+"options":[
+    _("Orange"),
+    _("Banana"),
+    _("Apple"),
+    _("Rice")
+],
 "correct":0,
-"explanation":"Oranges are high in Vitamin C."},
+"explanation": _("Oranges are high in Vitamin C.")},
 
-{"question":"Too much sugar can lead to?",
-"options":["Strong bones","Diabetes","Better sleep","More vitamins"],
+{"question": _("Too much sugar can lead to?"),
+"options":[
+    _("Strong bones"),
+    _("Diabetes"),
+    _("Better sleep"),
+    _("More vitamins")
+],
 "correct":1,
-"explanation":"Excess sugar intake increases diabetes risk."},
+"explanation": _("Excess sugar intake increases diabetes risk.")},
 
-{"question":"Which mineral strengthens bones?",
-"options":["Iron","Calcium","Sodium","Zinc"],
+{"question": _("Which mineral strengthens bones?"),
+"options":[
+    _("Iron"),
+    _("Calcium"),
+    _("Sodium"),
+    _("Zinc")
+],
 "correct":1,
-"explanation":"Calcium builds strong bones and teeth."},
+"explanation": _("Calcium builds strong bones and teeth.")},
 
-{"question":"Water helps regulate?",
-"options":["Body temperature","Hair color","Eye color","Height"],
+{"question": _("Water helps regulate?"),
+"options":[
+    _("Body temperature"),
+    _("Hair color"),
+    _("Eye color"),
+    _("Height")
+],
 "correct":0,
-"explanation":"Water regulates body temperature."},
+"explanation": _("Water regulates body temperature.")},
 
-{"question":"Balanced diet includes?",
-"options":["Only protein","Only fats","All nutrients","Only carbs"],
+{"question": _("Balanced diet includes?"),
+"options":[
+    _("Only protein"),
+    _("Only fats"),
+    _("All nutrients"),
+    _("Only carbs")
+],
 "correct":2,
-"explanation":"A balanced diet includes all essential nutrients."},
+"explanation": _("A balanced diet includes all essential nutrients.")},
 
-{"question":"Which is whole grain?",
-"options":["White bread","Brown rice","Candy","Soda"],
+{"question": _("Which is whole grain?"),
+"options":[
+    _("White bread"),
+    _("Brown rice"),
+    _("Candy"),
+    _("Soda")
+],
 "correct":1,
-"explanation":"Brown rice is a whole grain."},
+"explanation": _("Brown rice is a whole grain.")},
 
-{"question":"Which vitamin supports immunity?",
-"options":["Vitamin C","Vitamin K","Vitamin D","Vitamin B"],
+{"question": _("Which vitamin supports immunity?"),
+"options":[
+    _("Vitamin C"),
+    _("Vitamin K"),
+    _("Vitamin D"),
+    _("Vitamin B")
+],
 "correct":0,
-"explanation":"Vitamin C boosts immunity."},
+"explanation": _("Vitamin C boosts immunity.")},
 
-{"question":"Overeating can cause?",
-"options":["Obesity","Stronger bones","Better vision","Hair growth"],
+{"question": _("Overeating can cause?"),
+"options":[
+    _("Obesity"),
+    _("Stronger bones"),
+    _("Better vision"),
+    _("Hair growth")
+],
 "correct":0,
-"explanation":"Overeating leads to weight gain and obesity."},
+"explanation": _("Overeating leads to weight gain and obesity.")},
 
-{"question":"Which is a dairy product?",
-"options":["Milk","Apple","Rice","Carrot"],
+{"question": _("Which is a dairy product?"),
+"options":[
+    _("Milk"),
+    _("Apple"),
+    _("Rice"),
+    _("Carrot")
+],
 "correct":0,
-"explanation":"Milk is a dairy product rich in calcium."},
+"explanation": _("Milk is a dairy product rich in calcium.")},
 
-{"question":"Which food is high in fiber?",
-"options":["Vegetables","Candy","Butter","Oil"],
+{"question": _("Which food is high in fiber?"),
+"options":[
+    _("Vegetables"),
+    _("Candy"),
+    _("Butter"),
+    _("Oil")
+],
 "correct":0,
-"explanation":"Vegetables are rich in fiber."},
+"explanation": _("Vegetables are rich in fiber.")},
 
-{"question":"Salt mainly contains?",
-"options":["Sodium","Iron","Protein","Fiber"],
+{"question": _("Salt mainly contains?"),
+"options":[
+    _("Sodium"),
+    _("Iron"),
+    _("Protein"),
+    _("Fiber")
+],
 "correct":0,
-"explanation":"Salt contains sodium."},
+"explanation": _("Salt contains sodium.")},
 
-{"question":"Too much salt causes?",
-"options":["Low BP","High BP","Better sleep","Strong teeth"],
+{"question": _("Too much salt causes?"),
+"options":[
+    _("Low BP"),
+    _("High BP"),
+    _("Better sleep"),
+    _("Strong teeth")
+],
 "correct":1,
-"explanation":"Excess sodium increases blood pressure."},
-
-# Continue pattern...
+"explanation": _("Excess sodium increases blood pressure.")},
 
 
 
@@ -120,353 +220,603 @@ QUIZ_QUESTIONS = {
     "fitness": [
 
 {
-"question": "How many minutes of moderate exercise is recommended per week?",
-"options": ["60 minutes", "90 minutes", "150 minutes", "300 minutes"],
+"question": _("How many minutes of moderate exercise is recommended per week?"),
+"options": [
+    _("60 minutes"),
+    _("90 minutes"),
+    _("150 minutes"),
+    _("300 minutes")
+],
 "correct": 2,
-"explanation": "WHO recommends at least 150 minutes of moderate exercise per week."
+"explanation": _("WHO recommends at least 150 minutes of moderate exercise per week.")
 },
 
 {
-"question": "Which exercise mainly improves cardiovascular endurance?",
-"options": ["Weight lifting", "Running", "Plank", "Stretching"],
+"question": _("Which exercise mainly improves cardiovascular endurance?"),
+"options": [
+    _("Weight lifting"),
+    _("Running"),
+    _("Plank"),
+    _("Stretching")
+],
 "correct": 1,
-"explanation": "Running strengthens the heart and improves stamina."
+"explanation": _("Running strengthens the heart and improves stamina.")
 },
 
 {
-"question": "Which muscle group is targeted in squats?",
-"options": ["Chest", "Shoulders", "Legs", "Arms"],
+"question": _("Which muscle group is targeted in squats?"),
+"options": [
+    _("Chest"),
+    _("Shoulders"),
+    _("Legs"),
+    _("Arms")
+],
 "correct": 2,
-"explanation": "Squats primarily target quadriceps, hamstrings, and glutes."
+"explanation": _("Squats primarily target quadriceps, hamstrings, and glutes.")
 },
 
 {
-"question": "What is the main benefit of strength training?",
-"options": ["Flexibility", "Muscle growth", "Better eyesight", "Hair growth"],
+"question": _("What is the main benefit of strength training?"),
+"options": [
+    _("Flexibility"),
+    _("Muscle growth"),
+    _("Better eyesight"),
+    _("Hair growth")
+],
 "correct": 1,
-"explanation": "Strength training increases muscle mass and strength."
+"explanation": _("Strength training increases muscle mass and strength.")
 },
 
 {
-"question": "Which exercise is best for core strength?",
-"options": ["Push-ups", "Plank", "Cycling", "Walking"],
+"question": _("Which exercise is best for core strength?"),
+"options": [
+    _("Push-ups"),
+    _("Plank"),
+    _("Cycling"),
+    _("Walking")
+],
 "correct": 1,
-"explanation": "Planks engage multiple core muscles."
+"explanation": _("Planks engage multiple core muscles.")
 },
 
 {
-"question": "How long should you warm up before exercise?",
-"options": ["1 minute", "5-10 minutes", "30 minutes", "No need"],
+"question": _("How long should you warm up before exercise?"),
+"options": [
+    _("1 minute"),
+    _("5-10 minutes"),
+    _("30 minutes"),
+    _("No need")
+],
 "correct": 1,
-"explanation": "A 5–10 minute warm-up prepares muscles and reduces injury risk."
+"explanation": _("A 5–10 minute warm-up prepares muscles and reduces injury risk.")
 },
 
 {
-"question": "Which nutrient helps muscle recovery?",
-"options": ["Protein", "Sugar", "Salt", "Fiber"],
+"question": _("Which nutrient helps muscle recovery?"),
+"options": [
+    _("Protein"),
+    _("Sugar"),
+    _("Salt"),
+    _("Fiber")
+],
 "correct": 0,
-"explanation": "Protein repairs and builds muscle tissue."
+"explanation": _("Protein repairs and builds muscle tissue.")
 },
 
 {
-"question": "What does BMI stand for?",
-"options": ["Body Mass Index", "Body Muscle Intake", "Basic Mass Indicator", "Body Movement Index"],
+"question": _("What does BMI stand for?"),
+"options": [
+    _("Body Mass Index"),
+    _("Body Muscle Intake"),
+    _("Basic Mass Indicator"),
+    _("Body Movement Index")
+],
 "correct": 0,
-"explanation": "BMI stands for Body Mass Index."
+"explanation": _("BMI stands for Body Mass Index.")
 },
 
 {
-"question": "Which exercise improves flexibility?",
-"options": ["Yoga", "Deadlift", "Bench press", "Sprint"],
+"question": _("Which exercise improves flexibility?"),
+"options": [
+    _("Yoga"),
+    _("Deadlift"),
+    _("Bench press"),
+    _("Sprint")
+],
 "correct": 0,
-"explanation": "Yoga enhances flexibility and balance."
+"explanation": _("Yoga enhances flexibility and balance.")
 },
 
 {
-"question": "Rest days are important because they help:",
-"options": ["Lose weight faster", "Muscle recovery", "Sleep less", "Avoid hydration"],
+"question": _("Rest days are important because they help:"),
+"options": [
+    _("Lose weight faster"),
+    _("Muscle recovery"),
+    _("Sleep less"),
+    _("Avoid hydration")
+],
 "correct": 1,
-"explanation": "Muscles repair and grow during rest."
+"explanation": _("Muscles repair and grow during rest.")
 },
 
 {
-"question": "What is a common sign of overtraining?",
-"options": ["Improved performance", "Constant fatigue", "Better sleep", "More energy"],
+"question": _("What is a common sign of overtraining?"),
+"options": [
+    _("Improved performance"),
+    _("Constant fatigue"),
+    _("Better sleep"),
+    _("More energy")
+],
 "correct": 1,
-"explanation": "Overtraining causes fatigue and decreased performance."
+"explanation": _("Overtraining causes fatigue and decreased performance.")
 },
 
 {
-"question": "Which exercise strengthens the chest?",
-"options": ["Push-ups", "Squats", "Lunges", "Crunches"],
+"question": _("Which exercise strengthens the chest?"),
+"options": [
+    _("Push-ups"),
+    _("Squats"),
+    _("Lunges"),
+    _("Crunches")
+],
 "correct": 0,
-"explanation": "Push-ups target chest muscles."
+"explanation": _("Push-ups target chest muscles.")
 },
 
 {
-"question": "Hydration during workouts helps to:",
-"options": ["Increase injuries", "Maintain performance", "Reduce oxygen", "Increase cramps"],
+"question": _("Hydration during workouts helps to:"),
+"options": [
+    _("Increase injuries"),
+    _("Maintain performance"),
+    _("Reduce oxygen"),
+    _("Increase cramps")
+],
 "correct": 1,
-"explanation": "Water prevents dehydration and maintains performance."
+"explanation": _("Water prevents dehydration and maintains performance.")
 },
 
 {
-"question": "HIIT stands for:",
-"options": ["High Intensity Interval Training", "Heavy Internal Intense Training", "Healthy Interval Intensive Training", "High Internal Integrated Training"],
+"question": _("HIIT stands for:"),
+"options": [
+    _("High Intensity Interval Training"),
+    _("Heavy Internal Intense Training"),
+    _("Healthy Interval Intensive Training"),
+    _("High Internal Integrated Training")
+],
 "correct": 0,
-"explanation": "HIIT means High Intensity Interval Training."
+"explanation": _("HIIT means High Intensity Interval Training.")
 },
 
 {
-"question": "Which exercise burns the most calories?",
-"options": ["Sleeping", "Running", "Reading", "Meditation"],
+"question": _("Which exercise burns the most calories?"),
+"options": [
+    _("Sleeping"),
+    _("Running"),
+    _("Reading"),
+    _("Meditation")
+],
 "correct": 1,
-"explanation": "Running burns high calories compared to resting activities."
+"explanation": _("Running burns high calories compared to resting activities.")
 },
 
 {
-"question": "What is the ideal rest between strength sets?",
-"options": ["5 seconds", "30-90 seconds", "10 minutes", "No rest"],
+"question": _("What is the ideal rest between strength sets?"),
+"options": [
+    _("5 seconds"),
+    _("30-90 seconds"),
+    _("10 minutes"),
+    _("No rest")
+],
 "correct": 1,
-"explanation": "30–90 seconds rest allows muscle recovery."
+"explanation": _("30–90 seconds rest allows muscle recovery.")
 },
 
 {
-"question": "Which is a bodyweight exercise?",
-"options": ["Pull-ups", "Leg press machine", "Cable row", "Treadmill incline"],
+"question": _("Which is a bodyweight exercise?"),
+"options": [
+    _("Pull-ups"),
+    _("Leg press machine"),
+    _("Cable row"),
+    _("Treadmill incline")
+],
 "correct": 0,
-"explanation": "Pull-ups use your own body weight."
+"explanation": _("Pull-ups use your own body weight.")
 },
 
 {
-"question": "Cardio exercises mainly improve:",
-"options": ["Memory", "Heart health", "Hair growth", "Vision"],
+"question": _("Cardio exercises mainly improve:"),
+"options": [
+    _("Memory"),
+    _("Heart health"),
+    _("Hair growth"),
+    _("Vision")
+],
 "correct": 1,
-"explanation": "Cardio strengthens heart and lungs."
+"explanation": _("Cardio strengthens heart and lungs.")
 },
 
 {
-"question": "Which vitamin supports muscle function?",
-"options": ["Vitamin D", "Vitamin C", "Vitamin A", "Vitamin K"],
+"question": _("Which vitamin supports muscle function?"),
+"options": [
+    _("Vitamin D"),
+    _("Vitamin C"),
+    _("Vitamin A"),
+    _("Vitamin K")
+],
 "correct": 0,
-"explanation": "Vitamin D supports muscle and bone function."
+"explanation": _("Vitamin D supports muscle and bone function.")
 },
 
 {
-"question": "Which activity improves balance?",
-"options": ["Tai Chi", "Sleeping", "Watching TV", "Driving"],
+"question": _("Which activity improves balance?"),
+"options": [
+    _("Tai Chi"),
+    _("Sleeping"),
+    _("Watching TV"),
+    _("Driving")
+],
 "correct": 0,
-"explanation": "Tai Chi improves balance and coordination."
+"explanation": _("Tai Chi improves balance and coordination.")
 },
 
 {
-"question": "Which muscle is targeted during bicep curls?",
-"options": ["Triceps", "Biceps", "Quadriceps", "Glutes"],
+"question": _("Which muscle is targeted during bicep curls?"),
+"options": [
+    _("Triceps"),
+    _("Biceps"),
+    _("Quadriceps"),
+    _("Glutes")
+],
 "correct": 1,
-"explanation": "Bicep curls target the biceps."
+"explanation": _("Bicep curls target the biceps.")
 },
 
 {
-"question": "Which exercise is best for leg strength?",
-"options": ["Lunges", "Crunches", "Shoulder press", "Plank"],
+"question": _("Which exercise is best for leg strength?"),
+"options": [
+    _("Lunges"),
+    _("Crunches"),
+    _("Shoulder press"),
+    _("Plank")
+],
 "correct": 0,
-"explanation": "Lunges strengthen leg muscles."
+"explanation": _("Lunges strengthen leg muscles.")
 },
 
 {
-"question": "How often should beginners exercise weekly?",
-"options": ["1 day", "3-5 days", "7 days nonstop", "None"],
+"question": _("How often should beginners exercise weekly?"),
+"options": [
+    _("1 day"),
+    _("3-5 days"),
+    _("7 days nonstop"),
+    _("None")
+],
 "correct": 1,
-"explanation": "3–5 days per week is ideal for beginners."
+"explanation": _("3–5 days per week is ideal for beginners.")
 },
 
 {
-"question": "Stretching after workouts helps:",
-"options": ["Reduce flexibility", "Prevent soreness", "Increase stress", "Burn fat"],
+"question": _("Stretching after workouts helps:"),
+"options": [
+    _("Reduce flexibility"),
+    _("Prevent soreness"),
+    _("Increase stress"),
+    _("Burn fat")
+],
 "correct": 1,
-"explanation": "Stretching reduces stiffness and soreness."
+"explanation": _("Stretching reduces stiffness and soreness.")
 },
 
 {
-"question": "Which exercise strengthens the back?",
-"options": ["Deadlift", "Crunches", "Jump rope", "Cycling"],
+"question": _("Which exercise strengthens the back?"),
+"options": [
+    _("Deadlift"),
+    _("Crunches"),
+    _("Jump rope"),
+    _("Cycling")
+],
 "correct": 0,
-"explanation": "Deadlifts strengthen lower back and posterior chain."
+"explanation": _("Deadlifts strengthen lower back and posterior chain.")
 },
 
 {
-"question": "Which exercise improves coordination?",
-"options": ["Jump rope", "Sleeping", "Reading", "Watching TV"],
+"question": _("Which exercise improves coordination?"),
+"options": [
+    _("Jump rope"),
+    _("Sleeping"),
+    _("Reading"),
+    _("Watching TV")
+],
 "correct": 0,
-"explanation": "Jump rope improves coordination and agility."
+"explanation": _("Jump rope improves coordination and agility.")
 },
 
 {
-"question": "Proper posture during exercise prevents:",
-"options": ["Muscle gain", "Injuries", "Fat loss", "Energy use"],
+"question": _("Proper posture during exercise prevents:"),
+"options": [
+    _("Muscle gain"),
+    _("Injuries"),
+    _("Fat loss"),
+    _("Energy use")
+],
 "correct": 1,
-"explanation": "Correct posture reduces injury risk."
+"explanation": _("Correct posture reduces injury risk.")
 },
 
 {
-"question": "Which exercise targets abdominal muscles?",
-"options": ["Crunches", "Squats", "Bench press", "Lat pulldown"],
+"question": _("Which exercise targets abdominal muscles?"),
+"options": [
+    _("Crunches"),
+    _("Squats"),
+    _("Bench press"),
+    _("Lat pulldown")
+],
 "correct": 0,
-"explanation": "Crunches focus on abdominal muscles."
+"explanation": _("Crunches focus on abdominal muscles.")
 },
 
 {
-"question": "Cool down after workout helps:",
-"options": ["Sudden stop", "Gradual heart rate decrease", "Increase stress", "Injury"],
+"question": _("Cool down after workout helps:"),
+"options": [
+    _("Sudden stop"),
+    _("Gradual heart rate decrease"),
+    _("Increase stress"),
+    _("Injury")
+],
 "correct": 1,
-"explanation": "Cooling down prevents dizziness and supports recovery."
+"explanation": _("Cooling down prevents dizziness and supports recovery.")
 },
 
 {
-"question": "Which activity builds endurance?",
-"options": ["Long-distance running", "Short naps", "Gaming", "Reading"],
+"question": _("Which activity builds endurance?"),
+"options": [
+    _("Long-distance running"),
+    _("Short naps"),
+    _("Gaming"),
+    _("Reading")
+],
 "correct": 0,
-"explanation": "Long-distance running improves endurance."
+"explanation": _("Long-distance running improves endurance.")
 },
 
 {
-"question": "Muscle soreness after workout is called:",
-"options": ["DOMS", "BMI", "HIIT", "ATP"],
+"question": _("Muscle soreness after workout is called:"),
+"options": [
+    _("DOMS"),
+    _("BMI"),
+    _("HIIT"),
+    _("ATP")
+],
 "correct": 0,
-"explanation": "Delayed Onset Muscle Soreness (DOMS) occurs after exercise."
+"explanation": _("Delayed Onset Muscle Soreness (DOMS) occurs after exercise.")
 },
 
 {
-"question": "Which is anaerobic exercise?",
-"options": ["Sprint", "Walking", "Jogging", "Cycling slowly"],
+"question": _("Which is anaerobic exercise?"),
+"options": [
+    _("Sprint"),
+    _("Walking"),
+    _("Jogging"),
+    _("Cycling slowly")
+],
 "correct": 0,
-"explanation": "Sprinting is short-duration high-intensity anaerobic exercise."
+"explanation": _("Sprinting is short-duration high-intensity anaerobic exercise.")
 },
 
 {
-"question": "Which mineral prevents muscle cramps?",
-"options": ["Magnesium", "Iron", "Zinc", "Copper"],
+"question": _("Which mineral prevents muscle cramps?"),
+"options": [
+    _("Magnesium"),
+    _("Iron"),
+    _("Zinc"),
+    _("Copper")
+],
 "correct": 0,
-"explanation": "Magnesium helps prevent muscle cramps."
+"explanation": _("Magnesium helps prevent muscle cramps.")
 },
 
 {
-"question": "Which improves lung capacity?",
-"options": ["Swimming", "Sleeping", "Driving", "Reading"],
+"question": _("Which improves lung capacity?"),
+"options": [
+    _("Swimming"),
+    _("Sleeping"),
+    _("Driving"),
+    _("Reading")
+],
 "correct": 0,
-"explanation": "Swimming enhances lung function."
+"explanation": _("Swimming enhances lung function.")
 },
 
 {
-"question": "Push-ups primarily work which body part?",
-"options": ["Chest and arms", "Legs", "Back only", "Neck"],
+"question": _("Push-ups primarily work which body part?"),
+"options": [
+    _("Chest and arms"),
+    _("Legs"),
+    _("Back only"),
+    _("Neck")
+],
 "correct": 0,
-"explanation": "Push-ups target chest, shoulders, and triceps."
+"explanation": _("Push-ups target chest, shoulders, and triceps.")
 },
 
 {
-"question": "How much water is recommended daily?",
-"options": ["1 glass", "2 liters approx", "500 ml", "None"],
+"question": _("How much water is recommended daily?"),
+"options": [
+    _("1 glass"),
+    _("2 liters approx"),
+    _("500 ml"),
+    _("None")
+],
 "correct": 1,
-"explanation": "Around 2 liters is generally recommended."
+"explanation": _("Around 2 liters is generally recommended.")
 },
 
 {
-"question": "Which exercise helps lose belly fat?",
-"options": ["Overall cardio", "Only crunches", "Sleeping", "Watching TV"],
+"question": _("Which exercise helps lose belly fat?"),
+"options": [
+    _("Overall cardio"),
+    _("Only crunches"),
+    _("Sleeping"),
+    _("Watching TV")
+],
 "correct": 0,
-"explanation": "Overall fat loss requires cardio and diet."
+"explanation": _("Overall fat loss requires cardio and diet.")
 },
 
 {
-"question": "Which exercise strengthens shoulders?",
-"options": ["Shoulder press", "Squats", "Lunges", "Crunches"],
+"question": _("Which exercise strengthens shoulders?"),
+"options": [
+    _("Shoulder press"),
+    _("Squats"),
+    _("Lunges"),
+    _("Crunches")
+],
 "correct": 0,
-"explanation": "Shoulder press targets deltoid muscles."
+"explanation": _("Shoulder press targets deltoid muscles.")
 },
 
 {
-"question": "Exercise improves mental health by:",
-"options": ["Reducing stress", "Increasing stress", "Reducing oxygen", "None"],
+"question": _("Exercise improves mental health by:"),
+"options": [
+    _("Reducing stress"),
+    _("Increasing stress"),
+    _("Reducing oxygen"),
+    _("None")
+],
 "correct": 0,
-"explanation": "Exercise releases endorphins that reduce stress."
+"explanation": _("Exercise releases endorphins that reduce stress.")
 },
 
 {
-"question": "What is flexibility?",
-"options": ["Ability to stretch muscles", "Running speed", "Muscle size", "Fat percentage"],
+"question": _("What is flexibility?"),
+"options": [
+    _("Ability to stretch muscles"),
+    _("Running speed"),
+    _("Muscle size"),
+    _("Fat percentage")
+],
 "correct": 0,
-"explanation": "Flexibility is the ability of muscles to stretch."
+"explanation": _("Flexibility is the ability of muscles to stretch.")
 },
 
 {
-"question": "Which activity improves agility?",
-"options": ["Ladder drills", "Sleeping", "Watching TV", "Reading"],
+"question": _("Which activity improves agility?"),
+"options": [
+    _("Ladder drills"),
+    _("Sleeping"),
+    _("Watching TV"),
+    _("Reading")
+],
 "correct": 0,
-"explanation": "Agility drills improve quick movement."
+"explanation": _("Agility drills improve quick movement.")
 },
 
 {
-"question": "Which is a compound exercise?",
-"options": ["Squats", "Bicep curls", "Wrist curls", "Neck rolls"],
+"question": _("Which is a compound exercise?"),
+"options": [
+    _("Squats"),
+    _("Bicep curls"),
+    _("Wrist curls"),
+    _("Neck rolls")
+],
 "correct": 0,
-"explanation": "Squats use multiple joints and muscles."
+"explanation": _("Squats use multiple joints and muscles.")
 },
 
 {
-"question": "Exercise reduces risk of:",
-"options": ["Heart disease", "Fitness", "Energy", "Strength"],
+"question": _("Exercise reduces risk of:"),
+"options": [
+    _("Heart disease"),
+    _("Fitness"),
+    _("Energy"),
+    _("Strength")
+],
 "correct": 0,
-"explanation": "Regular exercise lowers heart disease risk."
+"explanation": _("Regular exercise lowers heart disease risk.")
 },
 
 {
-"question": "Best time to exercise is:",
-"options": ["When consistent", "Midnight only", "Never", "Random"],
+"question": _("Best time to exercise is:"),
+"options": [
+    _("When consistent"),
+    _("Midnight only"),
+    _("Never"),
+    _("Random")
+],
 "correct": 0,
-"explanation": "Consistency matters more than time."
+"explanation": _("Consistency matters more than time.")
 },
 
 {
-"question": "Which helps build stamina?",
-"options": ["Cycling", "Sleeping", "Eating junk", "Skipping water"],
+"question": _("Which helps build stamina?"),
+"options": [
+    _("Cycling"),
+    _("Sleeping"),
+    _("Eating junk"),
+    _("Skipping water")
+],
 "correct": 0,
-"explanation": "Cycling improves stamina."
+"explanation": _("Cycling improves stamina.")
 },
 
 {
-"question": "Protein shakes are mainly for:",
-"options": ["Muscle recovery", "Hair growth", "Vision", "Sleep"],
+"question": _("Protein shakes are mainly for:"),
+"options": [
+    _("Muscle recovery"),
+    _("Hair growth"),
+    _("Vision"),
+    _("Sleep")
+],
 "correct": 0,
-"explanation": "Protein supports muscle repair."
+"explanation": _("Protein supports muscle repair.")
 },
 
 {
-"question": "Which reduces injury risk?",
-"options": ["Proper warm-up", "Skipping warm-up", "Overtraining", "No rest"],
+"question": _("Which reduces injury risk?"),
+"options": [
+    _("Proper warm-up"),
+    _("Skipping warm-up"),
+    _("Overtraining"),
+    _("No rest")
+],
 "correct": 0,
-"explanation": "Warm-up prepares muscles for activity."
+"explanation": _("Warm-up prepares muscles for activity.")
 },
 
 {
-"question": "Which improves posture?",
-"options": ["Core strengthening", "Sleeping poorly", "Slouching", "None"],
+"question": _("Which improves posture?"),
+"options": [
+    _("Core strengthening"),
+    _("Sleeping poorly"),
+    _("Slouching"),
+    _("None")
+],
 "correct": 0,
-"explanation": "Strong core improves posture."
+"explanation": _("Strong core improves posture.")
 },
 
 {
-"question": "What does progressive overload mean?",
-"options": ["Gradually increasing workout intensity", "Stopping exercise", "Reducing effort", "Sleeping more"],
+"question": _("What does progressive overload mean?"),
+"options": [
+    _("Gradually increasing workout intensity"),
+    _("Stopping exercise"),
+    _("Reducing effort"),
+    _("Sleeping more")
+],
 "correct": 0,
-"explanation": "Progressive overload increases muscle strength gradually."
+"explanation": _("Progressive overload increases muscle strength gradually.")
 },
 
 {
-"question": "Exercise helps control:",
-"options": ["Blood sugar", "Hair color", "Height", "Eye color"],
+"question": _("Exercise helps control:"),
+"options": [
+    _("Blood sugar"),
+    _("Hair color"),
+    _("Height"),
+    _("Eye color")
+],
 "correct": 0,
-"explanation": "Exercise helps regulate blood sugar levels."
+"explanation": _("Exercise helps regulate blood sugar levels.")
 }
 
 ],
@@ -475,843 +825,1751 @@ QUIZ_QUESTIONS = {
     "mental": [
 
 {
-    "question": "What is mental health?",
+    "question": _("What is mental health?"),
     "options": [
-        "The absence of illness",
-        "Emotional, psychological, and social well-being",
-        "Physical strength",
-        "IQ level"
+        _("The absence of illness"),
+        _("Emotional, psychological, and social well-being"),
+        _("Physical strength"),
+        _("IQ level")
     ],
     "correct": 1,
-    "explanation": "Mental health includes emotional, psychological, and social well-being."
+    "explanation": _("Mental health includes emotional, psychological, and social well-being.")
 },
 
 {
-    "question": "Which hormone is commonly known as the stress hormone?",
-    "options": ["Dopamine", "Serotonin", "Cortisol", "Oxytocin"],
+    "question": _("Which hormone is commonly known as the stress hormone?"),
+    "options": [
+        _("Dopamine"),
+        _("Serotonin"),
+        _("Cortisol"),
+        _("Oxytocin")
+    ],
     "correct": 2,
-    "explanation": "Cortisol is released during stress."
+    "explanation": _("Cortisol is released during stress.")
 },
 
 {
-    "question": "Which activity helps reduce stress?",
-    "options": ["Meditation", "Overthinking", "Skipping sleep", "Isolation"],
-    "correct": 0,
-    "explanation": "Meditation helps calm the mind and reduce stress."
-},
-
-{
-    "question": "How many hours of sleep do adults generally need?",
-    "options": ["4-5", "7-9", "10-12", "5-6"],
-    "correct": 1,
-    "explanation": "Adults typically need 7-9 hours of sleep."
-},
-
-{
-    "question": "Which condition involves persistent sadness?",
-    "options": ["Depression", "Anxiety", "ADHD", "Phobia"],
-    "correct": 0,
-    "explanation": "Depression is characterized by persistent sadness."
-},
-
-{
-    "question": "Which practice improves emotional awareness?",
-    "options": ["Mindfulness", "Avoidance", "Anger", "Denial"],
-    "correct": 0,
-    "explanation": "Mindfulness improves emotional awareness."
-},
-
-{
-    "question": "Which neurotransmitter is linked to happiness?",
-    "options": ["Serotonin", "Adrenaline", "Insulin", "Melatonin"],
-    "correct": 0,
-    "explanation": "Serotonin helps regulate mood and happiness."
-},
-
-{
-    "question": "Anxiety mainly affects which part of health?",
-    "options": ["Mental", "Dental", "Vision", "Hearing"],
-    "correct": 0,
-    "explanation": "Anxiety affects mental and emotional well-being."
-},
-
-{
-    "question": "Which technique helps control panic attacks?",
-    "options": ["Deep breathing", "Shouting", "Skipping meals", "Isolation"],
-    "correct": 0,
-    "explanation": "Deep breathing helps regulate panic symptoms."
-},
-
-{
-    "question": "What is burnout?",
+    "question": _("Which activity helps reduce stress?"),
     "options": [
-        "Extreme physical exercise",
-        "Chronic workplace stress",
-        "Sleeping disorder",
-        "Brain injury"
+        _("Meditation"),
+        _("Overthinking"),
+        _("Skipping sleep"),
+        _("Isolation")
+    ],
+    "correct": 0,
+    "explanation": _("Meditation helps calm the mind and reduce stress.")
+},
+
+{
+    "question": _("How many hours of sleep do adults generally need?"),
+    "options": [
+        _("4-5"),
+        _("7-9"),
+        _("10-12"),
+        _("5-6")
     ],
     "correct": 1,
-    "explanation": "Burnout results from chronic unmanaged stress."
+    "explanation": _("Adults typically need 7-9 hours of sleep.")
 },
 
 {
-    "question": "Which habit improves mental health?",
-    "options": ["Regular exercise", "Overworking", "Neglecting sleep", "Isolation"],
-    "correct": 0,
-    "explanation": "Exercise releases mood-boosting chemicals."
-},
-
-{
-    "question": "What is cognitive behavioral therapy (CBT)?",
+    "question": _("Which condition involves persistent sadness?"),
     "options": [
-        "Medication",
-        "Talk therapy",
-        "Surgery",
-        "Diet plan"
+        _("Depression"),
+        _("Anxiety"),
+        _("ADHD"),
+        _("Phobia")
+    ],
+    "correct": 0,
+    "explanation": _("Depression is characterized by persistent sadness.")
+},
+
+{
+    "question": _("Which practice improves emotional awareness?"),
+    "options": [
+        _("Mindfulness"),
+        _("Avoidance"),
+        _("Anger"),
+        _("Denial")
+    ],
+    "correct": 0,
+    "explanation": _("Mindfulness improves emotional awareness.")
+},
+
+{
+    "question": _("Which neurotransmitter is linked to happiness?"),
+    "options": [
+        _("Serotonin"),
+        _("Adrenaline"),
+        _("Insulin"),
+        _("Melatonin")
+    ],
+    "correct": 0,
+    "explanation": _("Serotonin helps regulate mood and happiness.")
+},
+
+{
+    "question": _("Anxiety mainly affects which part of health?"),
+    "options": [
+        _("Mental"),
+        _("Dental"),
+        _("Vision"),
+        _("Hearing")
+    ],
+    "correct": 0,
+    "explanation": _("Anxiety affects mental and emotional well-being.")
+},
+
+{
+    "question": _("Which technique helps control panic attacks?"),
+    "options": [
+        _("Deep breathing"),
+        _("Shouting"),
+        _("Skipping meals"),
+        _("Isolation")
+    ],
+    "correct": 0,
+    "explanation": _("Deep breathing helps regulate panic symptoms.")
+},
+
+{
+    "question": _("What is burnout?"),
+    "options": [
+        _("Extreme physical exercise"),
+        _("Chronic workplace stress"),
+        _("Sleeping disorder"),
+        _("Brain injury")
     ],
     "correct": 1,
-    "explanation": "CBT is a form of talk therapy."
+    "explanation": _("Burnout results from chronic unmanaged stress.")
 },
 
 {
-    "question": "Which disorder involves excessive fear of social situations?",
-    "options": ["Social anxiety", "Bipolar disorder", "Schizophrenia", "OCD"],
-    "correct": 0,
-    "explanation": "Social anxiety disorder involves fear of social situations."
-},
-
-{
-    "question": "What does ADHD stand for?",
+    "question": _("Which habit improves mental health?"),
     "options": [
-        "Advanced Health Disorder",
-        "Attention Deficit Hyperactivity Disorder",
-        "Anxiety Disorder",
-        "Adult Depression Habit Disorder"
+        _("Regular exercise"),
+        _("Overworking"),
+        _("Neglecting sleep"),
+        _("Isolation")
+    ],
+    "correct": 0,
+    "explanation": _("Exercise releases mood-boosting chemicals.")
+},
+
+{
+    "question": _("What is cognitive behavioral therapy (CBT)?"),
+    "options": [
+        _("Medication"),
+        _("Talk therapy"),
+        _("Surgery"),
+        _("Diet plan")
     ],
     "correct": 1,
-    "explanation": "ADHD stands for Attention Deficit Hyperactivity Disorder."
+    "explanation": _("CBT is a form of talk therapy.")
 },
 
 {
-    "question": "Which practice helps emotional regulation?",
-    "options": ["Journaling", "Suppressing emotions", "Avoiding people", "Anger"],
-    "correct": 0,
-    "explanation": "Journaling helps process emotions."
-},
-
-{
-    "question": "Which mental illness includes mood swings between high and low?",
-    "options": ["Bipolar disorder", "Depression", "Anxiety", "Phobia"],
-    "correct": 0,
-    "explanation": "Bipolar disorder involves extreme mood swings."
-},
-
-{
-    "question": "Which chemical is known as the 'love hormone'?",
-    "options": ["Oxytocin", "Cortisol", "Insulin", "Adrenaline"],
-    "correct": 0,
-    "explanation": "Oxytocin is associated with bonding."
-},
-
-{
-    "question": "What is a common symptom of anxiety?",
-    "options": ["Rapid heartbeat", "Better memory", "Improved focus", "Calmness"],
-    "correct": 0,
-    "explanation": "Anxiety often causes rapid heartbeat."
-},
-
-{
-    "question": "Which factor improves mental resilience?",
-    "options": ["Strong support system", "Isolation", "Sleep deprivation", "Stress"],
-    "correct": 0,
-    "explanation": "Support systems improve resilience."
-},
-
-{
-    "question": "What is mindfulness?",
+    "question": _("Which disorder involves excessive fear of social situations?"),
     "options": [
-        "Living in the present moment",
-        "Overthinking",
-        "Ignoring feelings",
-        "Worrying about future"
+        _("Social anxiety"),
+        _("Bipolar disorder"),
+        _("Schizophrenia"),
+        _("OCD")
     ],
     "correct": 0,
-    "explanation": "Mindfulness means focusing on the present."
+    "explanation": _("Social anxiety disorder involves fear of social situations.")
 },
 
 {
-    "question": "What is insomnia?",
-    "options": ["Sleep disorder", "Eating disorder", "Memory issue", "Vision issue"],
-    "correct": 0,
-    "explanation": "Insomnia is difficulty sleeping."
-},
-
-{
-    "question": "Which is a healthy coping mechanism?",
-    "options": ["Talking to friends", "Substance abuse", "Isolation", "Anger"],
-    "correct": 0,
-    "explanation": "Talking helps process emotions."
-},
-
-{
-    "question": "Which mental condition involves repetitive behaviors?",
-    "options": ["OCD", "Depression", "Phobia", "Burnout"],
-    "correct": 0,
-    "explanation": "OCD involves obsessions and compulsions."
-},
-
-{
-    "question": "Meditation mainly improves?",
-    "options": ["Focus and calmness", "Anger", "Stress", "Fear"],
-    "correct": 0,
-    "explanation": "Meditation improves calmness and focus."
-},
-
-{
-    "question": "Which disorder includes hallucinations?",
-    "options": ["Schizophrenia", "Anxiety", "Depression", "Insomnia"],
-    "correct": 0,
-    "explanation": "Schizophrenia can involve hallucinations."
-},
-
-{
-    "question": "Which activity releases endorphins?",
-    "options": ["Exercise", "Skipping sleep", "Stress", "Isolation"],
-    "correct": 0,
-    "explanation": "Exercise releases endorphins."
-},
-
-{
-    "question": "Emotional intelligence means?",
+    "question": _("What does ADHD stand for?"),
     "options": [
-        "Understanding and managing emotions",
-        "High IQ",
-        "Physical strength",
-        "Ignoring emotions"
+        _("Advanced Health Disorder"),
+        _("Attention Deficit Hyperactivity Disorder"),
+        _("Anxiety Disorder"),
+        _("Adult Depression Habit Disorder")
+    ],
+    "correct": 1,
+    "explanation": _("ADHD stands for Attention Deficit Hyperactivity Disorder.")
+},
+
+{
+    "question": _("Which practice helps emotional regulation?"),
+    "options": [
+        _("Journaling"),
+        _("Suppressing emotions"),
+        _("Avoiding people"),
+        _("Anger")
     ],
     "correct": 0,
-    "explanation": "Emotional intelligence is managing emotions effectively."
+    "explanation": _("Journaling helps process emotions.")
 },
 
 {
-    "question": "Chronic stress may lead to?",
-    "options": ["Mental health disorders", "Better sleep", "Stronger memory", "Improved mood"],
+    "question": _("Which mental illness includes mood swings between high and low?"),
+    "options": [
+        _("Bipolar disorder"),
+        _("Depression"),
+        _("Anxiety"),
+        _("Phobia")
+    ],
     "correct": 0,
-    "explanation": "Chronic stress harms mental health."
+    "explanation": _("Bipolar disorder involves extreme mood swings.")
 },
 
 {
-    "question": "Which therapy involves group discussion?",
-    "options": ["Group therapy", "Surgery", "Medication", "Diet therapy"],
+    "question": _("Which chemical is known as the 'love hormone'?"),
+    "options": [
+        _("Oxytocin"),
+        _("Cortisol"),
+        _("Insulin"),
+        _("Adrenaline")
+    ],
     "correct": 0,
-    "explanation": "Group therapy involves shared discussions."
+    "explanation": _("Oxytocin is associated with bonding.")
 },
 
 {
-    "question": "Which disorder causes intense mood sadness lasting weeks?",
-    "options": ["Major depression", "Phobia", "ADHD", "OCD"],
+    "question": _("What is a common symptom of anxiety?"),
+    "options": [
+        _("Rapid heartbeat"),
+        _("Better memory"),
+        _("Improved focus"),
+        _("Calmness")
+    ],
     "correct": 0,
-    "explanation": "Major depression lasts weeks or longer."
+    "explanation": _("Anxiety often causes rapid heartbeat.")
 },
 
 {
-    "question": "Which is a sign of good mental health?",
-    "options": ["Ability to cope with stress", "Constant anger", "Isolation", "Sleep deprivation"],
+    "question": _("Which factor improves mental resilience?"),
+    "options": [
+        _("Strong support system"),
+        _("Isolation"),
+        _("Sleep deprivation"),
+        _("Stress")
+    ],
     "correct": 0,
-    "explanation": "Coping well with stress shows good mental health."
+    "explanation": _("Support systems improve resilience.")
 },
 
 {
-    "question": "Which mental illness affects eating habits?",
-    "options": ["Eating disorders", "Phobia", "Burnout", "Insomnia"],
+    "question": _("What is mindfulness?"),
+    "options": [
+        _("Living in the present moment"),
+        _("Overthinking"),
+        _("Ignoring feelings"),
+        _("Worrying about future")
+    ],
     "correct": 0,
-    "explanation": "Eating disorders affect food behavior."
+    "explanation": _("Mindfulness means focusing on the present.")
 },
 
 {
-    "question": "Self-care includes?",
-    "options": ["Healthy sleep routine", "Overworking", "Skipping meals", "Ignoring stress"],
+    "question": _("What is insomnia?"),
+    "options": [
+        _("Sleep disorder"),
+        _("Eating disorder"),
+        _("Memory issue"),
+        _("Vision issue")
+    ],
     "correct": 0,
-    "explanation": "Healthy routines support mental health."
+    "explanation": _("Insomnia is difficulty sleeping.")
 },
 
 {
-    "question": "Which technique reduces negative thoughts?",
-    "options": ["Cognitive restructuring", "Isolation", "Anger", "Stress"],
+    "question": _("Which is a healthy coping mechanism?"),
+    "options": [
+        _("Talking to friends"),
+        _("Substance abuse"),
+        _("Isolation"),
+        _("Anger")
+    ],
     "correct": 0,
-    "explanation": "Cognitive restructuring changes negative thought patterns."
+    "explanation": _("Talking helps process emotions.")
 },
 
 {
-    "question": "Which age group can experience mental health issues?",
-    "options": ["All ages", "Only adults", "Only children", "Only elderly"],
+    "question": _("Which mental condition involves repetitive behaviors?"),
+    "options": [
+        _("OCD"),
+        _("Depression"),
+        _("Phobia"),
+        _("Burnout")
+    ],
     "correct": 0,
-    "explanation": "Mental health issues can affect all ages."
+    "explanation": _("OCD involves obsessions and compulsions.")
 },
 
 {
-    "question": "Which practice helps manage anxiety?",
-    "options": ["Deep breathing", "Skipping meals", "Overthinking", "Avoidance"],
+    "question": _("Meditation mainly improves?"),
+    "options": [
+        _("Focus and calmness"),
+        _("Anger"),
+        _("Stress"),
+        _("Fear")
+    ],
     "correct": 0,
-    "explanation": "Breathing exercises calm anxiety."
+    "explanation": _("Meditation improves calmness and focus.")
 },
 
 {
-    "question": "Post-traumatic stress disorder (PTSD) occurs after?",
-    "options": ["Traumatic events", "Exercise", "Diet change", "Vacation"],
+    "question": _("Which disorder includes hallucinations?"),
+    "options": [
+        _("Schizophrenia"),
+        _("Anxiety"),
+        _("Depression"),
+        _("Insomnia")
+    ],
     "correct": 0,
-    "explanation": "PTSD follows traumatic events."
+    "explanation": _("Schizophrenia can involve hallucinations.")
 },
 
 {
-    "question": "Positive thinking can?",
-    "options": ["Improve mental well-being", "Increase stress", "Cause insomnia", "Cause anxiety"],
+    "question": _("Which activity releases endorphins?"),
+    "options": [
+        _("Exercise"),
+        _("Skipping sleep"),
+        _("Stress"),
+        _("Isolation")
+    ],
     "correct": 0,
-    "explanation": "Positive thinking supports mental health."
+    "explanation": _("Exercise releases endorphins.")
 },
 
 {
-    "question": "Which is a professional mental health provider?",
-    "options": ["Psychologist", "Chef", "Driver", "Engineer"],
+    "question": _("Emotional intelligence means?"),
+    "options": [
+        _("Understanding and managing emotions"),
+        _("High IQ"),
+        _("Physical strength"),
+        _("Ignoring emotions")
+    ],
     "correct": 0,
-    "explanation": "Psychologists specialize in mental health."
+    "explanation": _("Emotional intelligence is managing emotions effectively.")
 },
 
 {
-    "question": "What is emotional burnout?",
-    "options": ["Emotional exhaustion", "Happiness", "Energy boost", "Calmness"],
+    "question": _("Chronic stress may lead to?"),
+    "options": [
+        _("Mental health disorders"),
+        _("Better sleep"),
+        _("Stronger memory"),
+        _("Improved mood")
+    ],
     "correct": 0,
-    "explanation": "Burnout involves emotional exhaustion."
+    "explanation": _("Chronic stress harms mental health.")
 },
 
 {
-    "question": "Which habit improves focus?",
-    "options": ["Adequate sleep", "Late-night scrolling", "Skipping meals", "Stress"],
+    "question": _("Which therapy involves group discussion?"),
+    "options": [
+        _("Group therapy"),
+        _("Surgery"),
+        _("Medication"),
+        _("Diet therapy")
+    ],
     "correct": 0,
-    "explanation": "Sleep improves concentration."
+    "explanation": _("Group therapy involves shared discussions.")
 },
 
 {
-    "question": "Which is NOT a healthy coping strategy?",
-    "options": ["Substance abuse", "Exercise", "Meditation", "Talking"],
+    "question": _("Which disorder causes intense mood sadness lasting weeks?"),
+    "options": [
+        _("Major depression"),
+        _("Phobia"),
+        _("ADHD"),
+        _("OCD")
+    ],
     "correct": 0,
-    "explanation": "Substance abuse worsens mental health."
+    "explanation": _("Major depression lasts weeks or longer.")
 },
 
 {
-    "question": "Which is a relaxation method?",
-    "options": ["Yoga", "Anger", "Isolation", "Overthinking"],
+    "question": _("Which is a sign of good mental health?"),
+    "options": [
+        _("Ability to cope with stress"),
+        _("Constant anger"),
+        _("Isolation"),
+        _("Sleep deprivation")
+    ],
     "correct": 0,
-    "explanation": "Yoga promotes relaxation."
+    "explanation": _("Coping well with stress shows good mental health.")
 },
 
 {
-    "question": "Loneliness can affect?",
-    "options": ["Mental and physical health", "Only teeth", "Only vision", "Only hair"],
+    "question": _("Which mental illness affects eating habits?"),
+    "options": [
+        _("Eating disorders"),
+        _("Phobia"),
+        _("Burnout"),
+        _("Insomnia")
+    ],
     "correct": 0,
-    "explanation": "Loneliness impacts overall health."
+    "explanation": _("Eating disorders affect food behavior.")
 },
 
 {
-    "question": "Which is a symptom of depression?",
-    "options": ["Loss of interest", "High energy", "Excitement", "Confidence boost"],
+    "question": _("Self-care includes?"),
+    "options": [
+        _("Healthy sleep routine"),
+        _("Overworking"),
+        _("Skipping meals"),
+        _("Ignoring stress")
+    ],
     "correct": 0,
-    "explanation": "Loss of interest is a depression symptom."
+    "explanation": _("Healthy routines support mental health.")
 },
 
 {
-    "question": "Which activity builds self-esteem?",
-    "options": ["Achieving goals", "Constant criticism", "Isolation", "Neglect"],
+    "question": _("Which technique reduces negative thoughts?"),
+    "options": [
+        _("Cognitive restructuring"),
+        _("Isolation"),
+        _("Anger"),
+        _("Stress")
+    ],
     "correct": 0,
-    "explanation": "Achievement builds confidence."
+    "explanation": _("Cognitive restructuring changes negative thought patterns.")
 },
 
 {
-    "question": "Mental health awareness helps?",
-    "options": ["Reduce stigma", "Increase fear", "Cause stress", "Promote isolation"],
+    "question": _("Which age group can experience mental health issues?"),
+    "options": [
+        _("All ages"),
+        _("Only adults"),
+        _("Only children"),
+        _("Only elderly")
+    ],
     "correct": 0,
-    "explanation": "Awareness reduces stigma."
+    "explanation": _("Mental health issues can affect all ages.")
 },
 
 {
-    "question": "Which improves brain function?",
-    "options": ["Regular exercise", "Sleep deprivation", "Stress", "Isolation"],
+    "question": _("Which practice helps manage anxiety?"),
+    "options": [
+        _("Deep breathing"),
+        _("Skipping meals"),
+        _("Overthinking"),
+        _("Avoidance")
+    ],
     "correct": 0,
-    "explanation": "Exercise boosts brain function."
+    "explanation": _("Breathing exercises calm anxiety.")
 },
 
 {
-    "question": "Seeking help for mental health is?",
-    "options": ["A sign of strength", "Weakness", "Unnecessary", "Embarrassing"],
+    "question": _("Post-traumatic stress disorder (PTSD) occurs after?"),
+    "options": [
+        _("Traumatic events"),
+        _("Exercise"),
+        _("Diet change"),
+        _("Vacation")
+    ],
     "correct": 0,
-    "explanation": "Seeking help shows strength."
+    "explanation": _("PTSD follows traumatic events.")
+},
+
+{
+    "question": _("Positive thinking can?"),
+    "options": [
+        _("Improve mental well-being"),
+        _("Increase stress"),
+        _("Cause insomnia"),
+        _("Cause anxiety")
+    ],
+    "correct": 0,
+    "explanation": _("Positive thinking supports mental health.")
+},
+
+{
+    "question": _("Which is a professional mental health provider?"),
+    "options": [
+        _("Psychologist"),
+        _("Chef"),
+        _("Driver"),
+        _("Engineer")
+    ],
+    "correct": 0,
+    "explanation": _("Psychologists specialize in mental health.")
+},
+
+{
+    "question": _("What is emotional burnout?"),
+    "options": [
+        _("Emotional exhaustion"),
+        _("Happiness"),
+        _("Energy boost"),
+        _("Calmness")
+    ],
+    "correct": 0,
+    "explanation": _("Burnout involves emotional exhaustion.")
+},
+
+{
+    "question": _("Which habit improves focus?"),
+    "options": [
+        _("Adequate sleep"),
+        _("Late-night scrolling"),
+        _("Skipping meals"),
+        _("Stress")
+    ],
+    "correct": 0,
+    "explanation": _("Sleep improves concentration.")
+},
+
+{
+    "question": _("Which is NOT a healthy coping strategy?"),
+    "options": [
+        _("Substance abuse"),
+        _("Exercise"),
+        _("Meditation"),
+        _("Talking")
+    ],
+    "correct": 0,
+    "explanation": _("Substance abuse worsens mental health.")
+},
+
+{
+    "question": _("Which is a relaxation method?"),
+    "options": [
+        _("Yoga"),
+        _("Anger"),
+        _("Isolation"),
+        _("Overthinking")
+    ],
+    "correct": 0,
+    "explanation": _("Yoga promotes relaxation.")
+},
+
+{
+    "question": _("Loneliness can affect?"),
+    "options": [
+        _("Mental and physical health"),
+        _("Only teeth"),
+        _("Only vision"),
+        _("Only hair")
+    ],
+    "correct": 0,
+    "explanation": _("Loneliness impacts overall health.")
+},
+
+{
+    "question": _("Which is a symptom of depression?"),
+    "options": [
+        _("Loss of interest"),
+        _("High energy"),
+        _("Excitement"),
+        _("Confidence boost")
+    ],
+    "correct": 0,
+    "explanation": _("Loss of interest is a depression symptom.")
+},
+
+{
+    "question": _("Which activity builds self-esteem?"),
+    "options": [
+        _("Achieving goals"),
+        _("Constant criticism"),
+        _("Isolation"),
+        _("Neglect")
+    ],
+    "correct": 0,
+    "explanation": _("Achievement builds confidence.")
+},
+
+{
+    "question": _("Mental health awareness helps?"),
+    "options": [
+        _("Reduce stigma"),
+        _("Increase fear"),
+        _("Cause stress"),
+        _("Promote isolation")
+    ],
+    "correct": 0,
+    "explanation": _("Awareness reduces stigma.")
+},
+
+{
+    "question": _("Which improves brain function?"),
+    "options": [
+        _("Regular exercise"),
+        _("Sleep deprivation"),
+        _("Stress"),
+        _("Isolation")
+    ],
+    "correct": 0,
+    "explanation": _("Exercise boosts brain function.")
+},
+
+{
+    "question": _("Seeking help for mental health is?"),
+    "options": [
+        _("A sign of strength"),
+        _("Weakness"),
+        _("Unnecessary"),
+        _("Embarrassing")
+    ],
+    "correct": 0,
+    "explanation": _("Seeking help shows strength.")
 }
 
 ],
 "disease_prevention": [
 
 {
-"question": "What is the most effective way to prevent the spread of infectious diseases?",
-"options": ["Wearing perfume", "Regular handwashing", "Drinking cold water", "Sleeping less"],
+"question": _("What is the most effective way to prevent the spread of infectious diseases?"),
+"options": [
+    _("Wearing perfume"),
+    _("Regular handwashing"),
+    _("Drinking cold water"),
+    _("Sleeping less")
+],
 "correct": 1,
-"explanation": "Regular handwashing removes germs and prevents transmission."
+"explanation": _("Regular handwashing removes germs and prevents transmission.")
 },
 
 {
-"question": "Vaccines help prevent diseases by:",
-"options": ["Killing all bacteria", "Boosting natural immunity", "Increasing fever", "Replacing blood cells"],
+"question": _("Vaccines help prevent diseases by:"),
+"options": [
+    _("Killing all bacteria"),
+    _("Boosting natural immunity"),
+    _("Increasing fever"),
+    _("Replacing blood cells")
+],
 "correct": 1,
-"explanation": "Vaccines stimulate the immune system to recognize and fight infections."
+"explanation": _("Vaccines stimulate the immune system to recognize and fight infections.")
 },
 
 {
-"question": "How often should adults get a general health check-up?",
-"options": ["Every 10 years", "Only when sick", "Once a year", "Never"],
+"question": _("How often should adults get a general health check-up?"),
+"options": [
+    _("Every 10 years"),
+    _("Only when sick"),
+    _("Once a year"),
+    _("Never")
+],
 "correct": 2,
-"explanation": "Annual health check-ups help detect diseases early."
+"explanation": _("Annual health check-ups help detect diseases early.")
 },
 
 {
-"question": "Which of the following helps prevent heart disease?",
-"options": ["Smoking", "High salt diet", "Regular exercise", "Excess sugar intake"],
+"question": _("Which of the following helps prevent heart disease?"),
+"options": [
+    _("Smoking"),
+    _("High salt diet"),
+    _("Regular exercise"),
+    _("Excess sugar intake")
+],
 "correct": 2,
-"explanation": "Regular physical activity reduces heart disease risk."
+"explanation": _("Regular physical activity reduces heart disease risk.")
 },
 
 {
-"question": "Which vitamin strengthens the immune system?",
-"options": ["Vitamin C", "Vitamin K", "Vitamin B12", "Vitamin A"],
+"question": _("Which vitamin strengthens the immune system?"),
+"options": [
+    _("Vitamin C"),
+    _("Vitamin K"),
+    _("Vitamin B12"),
+    _("Vitamin A")
+],
 "correct": 0,
-"explanation": "Vitamin C supports immune defense."
+"explanation": _("Vitamin C supports immune defense.")
 },
 
 {
-"question": "Using mosquito nets helps prevent:",
-"options": ["Diabetes", "Malaria", "Asthma", "Arthritis"],
+"question": _("Using mosquito nets helps prevent:"),
+"options": [
+    _("Diabetes"),
+    _("Malaria"),
+    _("Asthma"),
+    _("Arthritis")
+],
 "correct": 1,
-"explanation": "Mosquito nets prevent malaria transmission."
+"explanation": _("Mosquito nets prevent malaria transmission.")
 },
 
 {
-"question": "Which disease can be prevented by HPV vaccination?",
-"options": ["Lung cancer", "Cervical cancer", "Diabetes", "Tuberculosis"],
+"question": _("Which disease can be prevented by HPV vaccination?"),
+"options": [
+    _("Lung cancer"),
+    _("Cervical cancer"),
+    _("Diabetes"),
+    _("Tuberculosis")
+],
 "correct": 1,
-"explanation": "HPV vaccine helps prevent cervical cancer."
+"explanation": _("HPV vaccine helps prevent cervical cancer.")
 },
 
 {
-"question": "Quitting smoking reduces risk of:",
-"options": ["Lung cancer", "Flu", "Fractures", "Migraine"],
+"question": _("Quitting smoking reduces risk of:"),
+"options": [
+    _("Lung cancer"),
+    _("Flu"),
+    _("Fractures"),
+    _("Migraine")
+],
 "correct": 0,
-"explanation": "Smoking is a major cause of lung cancer."
+"explanation": _("Smoking is a major cause of lung cancer.")
 },
 
 {
-"question": "Safe drinking water prevents:",
-"options": ["Malaria", "Cholera", "Cancer", "Arthritis"],
+"question": _("Safe drinking water prevents:"),
+"options": [
+    _("Malaria"),
+    _("Cholera"),
+    _("Cancer"),
+    _("Arthritis")
+],
 "correct": 1,
-"explanation": "Contaminated water spreads cholera."
+"explanation": _("Contaminated water spreads cholera.")
 },
 
 {
-"question": "Which test helps in early detection of breast cancer?",
-"options": ["ECG", "Mammogram", "X-ray", "Blood sugar test"],
+"question": _("Which test helps in early detection of breast cancer?"),
+"options": [
+    _("ECG"),
+    _("Mammogram"),
+    _("X-ray"),
+    _("Blood sugar test")
+],
 "correct": 1,
-"explanation": "Mammograms detect early breast cancer."
+"explanation": _("Mammograms detect early breast cancer.")
 },
 
 {
-"question": "Maintaining healthy weight prevents:",
-"options": ["Obesity-related diseases", "Infections", "Cold", "Fractures"],
+"question": _("Maintaining healthy weight prevents:"),
+"options": [
+    _("Obesity-related diseases"),
+    _("Infections"),
+    _("Cold"),
+    _("Fractures")
+],
 "correct": 0,
-"explanation": "Healthy weight reduces diabetes and heart risk."
+"explanation": _("Healthy weight reduces diabetes and heart risk.")
 },
 
 {
-"question": "Using sunscreen prevents:",
-"options": ["Skin cancer", "Cold", "Flu", "Asthma"],
+"question": _("Using sunscreen prevents:"),
+"options": [
+    _("Skin cancer"),
+    _("Cold"),
+    _("Flu"),
+    _("Asthma")
+],
 "correct": 0,
-"explanation": "Sunscreen protects against harmful UV rays."
+"explanation": _("Sunscreen protects against harmful UV rays.")
 },
 
 {
-"question": "Which disease spreads through airborne droplets?",
-"options": ["Tuberculosis", "Diabetes", "Hypertension", "Arthritis"],
+"question": _("Which disease spreads through airborne droplets?"),
+"options": [
+    _("Tuberculosis"),
+    _("Diabetes"),
+    _("Hypertension"),
+    _("Arthritis")
+],
 "correct": 0,
-"explanation": "TB spreads through air."
+"explanation": _("TB spreads through air.")
 },
 
 {
-"question": "Brushing teeth daily prevents:",
-"options": ["Tooth decay", "Diabetes", "Asthma", "Heart attack"],
+"question": _("Brushing teeth daily prevents:"),
+"options": [
+    _("Tooth decay"),
+    _("Diabetes"),
+    _("Asthma"),
+    _("Heart attack")
+],
 "correct": 0,
-"explanation": "Oral hygiene prevents cavities."
+"explanation": _("Oral hygiene prevents cavities.")
 },
 
 {
-"question": "Which screening detects colon cancer early?",
-"options": ["Colonoscopy", "MRI", "CT scan", "ECG"],
+"question": _("Which screening detects colon cancer early?"),
+"options": [
+    _("Colonoscopy"),
+    _("MRI"),
+    _("CT scan"),
+    _("ECG")
+],
 "correct": 0,
-"explanation": "Colonoscopy detects early colon cancer."
+"explanation": _("Colonoscopy detects early colon cancer.")
 },
 
 {
-"question": "Physical activity reduces risk of:",
-"options": ["Type 2 diabetes", "Cold", "Fracture", "Injury"],
+"question": _("Physical activity reduces risk of:"),
+"options": [
+    _("Type 2 diabetes"),
+    _("Cold"),
+    _("Fracture"),
+    _("Injury")
+],
 "correct": 0,
-"explanation": "Exercise improves insulin sensitivity."
+"explanation": _("Exercise improves insulin sensitivity.")
 },
 
 {
-"question": "Balanced diet helps prevent:",
-"options": ["Malnutrition", "Fractures", "Injury", "Burns"],
+"question": _("Balanced diet helps prevent:"),
+"options": [
+    _("Malnutrition"),
+    _("Fractures"),
+    _("Injury"),
+    _("Burns")
+],
 "correct": 0,
-"explanation": "Balanced diet provides essential nutrients."
+"explanation": _("Balanced diet provides essential nutrients.")
 },
 
 {
-"question": "Wearing masks helps prevent:",
-"options": ["COVID-19", "Diabetes", "Cancer", "Hypertension"],
+"question": _("Wearing masks helps prevent:"),
+"options": [
+    _("COVID-19"),
+    _("Diabetes"),
+    _("Cancer"),
+    _("Hypertension")
+],
 "correct": 0,
-"explanation": "Masks reduce virus transmission."
+"explanation": _("Masks reduce virus transmission.")
 },
 
 {
-"question": "High blood pressure can be prevented by:",
-"options": ["Reducing salt intake", "Eating junk food", "Smoking", "Stress"],
+"question": _("High blood pressure can be prevented by:"),
+"options": [
+    _("Reducing salt intake"),
+    _("Eating junk food"),
+    _("Smoking"),
+    _("Stress")
+],
 "correct": 0,
-"explanation": "Low salt diet controls blood pressure."
+"explanation": _("Low salt diet controls blood pressure.")
 },
 
 {
-"question": "Which vaccine prevents tuberculosis?",
-"options": ["BCG", "MMR", "Polio", "Hepatitis B"],
+"question": _("Which vaccine prevents tuberculosis?"),
+"options": [
+    _("BCG"),
+    _("MMR"),
+    _("Polio"),
+    _("Hepatitis B")
+],
 "correct": 0,
-"explanation": "BCG vaccine protects against TB."
+"explanation": _("BCG vaccine protects against TB.")
 },
 
 {
-"question": "Proper sanitation prevents:",
-"options": ["Diarrheal diseases", "Asthma", "Fractures", "Cancer"],
+"question": _("Proper sanitation prevents:"),
+"options": [
+    _("Diarrheal diseases"),
+    _("Asthma"),
+    _("Fractures"),
+    _("Cancer")
+],
 "correct": 0,
-"explanation": "Sanitation reduces infection spread."
+"explanation": _("Sanitation reduces infection spread.")
 },
 
 {
-"question": "Regular eye checkups help prevent:",
-"options": ["Vision loss", "Flu", "Asthma", "Diabetes"],
+"question": _("Regular eye checkups help prevent:"),
+"options": [
+    _("Vision loss"),
+    _("Flu"),
+    _("Asthma"),
+    _("Diabetes")
+],
 "correct": 0,
-"explanation": "Early detection prevents vision damage."
+"explanation": _("Early detection prevents vision damage.")
 },
 
 {
-"question": "Which disease is prevented by insulin control?",
-"options": ["Diabetes complications", "Cold", "Flu", "Migraine"],
+"question": _("Which disease is prevented by insulin control?"),
+"options": [
+    _("Diabetes complications"),
+    _("Cold"),
+    _("Flu"),
+    _("Migraine")
+],
 "correct": 0,
-"explanation": "Blood sugar control prevents complications."
+"explanation": _("Blood sugar control prevents complications.")
 },
 
 {
-"question": "Hepatitis B spreads through:",
-"options": ["Blood contact", "Air", "Sweat", "Sound"],
+"question": _("Hepatitis B spreads through:"),
+"options": [
+    _("Blood contact"),
+    _("Air"),
+    _("Sweat"),
+    _("Sound")
+],
 "correct": 0,
-"explanation": "Hepatitis B spreads through infected blood."
+"explanation": _("Hepatitis B spreads through infected blood.")
 },
 
 {
-"question": "Avoiding junk food reduces risk of:",
-"options": ["Obesity", "Cold", "Injury", "Burns"],
+"question": _("Avoiding junk food reduces risk of:"),
+"options": [
+    _("Obesity"),
+    _("Cold"),
+    _("Injury"),
+    _("Burns")
+],
 "correct": 0,
-"explanation": "Junk food increases obesity risk."
+"explanation": _("Junk food increases obesity risk.")
 },
 
 {
-"question": "Which test checks blood sugar?",
-"options": ["Glucose test", "ECG", "MRI", "X-ray"],
+"question": _("Which test checks blood sugar?"),
+"options": [
+    _("Glucose test"),
+    _("ECG"),
+    _("MRI"),
+    _("X-ray")
+],
 "correct": 0,
-"explanation": "Glucose test measures blood sugar levels."
+"explanation": _("Glucose test measures blood sugar levels.")
 },
 
 {
-"question": "Early cancer detection improves:",
-"options": ["Survival rate", "Infection rate", "Pain", "Fever"],
+"question": _("Early cancer detection improves:"),
+"options": [
+    _("Survival rate"),
+    _("Infection rate"),
+    _("Pain"),
+    _("Fever")
+],
 "correct": 0,
-"explanation": "Early detection increases survival."
+"explanation": _("Early detection increases survival.")
 },
 
 {
-"question": "Which habit prevents liver disease?",
-"options": ["Limiting alcohol", "Smoking", "Skipping meals", "Sleeping less"],
+"question": _("Which habit prevents liver disease?"),
+"options": [
+    _("Limiting alcohol"),
+    _("Smoking"),
+    _("Skipping meals"),
+    _("Sleeping less")
+],
 "correct": 0,
-"explanation": "Alcohol damages liver."
+"explanation": _("Alcohol damages liver.")
 },
 
 {
-"question": "Flu vaccine should be taken:",
-"options": ["Yearly", "Once in lifetime", "Never", "Every month"],
+"question": _("Flu vaccine should be taken:"),
+"options": [
+    _("Yearly"),
+    _("Once in lifetime"),
+    _("Never"),
+    _("Every month")
+],
 "correct": 0,
-"explanation": "Flu strains change yearly."
+"explanation": _("Flu strains change yearly.")
 },
 
 {
-"question": "Safe sex practices prevent:",
-"options": ["STDs", "Cold", "Migraine", "Asthma"],
+"question": _("Safe sex practices prevent:"),
+"options": [
+    _("STDs"),
+    _("Cold"),
+    _("Migraine"),
+    _("Asthma")
+],
 "correct": 0,
-"explanation": "Protection reduces STD transmission."
+"explanation": _("Protection reduces STD transmission.")
 },
 
 {
-"question": "Drinking adequate water prevents:",
-"options": ["Dehydration", "Cold", "Cancer", "TB"],
+"question": _("Drinking adequate water prevents:"),
+"options": [
+    _("Dehydration"),
+    _("Cold"),
+    _("Cancer"),
+    _("TB")
+],
 "correct": 0,
-"explanation": "Water maintains hydration."
+"explanation": _("Water maintains hydration.")
 },
 
 {
-"question": "Stress management helps prevent:",
-"options": ["Heart disease", "Fracture", "Burns", "Cold"],
+"question": _("Stress management helps prevent:"),
+"options": [
+    _("Heart disease"),
+    _("Fracture"),
+    _("Burns"),
+    _("Cold")
+],
 "correct": 0,
-"explanation": "Chronic stress affects heart health."
+"explanation": _("Chronic stress affects heart health.")
 },
 
 {
-"question": "Avoiding smoking prevents:",
-"options": ["COPD", "Cold", "Fever", "Migraine"],
+"question": _("Avoiding smoking prevents:"),
+"options": [
+    _("COPD"),
+    _("Cold"),
+    _("Fever"),
+    _("Migraine")
+],
 "correct": 0,
-"explanation": "Smoking causes lung diseases."
+"explanation": _("Smoking causes lung diseases.")
 },
 
 {
-"question": "Which test detects cervical cancer?",
-"options": ["Pap smear", "MRI", "CT", "ECG"],
+"question": _("Which test detects cervical cancer?"),
+"options": [
+    _("Pap smear"),
+    _("MRI"),
+    _("CT"),
+    _("ECG")
+],
 "correct": 0,
-"explanation": "Pap smear detects abnormal cervical cells."
+"explanation": _("Pap smear detects abnormal cervical cells.")
 },
 
 {
-"question": "Healthy sleep prevents:",
-"options": ["Weakened immunity", "Cold", "Injury", "Burns"],
+"question": _("Healthy sleep prevents:"),
+"options": [
+    _("Weakened immunity"),
+    _("Cold"),
+    _("Injury"),
+    _("Burns")
+],
 "correct": 0,
-"explanation": "Sleep boosts immunity."
+"explanation": _("Sleep boosts immunity.")
 },
 
 {
-"question": "Regular dental visits prevent:",
-"options": ["Gum disease", "Diabetes", "Cancer", "Cold"],
+"question": _("Regular dental visits prevent:"),
+"options": [
+    _("Gum disease"),
+    _("Diabetes"),
+    _("Cancer"),
+    _("Cold")
+],
 "correct": 0,
-"explanation": "Dentists detect oral problems early."
+"explanation": _("Dentists detect oral problems early.")
 },
 
 {
-"question": "Which disease is prevented by measles vaccine?",
-"options": ["Measles", "TB", "Cancer", "Asthma"],
+"question": _("Which disease is prevented by measles vaccine?"),
+"options": [
+    _("Measles"),
+    _("TB"),
+    _("Cancer"),
+    _("Asthma")
+],
 "correct": 0,
-"explanation": "MMR vaccine protects from measles."
+"explanation": _("MMR vaccine protects from measles.")
 },
 
 {
-"question": "Avoiding contaminated food prevents:",
-"options": ["Food poisoning", "Diabetes", "Asthma", "Fracture"],
+"question": _("Avoiding contaminated food prevents:"),
+"options": [
+    _("Food poisoning"),
+    _("Diabetes"),
+    _("Asthma"),
+    _("Fracture")
+],
 "correct": 0,
-"explanation": "Contaminated food spreads infection."
+"explanation": _("Contaminated food spreads infection.")
 },
 
 {
-"question": "Routine blood pressure checks prevent:",
-"options": ["Stroke", "Cold", "Migraine", "Burns"],
+"question": _("Routine blood pressure checks prevent:"),
+"options": [
+    _("Stroke"),
+    _("Cold"),
+    _("Migraine"),
+    _("Burns")
+],
 "correct": 0,
-"explanation": "High BP leads to stroke."
+"explanation": _("High BP leads to stroke.")
 },
 
 {
-"question": "Which helps prevent osteoporosis?",
-"options": ["Calcium intake", "Smoking", "Alcohol", "Junk food"],
+"question": _("Which helps prevent osteoporosis?"),
+"options": [
+    _("Calcium intake"),
+    _("Smoking"),
+    _("Alcohol"),
+    _("Junk food")
+],
 "correct": 0,
-"explanation": "Calcium strengthens bones."
+"explanation": _("Calcium strengthens bones.")
 },
 
 {
-"question": "Regular physical checkups help in:",
-"options": ["Early diagnosis", "Late detection", "Infection spread", "Weight gain"],
+"question": _("Regular physical checkups help in:"),
+"options": [
+    _("Early diagnosis"),
+    _("Late detection"),
+    _("Infection spread"),
+    _("Weight gain")
+],
 "correct": 0,
-"explanation": "Early detection improves treatment."
+"explanation": _("Early detection improves treatment.")
 },
 
 {
-"question": "Hand sanitizers should contain at least:",
-"options": ["60% alcohol", "10% sugar", "5% salt", "1% water"],
+"question": _("Hand sanitizers should contain at least:"),
+"options": [
+    _("60% alcohol"),
+    _("10% sugar"),
+    _("5% salt"),
+    _("1% water")
+],
 "correct": 0,
-"explanation": "60% alcohol kills germs effectively."
+"explanation": _("60% alcohol kills germs effectively.")
 },
 
 {
-"question": "Which disease spreads via contaminated needles?",
-"options": ["HIV", "Cold", "Asthma", "Fracture"],
+"question": _("Which disease spreads via contaminated needles?"),
+"options": [
+    _("HIV"),
+    _("Cold"),
+    _("Asthma"),
+    _("Fracture")
+],
 "correct": 0,
-"explanation": "HIV spreads through infected blood."
+"explanation": _("HIV spreads through infected blood.")
 },
 
 {
-"question": "Healthy cholesterol levels prevent:",
-"options": ["Heart attack", "Cold", "Burns", "Fracture"],
+"question": _("Healthy cholesterol levels prevent:"),
+"options": [
+    _("Heart attack"),
+    _("Cold"),
+    _("Burns"),
+    _("Fracture")
+],
 "correct": 0,
-"explanation": "High cholesterol causes heart disease."
+"explanation": _("High cholesterol causes heart disease.")
 },
 
 {
-"question": "Proper ventilation reduces:",
-"options": ["Airborne infection", "Diabetes", "Hypertension", "Fractures"],
+"question": _("Proper ventilation reduces:"),
+"options": [
+    _("Airborne infection"),
+    _("Diabetes"),
+    _("Hypertension"),
+    _("Fractures")
+],
 "correct": 0,
-"explanation": "Fresh air reduces germ concentration."
+"explanation": _("Fresh air reduces germ concentration.")
 },
 
 {
-"question": "Avoiding processed sugar reduces risk of:",
-"options": ["Diabetes", "Cold", "Asthma", "Injury"],
+"question": _("Avoiding processed sugar reduces risk of:"),
+"options": [
+    _("Diabetes"),
+    _("Cold"),
+    _("Asthma"),
+    _("Injury")
+],
 "correct": 0,
-"explanation": "Sugar increases insulin resistance."
+"explanation": _("Sugar increases insulin resistance.")
 },
 
 {
-"question": "Regular exercise improves:",
-"options": ["Immune function", "Virus growth", "Stress level", "Fatigue"],
+"question": _("Regular exercise improves:"),
+"options": [
+    _("Immune function"),
+    _("Virus growth"),
+    _("Stress level"),
+    _("Fatigue")
+],
 "correct": 0,
-"explanation": "Exercise strengthens immunity."
+"explanation": _("Exercise strengthens immunity.")
 },
 
 {
-"question": "Early HIV detection improves:",
-"options": ["Treatment success", "Infection rate", "Pain", "Cold"],
+"question": _("Early HIV detection improves:"),
+"options": [
+    _("Treatment success"),
+    _("Infection rate"),
+    _("Pain"),
+    _("Cold")
+],
 "correct": 0,
-"explanation": "Early treatment improves life expectancy."
+"explanation": _("Early treatment improves life expectancy.")
 },
 
 {
-"question": "Which disease is prevented by polio vaccine?",
-"options": ["Polio", "Cancer", "TB", "Diabetes"],
+"question": _("Which disease is prevented by polio vaccine?"),
+"options": [
+    _("Polio"),
+    _("Cancer"),
+    _("TB"),
+    _("Diabetes")
+],
 "correct": 0,
-"explanation": "Polio vaccine protects against paralysis."
+"explanation": _("Polio vaccine protects against paralysis.")
 },
 
 {
-"question": "Maintaining hygiene prevents:",
-"options": ["Many infections", "Bone fracture", "Burns", "Migraine"],
+"question": _("Maintaining hygiene prevents:"),
+"options": [
+    _("Many infections"),
+    _("Bone fracture"),
+    _("Burns"),
+    _("Migraine")
+],
 "correct": 0,
-"explanation": "Good hygiene blocks infection spread."
+"explanation": _("Good hygiene blocks infection spread.")
 }
 
 ],
 "general": [
 
-{"question": "How many hours of sleep do adults need daily?", "options": ["4-5", "5-6", "7-9", "10-12"], "correct": 2, "explanation": "Adults need 7-9 hours of sleep for proper health."},
+{"question": _("How many hours of sleep do adults need daily?"),
+"options": [
+    _("4-5"),
+    _("5-6"),
+    _("7-9"),
+    _("10-12")
+],
+"correct": 2,
+"explanation": _("Adults need 7-9 hours of sleep for proper health.")},
 
-{"question": "Drinking enough water helps to:", "options": ["Cause fatigue", "Improve digestion", "Reduce oxygen", "Increase stress"], "correct": 1, "explanation": "Hydration improves digestion and overall health."},
+{"question": _("Drinking enough water helps to:"),
+"options": [
+    _("Cause fatigue"),
+    _("Improve digestion"),
+    _("Reduce oxygen"),
+    _("Increase stress")
+],
+"correct": 1,
+"explanation": _("Hydration improves digestion and overall health.")},
 
-{"question": "Which organ pumps blood through the body?", "options": ["Lungs", "Brain", "Heart", "Kidney"], "correct": 2, "explanation": "The heart pumps blood throughout the body."},
+{"question": _("Which organ pumps blood through the body?"),
+"options": [
+    _("Lungs"),
+    _("Brain"),
+    _("Heart"),
+    _("Kidney")
+],
+"correct": 2,
+"explanation": _("The heart pumps blood throughout the body.")},
 
-{"question": "What is a normal body temperature?", "options": ["35°C", "37°C", "40°C", "39°C"], "correct": 1, "explanation": "Normal body temperature is approximately 37°C."},
+{"question": _("What is a normal body temperature?"),
+"options": [
+    _("35°C"),
+    _("37°C"),
+    _("40°C"),
+    _("39°C")
+],
+"correct": 1,
+"explanation": _("Normal body temperature is approximately 37°C.")},
 
-{"question": "Which nutrient helps build muscles?", "options": ["Protein", "Sugar", "Salt", "Fat"], "correct": 0, "explanation": "Protein helps in muscle repair and growth."},
+{"question": _("Which nutrient helps build muscles?"),
+"options": [
+    _("Protein"),
+    _("Sugar"),
+    _("Salt"),
+    _("Fat")
+],
+"correct": 0,
+"explanation": _("Protein helps in muscle repair and growth.")},
 
-{"question": "BMI stands for:", "options": ["Body Mass Index", "Body Muscle Indicator", "Basic Metabolic Intake", "Blood Measure Index"], "correct": 0, "explanation": "BMI means Body Mass Index."},
+{"question": _("BMI stands for:"),
+"options": [
+    _("Body Mass Index"),
+    _("Body Muscle Indicator"),
+    _("Basic Metabolic Intake"),
+    _("Blood Measure Index")
+],
+"correct": 0,
+"explanation": _("BMI means Body Mass Index.")},
 
-{"question": "Regular exercise helps reduce:", "options": ["Energy", "Stress", "Sleep", "Immunity"], "correct": 1, "explanation": "Exercise reduces stress levels."},
+{"question": _("Regular exercise helps reduce:"),
+"options": [
+    _("Energy"),
+    _("Stress"),
+    _("Sleep"),
+    _("Immunity")
+],
+"correct": 1,
+"explanation": _("Exercise reduces stress levels.")},
 
-{"question": "Which vitamin improves vision?", "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"], "correct": 0, "explanation": "Vitamin A supports eye health."},
+{"question": _("Which vitamin improves vision?"),
+"options": [
+    _("Vitamin A"),
+    _("Vitamin B"),
+    _("Vitamin C"),
+    _("Vitamin D")
+],
+"correct": 0,
+"explanation": _("Vitamin A supports eye health.")},
 
-{"question": "Smoking mainly damages which organ?", "options": ["Heart", "Liver", "Lungs", "Brain"], "correct": 2, "explanation": "Smoking primarily damages the lungs."},
+{"question": _("Smoking mainly damages which organ?"),
+"options": [
+    _("Heart"),
+    _("Liver"),
+    _("Lungs"),
+    _("Brain")
+],
+"correct": 2,
+"explanation": _("Smoking primarily damages the lungs.")},
 
-{"question": "A balanced diet includes:", "options": ["Only carbohydrates", "Only proteins", "All nutrients", "Only fats"], "correct": 2, "explanation": "A balanced diet includes all essential nutrients."},
+{"question": _("A balanced diet includes:"),
+"options": [
+    _("Only carbohydrates"),
+    _("Only proteins"),
+    _("All nutrients"),
+    _("Only fats")
+],
+"correct": 2,
+"explanation": _("A balanced diet includes all essential nutrients.")},
 
-{"question": "Which test measures blood sugar?", "options": ["ECG", "Blood Glucose Test", "X-ray", "MRI"], "correct": 1, "explanation": "Blood glucose test measures sugar levels."},
+{"question": _("Which test measures blood sugar?"),
+"options": [
+    _("ECG"),
+    _("Blood Glucose Test"),
+    _("X-ray"),
+    _("MRI")
+],
+"correct": 1,
+"explanation": _("Blood glucose test measures sugar levels.")},
 
-{"question": "Hypertension means:", "options": ["Low sugar", "High blood pressure", "Low BP", "High sugar"], "correct": 1, "explanation": "Hypertension means high blood pressure."},
+{"question": _("Hypertension means:"),
+"options": [
+    _("Low sugar"),
+    _("High blood pressure"),
+    _("Low BP"),
+    _("High sugar")
+],
+"correct": 1,
+"explanation": _("Hypertension means high blood pressure.")},
 
-{"question": "Which mineral prevents anemia?", "options": ["Iron", "Calcium", "Sodium", "Zinc"], "correct": 0, "explanation": "Iron deficiency causes anemia."},
+{"question": _("Which mineral prevents anemia?"),
+"options": [
+    _("Iron"),
+    _("Calcium"),
+    _("Sodium"),
+    _("Zinc")
+],
+"correct": 0,
+"explanation": _("Iron deficiency causes anemia.")},
 
-{"question": "Excess sugar intake may lead to:", "options": ["Diabetes", "Improved vision", "Stronger bones", "Better sleep"], "correct": 0, "explanation": "Too much sugar increases diabetes risk."},
+{"question": _("Excess sugar intake may lead to:"),
+"options": [
+    _("Diabetes"),
+    _("Improved vision"),
+    _("Stronger bones"),
+    _("Better sleep")
+],
+"correct": 0,
+"explanation": _("Too much sugar increases diabetes risk.")},
 
-{"question": "Which habit improves mental health?", "options": ["Meditation", "Smoking", "Overeating", "Alcohol abuse"], "correct": 0, "explanation": "Meditation improves mental wellness."},
+{"question": _("Which habit improves mental health?"),
+"options": [
+    _("Meditation"),
+    _("Smoking"),
+    _("Overeating"),
+    _("Alcohol abuse")
+],
+"correct": 0,
+"explanation": _("Meditation improves mental wellness.")},
 
-{"question": "Cholesterol mainly affects:", "options": ["Bones", "Heart", "Hair", "Skin"], "correct": 1, "explanation": "High cholesterol affects heart health."},
+{"question": _("Cholesterol mainly affects:"),
+"options": [
+    _("Bones"),
+    _("Heart"),
+    _("Hair"),
+    _("Skin")
+],
+"correct": 1,
+"explanation": _("High cholesterol affects heart health.")},
 
-{"question": "Vaccines help by:", "options": ["Causing disease", "Preventing disease", "Reducing sleep", "Lowering oxygen"], "correct": 1, "explanation": "Vaccines prevent diseases."},
+{"question": _("Vaccines help by:"),
+"options": [
+    _("Causing disease"),
+    _("Preventing disease"),
+    _("Reducing sleep"),
+    _("Lowering oxygen")
+],
+"correct": 1,
+"explanation": _("Vaccines prevent diseases.")},
 
-{"question": "Hand washing prevents:", "options": ["Infections", "Sleep", "Hunger", "Stress"], "correct": 0, "explanation": "Hand washing reduces infection risk."},
+{"question": _("Hand washing prevents:"),
+"options": [
+    _("Infections"),
+    _("Sleep"),
+    _("Hunger"),
+    _("Stress")
+],
+"correct": 0,
+"explanation": _("Hand washing reduces infection risk.")},
 
-{"question": "Stress can affect:", "options": ["Only brain", "Only heart", "Whole body", "Nothing"], "correct": 2, "explanation": "Stress impacts the whole body."},
+{"question": _("Stress can affect:"),
+"options": [
+    _("Only brain"),
+    _("Only heart"),
+    _("Whole body"),
+    _("Nothing")
+],
+"correct": 2,
+"explanation": _("Stress impacts the whole body.")},
 
-{"question": "Fiber helps in:", "options": ["Digestion", "Breathing", "Hearing", "Vision"], "correct": 0, "explanation": "Fiber improves digestion."},
+{"question": _("Fiber helps in:"),
+"options": [
+    _("Digestion"),
+    _("Breathing"),
+    _("Hearing"),
+    _("Vision")
+],
+"correct": 0,
+"explanation": _("Fiber improves digestion.")},
 
-{"question": "Obesity increases risk of:", "options": ["Heart disease", "Stronger immunity", "Better sleep", "Improved vision"], "correct": 0, "explanation": "Obesity increases heart disease risk."},
+{"question": _("Obesity increases risk of:"),
+"options": [
+    _("Heart disease"),
+    _("Stronger immunity"),
+    _("Better sleep"),
+    _("Improved vision")
+],
+"correct": 0,
+"explanation": _("Obesity increases heart disease risk.")},
 
-{"question": "Which is good for heart health?", "options": ["Fried food", "Exercise", "Smoking", "Sugary drinks"], "correct": 1, "explanation": "Exercise strengthens the heart."},
+{"question": _("Which is good for heart health?"),
+"options": [
+    _("Fried food"),
+    _("Exercise"),
+    _("Smoking"),
+    _("Sugary drinks")
+],
+"correct": 1,
+"explanation": _("Exercise strengthens the heart.")},
 
-{"question": "Water makes up about what % of body?", "options": ["20%", "40%", "60%", "90%"], "correct": 2, "explanation": "About 60% of the body is water."},
+{"question": _("Water makes up about what % of body?"),
+"options": [
+    _("20%"),
+    _("40%"),
+    _("60%"),
+    _("90%")
+],
+"correct": 2,
+"explanation": _("About 60% of the body is water.")},
 
-{"question": "Which habit boosts immunity?", "options": ["Proper sleep", "Smoking", "Alcohol abuse", "Skipping meals"], "correct": 0, "explanation": "Good sleep strengthens immunity."},
+{"question": _("Which habit boosts immunity?"),
+"options": [
+    _("Proper sleep"),
+    _("Smoking"),
+    _("Alcohol abuse"),
+    _("Skipping meals")
+],
+"correct": 0,
+"explanation": _("Good sleep strengthens immunity.")},
 
-{"question": "Which organ filters blood?", "options": ["Heart", "Kidney", "Lung", "Brain"], "correct": 1, "explanation": "Kidneys filter waste from blood."},
+{"question": _("Which organ filters blood?"),
+"options": [
+    _("Heart"),
+    _("Kidney"),
+    _("Lung"),
+    _("Brain")
+],
+"correct": 1,
+"explanation": _("Kidneys filter waste from blood.")},
 
-{"question": "Regular health checkups help to:", "options": ["Detect diseases early", "Cause disease", "Reduce height", "Increase stress"], "correct": 0, "explanation": "Early detection improves treatment."},
+{"question": _("Regular health checkups help to:"),
+"options": [
+    _("Detect diseases early"),
+    _("Cause disease"),
+    _("Reduce height"),
+    _("Increase stress")
+],
+"correct": 0,
+"explanation": _("Early detection improves treatment.")},
 
-{"question": "Too much salt may cause:", "options": ["Low BP", "High BP", "Low sugar", "Anemia"], "correct": 1, "explanation": "High salt increases blood pressure."},
+{"question": _("Too much salt may cause:"),
+"options": [
+    _("Low BP"),
+    _("High BP"),
+    _("Low sugar"),
+    _("Anemia")
+],
+"correct": 1,
+"explanation": _("High salt increases blood pressure.")},
 
-{"question": "Sun exposure gives:", "options": ["Vitamin D", "Vitamin C", "Iron", "Calcium"], "correct": 0, "explanation": "Sunlight helps produce Vitamin D."},
+{"question": _("Sun exposure gives:"),
+"options": [
+    _("Vitamin D"),
+    _("Vitamin C"),
+    _("Iron"),
+    _("Calcium")
+],
+"correct": 0,
+"explanation": _("Sunlight helps produce Vitamin D.")},
 
-{"question": "Which activity improves lung capacity?", "options": ["Smoking", "Deep breathing", "Skipping water", "Overeating"], "correct": 1, "explanation": "Breathing exercises improve lung function."},
+{"question": _("Which activity improves lung capacity?"),
+"options": [
+    _("Smoking"),
+    _("Deep breathing"),
+    _("Skipping water"),
+    _("Overeating")
+],
+"correct": 1,
+"explanation": _("Breathing exercises improve lung function.")},
 
-{"question": "Alcohol mainly affects:", "options": ["Liver", "Eyes", "Hair", "Teeth"], "correct": 0, "explanation": "Alcohol damages the liver."},
+{"question": _("Alcohol mainly affects:"),
+"options": [
+    _("Liver"),
+    _("Eyes"),
+    _("Hair"),
+    _("Teeth")
+],
+"correct": 0,
+"explanation": _("Alcohol damages the liver.")},
 
-# (Remaining shortened for readability but still 50 total)
+{"question": _("Healthy weight reduces risk of:"),
+"options": [
+    _("Diabetes"),
+    _("Height growth"),
+    _("Better hair"),
+    _("Eye color change")
+],
+"correct": 0,
+"explanation": _("Healthy weight lowers disease risk.")},
 
-{"question": "Healthy weight reduces risk of:", "options": ["Diabetes", "Height growth", "Better hair", "Eye color change"], "correct": 0, "explanation": "Healthy weight lowers disease risk."},
-{"question": "Daily physical activity should be at least:", "options": ["10 min", "30 min", "2 hrs", "5 hrs"], "correct": 1, "explanation": "At least 30 minutes daily."},
-{"question": "Which vitamin boosts immunity?", "options": ["Vitamin C", "Vitamin K", "Vitamin B12", "Vitamin E"], "correct": 0, "explanation": "Vitamin C supports immunity."},
-{"question": "Dehydration can cause:", "options": ["Headache", "Strength", "Energy boost", "Better sleep"], "correct": 0, "explanation": "Lack of water causes headaches."},
-{"question": "Balanced meals should include:", "options": ["Protein, carbs, fats", "Only carbs", "Only sugar", "Only fats"], "correct": 0, "explanation": "All macronutrients are needed."},
-{"question": "Good posture prevents:", "options": ["Back pain", "Vision", "Cold", "Flu"], "correct": 0, "explanation": "Proper posture prevents back pain."},
-{"question": "Walking improves:", "options": ["Heart health", "Stress", "Fatigue", "Weakness"], "correct": 0, "explanation": "Walking improves heart health."},
-{"question": "Which is a healthy snack?", "options": ["Fruits", "Chips", "Soda", "Candy"], "correct": 0, "explanation": "Fruits are healthy snacks."},
-{"question": "Meditation helps with:", "options": ["Stress reduction", "Height growth", "Hair color", "Vision"], "correct": 0, "explanation": "Meditation reduces stress."},
-{"question": "Which reduces infection risk?", "options": ["Hand sanitizer", "Sharing bottles", "Skipping bath", "Not washing hands"], "correct": 0, "explanation": "Sanitizer reduces germs."},
+{"question": _("Daily physical activity should be at least:"),
+"options": [
+    _("10 min"),
+    _("30 min"),
+    _("2 hrs"),
+    _("5 hrs")
+],
+"correct": 1,
+"explanation": _("At least 30 minutes daily.")},
+
+{"question": _("Which vitamin boosts immunity?"),
+"options": [
+    _("Vitamin C"),
+    _("Vitamin K"),
+    _("Vitamin B12"),
+    _("Vitamin E")
+],
+"correct": 0,
+"explanation": _("Vitamin C supports immunity.")},
+
+{"question": _("Dehydration can cause:"),
+"options": [
+    _("Headache"),
+    _("Strength"),
+    _("Energy boost"),
+    _("Better sleep")
+],
+"correct": 0,
+"explanation": _("Lack of water causes headaches.")},
+
+{"question": _("Balanced meals should include:"),
+"options": [
+    _("Protein, carbs, fats"),
+    _("Only carbs"),
+    _("Only sugar"),
+    _("Only fats")
+],
+"correct": 0,
+"explanation": _("All macronutrients are needed.")},
+
+{"question": _("Good posture prevents:"),
+"options": [
+    _("Back pain"),
+    _("Vision"),
+    _("Cold"),
+    _("Flu")
+],
+"correct": 0,
+"explanation": _("Proper posture prevents back pain.")},
+
+{"question": _("Walking improves:"),
+"options": [
+    _("Heart health"),
+    _("Stress"),
+    _("Fatigue"),
+    _("Weakness")
+],
+"correct": 0,
+"explanation": _("Walking improves heart health.")},
+
+{"question": _("Which is a healthy snack?"),
+"options": [
+    _("Fruits"),
+    _("Chips"),
+    _("Soda"),
+    _("Candy")
+],
+"correct": 0,
+"explanation": _("Fruits are healthy snacks.")},
+
+{"question": _("Meditation helps with:"),
+"options": [
+    _("Stress reduction"),
+    _("Height growth"),
+    _("Hair color"),
+    _("Vision")
+],
+"correct": 0,
+"explanation": _("Meditation reduces stress.")},
+
+{"question": _("Which reduces infection risk?"),
+"options": [
+    _("Hand sanitizer"),
+    _("Sharing bottles"),
+    _("Skipping bath"),
+    _("Not washing hands")
+],
+"correct": 0,
+"explanation": _("Sanitizer reduces germs.")},
 
 ],
 "firstaid": [
 
-{"question": "What should you do first in an emergency?", "options": ["Panic", "Ensure safety", "Run away", "Ignore"], "correct": 1, "explanation": "Always ensure scene safety first."},
+{"question": _("What should you do first in an emergency?"),
+"options": [
+    _("Panic"),
+    _("Ensure safety"),
+    _("Run away"),
+    _("Ignore")
+],
+"correct": 1,
+"explanation": _("Always ensure scene safety first.")},
 
-{"question": "For minor burns, use:", "options": ["Ice directly", "Cold running water", "Oil", "Toothpaste"], "correct": 1, "explanation": "Cool running water soothes burns."},
+{"question": _("For minor burns, use:"),
+"options": [
+    _("Ice directly"),
+    _("Cold running water"),
+    _("Oil"),
+    _("Toothpaste")
+],
+"correct": 1,
+"explanation": _("Cool running water soothes burns.")},
 
-{"question": "CPR stands for:", "options": ["Cardio Pulmonary Resuscitation", "Cardiac Pressure Response", "Chest Pump Rescue", "Critical Pulse Recovery"], "correct": 0, "explanation": "CPR means Cardio Pulmonary Resuscitation."},
+{"question": _("CPR stands for:"),
+"options": [
+    _("Cardio Pulmonary Resuscitation"),
+    _("Cardiac Pressure Response"),
+    _("Chest Pump Rescue"),
+    _("Critical Pulse Recovery")
+],
+"correct": 0,
+"explanation": _("CPR means Cardio Pulmonary Resuscitation.")},
 
-{"question": "For nosebleed, you should:", "options": ["Tilt head back", "Lean forward", "Lie down", "Ignore"], "correct": 1, "explanation": "Lean forward to avoid swallowing blood."},
+{"question": _("For nosebleed, you should:"),
+"options": [
+    _("Tilt head back"),
+    _("Lean forward"),
+    _("Lie down"),
+    _("Ignore")
+],
+"correct": 1,
+"explanation": _("Lean forward to avoid swallowing blood.")},
 
-{"question": "If someone is choking, perform:", "options": ["Heimlich maneuver", "CPR immediately", "Water therapy", "Massage"], "correct": 0, "explanation": "Heimlich maneuver helps remove obstruction."},
+{"question": _("If someone is choking, perform:"),
+"options": [
+    _("Heimlich maneuver"),
+    _("CPR immediately"),
+    _("Water therapy"),
+    _("Massage")
+],
+"correct": 0,
+"explanation": _("Heimlich maneuver helps remove obstruction.")},
 
-{"question": "For cuts, first step:", "options": ["Wash with clean water", "Apply mud", "Ignore", "Use dirty cloth"], "correct": 0, "explanation": "Clean wound with water."},
+{"question": _("For cuts, first step:"),
+"options": [
+    _("Wash with clean water"),
+    _("Apply mud"),
+    _("Ignore"),
+    _("Use dirty cloth")
+],
+"correct": 0,
+"explanation": _("Clean wound with water.")},
 
-{"question": "If someone faints, you should:", "options": ["Lay them flat", "Shake violently", "Throw water", "Ignore"], "correct": 0, "explanation": "Lay flat and elevate legs."},
+{"question": _("If someone faints, you should:"),
+"options": [
+    _("Lay them flat"),
+    _("Shake violently"),
+    _("Throw water"),
+    _("Ignore")
+],
+"correct": 0,
+"explanation": _("Lay flat and elevate legs.")},
 
-{"question": "For sprain, use:", "options": ["RICE method", "Heat immediately", "Ignore", "Massage hard"], "correct": 0, "explanation": "Rest, Ice, Compression, Elevation."},
+{"question": _("For sprain, use:"),
+"options": [
+    _("RICE method"),
+    _("Heat immediately"),
+    _("Ignore"),
+    _("Massage hard")
+],
+"correct": 0,
+"explanation": _("Rest, Ice, Compression, Elevation.")},
 
-{"question": "Emergency number in India is:", "options": ["100", "108", "101", "112"], "correct": 3, "explanation": "112 is national emergency helpline."},
+{"question": _("Emergency number in India is:"),
+"options": [
+    _("100"),
+    _("108"),
+    _("101"),
+    _("112")
+],
+"correct": 3,
+"explanation": _("112 is national emergency helpline.")},
 
-{"question": "If electric shock occurs:", "options": ["Touch directly", "Switch off power first", "Pour water", "Ignore"], "correct": 1, "explanation": "Turn off power before touching victim."},
+{"question": _("If electric shock occurs:"),
+"options": [
+    _("Touch directly"),
+    _("Switch off power first"),
+    _("Pour water"),
+    _("Ignore")
+],
+"correct": 1,
+"explanation": _("Turn off power before touching victim.")},
 
-# Add more below same pattern to complete 50
+{"question": _("For snake bite, you should:"),
+"options": [
+    _("Suck venom"),
+    _("Keep person calm"),
+    _("Cut wound"),
+    _("Apply ice")
+],
+"correct": 1,
+"explanation": _("Keep calm and seek medical help.")},
 
-{"question": "For snake bite, you should:", "options": ["Suck venom", "Keep person calm", "Cut wound", "Apply ice"], "correct": 1, "explanation": "Keep calm and seek medical help."},
+{"question": _("For eye injury, you should:"),
+"options": [
+    _("Rub eye"),
+    _("Rinse gently"),
+    _("Ignore"),
+    _("Apply oil")
+],
+"correct": 1,
+"explanation": _("Rinse gently with clean water.")},
 
-{"question": "For eye injury, you should:", "options": ["Rub eye", "Rinse gently", "Ignore", "Apply oil"], "correct": 1, "explanation": "Rinse gently with clean water."},
+{"question": _("If fracture suspected:"),
+"options": [
+    _("Move limb"),
+    _("Immobilize"),
+    _("Massage"),
+    _("Ignore")
+],
+"correct": 1,
+"explanation": _("Keep limb still and supported.")},
 
-{"question": "If fracture suspected:", "options": ["Move limb", "Immobilize", "Massage", "Ignore"], "correct": 1, "explanation": "Keep limb still and supported."},
+{"question": _("For heat stroke:"),
+"options": [
+    _("Cool the person"),
+    _("Give alcohol"),
+    _("Ignore"),
+    _("Wrap blanket")
+],
+"correct": 0,
+"explanation": _("Cool body immediately.")},
 
-{"question": "For heat stroke:", "options": ["Cool the person", "Give alcohol", "Ignore", "Wrap blanket"], "correct": 0, "explanation": "Cool body immediately."},
-
-{"question": "For poisoning:", "options": ["Induce vomiting always", "Call emergency", "Ignore", "Give soda"], "correct": 1, "explanation": "Call emergency services immediately."},
-
-# (Continue similarly until 50)
+{"question": _("For poisoning:"),
+"options": [
+    _("Induce vomiting always"),
+    _("Call emergency"),
+    _("Ignore"),
+    _("Give soda")
+],
+"correct": 1,
+"explanation": _("Call emergency services immediately.")},
 
 ]
 

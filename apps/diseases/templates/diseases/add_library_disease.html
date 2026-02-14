@@ -7,6 +7,18 @@
 
     <input type="text" name="name" placeholder="{% trans "Disease Name" %}" required><br><br>
 
+    <!-- ✅ CATEGORY ADDED HERE -->
+    <select name="category" required>
+        <option value="">Select Category</option>
+        <option value="viral">Viral</option>
+        <option value="bacterial">Bacterial</option>
+        <option value="fungal">Fungal</option>
+        <option value="genetic">Genetic</option>
+        <option value="chronic">Chronic</option>
+        <option value="skin">Skin</option>
+        <option value="other">Other</option>
+    </select><br><br>
+
     <input type="text" name="body_system" placeholder="{% trans "Body System" %}"><br><br>
 
     <textarea name="history" placeholder="{% trans "History / Origin" %}"></textarea><br><br>
@@ -23,7 +35,7 @@
 
     <input type="text" name="specialist_required" placeholder="{% trans "Specialist Doctor (e.g., Dermatologist)" %}"><br><br>
 
-    <input type="text" name="hospital_phone" 
+    <input type="text" name="hospital_phone"
        placeholder="{% trans "Hospital Phone Number" %}"><br><br>
 
     <select name="is_contagious">

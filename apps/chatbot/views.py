@@ -5,6 +5,7 @@ from .gemini_client import generate_reply
 
 import markdown
 from django.utils.safestring import mark_safe
+from django.utils import translation
 
 
 def chatbot_view(request, chat_id=None):
@@ -14,7 +15,7 @@ def chatbot_view(request, chat_id=None):
         chat = get_object_or_404(Chat, id=chat_id)
     else:
         chat = Chat.objects.create(title="New Chat")
-        return redirect("chat_detail", chat_id=chat.id)
+        return redirect("chatbot:chat_detail", chat_id=chat.id)
 
     if request.method == "POST":
         user_msg = request.POST.get("message")
@@ -31,9 +32,11 @@ def chatbot_view(request, chat_id=None):
         for msg in chat.messages.all():
             role = "User" if msg.role == "user" else "AI"
             conversation += f"{role}: {msg.text}\n"
+        
+        current_language = translation.get_language()
 
         # Get AI reply
-        ai_reply = generate_reply(conversation)
+        ai_reply = generate_reply(conversation,current_language)
 
         # Convert Markdown → HTML
         html_reply = mark_safe(markdown.markdown(ai_reply))
@@ -67,9 +70,9 @@ def delete_chat(request, chat_id):
     # If user deleted the currently open chat
     if str(chat_id) == request.GET.get("current"):
         if remaining_chats.exists():
-            return redirect("chat_detail", chat_id=remaining_chats.first().id)
+            return redirect("chatbot:chat_detail", chat_id=remaining_chats.first().id)
         else:
-            return redirect("chatbot")  # will create ONE new chat
+            return redirect("chatbot:chatbot")  # will create ONE new chat
     
     # If deleted some other chat, stay on same page
-    return redirect(request.META.get("HTTP_REFERER", "chatbot"))
+    return redirect(request.META.get("HTTP_REFERER", "chatbot:chatbot"))

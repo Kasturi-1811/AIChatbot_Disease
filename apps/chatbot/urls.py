@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import chatbot_view, delete_chat
 
+app_name = "chatbot" 
 urlpatterns = [
     path("", chatbot_view, name="chatbot"),
     path("<int:chat_id>/", chatbot_view, name="chat_detail"),

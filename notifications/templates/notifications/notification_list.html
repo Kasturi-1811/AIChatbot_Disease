@@ -378,8 +378,9 @@
                         ℹ️
                     </div>
                     <div class="notification-content">
-                        <div class="notification-title">{{ n.title }}</div>
-                        <div class="notification-message">{{ n.message }}</div>
+                        <div class="notification-title">{{ n.get_title }}</div>
+                        <p>{{ n.get_message }}</p>
+                        <div class="notification-message">{{ n.get_message }}</div>
                         <div class="notification-footer">
                             <div class="notification-time">
                                 🕐 {{ n.created_at|timesince }} ago

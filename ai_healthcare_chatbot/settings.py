@@ -54,10 +54,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware', 
-    'django.middleware.common.CommonMiddleware',  # 👈 first
+    'django.contrib.sessions.middleware.SessionMiddleware',   # 👈 first
     'django.middleware.locale.LocaleMiddleware',              # 👈 then this
-    
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -167,6 +166,6 @@ import os
 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-GEMINI_API_KEY = "AIzaSyAPzWCPSu7F9yuDaLGsKiAHsF9hsej7juU"
+GEMINI_API_KEY = "AIzaSyAg6t4TIAlugbDXbk-cS3VBVsRtYOnnxeU"
 
 

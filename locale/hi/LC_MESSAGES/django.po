@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-12 23:44+0530\n"
+"POT-Creation-Date: 2026-02-13 22:55+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,570 +17,585 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\apps\accounts\templates\accounts\login.html:356
-msgid "Welcome Back!"
-msgstr ""
+
+#: .\ai_healthcare_chatbot\settings.py:132
+#: .\apps\accounts\templates\accounts\profile.html:521
+msgid "English"
+msgstr "अंग्रेज़ी"
+
+#: .\ai_healthcare_chatbot\settings.py:133
+#: .\apps\accounts\templates\accounts\profile.html:522
+msgid "Hindi"
+msgstr "हिंदी"
+
+#: .\ai_healthcare_chatbot\settings.py:134
+#: .\apps\accounts\templates\accounts\profile.html:523
+msgid "Telugu"
+msgstr "तेलुगु"
 
 #: .\apps\accounts\templates\accounts\login.html:357
+msgid "Welcome Back!"
+msgstr "वापसी पर स्वागत है!"
+
+#: .\apps\accounts\templates\accounts\login.html:358
 msgid ""
 "Sign in to continue your health journey with personalized AI-powered "
 "insights."
 msgstr ""
-
-#: .\apps\accounts\templates\accounts\login.html:359
-msgid "Track your health metrics"
-msgstr ""
+"व्यक्तिगत एआई-संचालित स्वास्थ्य जानकारी के साथ अपनी स्वास्थ्य यात्रा जारी रखने के लिए "
+"साइन इन करें।"
 
 #: .\apps\accounts\templates\accounts\login.html:360
-msgid "Get instant AI consultations"
-msgstr ""
+msgid "Track your health metrics"
+msgstr "अपने स्वास्थ्य मापदंड ट्रैक करें"
 
 #: .\apps\accounts\templates\accounts\login.html:361
-msgid "Access your medical history"
-msgstr ""
+msgid "Get instant AI consultations"
+msgstr "तुरंत एआई परामर्श प्राप्त करें"
 
 #: .\apps\accounts\templates\accounts\login.html:362
-msgid "Manage vaccination schedules"
-msgstr ""
+msgid "Access your medical history"
+msgstr "अपना चिकित्सा इतिहास देखें"
 
-#: .\apps\accounts\templates\accounts\login.html:369
-#: .\apps\accounts\templates\accounts\login.html:398
-#: .\apps\home\templates\home\home.html:494
-msgid "Sign In"
-msgstr ""
+#: .\apps\accounts\templates\accounts\login.html:363
+msgid "Manage vaccination schedules"
+msgstr "टीकाकरण समय-सारणी प्रबंधित करें"
 
 #: .\apps\accounts\templates\accounts\login.html:370
+#: .\apps\accounts\templates\accounts\login.html:399
+#: .\apps\home\templates\home\home.html:495
+msgid "Sign In"
+msgstr "साइन इन करें"
+
+#: .\apps\accounts\templates\accounts\login.html:371
 msgid "Enter your credentials to access your account"
-msgstr ""
+msgstr "अपने खाते में प्रवेश करने के लिए अपनी जानकारी दर्ज करें"
 
-#: .\apps\accounts\templates\accounts\login.html:393
+#: .\apps\accounts\templates\accounts\login.html:394
 msgid "Remember me"
-msgstr ""
+msgstr "मुझे याद रखें"
 
-#: .\apps\accounts\templates\accounts\login.html:395
+#: .\apps\accounts\templates\accounts\login.html:396
 msgid "Forgot password?"
-msgstr ""
+msgstr "पासवर्ड भूल गए?"
 
-#: .\apps\accounts\templates\accounts\login.html:404
+#: .\apps\accounts\templates\accounts\login.html:405
 msgid "Create an account"
-msgstr ""
+msgstr "खाता बनाएं"
 
-#: .\apps\accounts\templates\accounts\login.html:408
-#: .\apps\accounts\templates\accounts\register.html:470
+#: .\apps\accounts\templates\accounts\login.html:409
+#: .\apps\accounts\templates\accounts\register.html:471
 msgid "Back to home"
-msgstr ""
-
-#: .\apps\accounts\templates\accounts\profile.html:485
-msgid "Account Information"
-msgstr ""
+msgstr "होम पर वापस जाएं"
 
 #: .\apps\accounts\templates\accounts\profile.html:486
+msgid "Account Information"
+msgstr "खाता जानकारी"
+
+#: .\apps\accounts\templates\accounts\profile.html:487
 msgid "Manage your personal details and preferences"
-msgstr ""
+msgstr "अपनी व्यक्तिगत जानकारी और प्राथमिकताएँ प्रबंधित करें"
 
-#: .\apps\accounts\templates\accounts\profile.html:495
+#: .\apps\accounts\templates\accounts\profile.html:496
 msgid "Email Address"
-msgstr ""
+msgstr "ईमेल पता"
 
-#: .\apps\accounts\templates\accounts\profile.html:500
-#: .\apps\diseases\templates\diseases\add_disease.html:195
+#: .\apps\accounts\templates\accounts\profile.html:501
+#: .\apps\diseases\templates\diseases\add_disease.html:196
 #: .\apps\vaccination\templates\vaccination\add_vaccination.html:142
 msgid "Location"
-msgstr ""
+msgstr "स्थान"
 
-#: .\apps\accounts\templates\accounts\profile.html:507
+#: .\apps\accounts\templates\accounts\profile.html:508
 msgid "Language & Preferences"
-msgstr ""
-
-#: .\apps\accounts\templates\accounts\profile.html:514
-msgid "Language"
-msgstr ""
+msgstr "भाषा और प्राथमिकताएँ"
 
 #: .\apps\accounts\templates\accounts\profile.html:515
+msgid "Language"
+msgstr "भाषा"
+
+#: .\apps\accounts\templates\accounts\profile.html:516
 msgid "Choose your preferred language"
-msgstr ""
+msgstr "अपनी पसंदीदा भाषा चुनें"
 
-#: .\apps\accounts\templates\accounts\profile.html:520
-msgid "English"
-msgstr ""
-
-#: .\apps\accounts\templates\accounts\profile.html:521
-msgid "Hindi"
-msgstr ""
-
-#: .\apps\accounts\templates\accounts\profile.html:522
-msgid "Telugu"
-msgstr ""
-
-#: .\apps\accounts\templates\accounts\profile.html:523
+#: .\apps\accounts\templates\accounts\profile.html:524
 msgid "Tamil"
-msgstr ""
-
-#: .\apps\accounts\templates\accounts\profile.html:533
-msgid "Email Notifications"
-msgstr ""
+msgstr "तमिल"
 
 #: .\apps\accounts\templates\accounts\profile.html:534
-msgid "Receive health updates via email"
-msgstr ""
+msgid "Email Notifications"
+msgstr "ईमेल सूचनाएं"
 
-#: .\apps\accounts\templates\accounts\profile.html:552
-msgid "Vaccination Reminders"
-msgstr ""
+#: .\apps\accounts\templates\accounts\profile.html:535
+msgid "Receive health updates via email"
+msgstr "ईमेल के माध्यम से स्वास्थ्य अपडेट प्राप्त करें"
 
 #: .\apps\accounts\templates\accounts\profile.html:553
+msgid "Vaccination Reminders"
+msgstr "टीकाकरण अनुस्मारक"
+
+#: .\apps\accounts\templates\accounts\profile.html:554
 msgid "Get notified about upcoming vaccines"
-msgstr ""
+msgstr "आगामी टीकों के बारे में सूचना प्राप्त करें"
 
-#: .\apps\accounts\templates\accounts\profile.html:567
+#: .\apps\accounts\templates\accounts\profile.html:568
 msgid "Save Changes"
-msgstr ""
-
-#: .\apps\accounts\templates\accounts\register.html:421
-msgid "Join HealthAI"
-msgstr ""
+msgstr "परिवर्तन सहेजें"
 
 #: .\apps\accounts\templates\accounts\register.html:422
+msgid "Join HealthAI"
+msgstr "हेल्थएआई से जुड़ें"
+
+#: .\apps\accounts\templates\accounts\register.html:423
 msgid "Start your journey to better health awareness"
-msgstr ""
+msgstr "बेहतर स्वास्थ्य जागरूकता की अपनी यात्रा शुरू करें"
 
-#: .\apps\accounts\templates\accounts\register.html:456
+#: .\apps\accounts\templates\accounts\register.html:457
 msgid "I agree to the"
-msgstr ""
+msgstr "मैं सहमत हूँ"
 
-#: .\apps\accounts\templates\accounts\register.html:456
+#: .\apps\accounts\templates\accounts\register.html:457
 msgid "Terms of Service"
-msgstr ""
+msgstr "सेवा की शर्तें"
 
-#: .\apps\accounts\templates\accounts\register.html:456
+#: .\apps\accounts\templates\accounts\register.html:457
 msgid "and"
-msgstr ""
+msgstr "और"
 
-#: .\apps\accounts\templates\accounts\register.html:456
+#: .\apps\accounts\templates\accounts\register.html:457
 msgid "Privacy Policy"
-msgstr ""
+msgstr "गोपनीयता नीति"
 
-#: .\apps\accounts\templates\accounts\register.html:456
+#: .\apps\accounts\templates\accounts\register.html:457
 msgid ""
 "I understand my data will be used to provide personalized health insights."
 msgstr ""
+"मैं समझता/समझती हूँ कि मेरे डेटा का उपयोग व्यक्तिगत स्वास्थ्य जानकारी प्रदान करने के लिए "
+"किया जाएगा।"
 
-#: .\apps\accounts\templates\accounts\register.html:460
+#: .\apps\accounts\templates\accounts\register.html:461
 msgid "Create My Account"
-msgstr ""
+msgstr "मेरा खाता बनाएं"
 
-#: .\apps\accounts\templates\accounts\register.html:466
+#: .\apps\accounts\templates\accounts\register.html:467
 msgid "Already have an account?"
-msgstr ""
+msgstr "पहले से खाता है?"
 
-#: .\apps\accounts\templates\accounts\register.html:466
+#: .\apps\accounts\templates\accounts\register.html:467
 msgid "Sign in instead"
-msgstr ""
+msgstr "इसके बजाय साइन इन करें"
 
-#: .\apps\accounts\templates\accounts\register.html:470
+#: .\apps\accounts\templates\accounts\register.html:471
 msgid "←"
-msgstr ""
+msgstr "←"
 
-#: .\apps\chatbot\templates\chatbot\chatbot.html:490
+#: .\apps\chatbot\templates\chatbot\chatbot.html:491
 #: .\apps\diseases\templates\diseases\diseases.html:625
 #: .\apps\history\templates\history\history.html:347
 #: .\apps\quiz\templates\quiz\quiz.html:410
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:522
 msgid "🏥 HealthAI"
-msgstr ""
+msgstr "🏥 हेल्थएआई"
 
-#: .\apps\chatbot\templates\chatbot\chatbot.html:494
+#: .\apps\chatbot\templates\chatbot\chatbot.html:495
 #: .\apps\diseases\templates\diseases\diseases.html:627
 #: .\apps\history\templates\history\history.html:349
 #: .\apps\quiz\templates\quiz\quiz.html:412
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:524
 #: .\apps\vaccination\templates\vaccination\vaccination.html:785
 msgid "Home"
-msgstr ""
+msgstr "होम"
 
-#: .\apps\chatbot\templates\chatbot\chatbot.html:498
+#: .\apps\chatbot\templates\chatbot\chatbot.html:499
 msgid "New Chat"
-msgstr ""
+msgstr "नई चैट"
 
-#: .\apps\chatbot\templates\chatbot\chatbot.html:502
+#: .\apps\chatbot\templates\chatbot\chatbot.html:503
 msgid "Recent Chats"
-msgstr ""
-
-#: .\apps\chatbot\templates\chatbot\chatbot.html:529
-msgid "Health AI Assistant"
-msgstr ""
+msgstr "हाल की चैट"
 
 #: .\apps\chatbot\templates\chatbot\chatbot.html:530
-msgid "Online & Ready"
-msgstr ""
+msgid "Health AI Assistant"
+msgstr "हेल्थ एआई सहायक"
 
-#: .\apps\chatbot\templates\chatbot\chatbot.html:553
-msgid "Start a New Conversation"
-msgstr ""
+#: .\apps\chatbot\templates\chatbot\chatbot.html:531
+msgid "Online & Ready"
+msgstr "ऑनलाइन और तैयार"
 
 #: .\apps\chatbot\templates\chatbot\chatbot.html:554
+msgid "Start a New Conversation"
+msgstr "नई बातचीत शुरू करें"
+
+#: .\apps\chatbot\templates\chatbot\chatbot.html:555
 msgid ""
 "Ask me anything about your health, symptoms, or medical conditions. I'm here "
 "to help!"
 msgstr ""
+"अपने स्वास्थ्य, लक्षणों या चिकित्सा स्थितियों के बारे में कुछ भी पूछें। मैं मदद के लिए यहाँ हूँ!"
 
-#: .\apps\diseases\templates\diseases\add_disease.html:168
+#: .\apps\diseases\templates\diseases\add_disease.html:169
 msgid "Add Disease Alert"
-msgstr ""
+msgstr "रोग अलर्ट जोड़ें"
 
-#: .\apps\diseases\templates\diseases\add_disease.html:170
+#: .\apps\diseases\templates\diseases\add_disease.html:171
 msgid "Help keep your community informed and safe"
-msgstr ""
+msgstr "अपने समुदाय को सूचित और सुरक्षित रखने में मदद करें"
 
-#: .\apps\diseases\templates\diseases\add_disease.html:179
+#: .\apps\diseases\templates\diseases\add_disease.html:180
 msgid "Disease Title"
-msgstr ""
+msgstr "रोग का शीर्षक"
 
-#: .\apps\diseases\templates\diseases\add_disease.html:181
+#: .\apps\diseases\templates\diseases\add_disease.html:182
 msgid "e.g., Dengue Outbreak"
-msgstr ""
+msgstr "जैसे, डेंगू का प्रकोप"
 
-#: .\apps\diseases\templates\diseases\add_disease.html:187
+#: .\apps\diseases\templates\diseases\add_disease.html:188
 msgid "Description"
-msgstr ""
+msgstr "विवरण"
 
-#: .\apps\diseases\templates\diseases\add_disease.html:189
+#: .\apps\diseases\templates\diseases\add_disease.html:190
 msgid "Provide detailed information about the disease alert..."
-msgstr ""
+msgstr "रोग अलर्ट के बारे में विस्तृत जानकारी प्रदान करें..."
 
-#: .\apps\diseases\templates\diseases\add_disease.html:197
+#: .\apps\diseases\templates\diseases\add_disease.html:198
 msgid "e.g., Guntur, Andhra Pradesh"
-msgstr ""
+msgstr "जैसे, गुंटूर, आंध्र प्रदेश"
 
-#: .\apps\diseases\templates\diseases\add_disease.html:200
+#: .\apps\diseases\templates\diseases\add_disease.html:201
 msgid "Send Alert"
-msgstr ""
+msgstr "अलर्ट भेजें"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:3
 #: .\apps\diseases\templates\diseases\diseases.html:631
 msgid "Add Disease"
-msgstr ""
+msgstr "रोग जोड़ें"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:8
 msgid "Disease Name"
-msgstr ""
+msgstr "रोग का नाम"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:10
 msgid "Body System"
-msgstr ""
+msgstr "शरीर प्रणाली"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:12
 msgid "History / Origin"
-msgstr ""
+msgstr "इतिहास / उत्पत्ति"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:14
 #: .\apps\diseases\templates\diseases\detail.html:7
 msgid "Causes"
-msgstr ""
+msgstr "कारण"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:16
 #: .\apps\diseases\templates\diseases\detail.html:10
 msgid "Symptoms"
-msgstr ""
+msgstr "लक्षण"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:18
 #: .\apps\diseases\templates\diseases\detail.html:13
 msgid "Treatment"
-msgstr ""
+msgstr "उपचार"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:20
 #: .\apps\diseases\templates\diseases\detail.html:16
 msgid "Home Remedies"
-msgstr ""
+msgstr "घरेलू उपचार"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:22
 #: .\apps\diseases\templates\diseases\detail.html:19
 msgid "Prevention"
-msgstr ""
+msgstr "रोकथाम"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:24
 msgid "Specialist Doctor (e.g., Dermatologist)"
-msgstr ""
+msgstr "विशेषज्ञ डॉक्टर (जैसे, त्वचा रोग विशेषज्ञ)"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:27
 msgid "Hospital Phone Number"
-msgstr ""
+msgstr "अस्पताल फोन नंबर"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:30
 msgid "Contagious"
-msgstr ""
+msgstr "संक्रामक"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:31
 msgid "Not Contagious"
-msgstr ""
+msgstr "गैर-संक्रामक"
 
 #: .\apps\diseases\templates\diseases\add_library_disease.html:34
 msgid "Submit"
-msgstr ""
+msgstr "जमा करें"
 
 #: .\apps\diseases\templates\diseases\detail.html:4
 msgid "Category:"
-msgstr ""
+msgstr "श्रेणी:"
 
 #: .\apps\diseases\templates\diseases\detail.html:5
 msgid "Body System:"
-msgstr ""
+msgstr "शरीर प्रणाली:"
 
 #: .\apps\diseases\templates\diseases\detail.html:22
 msgid "Specialist Required"
-msgstr ""
+msgstr "विशेषज्ञ की आवश्यकता"
 
 #: .\apps\diseases\templates\diseases\diseases.html:628
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:525
 #: .\apps\vaccination\templates\vaccination\vaccination.html:786
 msgid "Back"
-msgstr ""
+msgstr "वापस"
 
 #: .\apps\diseases\templates\diseases\diseases.html:636
 msgid "Add Disease (Library)"
-msgstr ""
+msgstr "रोग जोड़ें (पुस्तकालय)"
 
 #: .\apps\diseases\templates\diseases\diseases.html:644
 msgid "📚 Disease Library"
-msgstr ""
+msgstr "📚 रोग पुस्तकालय"
 
 #: .\apps\diseases\templates\diseases\diseases.html:645
 msgid ""
 "Comprehensive health information about diseases, symptoms, treatments, and "
 "prevention strategies for better health awareness"
 msgstr ""
+"बेहतर स्वास्थ्य जागरूकता के लिए रोगों, लक्षणों, उपचारों और रोकथाम रणनीतियों के बारे में "
+"व्यापक स्वास्थ्य जानकारी"
 
 #: .\apps\diseases\templates\diseases\diseases.html:653
 msgid "All Diseases"
-msgstr ""
+msgstr "सभी रोग"
 
 #: .\apps\diseases\templates\diseases\diseases.html:654
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:558
 msgid "Respiratory"
-msgstr ""
+msgstr "श्वसन संबंधी"
 
 #: .\apps\diseases\templates\diseases\diseases.html:655
 msgid "Cardiac"
-msgstr ""
+msgstr "हृदय संबंधी"
 
 #: .\apps\diseases\templates\diseases\diseases.html:656
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:559
 msgid "Digestive"
-msgstr ""
+msgstr "पाचन संबंधी"
 
 #: .\apps\diseases\templates\diseases\diseases.html:657
 msgid "Neurological"
-msgstr ""
+msgstr "तंत्रिका संबंधी"
 
 #: .\apps\diseases\templates\diseases\diseases.html:658
 msgid "Infectious"
-msgstr ""
+msgstr "संक्रामक"
 
 #: .\apps\diseases\templates\diseases\diseases.html:666
 msgid "📋 Browse Diseases"
-msgstr ""
+msgstr "📋 रोग ब्राउज़ करें"
 
 #: .\apps\diseases\templates\diseases\diseases.html:694
 msgid "No diseases added yet."
-msgstr ""
+msgstr "अभी तक कोई रोग नहीं जोड़ा गया।"
 
 #: .\apps\diseases\templates\diseases\diseases.html:705
 msgid "Select a Disease"
-msgstr ""
+msgstr "एक रोग चुनें"
 
 #: .\apps\diseases\templates\diseases\diseases.html:707
 msgid "Choose a disease from the sidebar"
-msgstr ""
+msgstr "साइडबार से एक रोग चुनें"
 
 #: .\apps\history\templates\history\history.html:350
 #: .\apps\quiz\templates\quiz\quiz.html:413
 msgid "← Back"
-msgstr ""
+msgstr "← वापस"
 
 #: .\apps\history\templates\history\history.html:357
 msgid "📊 My Health History"
-msgstr ""
+msgstr "📊 मेरा स्वास्थ्य इतिहास"
 
 #: .\apps\history\templates\history\history.html:358
 msgid "Track your health journey and review past activities"
-msgstr ""
+msgstr "अपनी स्वास्थ्य यात्रा को ट्रैक करें और पिछली गतिविधियों की समीक्षा करें"
 
 #: .\apps\history\templates\history\history.html:375
 msgid "ago"
-msgstr ""
+msgstr "पहले"
 
 #: .\apps\history\templates\history\history.html:380
 msgid "No history yet"
-msgstr ""
+msgstr "अभी तक कोई इतिहास नहीं"
 
-#: .\apps\home\templates\home\home.html:6
+#: .\apps\home\templates\home\home.html:7
 msgid "AI Disease Awareness System"
-msgstr ""
+msgstr "एआई रोग जागरूकता प्रणाली"
 
-#: .\apps\home\templates\home\home.html:438
+#: .\apps\home\templates\home\home.html:439
 msgid "Features"
-msgstr ""
+msgstr "विशेषताएँ"
 
-#: .\apps\home\templates\home\home.html:440
+#: .\apps\home\templates\home\home.html:441
 msgid "About"
-msgstr ""
-
-#: .\apps\home\templates\home\home.html:466
-msgid "Profile"
-msgstr ""
+msgstr "बारे में"
 
 #: .\apps\home\templates\home\home.html:467
+msgid "Profile"
+msgstr "प्रोफ़ाइल"
+
+#: .\apps\home\templates\home\home.html:468
 msgid "Logout"
-msgstr ""
+msgstr "लॉगआउट"
 
-#: .\apps\home\templates\home\home.html:473
+#: .\apps\home\templates\home\home.html:474
 msgid "Get Started"
-msgstr ""
-
-#: .\apps\home\templates\home\home.html:483
-msgid "Welcome back,"
-msgstr ""
+msgstr "शुरू करें"
 
 #: .\apps\home\templates\home\home.html:484
+msgid "Welcome back,"
+msgstr "वापसी पर स्वागत है,"
+
+#: .\apps\home\templates\home\home.html:485
 msgid ""
 "Continue your health journey with personalized AI-powered insights and "
 "comprehensive health management tools."
 msgstr ""
-
-#: .\apps\home\templates\home\home.html:486
-msgid "Explore Features"
-msgstr ""
+"व्यक्तिगत एआई-संचालित अंतर्दृष्टि और व्यापक स्वास्थ्य प्रबंधन उपकरणों के साथ अपनी स्वास्थ्य "
+"यात्रा जारी रखें।"
 
 #: .\apps\home\templates\home\home.html:487
+msgid "Explore Features"
+msgstr "विशेषताएँ देखें"
+
+#: .\apps\home\templates\home\home.html:488
 msgid "My Dashboard"
-msgstr ""
-
-#: .\apps\home\templates\home\home.html:490
-msgid "Manage Your Health,"
-msgstr ""
-
-#: .\apps\home\templates\home\home.html:490
-msgid "Simplified"
-msgstr ""
+msgstr "मेरा डैशबोर्ड"
 
 #: .\apps\home\templates\home\home.html:491
+msgid "Manage Your Health,"
+msgstr "अपने स्वास्थ्य का प्रबंधन करें,"
+
+#: .\apps\home\templates\home\home.html:491
+msgid "Simplified"
+msgstr "सरल बनाया गया"
+
+#: .\apps\home\templates\home\home.html:492
 msgid ""
 "Get instant AI-powered health insights, track symptoms, and stay informed "
 "about diseases with our intelligent healthcare companion."
 msgstr ""
+"हमारे बुद्धिमान स्वास्थ्य देखभाल साथी के साथ तत्काल एआई-संचालित स्वास्थ्य अंतर्दृष्टि प्राप्त "
+"करें, लक्षणों को ट्रैक करें और रोगों के बारे में सूचित रहें।"
 
-#: .\apps\home\templates\home\home.html:493
+#: .\apps\home\templates\home\home.html:494
 msgid "Start Free Today"
-msgstr ""
-
-#: .\apps\home\templates\home\home.html:502
-msgid "AI Chatbot Ready"
-msgstr ""
+msgstr "आज मुफ्त में शुरू करें"
 
 #: .\apps\home\templates\home\home.html:503
-msgid "Ask anything about your health"
-msgstr ""
+msgid "AI Chatbot Ready"
+msgstr "एआई चैटबॉट तैयार"
 
-#: .\apps\home\templates\home\home.html:507
-#: .\apps\vaccination\templates\vaccination\vaccination.html:793
-msgid "Vaccination Tracker"
-msgstr ""
+#: .\apps\home\templates\home\home.html:504
+msgid "Ask anything about your health"
+msgstr "अपने स्वास्थ्य के बारे में कुछ भी पूछें"
 
 #: .\apps\home\templates\home\home.html:508
-msgid "Never miss a shot again"
-msgstr ""
+#: .\apps\vaccination\templates\vaccination\vaccination.html:793
+msgid "Vaccination Tracker"
+msgstr "टीकाकरण ट्रैकर"
 
-#: .\apps\home\templates\home\home.html:512
-msgid "Health Analytics"
-msgstr ""
+#: .\apps\home\templates\home\home.html:509
+msgid "Never miss a shot again"
+msgstr "फिर कभी टीका न चूकें"
 
 #: .\apps\home\templates\home\home.html:513
-msgid "Track your progress over time"
-msgstr ""
+msgid "Health Analytics"
+msgstr "स्वास्थ्य विश्लेषण"
 
-#: .\apps\home\templates\home\home.html:520
-msgid "Everything You Need"
-msgstr ""
+#: .\apps\home\templates\home\home.html:514
+msgid "Track your progress over time"
+msgstr "समय के साथ अपनी प्रगति को ट्रैक करें"
 
 #: .\apps\home\templates\home\home.html:521
-msgid "Comprehensive tools to manage and understand your health better"
-msgstr ""
+msgid "Everything You Need"
+msgstr "वह सब कुछ जो आपको चाहिए"
 
-#: .\apps\home\templates\home\home.html:531
-msgid "Smart Chatbot"
-msgstr ""
+#: .\apps\home\templates\home\home.html:522
+msgid "Comprehensive tools to manage and understand your health better"
+msgstr "अपने स्वास्थ्य को बेहतर ढंग से प्रबंधित और समझने के लिए व्यापक उपकरण"
 
 #: .\apps\home\templates\home\home.html:532
-msgid "Chat with our AI assistant for instant health advice"
-msgstr ""
+msgid "Smart Chatbot"
+msgstr "स्मार्ट चैटबॉट"
 
-#: .\apps\home\templates\home\home.html:539
-msgid "Symptom Checker"
-msgstr ""
+#: .\apps\home\templates\home\home.html:533
+msgid "Chat with our AI assistant for instant health advice"
+msgstr "तुरंत स्वास्थ्य सलाह के लिए हमारे एआई सहायक के साथ चैट करें"
 
 #: .\apps\home\templates\home\home.html:540
-msgid "Describe symptoms and get assessments"
-msgstr ""
+msgid "Symptom Checker"
+msgstr "लक्षण जांचकर्ता"
 
-#: .\apps\home\templates\home\home.html:547
-msgid "Disease Library"
-msgstr ""
+#: .\apps\home\templates\home\home.html:541
+msgid "Describe symptoms and get assessments"
+msgstr "लक्षणों का वर्णन करें और मूल्यांकन प्राप्त करें"
 
 #: .\apps\home\templates\home\home.html:548
-msgid "Learn about health conditions"
-msgstr ""
+msgid "Disease Library"
+msgstr "रोग पुस्तकालय"
 
-#: .\apps\home\templates\home\home.html:557
-msgid "Vaccination Information"
-msgstr ""
+#: .\apps\home\templates\home\home.html:549
+msgid "Learn about health conditions"
+msgstr "स्वास्थ्य स्थितियों के बारे में जानें"
 
 #: .\apps\home\templates\home\home.html:558
-msgid "View vaccinations near your location"
-msgstr ""
+msgid "Vaccination Information"
+msgstr "टीकाकरण जानकारी"
 
-#: .\apps\home\templates\home\home.html:568
+#: .\apps\home\templates\home\home.html:559
+msgid "View vaccinations near your location"
+msgstr "अपने स्थान के पास टीकाकरण देखें"
+
+#: .\apps\home\templates\home\home.html:569
 #: .\apps\vaccination\templates\vaccination\add_vaccination.html:116
 #: .\apps\vaccination\templates\vaccination\add_vaccination.html:149
 #: .\apps\vaccination\templates\vaccination\vaccination.html:908
 #: .\apps\vaccination\templates\vaccination\vaccination.html:932
 msgid "Add Vaccination"
-msgstr ""
+msgstr "टीकाकरण जोड़ें"
 
-#: .\apps\home\templates\home\home.html:569
+#: .\apps\home\templates\home\home.html:570
 msgid "Publish vaccination drives"
-msgstr ""
-
-#: .\apps\home\templates\home\home.html:578
-msgid "Health Quizzes"
-msgstr ""
+msgstr "टीकाकरण अभियान प्रकाशित करें"
 
 #: .\apps\home\templates\home\home.html:579
-msgid "Test and expand your medical knowledge with fun quizzes"
-msgstr ""
+msgid "Health Quizzes"
+msgstr "स्वास्थ्य प्रश्नोत्तरी"
 
-#: .\apps\home\templates\home\home.html:586
-msgid "Personal History"
-msgstr ""
+#: .\apps\home\templates\home\home.html:580
+msgid "Test and expand your medical knowledge with fun quizzes"
+msgstr "मज़ेदार प्रश्नोत्तरी के साथ अपने चिकित्सा ज्ञान का परीक्षण और विस्तार करें"
 
 #: .\apps\home\templates\home\home.html:587
+msgid "Personal History"
+msgstr "व्यक्तिगत इतिहास"
+
+#: .\apps\home\templates\home\home.html:588
 msgid "Maintain comprehensive records of your health journey"
-msgstr ""
+msgstr "अपनी स्वास्थ्य यात्रा का व्यापक रिकॉर्ड बनाए रखें"
 
 #: .\apps\quiz\templates\quiz\quiz.html:420
 msgid "🎯 Health Knowledge Quiz"
-msgstr ""
+msgstr "🎯 स्वास्थ्य ज्ञान प्रश्नोत्तरी"
 
 #: .\apps\quiz\templates\quiz\quiz.html:421
 msgid "Test your health knowledge and learn something new!"
-msgstr ""
+msgstr "अपने स्वास्थ्य ज्ञान का परीक्षण करें और कुछ नया सीखें!"
 
 #: .\apps\quiz\templates\quiz\quiz.html:427
 msgid "Nutrition & Diet"
-msgstr ""
+msgstr "पोषण और आहार"
 
 #: .\apps\quiz\templates\quiz\quiz.html:428
 msgid "Test your knowledge about healthy eating and nutrition"
-msgstr ""
+msgstr "स्वस्थ भोजन और पोषण के बारे में अपने ज्ञान का परीक्षण करें"
 
 #: .\apps\quiz\templates\quiz\quiz.html:430
 #: .\apps\quiz\templates\quiz\quiz.html:441
@@ -589,7 +604,7 @@ msgstr ""
 #: .\apps\quiz\templates\quiz\quiz.html:473
 #: .\apps\quiz\templates\quiz\quiz.html:483
 msgid "📝 10 Questions"
-msgstr ""
+msgstr "📝 10 प्रश्न"
 
 #: .\apps\quiz\templates\quiz\quiz.html:431
 #: .\apps\quiz\templates\quiz\quiz.html:442
@@ -598,341 +613,4385 @@ msgstr ""
 #: .\apps\quiz\templates\quiz\quiz.html:474
 #: .\apps\quiz\templates\quiz\quiz.html:484
 msgid "⏱️ 10 min"
-msgstr ""
+msgstr "⏱️ 10 मिनट"
 
 #: .\apps\quiz\templates\quiz\quiz.html:438
 msgid "Fitness & Exercise"
-msgstr ""
+msgstr "फिटनेस और व्यायाम"
 
 #: .\apps\quiz\templates\quiz\quiz.html:439
 msgid "Learn about exercise, workouts, and staying active"
-msgstr ""
+msgstr "व्यायाम, वर्कआउट और सक्रिय रहने के बारे में जानें"
 
 #: .\apps\quiz\templates\quiz\quiz.html:449
 msgid "Mental Health"
-msgstr ""
+msgstr "मानसिक स्वास्थ्य"
 
 #: .\apps\quiz\templates\quiz\quiz.html:450
 msgid "Understand mental wellness and emotional health"
-msgstr ""
+msgstr "मानसिक स्वास्थ्य और भावनात्मक स्वास्थ्य को समझें"
 
 #: .\apps\quiz\templates\quiz\quiz.html:460
 msgid "Disease Prevention"
-msgstr ""
+msgstr "रोग रोकथाम"
 
 #: .\apps\quiz\templates\quiz\quiz.html:461
 msgid "Learn about common diseases and prevention"
-msgstr ""
+msgstr "सामान्य रोगों और रोकथाम के बारे में जानें"
 
 #: .\apps\quiz\templates\quiz\quiz.html:470
 msgid "General Health"
-msgstr ""
+msgstr "सामान्य स्वास्थ्य"
 
 #: .\apps\quiz\templates\quiz\quiz.html:471
 msgid "Overall health knowledge and wellness tips"
-msgstr ""
+msgstr "समग्र स्वास्थ्य ज्ञान और कल्याण युक्तियाँ"
 
 #: .\apps\quiz\templates\quiz\quiz.html:480
 msgid "First Aid"
-msgstr ""
+msgstr "प्राथमिक चिकित्सा"
 
 #: .\apps\quiz\templates\quiz\quiz.html:481
 msgid "Emergency response and first aid basics"
-msgstr ""
+msgstr "आपातकालीन प्रतिक्रिया और प्राथमिक चिकित्सा की मूल बातें"
 
 #: .\apps\quiz\templates\quiz\quiz.html:492
 msgid "Question "
-msgstr ""
+msgstr "प्रश्न "
 
 #: .\apps\quiz\templates\quiz\quiz.html:492
 msgid " of "
-msgstr ""
+msgstr " का "
 
 #: .\apps\quiz\templates\quiz\quiz.html:501
 msgid "Question 1"
-msgstr ""
+msgstr "प्रश्न 1"
 
 #: .\apps\quiz\templates\quiz\quiz.html:502
 msgid "Loading question..."
-msgstr ""
+msgstr "प्रश्न लोड हो रहा है..."
 
 #: .\apps\quiz\templates\quiz\quiz.html:505
 msgid "💡 Explanation"
-msgstr ""
+msgstr "💡 व्याख्या"
 
 #: .\apps\quiz\templates\quiz\quiz.html:511
 msgid "Previous"
-msgstr ""
+msgstr "पिछला"
 
 #: .\apps\quiz\templates\quiz\quiz.html:512
 msgid "Next"
-msgstr ""
+msgstr "अगला"
 
 #: .\apps\quiz\templates\quiz\quiz.html:519
 msgid "Great job!"
-msgstr ""
+msgstr "बहुत बढ़िया!"
 
 #: .\apps\quiz\templates\quiz\quiz.html:524
 msgid "Correct Answers"
-msgstr ""
+msgstr "सही उत्तर"
 
 #: .\apps\quiz\templates\quiz\quiz.html:528
 msgid "Accuracy"
-msgstr ""
+msgstr "सटीकता"
 
 #: .\apps\quiz\templates\quiz\quiz.html:532
 msgid "Time Taken"
-msgstr ""
+msgstr "लिया गया समय"
 
 #: .\apps\quiz\templates\quiz\quiz.html:536
 msgid "Take Another Quiz"
-msgstr ""
+msgstr "एक और प्रश्नोत्तरी लें"
+
+#: .\apps\quiz\views.py:16
+msgid "Which vitamin is produced when skin is exposed to sunlight?"
+msgstr "त्वचा को धूप के संपर्क में लाने पर कौन सा विटामिन बनता है?"
+
+#: .\apps\quiz\views.py:18 .\apps\quiz\views.py:58 .\apps\quiz\views.py:443
+#: .\apps\quiz\views.py:1472 .\apps\quiz\views.py:2093
+msgid "Vitamin A"
+msgstr "विटामिन ए"
+
+#: .\apps\quiz\views.py:19 .\apps\quiz\views.py:160 .\apps\quiz\views.py:441
+#: .\apps\quiz\views.py:2096 .\apps\quiz\views.py:2293
+msgid "Vitamin D"
+msgstr "विटामिन डी"
+
+#: .\apps\quiz\views.py:20 .\apps\quiz\views.py:60 .\apps\quiz\views.py:158
+#: .\apps\quiz\views.py:442 .\apps\quiz\views.py:1469 .\apps\quiz\views.py:2095
+#: .\apps\quiz\views.py:2294 .\apps\quiz\views.py:2343
+msgid "Vitamin C"
+msgstr "विटामिन सी"
+
+#: .\apps\quiz\views.py:21 .\apps\quiz\views.py:159 .\apps\quiz\views.py:444
+#: .\apps\quiz\views.py:1470 .\apps\quiz\views.py:2344
+msgid "Vitamin K"
+msgstr "विटामिन के"
+
+#: .\apps\quiz\views.py:24
+msgid "Vitamin D is synthesized through sunlight exposure."
+msgstr "विटामिन डी धूप के संपर्क से संश्लेषित होता है।"
+
+#: .\apps\quiz\views.py:26
+msgid "Which nutrient is the main source of energy for the body?"
+msgstr "कौन सा पोषक तत्व शरीर के लिए ऊर्जा का मुख्य स्रोत है?"
+
+#: .\apps\quiz\views.py:28 .\apps\quiz\views.py:68 .\apps\quiz\views.py:200
+#: .\apps\quiz\views.py:297 .\apps\quiz\views.py:2063
+msgid "Protein"
+msgstr "प्रोटीन"
+
+#: .\apps\quiz\views.py:29
+msgid "Carbohydrates"
+msgstr "कार्बोहाइड्रेट"
+
+#: .\apps\quiz\views.py:30
+msgid "Vitamins"
+msgstr "विटामिन"
+
+#: .\apps\quiz\views.py:31
+msgid "Minerals"
+msgstr "खनिज"
+
+#: .\apps\quiz\views.py:34
+msgid "Carbohydrates are the body's primary energy source."
+msgstr "कार्बोहाइड्रेट शरीर का प्राथमिक ऊर्जा स्रोत हैं।"
+
+#: .\apps\quiz\views.py:36
+msgid "Which mineral is essential for oxygen transport in blood?"
+msgstr "रक्त में ऑक्सीजन परिवहन के लिए कौन सा खनिज आवश्यक है?"
+
+#: .\apps\quiz\views.py:38 .\apps\quiz\views.py:118 .\apps\quiz\views.py:199
+#: .\apps\quiz\views.py:610 .\apps\quiz\views.py:2143 .\apps\quiz\views.py:2295
+msgid "Iron"
+msgstr "आयरन"
+
+#: .\apps\quiz\views.py:39 .\apps\quiz\views.py:119 .\apps\quiz\views.py:2144
+#: .\apps\quiz\views.py:2296
+msgid "Calcium"
+msgstr "कैल्शियम"
+
+#: .\apps\quiz\views.py:40 .\apps\quiz\views.py:609
+msgid "Magnesium"
+msgstr "मैग्नीशियम"
+
+#: .\apps\quiz\views.py:41
+msgid "Potassium"
+msgstr "पोटैशियम"
+
+#: .\apps\quiz\views.py:44
+msgid "Iron helps form hemoglobin which carries oxygen."
+msgstr "आयरन हीमोग्लोबिन बनाने में मदद करता है जो ऑक्सीजन ले जाता है।"
+
+#: .\apps\quiz\views.py:46
+msgid "Which food is highest in protein?"
+msgstr "कौन सा भोजन प्रोटीन में सबसे अधिक है?"
+
+#: .\apps\quiz\views.py:48 .\apps\quiz\views.py:101 .\apps\quiz\views.py:180
+msgid "Rice"
+msgstr "चावल"
+
+#: .\apps\quiz\views.py:49
+msgid "Eggs"
+msgstr "अंडे"
+
+#: .\apps\quiz\views.py:50 .\apps\quiz\views.py:80 .\apps\quiz\views.py:190
+msgid "Butter"
+msgstr "मक्खन"
+
+#: .\apps\quiz\views.py:51 .\apps\quiz\views.py:71 .\apps\quiz\views.py:298
+#: .\apps\quiz\views.py:2064
+msgid "Sugar"
+msgstr "चीनी"
+
+#: .\apps\quiz\views.py:54
+msgid "Eggs are a rich source of protein."
+msgstr "अंडे प्रोटीन का एक समृद्ध स्रोत हैं।"
+
+#: .\apps\quiz\views.py:56
+msgid "Which vitamin helps with vision?"
+msgstr "कौन सा विटामिन दृष्टि में मदद करता है?"
+
+#: .\apps\quiz\views.py:59 .\apps\quiz\views.py:1471 .\apps\quiz\views.py:2345
+msgid "Vitamin B12"
+msgstr "विटामिन बी12"
+
+#: .\apps\quiz\views.py:61 .\apps\quiz\views.py:2346
+msgid "Vitamin E"
+msgstr "विटामिन ई"
+
+#: .\apps\quiz\views.py:64
+msgid "Vitamin A supports healthy vision."
+msgstr "विटामिन ए स्वस्थ दृष्टि का समर्थन करता है।"
+
+#: .\apps\quiz\views.py:66 .\apps\quiz\views.py:2061
+msgid "Which nutrient helps build muscles?"
+msgstr "कौन सा पोषक तत्व मांसपेशियों को बनाने में मदद करता है?"
+
+#: .\apps\quiz\views.py:69 .\apps\quiz\views.py:2066
+msgid "Fat"
+msgstr "वसा"
+
+#: .\apps\quiz\views.py:70 .\apps\quiz\views.py:201 .\apps\quiz\views.py:300
+msgid "Fiber"
+msgstr "फाइबर"
+
+#: .\apps\quiz\views.py:74 .\apps\quiz\views.py:303
+msgid "Protein repairs and builds muscle tissue."
+msgstr "प्रोटीन मांसपेशियों के ऊतकों की मरम्मत और निर्माण करता है।"
+
+#: .\apps\quiz\views.py:76
+msgid "Which is a healthy fat source?"
+msgstr "कौन सा स्वस्थ वसा का स्रोत है?"
+
+#: .\apps\quiz\views.py:78
+msgid "Fried chips"
+msgstr "तले हुए चिप्स"
+
+#: .\apps\quiz\views.py:79
+msgid "Olive oil"
+msgstr "जैतून का तेल"
+
+#: .\apps\quiz\views.py:81
+msgid "Processed snacks"
+msgstr "प्रोसेस्ड स्नैक्स"
+
+#: .\apps\quiz\views.py:84
+msgid "Olive oil contains healthy monounsaturated fats."
+msgstr "जैतून के तेल में स्वस्थ मोनोअनसैचुरेटेड वसा होती है।"
+
+#: .\apps\quiz\views.py:86
+msgid "Fiber mainly helps in?"
+msgstr "फाइबर मुख्य रूप से किसमें मदद करता है?"
+
+#: .\apps\quiz\views.py:88 .\apps\quiz\views.py:2213
+msgid "Digestion"
+msgstr "पाचन"
+
+#: .\apps\quiz\views.py:89 .\apps\quiz\views.py:2214
+msgid "Breathing"
+msgstr "सांस लेना"
+
+#: .\apps\quiz\views.py:90 .\apps\quiz\views.py:432 .\apps\quiz\views.py:767
+#: .\apps\quiz\views.py:916 .\apps\quiz\views.py:2216 .\apps\quiz\views.py:2374
+#: .\apps\quiz\views.py:2406
+msgid "Vision"
+msgstr "दृष्टि"
+
+#: .\apps\quiz\views.py:91 .\apps\quiz\views.py:917 .\apps\quiz\views.py:2215
+msgid "Hearing"
+msgstr "सुनना"
+
+#: .\apps\quiz\views.py:94
+msgid "Fiber improves digestion and prevents constipation."
+msgstr "फाइबर पाचन में सुधार करता है और कब्ज को रोकता है।"
+
+#: .\apps\quiz\views.py:96
+msgid "Which fruit is rich in Vitamin C?"
+msgstr "कौन सा फल विटामिन सी से भरपूर है?"
+
+#: .\apps\quiz\views.py:98
+msgid "Orange"
+msgstr "संतरा"
+
+#: .\apps\quiz\views.py:99
+msgid "Banana"
+msgstr "केला"
+
+#: .\apps\quiz\views.py:100 .\apps\quiz\views.py:179
+msgid "Apple"
+msgstr "सेब"
+
+#: .\apps\quiz\views.py:104
+msgid "Oranges are high in Vitamin C."
+msgstr "संतरे में विटामिन सी अधिक होता है।"
+
+#: .\apps\quiz\views.py:106
+msgid "Too much sugar can lead to?"
+msgstr "बहुत अधिक चीनी किस ओर ले जा सकती है?"
+
+#: .\apps\quiz\views.py:108
+msgid "Strong bones"
+msgstr "मजबूत हड्डियां"
+
+#: .\apps\quiz\views.py:109 .\apps\quiz\views.py:1481 .\apps\quiz\views.py:1495
+#: .\apps\quiz\views.py:1566 .\apps\quiz\views.py:1578
+#: .\apps\quiz\views.py:1626 .\apps\quiz\views.py:1676
+#: .\apps\quiz\views.py:1842 .\apps\quiz\views.py:1866
+#: .\apps\quiz\views.py:1950 .\apps\quiz\views.py:1961
+#: .\apps\quiz\views.py:2000 .\apps\quiz\views.py:2153
+#: .\apps\quiz\views.py:2323
+msgid "Diabetes"
+msgstr "मधुमेह"
+
+#: .\apps\quiz\views.py:110 .\apps\quiz\views.py:210 .\apps\quiz\views.py:347
+#: .\apps\quiz\views.py:1155 .\apps\quiz\views.py:2156
+#: .\apps\quiz\views.py:2225 .\apps\quiz\views.py:2356
+msgid "Better sleep"
+msgstr "बेहतर नींद"
+
+#: .\apps\quiz\views.py:111
+msgid "More vitamins"
+msgstr "अधिक विटामिन"
+
+#: .\apps\quiz\views.py:114
+msgid "Excess sugar intake increases diabetes risk."
+msgstr "अत्यधिक चीनी का सेवन मधुमेह का खतरा बढ़ाता है।"
+
+#: .\apps\quiz\views.py:116
+msgid "Which mineral strengthens bones?"
+msgstr "कौन सा खनिज हड्डियों को मजबूत करता है?"
+
+#: .\apps\quiz\views.py:120 .\apps\quiz\views.py:198 .\apps\quiz\views.py:2145
+msgid "Sodium"
+msgstr "सोडियम"
+
+#: .\apps\quiz\views.py:121 .\apps\quiz\views.py:611 .\apps\quiz\views.py:2146
+msgid "Zinc"
+msgstr "जिंक"
+
+#: .\apps\quiz\views.py:124
+msgid "Calcium builds strong bones and teeth."
+msgstr "कैल्शियम मजबूत हड्डियों और दांतों का निर्माण करता है।"
+
+#: .\apps\quiz\views.py:126
+msgid "Water helps regulate?"
+msgstr "पानी किसे नियंत्रित करने में मदद करता है?"
+
+#: .\apps\quiz\views.py:128
+msgid "Body temperature"
+msgstr "शरीर का तापमान"
+
+#: .\apps\quiz\views.py:129 .\apps\quiz\views.py:814 .\apps\quiz\views.py:2405
+msgid "Hair color"
+msgstr "बालों का रंग"
+
+#: .\apps\quiz\views.py:130 .\apps\quiz\views.py:816
+msgid "Eye color"
+msgstr "आंखों का रंग"
+
+#: .\apps\quiz\views.py:131 .\apps\quiz\views.py:815
+msgid "Height"
+msgstr "ऊंचाई"
+
+#: .\apps\quiz\views.py:134
+msgid "Water regulates body temperature."
+msgstr "पानी शरीर के तापमान को नियंत्रित करता है।"
+
+#: .\apps\quiz\views.py:136
+msgid "Balanced diet includes?"
+msgstr "संतुलित आहार में क्या शामिल है?"
+
+#: .\apps\quiz\views.py:138
+msgid "Only protein"
+msgstr "केवल प्रोटीन"
+
+#: .\apps\quiz\views.py:139 .\apps\quiz\views.py:2116 .\apps\quiz\views.py:2366
+msgid "Only fats"
+msgstr "केवल वसा"
+
+#: .\apps\quiz\views.py:140 .\apps\quiz\views.py:2115
+msgid "All nutrients"
+msgstr "सभी पोषक तत्व"
+
+#: .\apps\quiz\views.py:141 .\apps\quiz\views.py:2364
+msgid "Only carbs"
+msgstr "केवल कार्ब्स"
+
+#: .\apps\quiz\views.py:144 .\apps\quiz\views.py:2119
+msgid "A balanced diet includes all essential nutrients."
+msgstr "संतुलित आहार में सभी आवश्यक पोषक तत्व शामिल होते हैं।"
+
+#: .\apps\quiz\views.py:146
+msgid "Which is whole grain?"
+msgstr "कौन सा साबुत अनाज है?"
+
+#: .\apps\quiz\views.py:148
+msgid "White bread"
+msgstr "सफेद ब्रेड"
+
+#: .\apps\quiz\views.py:149
+msgid "Brown rice"
+msgstr "ब्राउन राइस"
+
+#: .\apps\quiz\views.py:150 .\apps\quiz\views.py:189 .\apps\quiz\views.py:2396
+msgid "Candy"
+msgstr "कैंडी"
+
+#: .\apps\quiz\views.py:151 .\apps\quiz\views.py:2395
+msgid "Soda"
+msgstr "सोडा"
+
+#: .\apps\quiz\views.py:154
+msgid "Brown rice is a whole grain."
+msgstr "ब्राउन राइस एक साबुत अनाज है।"
+
+#: .\apps\quiz\views.py:156
+msgid "Which vitamin supports immunity?"
+msgstr "कौन सा विटामिन प्रतिरक्षा का समर्थन करता है?"
+
+#: .\apps\quiz\views.py:161 .\apps\quiz\views.py:2094
+msgid "Vitamin B"
+msgstr "विटामिन बी"
+
+#: .\apps\quiz\views.py:164
+msgid "Vitamin C boosts immunity."
+msgstr "विटामिन सी प्रतिरक्षा को बढ़ाता है।"
+
+#: .\apps\quiz\views.py:166
+msgid "Overeating can cause?"
+msgstr "अधिक खाने से क्या हो सकता है?"
+
+#: .\apps\quiz\views.py:168 .\apps\quiz\views.py:1709
+msgid "Obesity"
+msgstr "मोटापा"
+
+#: .\apps\quiz\views.py:169 .\apps\quiz\views.py:2155
+msgid "Stronger bones"
+msgstr "मजबूत हड्डियां"
+
+#: .\apps\quiz\views.py:170
+msgid "Better vision"
+msgstr "बेहतर दृष्टि"
+
+#: .\apps\quiz\views.py:171 .\apps\quiz\views.py:264 .\apps\quiz\views.py:431
+#: .\apps\quiz\views.py:766
+msgid "Hair growth"
+msgstr "बालों का विकास"
+
+#: .\apps\quiz\views.py:174
+msgid "Overeating leads to weight gain and obesity."
+msgstr "अधिक खाने से वजन बढ़ता है और मोटापा होता है।"
+
+#: .\apps\quiz\views.py:176
+msgid "Which is a dairy product?"
+msgstr "कौन सा डेयरी उत्पाद है?"
+
+#: .\apps\quiz\views.py:178
+msgid "Milk"
+msgstr "दूध"
+
+#: .\apps\quiz\views.py:181
+msgid "Carrot"
+msgstr "गाजर"
+
+#: .\apps\quiz\views.py:184
+msgid "Milk is a dairy product rich in calcium."
+msgstr "दूध एक डेयरी उत्पाद है जो कैल्शियम से भरपूर है।"
+
+#: .\apps\quiz\views.py:186
+msgid "Which food is high in fiber?"
+msgstr "कौन सा भोजन फाइबर में उच्च है?"
+
+#: .\apps\quiz\views.py:188
+msgid "Vegetables"
+msgstr "सब्जियां"
+
+#: .\apps\quiz\views.py:191 .\apps\quiz\views.py:2438
+msgid "Oil"
+msgstr "तेल"
+
+#: .\apps\quiz\views.py:194
+msgid "Vegetables are rich in fiber."
+msgstr "सब्जियां फाइबर से भरपूर होती हैं।"
+
+#: .\apps\quiz\views.py:196
+msgid "Salt mainly contains?"
+msgstr "नमक में मुख्य रूप से क्या होता है?"
+
+#: .\apps\quiz\views.py:204
+msgid "Salt contains sodium."
+msgstr "नमक में सोडियम होता है।"
+
+#: .\apps\quiz\views.py:206
+msgid "Too much salt causes?"
+msgstr "बहुत अधिक नमक से क्या होता है?"
+
+#: .\apps\quiz\views.py:208 .\apps\quiz\views.py:2135 .\apps\quiz\views.py:2283
+msgid "Low BP"
+msgstr "निम्न रक्तचाप"
+
+#: .\apps\quiz\views.py:209 .\apps\quiz\views.py:2284
+msgid "High BP"
+msgstr "उच्च रक्तचाप"
+
+#: .\apps\quiz\views.py:211
+msgid "Strong teeth"
+msgstr "मजबूत दांत"
+
+#: .\apps\quiz\views.py:214
+msgid "Excess sodium increases blood pressure."
+msgstr "अतिरिक्त सोडियम रक्तचाप बढ़ाता है।"
+
+#: .\apps\quiz\views.py:223
+msgid "How many minutes of moderate exercise is recommended per week?"
+msgstr "प्रति सप्ताह कितने मिनट का मध्यम व्यायाम अनुशंसित है?"
+
+#: .\apps\quiz\views.py:225
+msgid "60 minutes"
+msgstr "60 मिनट"
+
+#: .\apps\quiz\views.py:226
+msgid "90 minutes"
+msgstr "90 मिनट"
+
+#: .\apps\quiz\views.py:227
+msgid "150 minutes"
+msgstr "150 मिनट"
+
+#: .\apps\quiz\views.py:228
+msgid "300 minutes"
+msgstr "300 मिनट"
+
+#: .\apps\quiz\views.py:231
+msgid "WHO recommends at least 150 minutes of moderate exercise per week."
+msgstr "डब्ल्यूएचओ प्रति सप्ताह कम से कम 150 मिनट मध्यम व्यायाम की सिफारिश करता है।"
+
+#: .\apps\quiz\views.py:235
+msgid "Which exercise mainly improves cardiovascular endurance?"
+msgstr "कौन सा व्यायाम मुख्य रूप से हृदय की सहनशक्ति में सुधार करता है?"
+
+#: .\apps\quiz\views.py:237
+msgid "Weight lifting"
+msgstr "वजन उठाना"
+
+#: .\apps\quiz\views.py:238 .\apps\quiz\views.py:394
+msgid "Running"
+msgstr "दौड़ना"
+
+#: .\apps\quiz\views.py:239 .\apps\quiz\views.py:274 .\apps\quiz\views.py:480
+msgid "Plank"
+msgstr "प्लैंक"
+
+#: .\apps\quiz\views.py:240
+msgid "Stretching"
+msgstr "स्ट्रेचिंग"
+
+#: .\apps\quiz\views.py:243
+msgid "Running strengthens the heart and improves stamina."
+msgstr "दौड़ना हृदय को मजबूत करता है और सहनशक्ति में सुधार करता है।"
+
+#: .\apps\quiz\views.py:247
+msgid "Which muscle group is targeted in squats?"
+msgstr "स्क्वाट्स में कौन सी मांसपेशी समूह लक्षित होता है?"
+
+#: .\apps\quiz\views.py:249
+msgid "Chest"
+msgstr "छाती"
+
+#: .\apps\quiz\views.py:250
+msgid "Shoulders"
+msgstr "कंधे"
+
+#: .\apps\quiz\views.py:251 .\apps\quiz\views.py:634
+msgid "Legs"
+msgstr "पैर"
+
+#: .\apps\quiz\views.py:252
+msgid "Arms"
+msgstr "हाथ"
+
+#: .\apps\quiz\views.py:255
+msgid "Squats primarily target quadriceps, hamstrings, and glutes."
+msgstr "स्क्वाट्स मुख्य रूप से क्वाड्रिसेप्स, हैमस्ट्रिंग और ग्लूट्स को लक्षित करते हैं।"
+
+#: .\apps\quiz\views.py:259
+msgid "What is the main benefit of strength training?"
+msgstr "शक्ति प्रशिक्षण का मुख्य लाभ क्या है?"
+
+#: .\apps\quiz\views.py:261
+msgid "Flexibility"
+msgstr "लचीलापन"
+
+#: .\apps\quiz\views.py:262
+msgid "Muscle growth"
+msgstr "मांसपेशी वृद्धि"
+
+#: .\apps\quiz\views.py:263
+msgid "Better eyesight"
+msgstr "बेहतर दृष्टि"
+
+#: .\apps\quiz\views.py:267
+msgid "Strength training increases muscle mass and strength."
+msgstr "शक्ति प्रशिक्षण मांसपेशी द्रव्यमान और शक्ति बढ़ाता है।"
+
+#: .\apps\quiz\views.py:271
+msgid "Which exercise is best for core strength?"
+msgstr "कोर शक्ति के लिए कौन सा व्यायाम सबसे अच्छा है?"
+
+#: .\apps\quiz\views.py:273 .\apps\quiz\views.py:357
+msgid "Push-ups"
+msgstr "पुश-अप्स"
+
+#: .\apps\quiz\views.py:275 .\apps\quiz\views.py:516 .\apps\quiz\views.py:753
+msgid "Cycling"
+msgstr "साइकिलिंग"
+
+#: .\apps\quiz\views.py:276 .\apps\quiz\views.py:598
+msgid "Walking"
+msgstr "चलना"
+
+#: .\apps\quiz\views.py:279
+msgid "Planks engage multiple core muscles."
+msgstr "प्लैंक कई कोर मांसपेशियों को शामिल करता है।"
+
+#: .\apps\quiz\views.py:283
+msgid "How long should you warm up before exercise?"
+msgstr "व्यायाम से पहले कितनी देर वार्म अप करना चाहिए?"
+
+#: .\apps\quiz\views.py:285
+msgid "1 minute"
+msgstr "1 मिनट"
+
+#: .\apps\quiz\views.py:286
+msgid "5-10 minutes"
+msgstr "5-10 मिनट"
+
+#: .\apps\quiz\views.py:287
+msgid "30 minutes"
+msgstr "30 मिनट"
+
+#: .\apps\quiz\views.py:288
+msgid "No need"
+msgstr "आवश्यकता नहीं"
+
+#: .\apps\quiz\views.py:291
+msgid "A 5–10 minute warm-up prepares muscles and reduces injury risk."
+msgstr "5-10 मिनट का वार्म-अप मांसपेशियों को तैयार करता है और चोट के जोखिम को कम करता है।"
+
+#: .\apps\quiz\views.py:295
+msgid "Which nutrient helps muscle recovery?"
+msgstr "कौन सा पोषक तत्व मांसपेशियों की रिकवरी में मदद करता है?"
+
+#: .\apps\quiz\views.py:299 .\apps\quiz\views.py:2065
+msgid "Salt"
+msgstr "नमक"
+
+#: .\apps\quiz\views.py:307
+msgid "What does BMI stand for?"
+msgstr "बीएमआई का क्या मतलब है?"
+
+#: .\apps\quiz\views.py:309 .\apps\quiz\views.py:2073
+msgid "Body Mass Index"
+msgstr "बॉडी मास इंडेक्स"
+
+#: .\apps\quiz\views.py:310
+msgid "Body Muscle Intake"
+msgstr "बॉडी मसल इनटेक"
+
+#: .\apps\quiz\views.py:311
+msgid "Basic Mass Indicator"
+msgstr "बेसिक मास इंडिकेटर"
+
+#: .\apps\quiz\views.py:312
+msgid "Body Movement Index"
+msgstr "बॉडी मूवमेंट इंडेक्स"
+
+#: .\apps\quiz\views.py:315
+msgid "BMI stands for Body Mass Index."
+msgstr "बीएमआई का मतलब बॉडी मास इंडेक्स है।"
+
+#: .\apps\quiz\views.py:319
+msgid "Which exercise improves flexibility?"
+msgstr "कौन सा व्यायाम लचीलेपन में सुधार करता है?"
+
+#: .\apps\quiz\views.py:321 .\apps\quiz\views.py:1334
+msgid "Yoga"
+msgstr "योग"
+
+#: .\apps\quiz\views.py:322 .\apps\quiz\views.py:513
+msgid "Deadlift"
+msgstr "डेडलिफ्ट"
+
+#: .\apps\quiz\views.py:323 .\apps\quiz\views.py:551
+msgid "Bench press"
+msgstr "बेंच प्रेस"
+
+#: .\apps\quiz\views.py:324 .\apps\quiz\views.py:597
+msgid "Sprint"
+msgstr "स्प्रिंट"
+
+#: .\apps\quiz\views.py:327
+msgid "Yoga enhances flexibility and balance."
+msgstr "योग लचीलेपन और संतुलन को बढ़ाता है।"
+
+#: .\apps\quiz\views.py:331
+msgid "Rest days are important because they help:"
+msgstr "आराम के दिन महत्वपूर्ण हैं क्योंकि वे मदद करते हैं:"
+
+#: .\apps\quiz\views.py:333
+msgid "Lose weight faster"
+msgstr "तेजी से वजन कम करें"
+
+#: .\apps\quiz\views.py:334 .\apps\quiz\views.py:765
+msgid "Muscle recovery"
+msgstr "मांसपेशी रिकवरी"
+
+#: .\apps\quiz\views.py:335
+msgid "Sleep less"
+msgstr "कम सोएं"
+
+#: .\apps\quiz\views.py:336
+msgid "Avoid hydration"
+msgstr "हाइड्रेशन से बचें"
+
+#: .\apps\quiz\views.py:339
+msgid "Muscles repair and grow during rest."
+msgstr "आराम के दौरान मांसपेशियां मरम्मत और विकास करती हैं।"
+
+#: .\apps\quiz\views.py:343
+msgid "What is a common sign of overtraining?"
+msgstr "ओवरट्रेनिंग का एक सामान्य संकेत क्या है?"
+
+#: .\apps\quiz\views.py:345
+msgid "Improved performance"
+msgstr "बेहतर प्रदर्शन"
+
+#: .\apps\quiz\views.py:346
+msgid "Constant fatigue"
+msgstr "लगातार थकान"
+
+#: .\apps\quiz\views.py:348
+msgid "More energy"
+msgstr "अधिक ऊर्जा"
+
+#: .\apps\quiz\views.py:351
+msgid "Overtraining causes fatigue and decreased performance."
+msgstr "ओवरट्रेनिंग थकान और प्रदर्शन में कमी का कारण बनती है।"
+
+#: .\apps\quiz\views.py:355
+msgid "Which exercise strengthens the chest?"
+msgstr "कौन सा व्यायाम छाती को मजबूत करता है?"
+
+#: .\apps\quiz\views.py:358 .\apps\quiz\views.py:550 .\apps\quiz\views.py:670
+#: .\apps\quiz\views.py:717
+msgid "Squats"
+msgstr "स्क्वाट्स"
+
+#: .\apps\quiz\views.py:359 .\apps\quiz\views.py:477 .\apps\quiz\views.py:671
+msgid "Lunges"
+msgstr "लंजेस"
+
+#: .\apps\quiz\views.py:360 .\apps\quiz\views.py:478 .\apps\quiz\views.py:514
+#: .\apps\quiz\views.py:549 .\apps\quiz\views.py:672
+msgid "Crunches"
+msgstr "क्रंचेस"
+
+#: .\apps\quiz\views.py:363
+msgid "Push-ups target chest muscles."
+msgstr "पुश-अप्स छाती की मांसपेशियों को लक्षित करते हैं।"
+
+#: .\apps\quiz\views.py:367
+msgid "Hydration during workouts helps to:"
+msgstr "कसरत के दौरान हाइड्रेशन मदद करता है:"
+
+#: .\apps\quiz\views.py:369
+msgid "Increase injuries"
+msgstr "चोटों को बढ़ाएं"
+
+#: .\apps\quiz\views.py:370
+msgid "Maintain performance"
+msgstr "प्रदर्शन बनाए रखें"
+
+#: .\apps\quiz\views.py:371 .\apps\quiz\views.py:2035
+msgid "Reduce oxygen"
+msgstr "ऑक्सीजन कम करें"
+
+#: .\apps\quiz\views.py:372
+msgid "Increase cramps"
+msgstr "ऐंठन बढ़ाएं"
+
+#: .\apps\quiz\views.py:375
+msgid "Water prevents dehydration and maintains performance."
+msgstr "पानी निर्जलीकरण को रोकता है और प्रदर्शन बनाए रखता है।"
+
+#: .\apps\quiz\views.py:379
+msgid "HIIT stands for:"
+msgstr "HIIT का मतलब है:"
+
+#: .\apps\quiz\views.py:381
+msgid "High Intensity Interval Training"
+msgstr "हाई इंटेंसिटी इंटरवल ट्रेनिंग"
+
+#: .\apps\quiz\views.py:382
+msgid "Heavy Internal Intense Training"
+msgstr "हेवी इंटर्नल इंटेंस ट्रेनिंग"
+
+#: .\apps\quiz\views.py:383
+msgid "Healthy Interval Intensive Training"
+msgstr "हेल्दी इंटरवल इंटेंसिव ट्रेनिंग"
+
+#: .\apps\quiz\views.py:384
+msgid "High Internal Integrated Training"
+msgstr "हाई इंटर्नल इंटीग्रेटेड ट्रेनिंग"
+
+#: .\apps\quiz\views.py:387
+msgid "HIIT means High Intensity Interval Training."
+msgstr "HIIT का मतलब हाई इंटेंसिटी इंटरवल ट्रेनिंग है।"
+
+#: .\apps\quiz\views.py:391
+msgid "Which exercise burns the most calories?"
+msgstr "कौन सा व्यायाम सबसे अधिक कैलोरी जलाता है?"
+
+#: .\apps\quiz\views.py:393 .\apps\quiz\views.py:454 .\apps\quiz\views.py:526
+#: .\apps\quiz\views.py:622 .\apps\quiz\views.py:659 .\apps\quiz\views.py:706
+#: .\apps\quiz\views.py:754
+msgid "Sleeping"
+msgstr "सोना"
+
+#: .\apps\quiz\views.py:395 .\apps\quiz\views.py:527 .\apps\quiz\views.py:576
+#: .\apps\quiz\views.py:624 .\apps\quiz\views.py:708
+msgid "Reading"
+msgstr "पढ़ना"
+
+#: .\apps\quiz\views.py:396 .\apps\quiz\views.py:854 .\apps\quiz\views.py:1324
+#: .\apps\quiz\views.py:2163
+msgid "Meditation"
+msgstr "ध्यान"
+
+#: .\apps\quiz\views.py:399
+msgid "Running burns high calories compared to resting activities."
+msgstr "आराम की गतिविधियों की तुलना में दौड़ना उच्च कैलोरी जलाता है।"
+
+#: .\apps\quiz\views.py:403
+msgid "What is the ideal rest between strength sets?"
+msgstr "शक्ति सेटों के बीच आदर्श आराम क्या है?"
+
+#: .\apps\quiz\views.py:405
+msgid "5 seconds"
+msgstr "5 सेकंड"
+
+#: .\apps\quiz\views.py:406
+msgid "30-90 seconds"
+msgstr "30-90 सेकंड"
+
+#: .\apps\quiz\views.py:407
+msgid "10 minutes"
+msgstr "10 मिनट"
+
+#: .\apps\quiz\views.py:408 .\apps\quiz\views.py:780
+msgid "No rest"
+msgstr "कोई आराम नहीं"
+
+#: .\apps\quiz\views.py:411
+msgid "30–90 seconds rest allows muscle recovery."
+msgstr "30-90 सेकंड का आराम मांसपेशियों की रिकवरी की अनुमति देता है।"
+
+#: .\apps\quiz\views.py:415
+msgid "Which is a bodyweight exercise?"
+msgstr "कौन सा बॉडीवेट व्यायाम है?"
+
+#: .\apps\quiz\views.py:417
+msgid "Pull-ups"
+msgstr "पुल-अप्स"
+
+#: .\apps\quiz\views.py:418
+msgid "Leg press machine"
+msgstr "लेग प्रेस मशीन"
+
+#: .\apps\quiz\views.py:419
+msgid "Cable row"
+msgstr "केबल रो"
+
+#: .\apps\quiz\views.py:420
+msgid "Treadmill incline"
+msgstr "ट्रेडमिल इनक्लाइन"
+
+#: .\apps\quiz\views.py:423
+msgid "Pull-ups use your own body weight."
+msgstr "पुल-अप्स आपके अपने शरीर के वजन का उपयोग करते हैं।"
+
+#: .\apps\quiz\views.py:427
+msgid "Cardio exercises mainly improve:"
+msgstr "कार्डियो व्यायाम मुख्य रूप से सुधार करते हैं:"
+
+#: .\apps\quiz\views.py:429
+msgid "Memory"
+msgstr "याददाश्त"
+
+#: .\apps\quiz\views.py:430 .\apps\quiz\views.py:2383
+msgid "Heart health"
+msgstr "हृदय स्वास्थ्य"
+
+#: .\apps\quiz\views.py:435
+msgid "Cardio strengthens heart and lungs."
+msgstr "कार्डियो हृदय और फेफड़ों को मजबूत करता है।"
+
+#: .\apps\quiz\views.py:439
+msgid "Which vitamin supports muscle function?"
+msgstr "कौन सा विटामिन मांसपेशियों के कार्य का समर्थन करता है?"
+
+#: .\apps\quiz\views.py:447
+msgid "Vitamin D supports muscle and bone function."
+msgstr "विटामिन डी मांसपेशियों और हड्डियों के कार्य का समर्थन करता है।"
+
+#: .\apps\quiz\views.py:451
+msgid "Which activity improves balance?"
+msgstr "कौन सी गतिविधि संतुलन में सुधार करती है?"
+
+#: .\apps\quiz\views.py:453
+msgid "Tai Chi"
+msgstr "ताई ची"
+
+#: .\apps\quiz\views.py:455 .\apps\quiz\views.py:528 .\apps\quiz\views.py:660
+#: .\apps\quiz\views.py:707
+msgid "Watching TV"
+msgstr "टीवी देखना"
+
+#: .\apps\quiz\views.py:456 .\apps\quiz\views.py:623
+msgid "Driving"
+msgstr "ड्राइविंग"
+
+#: .\apps\quiz\views.py:459
+msgid "Tai Chi improves balance and coordination."
+msgstr "ताई ची संतुलन और समन्वय में सुधार करता है।"
+
+#: .\apps\quiz\views.py:463
+msgid "Which muscle is targeted during bicep curls?"
+msgstr "बाइसेप कर्ल्स के दौरान कौन सी मांसपेशी लक्षित होती है?"
+
+#: .\apps\quiz\views.py:465
+msgid "Triceps"
+msgstr "ट्राइसेप्स"
+
+#: .\apps\quiz\views.py:466
+msgid "Biceps"
+msgstr "बाइसेप्स"
+
+#: .\apps\quiz\views.py:467
+msgid "Quadriceps"
+msgstr "क्वाड्रिसेप्स"
+
+#: .\apps\quiz\views.py:468
+msgid "Glutes"
+msgstr "ग्लूट्स"
+
+#: .\apps\quiz\views.py:471
+msgid "Bicep curls target the biceps."
+msgstr "बाइसेप कर्ल्स बाइसेप्स को लक्षित करते हैं।"
+
+#: .\apps\quiz\views.py:475
+msgid "Which exercise is best for leg strength?"
+msgstr "पैर की ताकत के लिए कौन सा व्यायाम सबसे अच्छा है?"
+
+#: .\apps\quiz\views.py:479 .\apps\quiz\views.py:669
+msgid "Shoulder press"
+msgstr "शोल्डर प्रेस"
+
+#: .\apps\quiz\views.py:483
+msgid "Lunges strengthen leg muscles."
+msgstr "लंजेस पैर की मांसपेशियों को मजबूत करते हैं।"
+
+#: .\apps\quiz\views.py:487
+msgid "How often should beginners exercise weekly?"
+msgstr "शुरुआती लोगों को सप्ताह में कितनी बार व्यायाम करना चाहिए?"
+
+#: .\apps\quiz\views.py:489
+msgid "1 day"
+msgstr "1 दिन"
+
+#: .\apps\quiz\views.py:490
+msgid "3-5 days"
+msgstr "3-5 दिन"
+
+#: .\apps\quiz\views.py:491
+msgid "7 days nonstop"
+msgstr "7 दिन लगातार"
+
+#: .\apps\quiz\views.py:492 .\apps\quiz\views.py:648 .\apps\quiz\views.py:684
+#: .\apps\quiz\views.py:792
+msgid "None"
+msgstr "कोई नहीं"
+
+#: .\apps\quiz\views.py:495
+msgid "3–5 days per week is ideal for beginners."
+msgstr "शुरुआती लोगों के लिए प्रति सप्ताह 3-5 दिन आदर्श है।"
+
+#: .\apps\quiz\views.py:499
+msgid "Stretching after workouts helps:"
+msgstr "कसरत के बाद स्ट्रेचिंग मदद करती है:"
+
+#: .\apps\quiz\views.py:501
+msgid "Reduce flexibility"
+msgstr "लचीलापन कम करें"
+
+#: .\apps\quiz\views.py:502
+msgid "Prevent soreness"
+msgstr "दर्द रोकें"
+
+#: .\apps\quiz\views.py:503 .\apps\quiz\views.py:563 .\apps\quiz\views.py:1275
+#: .\apps\quiz\views.py:2036 .\apps\quiz\views.py:2276
+msgid "Increase stress"
+msgstr "तनाव बढ़ाएं"
+
+#: .\apps\quiz\views.py:504
+msgid "Burn fat"
+msgstr "वसा जलाएं"
+
+#: .\apps\quiz\views.py:507
+msgid "Stretching reduces stiffness and soreness."
+msgstr "स्ट्रेचिंग कठोरता और दर्द को कम करती है।"
+
+#: .\apps\quiz\views.py:511
+msgid "Which exercise strengthens the back?"
+msgstr "कौन सा व्यायाम पीठ को मजबूत करता है?"
+
+#: .\apps\quiz\views.py:515 .\apps\quiz\views.py:525
+msgid "Jump rope"
+msgstr "रस्सी कूदना"
+
+#: .\apps\quiz\views.py:519
+msgid "Deadlifts strengthen lower back and posterior chain."
+msgstr "डेडलिफ्ट्स निचली पीठ और पोस्टीरियर चेन को मजबूत करते हैं।"
+
+#: .\apps\quiz\views.py:523
+msgid "Which exercise improves coordination?"
+msgstr "कौन सा व्यायाम समन्वय में सुधार करता है?"
+
+#: .\apps\quiz\views.py:531
+msgid "Jump rope improves coordination and agility."
+msgstr "रस्सी कूदना समन्वय और चपलता में सुधार करता है।"
+
+#: .\apps\quiz\views.py:535
+msgid "Proper posture during exercise prevents:"
+msgstr "व्यायाम के दौरान उचित मुद्रा रोकती है:"
+
+#: .\apps\quiz\views.py:537
+msgid "Muscle gain"
+msgstr "मांसपेशी लाभ"
+
+#: .\apps\quiz\views.py:538
+msgid "Injuries"
+msgstr "चोटें"
+
+#: .\apps\quiz\views.py:539
+msgid "Fat loss"
+msgstr "वसा हानि"
+
+#: .\apps\quiz\views.py:540
+msgid "Energy use"
+msgstr "ऊर्जा उपयोग"
+
+#: .\apps\quiz\views.py:543
+msgid "Correct posture reduces injury risk."
+msgstr "सही मुद्रा चोट के जोखिम को कम करती है।"
+
+#: .\apps\quiz\views.py:547
+msgid "Which exercise targets abdominal muscles?"
+msgstr "कौन सा व्यायाम पेट की मांसपेशियों को लक्षित करता है?"
+
+#: .\apps\quiz\views.py:552
+msgid "Lat pulldown"
+msgstr "लैट पुलडाउन"
+
+#: .\apps\quiz\views.py:555
+msgid "Crunches focus on abdominal muscles."
+msgstr "क्रंचेस पेट की मांसपेशियों पर ध्यान केंद्रित करते हैं।"
+
+#: .\apps\quiz\views.py:559
+msgid "Cool down after workout helps:"
+msgstr "कसरत के बाद कूल डाउन मदद करता है:"
+
+#: .\apps\quiz\views.py:561
+msgid "Sudden stop"
+msgstr "अचानक रुकना"
+
+#: .\apps\quiz\views.py:562
+msgid "Gradual heart rate decrease"
+msgstr "धीरे-धीरे हृदय गति में कमी"
+
+#: .\apps\quiz\views.py:564 .\apps\quiz\views.py:1604 .\apps\quiz\views.py:1615
+#: .\apps\quiz\views.py:1711 .\apps\quiz\views.py:1831
+#: .\apps\quiz\views.py:1964
+msgid "Injury"
+msgstr "चोट"
+
+#: .\apps\quiz\views.py:567
+msgid "Cooling down prevents dizziness and supports recovery."
+msgstr "कूल डाउन चक्कर आने से रोकता है और रिकवरी में मदद करता है।"
+
+#: .\apps\quiz\views.py:571
+msgid "Which activity builds endurance?"
+msgstr "कौन सी गतिविधि सहनशक्ति बनाती है?"
+
+#: .\apps\quiz\views.py:573
+msgid "Long-distance running"
+msgstr "लंबी दूरी की दौड़"
+
+#: .\apps\quiz\views.py:574
+msgid "Short naps"
+msgstr "छोटी झपकी"
+
+#: .\apps\quiz\views.py:575
+msgid "Gaming"
+msgstr "गेमिंग"
+
+#: .\apps\quiz\views.py:579
+msgid "Long-distance running improves endurance."
+msgstr "लंबी दूरी की दौड़ सहनशक्ति में सुधार करती है।"
+
+#: .\apps\quiz\views.py:583
+msgid "Muscle soreness after workout is called:"
+msgstr "कसरत के बाद मांसपेशियों में दर्द कहलाता है:"
+
+#: .\apps\quiz\views.py:585
+msgid "DOMS"
+msgstr "डोम्स"
+
+#: .\apps\quiz\views.py:586
+msgid "BMI"
+msgstr "बीएमआई"
+
+#: .\apps\quiz\views.py:587
+msgid "HIIT"
+msgstr "एचआईआईटी"
+
+#: .\apps\quiz\views.py:588
+msgid "ATP"
+msgstr "एटीपी"
+
+#: .\apps\quiz\views.py:591
+msgid "Delayed Onset Muscle Soreness (DOMS) occurs after exercise."
+msgstr "व्यायाम के बाद विलंबित शुरुआत मांसपेशी दर्द (DOMS) होता है।"
+
+#: .\apps\quiz\views.py:595
+msgid "Which is anaerobic exercise?"
+msgstr "कौन सा अवायवीय व्यायाम है?"
+
+#: .\apps\quiz\views.py:599
+msgid "Jogging"
+msgstr "जॉगिंग"
+
+#: .\apps\quiz\views.py:600
+msgid "Cycling slowly"
+msgstr "धीरे-धीरे साइकिलिंग"
+
+#: .\apps\quiz\views.py:603
+msgid "Sprinting is short-duration high-intensity anaerobic exercise."
+msgstr "स्प्रिंटिंग अल्पकालिक उच्च-तीव्रता अवायवीय व्यायाम है।"
+
+#: .\apps\quiz\views.py:607
+msgid "Which mineral prevents muscle cramps?"
+msgstr "कौन सा खनिज मांसपेशियों की ऐंठन को रोकता है?"
+
+#: .\apps\quiz\views.py:612
+msgid "Copper"
+msgstr "तांबा"
+
+#: .\apps\quiz\views.py:615
+msgid "Magnesium helps prevent muscle cramps."
+msgstr "मैग्नीशियम मांसपेशियों की ऐंठन को रोकने में मदद करता है।"
+
+#: .\apps\quiz\views.py:619
+msgid "Which improves lung capacity?"
+msgstr "कौन फेफड़ों की क्षमता में सुधार करता है?"
+
+#: .\apps\quiz\views.py:621
+msgid "Swimming"
+msgstr "तैरना"
+
+#: .\apps\quiz\views.py:627
+msgid "Swimming enhances lung function."
+msgstr "तैरना फेफड़ों के कार्य को बढ़ाता है।"
+
+#: .\apps\quiz\views.py:631
+msgid "Push-ups primarily work which body part?"
+msgstr "पुश-अप्स मुख्य रूप से शरीर के किस हिस्से पर काम करते हैं?"
+
+#: .\apps\quiz\views.py:633
+msgid "Chest and arms"
+msgstr "छाती और हाथ"
+
+#: .\apps\quiz\views.py:635
+msgid "Back only"
+msgstr "केवल पीठ"
+
+#: .\apps\quiz\views.py:636
+msgid "Neck"
+msgstr "गर्दन"
+
+#: .\apps\quiz\views.py:639
+msgid "Push-ups target chest, shoulders, and triceps."
+msgstr "पुश-अप्स छाती, कंधे और ट्राइसेप्स को लक्षित करते हैं।"
+
+#: .\apps\quiz\views.py:643
+msgid "How much water is recommended daily?"
+msgstr "दैनिक कितना पानी अनुशंसित है?"
+
+#: .\apps\quiz\views.py:645
+msgid "1 glass"
+msgstr "1 गिलास"
+
+#: .\apps\quiz\views.py:646
+msgid "2 liters approx"
+msgstr "लगभग 2 लीटर"
+
+#: .\apps\quiz\views.py:647
+msgid "500 ml"
+msgstr "500 मिली"
+
+#: .\apps\quiz\views.py:651
+msgid "Around 2 liters is generally recommended."
+msgstr "आम तौर पर लगभग 2 लीटर अनुशंसित है।"
+
+#: .\apps\quiz\views.py:655
+msgid "Which exercise helps lose belly fat?"
+msgstr "कौन सा व्यायाम पेट की चर्बी कम करने में मदद करता है?"
+
+#: .\apps\quiz\views.py:657
+msgid "Overall cardio"
+msgstr "समग्र कार्डियो"
+
+#: .\apps\quiz\views.py:658
+msgid "Only crunches"
+msgstr "केवल क्रंचेस"
+
+#: .\apps\quiz\views.py:663
+msgid "Overall fat loss requires cardio and diet."
+msgstr "समग्र वसा हानि के लिए कार्डियो और आहार की आवश्यकता होती है।"
+
+#: .\apps\quiz\views.py:667
+msgid "Which exercise strengthens shoulders?"
+msgstr "कौन सा व्यायाम कंधों को मजबूत करता है?"
+
+#: .\apps\quiz\views.py:675
+msgid "Shoulder press targets deltoid muscles."
+msgstr "शोल्डर प्रेस डेल्टॉइड मांसपेशियों को लक्षित करता है।"
+
+#: .\apps\quiz\views.py:679
+msgid "Exercise improves mental health by:"
+msgstr "व्यायाम मानसिक स्वास्थ्य में सुधार करता है:"
+
+#: .\apps\quiz\views.py:681
+msgid "Reducing stress"
+msgstr "तनाव कम करना"
+
+#: .\apps\quiz\views.py:682
+msgid "Increasing stress"
+msgstr "तनाव बढ़ाना"
+
+#: .\apps\quiz\views.py:683
+msgid "Reducing oxygen"
+msgstr "ऑक्सीजन कम करना"
+
+#: .\apps\quiz\views.py:687
+msgid "Exercise releases endorphins that reduce stress."
+msgstr "व्यायाम एंडोर्फिन जारी करता है जो तनाव को कम करता है।"
+
+#: .\apps\quiz\views.py:691
+msgid "What is flexibility?"
+msgstr "लचीलापन क्या है?"
+
+#: .\apps\quiz\views.py:693
+msgid "Ability to stretch muscles"
+msgstr "मांसपेशियों को खींचने की क्षमता"
+
+#: .\apps\quiz\views.py:694
+msgid "Running speed"
+msgstr "दौड़ने की गति"
+
+#: .\apps\quiz\views.py:695
+msgid "Muscle size"
+msgstr "मांसपेशी आकार"
+
+#: .\apps\quiz\views.py:696
+msgid "Fat percentage"
+msgstr "वसा प्रतिशत"
+
+#: .\apps\quiz\views.py:699
+msgid "Flexibility is the ability of muscles to stretch."
+msgstr "लचीलापन मांसपेशियों की खिंचाव करने की क्षमता है।"
+
+#: .\apps\quiz\views.py:703
+msgid "Which activity improves agility?"
+msgstr "कौन सी गतिविधि चपलता में सुधार करती है?"
+
+#: .\apps\quiz\views.py:705
+msgid "Ladder drills"
+msgstr "सीढ़ी ड्रिल"
+
+#: .\apps\quiz\views.py:711
+msgid "Agility drills improve quick movement."
+msgstr "चपलता ड्रिल तेज गति में सुधार करती हैं।"
+
+#: .\apps\quiz\views.py:715
+msgid "Which is a compound exercise?"
+msgstr "कौन सा यौगिक व्यायाम है?"
+
+#: .\apps\quiz\views.py:718
+msgid "Bicep curls"
+msgstr "बाइसेप कर्ल्स"
+
+#: .\apps\quiz\views.py:719
+msgid "Wrist curls"
+msgstr "कलाई कर्ल्स"
+
+#: .\apps\quiz\views.py:720
+msgid "Neck rolls"
+msgstr "गर्दन घुमाना"
+
+#: .\apps\quiz\views.py:723
+msgid "Squats use multiple joints and muscles."
+msgstr "स्क्वाट्स कई जोड़ों और मांसपेशियों का उपयोग करते हैं।"
+
+#: .\apps\quiz\views.py:727
+msgid "Exercise reduces risk of:"
+msgstr "व्यायाम जोखिम को कम करता है:"
+
+#: .\apps\quiz\views.py:729 .\apps\quiz\views.py:1793 .\apps\quiz\views.py:2223
+msgid "Heart disease"
+msgstr "हृदय रोग"
+
+#: .\apps\quiz\views.py:730
+msgid "Fitness"
+msgstr "फिटनेस"
+
+#: .\apps\quiz\views.py:731 .\apps\quiz\views.py:2083
+msgid "Energy"
+msgstr "ऊर्जा"
+
+#: .\apps\quiz\views.py:732 .\apps\quiz\views.py:2354
+msgid "Strength"
+msgstr "शक्ति"
+
+#: .\apps\quiz\views.py:735
+msgid "Regular exercise lowers heart disease risk."
+msgstr "नियमित व्यायाम हृदय रोग के जोखिम को कम करता है।"
+
+#: .\apps\quiz\views.py:739
+msgid "Best time to exercise is:"
+msgstr "व्यायाम करने का सबसे अच्छा समय है:"
+
+#: .\apps\quiz\views.py:741
+msgid "When consistent"
+msgstr "जब निरंतर"
+
+#: .\apps\quiz\views.py:742
+msgid "Midnight only"
+msgstr "केवल मध्यरात्रि"
+
+#: .\apps\quiz\views.py:743 .\apps\quiz\views.py:1448 .\apps\quiz\views.py:1759
+msgid "Never"
+msgstr "कभी नहीं"
+
+#: .\apps\quiz\views.py:744
+msgid "Random"
+msgstr "यादृच्छिक"
+
+#: .\apps\quiz\views.py:747
+msgid "Consistency matters more than time."
+msgstr "निरंतरता समय से अधिक महत्वपूर्ण है।"
+
+#: .\apps\quiz\views.py:751
+msgid "Which helps build stamina?"
+msgstr "कौन सहनशक्ति बनाने में मदद करता है?"
+
+#: .\apps\quiz\views.py:755
+msgid "Eating junk"
+msgstr "जंक खाना"
+
+#: .\apps\quiz\views.py:756 .\apps\quiz\views.py:2305
+msgid "Skipping water"
+msgstr "पानी छोड़ना"
+
+#: .\apps\quiz\views.py:759
+msgid "Cycling improves stamina."
+msgstr "साइकिलिंग सहनशक्ति में सुधार करती है।"
+
+#: .\apps\quiz\views.py:763
+msgid "Protein shakes are mainly for:"
+msgstr "प्रोटीन शेक मुख्य रूप से किसके लिए हैं:"
+
+#: .\apps\quiz\views.py:768 .\apps\quiz\views.py:2085 .\apps\quiz\views.py:2194
+msgid "Sleep"
+msgstr "नींद"
+
+#: .\apps\quiz\views.py:771
+msgid "Protein supports muscle repair."
+msgstr "प्रोटीन मांसपेशियों की मरम्मत का समर्थन करता है।"
+
+#: .\apps\quiz\views.py:775
+msgid "Which reduces injury risk?"
+msgstr "कौन चोट के जोखिम को कम करता है?"
+
+#: .\apps\quiz\views.py:777
+msgid "Proper warm-up"
+msgstr "उचित वार्म-अप"
+
+#: .\apps\quiz\views.py:778
+msgid "Skipping warm-up"
+msgstr "वार्म-अप छोड़ना"
+
+#: .\apps\quiz\views.py:779
+msgid "Overtraining"
+msgstr "ओवरट्रेनिंग"
+
+#: .\apps\quiz\views.py:783
+msgid "Warm-up prepares muscles for activity."
+msgstr "वार्म-अप मांसपेशियों को गतिविधि के लिए तैयार करता है।"
+
+#: .\apps\quiz\views.py:787
+msgid "Which improves posture?"
+msgstr "कौन मुद्रा में सुधार करता है?"
+
+#: .\apps\quiz\views.py:789
+msgid "Core strengthening"
+msgstr "कोर मजबूती"
+
+#: .\apps\quiz\views.py:790
+msgid "Sleeping poorly"
+msgstr "खराब नींद"
+
+#: .\apps\quiz\views.py:791
+msgid "Slouching"
+msgstr "झुकना"
+
+#: .\apps\quiz\views.py:795
+msgid "Strong core improves posture."
+msgstr "मजबूत कोर मुद्रा में सुधार करता है।"
+
+#: .\apps\quiz\views.py:799
+msgid "What does progressive overload mean?"
+msgstr "प्रगतिशील अधिभार का क्या मतलब है?"
+
+#: .\apps\quiz\views.py:801
+msgid "Gradually increasing workout intensity"
+msgstr "धीरे-धीरे कसरत की तीव्रता बढ़ाना"
+
+#: .\apps\quiz\views.py:802
+msgid "Stopping exercise"
+msgstr "व्यायाम बंद करना"
+
+#: .\apps\quiz\views.py:803
+msgid "Reducing effort"
+msgstr "प्रयास कम करना"
+
+#: .\apps\quiz\views.py:804
+msgid "Sleeping more"
+msgstr "अधिक सोना"
+
+#: .\apps\quiz\views.py:807
+msgid "Progressive overload increases muscle strength gradually."
+msgstr "प्रगतिशील अधिभार धीरे-धीरे मांसपेशियों की शक्ति बढ़ाता है।"
+
+#: .\apps\quiz\views.py:811
+msgid "Exercise helps control:"
+msgstr "व्यायाम नियंत्रण में मदद करता है:"
+
+#: .\apps\quiz\views.py:813
+msgid "Blood sugar"
+msgstr "रक्त शर्करा"
+
+#: .\apps\quiz\views.py:819
+msgid "Exercise helps regulate blood sugar levels."
+msgstr "व्यायाम रक्त शर्करा के स्तर को नियंत्रित करने में मदद करता है।"
+
+#: .\apps\quiz\views.py:828
+msgid "What is mental health?"
+msgstr "मानसिक स्वास्थ्य क्या है?"
+
+#: .\apps\quiz\views.py:830
+msgid "The absence of illness"
+msgstr "बीमारी की अनुपस्थिति"
+
+#: .\apps\quiz\views.py:831
+msgid "Emotional, psychological, and social well-being"
+msgstr "भावनात्मक, मनोवैज्ञानिक और सामाजिक कल्याण"
+
+#: .\apps\quiz\views.py:832 .\apps\quiz\views.py:1144
+msgid "Physical strength"
+msgstr "शारीरिक शक्ति"
+
+#: .\apps\quiz\views.py:833
+msgid "IQ level"
+msgstr "आईक्यू स्तर"
+
+#: .\apps\quiz\views.py:836
+msgid "Mental health includes emotional, psychological, and social well-being."
+msgstr "मानसिक स्वास्थ्य में भावनात्मक, मनोवैज्ञानिक और सामाजिक कल्याण शामिल है।"
+
+#: .\apps\quiz\views.py:840
+msgid "Which hormone is commonly known as the stress hormone?"
+msgstr "कौन सा हार्मोन आमतौर पर तनाव हार्मोन के रूप में जाना जाता है?"
+
+#: .\apps\quiz\views.py:842
+msgid "Dopamine"
+msgstr "डोपामाइन"
+
+#: .\apps\quiz\views.py:843 .\apps\quiz\views.py:902
+msgid "Serotonin"
+msgstr "सेरोटोनिन"
+
+#: .\apps\quiz\views.py:844 .\apps\quiz\views.py:1023
+msgid "Cortisol"
+msgstr "कोर्टिसोल"
+
+#: .\apps\quiz\views.py:845 .\apps\quiz\views.py:1022
+msgid "Oxytocin"
+msgstr "ऑक्सीटोसिन"
+
+#: .\apps\quiz\views.py:848
+msgid "Cortisol is released during stress."
+msgstr "तनाव के दौरान कोर्टिसोल जारी होता है।"
+
+#: .\apps\quiz\views.py:852
+msgid "Which activity helps reduce stress?"
+msgstr "कौन सी गतिविधि तनाव कम करने में मदद करती है?"
+
+#: .\apps\quiz\views.py:855 .\apps\quiz\views.py:1059 .\apps\quiz\views.py:1252
+#: .\apps\quiz\views.py:1337
+msgid "Overthinking"
+msgstr "अधिक सोचना"
+
+#: .\apps\quiz\views.py:856 .\apps\quiz\views.py:1131
+msgid "Skipping sleep"
+msgstr "नींद छोड़ना"
+
+#: .\apps\quiz\views.py:857 .\apps\quiz\views.py:929 .\apps\quiz\views.py:953
+#: .\apps\quiz\views.py:1047 .\apps\quiz\views.py:1084
+#: .\apps\quiz\views.py:1133 .\apps\quiz\views.py:1192
+#: .\apps\quiz\views.py:1227 .\apps\quiz\views.py:1336
+#: .\apps\quiz\views.py:1372 .\apps\quiz\views.py:1397
+msgid "Isolation"
+msgstr "अलगाव"
+
+#: .\apps\quiz\views.py:860
+msgid "Meditation helps calm the mind and reduce stress."
+msgstr "ध्यान मन को शांत करने और तनाव कम करने में मदद करता है।"
+
+#: .\apps\quiz\views.py:864
+msgid "How many hours of sleep do adults generally need?"
+msgstr "वयस्कों को आम तौर पर कितने घंटे की नींद की आवश्यकता होती है?"
+
+#: .\apps\quiz\views.py:866 .\apps\quiz\views.py:2023
+msgid "4-5"
+msgstr "4-5"
+
+#: .\apps\quiz\views.py:867 .\apps\quiz\views.py:2025
+msgid "7-9"
+msgstr "7-9"
+
+#: .\apps\quiz\views.py:868 .\apps\quiz\views.py:2026
+msgid "10-12"
+msgstr "10-12"
+
+#: .\apps\quiz\views.py:869 .\apps\quiz\views.py:2024
+msgid "5-6"
+msgstr "5-6"
+
+#: .\apps\quiz\views.py:872
+msgid "Adults typically need 7-9 hours of sleep."
+msgstr "वयस्कों को आमतौर पर 7-9 घंटे की नींद की आवश्यकता होती है।"
+
+#: .\apps\quiz\views.py:876
+msgid "Which condition involves persistent sadness?"
+msgstr "कौन सी स्थिति में लगातार उदासी शामिल है?"
+
+#: .\apps\quiz\views.py:878 .\apps\quiz\views.py:1011 .\apps\quiz\views.py:1095
+#: .\apps\quiz\views.py:1120
+msgid "Depression"
+msgstr "अवसाद"
+
+#: .\apps\quiz\views.py:879 .\apps\quiz\views.py:1012 .\apps\quiz\views.py:1119
+msgid "Anxiety"
+msgstr "चिंता"
+
+#: .\apps\quiz\views.py:880 .\apps\quiz\views.py:1180
+msgid "ADHD"
+msgstr "एडीएचडी"
+
+#: .\apps\quiz\views.py:881 .\apps\quiz\views.py:1013 .\apps\quiz\views.py:1096
+#: .\apps\quiz\views.py:1179 .\apps\quiz\views.py:1203
+msgid "Phobia"
+msgstr "फोबिया"
+
+#: .\apps\quiz\views.py:884
+msgid "Depression is characterized by persistent sadness."
+msgstr "अवसाद की विशेषता लगातार उदासी है।"
+
+#: .\apps\quiz\views.py:888
+msgid "Which practice improves emotional awareness?"
+msgstr "कौन सा अभ्यास भावनात्मक जागरूकता में सुधार करता है?"
+
+#: .\apps\quiz\views.py:890
+msgid "Mindfulness"
+msgstr "माइंडफुलनेस"
+
+#: .\apps\quiz\views.py:891 .\apps\quiz\views.py:1253
+msgid "Avoidance"
+msgstr "परिहार"
+
+#: .\apps\quiz\views.py:892 .\apps\quiz\views.py:1001 .\apps\quiz\views.py:1085
+#: .\apps\quiz\views.py:1107 .\apps\quiz\views.py:1228
+#: .\apps\quiz\views.py:1335
+msgid "Anger"
+msgstr "गुस्सा"
+
+#: .\apps\quiz\views.py:893
+msgid "Denial"
+msgstr "इनकार"
+
+#: .\apps\quiz\views.py:896
+msgid "Mindfulness improves emotional awareness."
+msgstr "माइंडफुलनेस भावनात्मक जागरूकता में सुधार करती है।"
+
+#: .\apps\quiz\views.py:900
+msgid "Which neurotransmitter is linked to happiness?"
+msgstr "कौन सा न्यूरोट्रांसमीटर खुशी से जुड़ा है?"
+
+#: .\apps\quiz\views.py:903 .\apps\quiz\views.py:1025
+msgid "Adrenaline"
+msgstr "एड्रेनालाईन"
+
+#: .\apps\quiz\views.py:904 .\apps\quiz\views.py:1024
+msgid "Insulin"
+msgstr "इंसुलिन"
+
+#: .\apps\quiz\views.py:905
+msgid "Melatonin"
+msgstr "मेलाटोनिन"
+
+#: .\apps\quiz\views.py:908
+msgid "Serotonin helps regulate mood and happiness."
+msgstr "सेरोटोनिन मूड और खुशी को नियंत्रित करने में मदद करता है।"
+
+#: .\apps\quiz\views.py:912
+msgid "Anxiety mainly affects which part of health?"
+msgstr "चिंता मुख्य रूप से स्वास्थ्य के किस हिस्से को प्रभावित करती है?"
+
+#: .\apps\quiz\views.py:914
+msgid "Mental"
+msgstr "मानसिक"
+
+#: .\apps\quiz\views.py:915
+msgid "Dental"
+msgstr "दंत"
+
+#: .\apps\quiz\views.py:920
+msgid "Anxiety affects mental and emotional well-being."
+msgstr "चिंता मानसिक और भावनात्मक कल्याण को प्रभावित करती है।"
+
+#: .\apps\quiz\views.py:924
+msgid "Which technique helps control panic attacks?"
+msgstr "कौन सी तकनीक पैनिक अटैक को नियंत्रित करने में मदद करती है?"
+
+#: .\apps\quiz\views.py:926 .\apps\quiz\views.py:1250 .\apps\quiz\views.py:2304
+msgid "Deep breathing"
+msgstr "गहरी सांस लेना"
+
+#: .\apps\quiz\views.py:927
+msgid "Shouting"
+msgstr "चिल्लाना"
+
+#: .\apps\quiz\views.py:928 .\apps\quiz\views.py:1216 .\apps\quiz\views.py:1251
+#: .\apps\quiz\views.py:1312 .\apps\quiz\views.py:1747
+#: .\apps\quiz\views.py:2256
+msgid "Skipping meals"
+msgstr "भोजन छोड़ना"
+
+#: .\apps\quiz\views.py:932
+msgid "Deep breathing helps regulate panic symptoms."
+msgstr "गहरी सांस लेना पैनिक के लक्षणों को नियंत्रित करने में मदद करता है।"
+
+#: .\apps\quiz\views.py:936
+msgid "What is burnout?"
+msgstr "बर्नआउट क्या है?"
+
+#: .\apps\quiz\views.py:938
+msgid "Extreme physical exercise"
+msgstr "चरम शारीरिक व्यायाम"
+
+#: .\apps\quiz\views.py:939
+msgid "Chronic workplace stress"
+msgstr "पुरानी कार्यस्थल तनाव"
+
+#: .\apps\quiz\views.py:940
+msgid "Sleeping disorder"
+msgstr "नींद की गड़बड़ी"
+
+#: .\apps\quiz\views.py:941
+msgid "Brain injury"
+msgstr "मस्तिष्क की चोट"
+
+#: .\apps\quiz\views.py:944
+msgid "Burnout results from chronic unmanaged stress."
+msgstr "बर्नआउट पुराने अप्रबंधित तनाव से होता है।"
+
+#: .\apps\quiz\views.py:948 .\apps\quiz\views.py:2161
+msgid "Which habit improves mental health?"
+msgstr "कौन सी आदत मानसिक स्वास्थ्य में सुधार करती है?"
+
+#: .\apps\quiz\views.py:950 .\apps\quiz\views.py:1394 .\apps\quiz\views.py:1459
+msgid "Regular exercise"
+msgstr "नियमित व्यायाम"
+
+#: .\apps\quiz\views.py:951 .\apps\quiz\views.py:1215
+msgid "Overworking"
+msgstr "अधिक काम करना"
+
+#: .\apps\quiz\views.py:952
+msgid "Neglecting sleep"
+msgstr "नींद की उपेक्षा"
+
+#: .\apps\quiz\views.py:956
+msgid "Exercise releases mood-boosting chemicals."
+msgstr "व्यायाम मूड बढ़ाने वाले रसायनों को जारी करता है।"
+
+#: .\apps\quiz\views.py:960
+msgid "What is cognitive behavioral therapy (CBT)?"
+msgstr "संज्ञानात्मक व्यवहार चिकित्सा (सीबीटी) क्या है?"
+
+#: .\apps\quiz\views.py:962 .\apps\quiz\views.py:1168
+msgid "Medication"
+msgstr "दवा"
+
+#: .\apps\quiz\views.py:963
+msgid "Talk therapy"
+msgstr "टॉक थेरेपी"
+
+#: .\apps\quiz\views.py:964 .\apps\quiz\views.py:1167
+msgid "Surgery"
+msgstr "सर्जरी"
+
+#: .\apps\quiz\views.py:965
+msgid "Diet plan"
+msgstr "आहार योजना"
+
+#: .\apps\quiz\views.py:968
+msgid "CBT is a form of talk therapy."
+msgstr "सीबीटी टॉक थेरेपी का एक रूप है।"
+
+#: .\apps\quiz\views.py:972
+msgid "Which disorder involves excessive fear of social situations?"
+msgstr "कौन सा विकार सामाजिक स्थितियों के अत्यधिक भय को शामिल करता है?"
+
+#: .\apps\quiz\views.py:974
+msgid "Social anxiety"
+msgstr "सामाजिक चिंता"
+
+#: .\apps\quiz\views.py:975 .\apps\quiz\views.py:1010
+msgid "Bipolar disorder"
+msgstr "द्विध्रुवी विकार"
+
+#: .\apps\quiz\views.py:976 .\apps\quiz\views.py:1118
+msgid "Schizophrenia"
+msgstr "सिज़ोफ्रेनिया"
+
+#: .\apps\quiz\views.py:977 .\apps\quiz\views.py:1094 .\apps\quiz\views.py:1181
+msgid "OCD"
+msgstr "ओसीडी"
+
+#: .\apps\quiz\views.py:980
+msgid "Social anxiety disorder involves fear of social situations."
+msgstr "सामाजिक चिंता विकार में सामाजिक स्थितियों का डर शामिल है।"
+
+#: .\apps\quiz\views.py:984
+msgid "What does ADHD stand for?"
+msgstr "एडीएचडी का क्या मतलब है?"
+
+#: .\apps\quiz\views.py:986
+msgid "Advanced Health Disorder"
+msgstr "उन्नत स्वास्थ्य विकार"
+
+#: .\apps\quiz\views.py:987
+msgid "Attention Deficit Hyperactivity Disorder"
+msgstr "अटेंशन डेफिसिट हाइपरएक्टिविटी डिसऑर्डर"
+
+#: .\apps\quiz\views.py:988
+msgid "Anxiety Disorder"
+msgstr "चिंता विकार"
+
+#: .\apps\quiz\views.py:989
+msgid "Adult Depression Habit Disorder"
+msgstr "वयस्क अवसाद आदत विकार"
+
+#: .\apps\quiz\views.py:992
+msgid "ADHD stands for Attention Deficit Hyperactivity Disorder."
+msgstr "एडीएचडी का मतलब अटेंशन डेफिसिट हाइपरएक्टिविटी डिसऑर्डर है।"
+
+#: .\apps\quiz\views.py:996
+msgid "Which practice helps emotional regulation?"
+msgstr "कौन सा अभ्यास भावनात्मक नियमन में मदद करता है?"
+
+#: .\apps\quiz\views.py:998
+msgid "Journaling"
+msgstr "जर्नलिंग"
+
+#: .\apps\quiz\views.py:999
+msgid "Suppressing emotions"
+msgstr "भावनाओं को दबाना"
+
+#: .\apps\quiz\views.py:1000
+msgid "Avoiding people"
+msgstr "लोगों से बचना"
+
+#: .\apps\quiz\views.py:1004
+msgid "Journaling helps process emotions."
+msgstr "जर्नलिंग भावनाओं को संसाधित करने में मदद करती है।"
+
+
+
+#: .\apps\quiz\views.py:1008
+msgid "Which mental illness includes mood swings between high and low?"
+msgstr "कौन सी मानसिक बीमारी में उच्च और निम्न के बीच मूड स्विंग शामिल हैं?"
+
+#: .\apps\quiz\views.py:1016
+msgid "Bipolar disorder involves extreme mood swings."
+msgstr "द्विध्रुवी विकार में चरम मूड स्विंग शामिल हैं।"
+
+#: .\apps\quiz\views.py:1020
+msgid "Which chemical is known as the 'love hormone'?"
+msgstr "कौन सा रसायन 'प्रेम हार्मोन' के रूप में जाना जाता है?"
+
+#: .\apps\quiz\views.py:1028
+msgid "Oxytocin is associated with bonding."
+msgstr "ऑक्सीटोसिन बंधन से जुड़ा है।"
+
+#: .\apps\quiz\views.py:1032
+msgid "What is a common symptom of anxiety?"
+msgstr "चिंता का एक सामान्य लक्षण क्या है?"
+
+#: .\apps\quiz\views.py:1034
+msgid "Rapid heartbeat"
+msgstr "तेज़ दिल की धड़कन"
+
+#: .\apps\quiz\views.py:1035
+msgid "Better memory"
+msgstr "बेहतर याददाश्त"
+
+#: .\apps\quiz\views.py:1036
+msgid "Improved focus"
+msgstr "बेहतर फोकस"
+
+#: .\apps\quiz\views.py:1037 .\apps\quiz\views.py:1301
+msgid "Calmness"
+msgstr "शांति"
+
+#: .\apps\quiz\views.py:1040
+msgid "Anxiety often causes rapid heartbeat."
+msgstr "चिंता अक्सर तेज़ दिल की धड़कन का कारण बनती है।"
+
+#: .\apps\quiz\views.py:1044
+msgid "Which factor improves mental resilience?"
+msgstr "कौन सा कारक मानसिक लचीलापन में सुधार करता है?"
+
+#: .\apps\quiz\views.py:1046
+msgid "Strong support system"
+msgstr "मजबूत समर्थन प्रणाली"
+
+#: .\apps\quiz\views.py:1048 .\apps\quiz\views.py:1193
+#: .\apps\quiz\views.py:1395
+msgid "Sleep deprivation"
+msgstr "नींद की कमी"
+
+#: .\apps\quiz\views.py:1049 .\apps\quiz\views.py:1108
+#: .\apps\quiz\views.py:1132 .\apps\quiz\views.py:1229
+#: .\apps\quiz\views.py:1313 .\apps\quiz\views.py:1396
+#: .\apps\quiz\views.py:1640 .\apps\quiz\views.py:2084
+#: .\apps\quiz\views.py:2196 .\apps\quiz\views.py:2384
+msgid "Stress"
+msgstr "तनाव"
+
+#: .\apps\quiz\views.py:1052
+msgid "Support systems improve resilience."
+msgstr "समर्थन प्रणालियां लचीलापन में सुधार करती हैं।"
+
+#: .\apps\quiz\views.py:1056
+msgid "What is mindfulness?"
+msgstr "माइंडफुलनेस क्या है?"
+
+#: .\apps\quiz\views.py:1058
+msgid "Living in the present moment"
+msgstr "वर्तमान क्षण में जीना"
+
+#: .\apps\quiz\views.py:1060
+msgid "Ignoring feelings"
+msgstr "भावनाओं को नजरअंदाज करना"
+
+#: .\apps\quiz\views.py:1061
+msgid "Worrying about future"
+msgstr "भविष्य के बारे में चिंता करना"
+
+#: .\apps\quiz\views.py:1064
+msgid "Mindfulness means focusing on the present."
+msgstr "माइंडफुलनेस का मतलब है वर्तमान पर ध्यान केंद्रित करना।"
+
+#: .\apps\quiz\views.py:1068
+msgid "What is insomnia?"
+msgstr "अनिद्रा क्या है?"
+
+#: .\apps\quiz\views.py:1070
+msgid "Sleep disorder"
+msgstr "नींद की गड़बड़ी"
+
+#: .\apps\quiz\views.py:1071
+msgid "Eating disorder"
+msgstr "खाने की गड़बड़ी"
+
+#: .\apps\quiz\views.py:1072
+msgid "Memory issue"
+msgstr "स्मृति समस्या"
+
+#: .\apps\quiz\views.py:1073
+msgid "Vision issue"
+msgstr "दृष्टि समस्या"
+
+#: .\apps\quiz\views.py:1076
+msgid "Insomnia is difficulty sleeping."
+msgstr "अनिद्रा सोने में कठिनाई है।"
+
+#: .\apps\quiz\views.py:1080
+msgid "Which is a healthy coping mechanism?"
+msgstr "कौन सा स्वस्थ मुकाबला तंत्र है?"
+
+#: .\apps\quiz\views.py:1082
+msgid "Talking to friends"
+msgstr "दोस्तों से बात करना"
+
+#: .\apps\quiz\views.py:1083 .\apps\quiz\views.py:1322
+msgid "Substance abuse"
+msgstr "मादक द्रव्यों का दुरुपयोग"
+
+#: .\apps\quiz\views.py:1088
+msgid "Talking helps process emotions."
+msgstr "बात करना भावनाओं को संसाधित करने में मदद करता है।"
+
+#: .\apps\quiz\views.py:1092
+msgid "Which mental condition involves repetitive behaviors?"
+msgstr "कौन सी मानसिक स्थिति में दोहरावदार व्यवहार शामिल हैं?"
+
+#: .\apps\quiz\views.py:1097 .\apps\quiz\views.py:1204
+msgid "Burnout"
+msgstr "बर्नआउट"
+
+#: .\apps\quiz\views.py:1100
+msgid "OCD involves obsessions and compulsions."
+msgstr "ओसीडी में जुनून और मजबूरी शामिल है।"
+
+#: .\apps\quiz\views.py:1104
+msgid "Meditation mainly improves?"
+msgstr "ध्यान मुख्य रूप से क्या सुधारता है?"
+
+#: .\apps\quiz\views.py:1106
+msgid "Focus and calmness"
+msgstr "फोकस और शांति"
+
+#: .\apps\quiz\views.py:1109
+msgid "Fear"
+msgstr "डर"
+
+#: .\apps\quiz\views.py:1112
+msgid "Meditation improves calmness and focus."
+msgstr "ध्यान शांति और फोकस में सुधार करता है।"
+
+#: .\apps\quiz\views.py:1116
+msgid "Which disorder includes hallucinations?"
+msgstr "कौन से विकार में मतिभ्रम शामिल हैं?"
+
+#: .\apps\quiz\views.py:1121 .\apps\quiz\views.py:1205
+msgid "Insomnia"
+msgstr "अनिद्रा"
+
+#: .\apps\quiz\views.py:1124
+msgid "Schizophrenia can involve hallucinations."
+msgstr "सिज़ोफ्रेनिया में मतिभ्रम शामिल हो सकते हैं।"
+
+#: .\apps\quiz\views.py:1128
+msgid "Which activity releases endorphins?"
+msgstr "कौन सी गतिविधि एंडोर्फिन जारी करती है?"
+
+#: .\apps\quiz\views.py:1130 .\apps\quiz\views.py:1263
+#: .\apps\quiz\views.py:1323 .\apps\quiz\views.py:2234
+msgid "Exercise"
+msgstr "व्यायाम"
+
+#: .\apps\quiz\views.py:1136
+msgid "Exercise releases endorphins."
+msgstr "व्यायाम एंडोर्फिन जारी करता है।"
+
+#: .\apps\quiz\views.py:1140
+msgid "Emotional intelligence means?"
+msgstr "भावनात्मक बुद्धिमत्ता का मतलब है?"
+
+#: .\apps\quiz\views.py:1142
+msgid "Understanding and managing emotions"
+msgstr "भावनाओं को समझना और प्रबंधित करना"
+
+#: .\apps\quiz\views.py:1143
+msgid "High IQ"
+msgstr "उच्च आईक्यू"
+
+#: .\apps\quiz\views.py:1145
+msgid "Ignoring emotions"
+msgstr "भावनाओं को नजरअंदाज करना"
+
+#: .\apps\quiz\views.py:1148
+msgid "Emotional intelligence is managing emotions effectively."
+msgstr "भावनात्मक बुद्धिमत्ता भावनाओं को प्रभावी ढंग से प्रबंधित करना है।"
+
+#: .\apps\quiz\views.py:1152
+msgid "Chronic stress may lead to?"
+msgstr "पुराना तनाव किसकी ओर ले जा सकता है?"
+
+#: .\apps\quiz\views.py:1154
+msgid "Mental health disorders"
+msgstr "मानसिक स्वास्थ्य विकार"
+
+#: .\apps\quiz\views.py:1156
+msgid "Stronger memory"
+msgstr "मजबूत याददाश्त"
+
+#: .\apps\quiz\views.py:1157
+msgid "Improved mood"
+msgstr "बेहतर मूड"
+
+#: .\apps\quiz\views.py:1160
+msgid "Chronic stress harms mental health."
+msgstr "पुराना तनाव मानसिक स्वास्थ्य को नुकसान पहुंचाता है।"
+
+#: .\apps\quiz\views.py:1164
+msgid "Which therapy involves group discussion?"
+msgstr "कौन सी थेरेपी में समूह चर्चा शामिल है?"
+
+#: .\apps\quiz\views.py:1166
+msgid "Group therapy"
+msgstr "समूह चिकित्सा"
+
+#: .\apps\quiz\views.py:1169
+msgid "Diet therapy"
+msgstr "आहार चिकित्सा"
+
+#: .\apps\quiz\views.py:1172
+msgid "Group therapy involves shared discussions."
+msgstr "समूह चिकित्सा में साझा चर्चा शामिल है।"
+
+#: .\apps\quiz\views.py:1176
+msgid "Which disorder causes intense mood sadness lasting weeks?"
+msgstr "कौन सा विकार सप्ताहों तक चलने वाली तीव्र मूड उदासी का कारण बनता है?"
+
+#: .\apps\quiz\views.py:1178
+msgid "Major depression"
+msgstr "प्रमुख अवसाद"
+
+#: .\apps\quiz\views.py:1184
+msgid "Major depression lasts weeks or longer."
+msgstr "प्रमुख अवसाद सप्ताह या उससे अधिक समय तक रहता है।"
+
+#: .\apps\quiz\views.py:1188
+msgid "Which is a sign of good mental health?"
+msgstr "अच्छे मानसिक स्वास्थ्य का संकेत क्या है?"
+
+#: .\apps\quiz\views.py:1190
+msgid "Ability to cope with stress"
+msgstr "तनाव से निपटने की क्षमता"
+
+#: .\apps\quiz\views.py:1191
+msgid "Constant anger"
+msgstr "लगातार गुस्सा"
+
+#: .\apps\quiz\views.py:1196
+msgid "Coping well with stress shows good mental health."
+msgstr "तनाव से अच्छी तरह निपटना अच्छे मानसिक स्वास्थ्य को दर्शाता है।"
+
+#: .\apps\quiz\views.py:1200
+msgid "Which mental illness affects eating habits?"
+msgstr "कौन सी मानसिक बीमारी खाने की आदतों को प्रभावित करती है?"
+
+#: .\apps\quiz\views.py:1202
+msgid "Eating disorders"
+msgstr "खाने के विकार"
+
+#: .\apps\quiz\views.py:1208
+msgid "Eating disorders affect food behavior."
+msgstr "खाने के विकार भोजन व्यवहार को प्रभावित करते हैं।"
+
+#: .\apps\quiz\views.py:1212
+msgid "Self-care includes?"
+msgstr "आत्म-देखभाल में क्या शामिल है?"
+
+#: .\apps\quiz\views.py:1214
+msgid "Healthy sleep routine"
+msgstr "स्वस्थ नींद दिनचर्या"
+
+#: .\apps\quiz\views.py:1217
+msgid "Ignoring stress"
+msgstr "तनाव को नजरअंदाज करना"
+
+#: .\apps\quiz\views.py:1220
+msgid "Healthy routines support mental health."
+msgstr "स्वस्थ दिनचर्या मानसिक स्वास्थ्य का समर्थन करती है।"
+
+#: .\apps\quiz\views.py:1224
+msgid "Which technique reduces negative thoughts?"
+msgstr "कौन सी तकनीक नकारात्मक विचारों को कम करती है?"
+
+#: .\apps\quiz\views.py:1226
+msgid "Cognitive restructuring"
+msgstr "संज्ञानात्मक पुनर्गठन"
+
+#: .\apps\quiz\views.py:1232
+msgid "Cognitive restructuring changes negative thought patterns."
+msgstr "संज्ञानात्मक पुनर्गठन नकारात्मक विचार पैटर्न को बदलता है।"
+
+#: .\apps\quiz\views.py:1236
+msgid "Which age group can experience mental health issues?"
+msgstr "कौन सा आयु वर्ग मानसिक स्वास्थ्य समस्याओं का अनुभव कर सकता है?"
+
+#: .\apps\quiz\views.py:1238
+msgid "All ages"
+msgstr "सभी उम्र"
+
+#: .\apps\quiz\views.py:1239
+msgid "Only adults"
+msgstr "केवल वयस्क"
+
+#: .\apps\quiz\views.py:1240
+msgid "Only children"
+msgstr "केवल बच्चे"
+
+#: .\apps\quiz\views.py:1241
+msgid "Only elderly"
+msgstr "केवल बुजुर्ग"
+
+#: .\apps\quiz\views.py:1244
+msgid "Mental health issues can affect all ages."
+msgstr "मानसिक स्वास्थ्य समस्याएं सभी उम्र को प्रभावित कर सकती हैं।"
+
+#: .\apps\quiz\views.py:1248
+msgid "Which practice helps manage anxiety?"
+msgstr "कौन सा अभ्यास चिंता को प्रबंधित करने में मदद करता है?"
+
+#: .\apps\quiz\views.py:1256
+msgid "Breathing exercises calm anxiety."
+msgstr "सांस लेने के व्यायाम चिंता को शांत करते हैं।"
+
+#: .\apps\quiz\views.py:1260
+msgid "Post-traumatic stress disorder (PTSD) occurs after?"
+msgstr "पोस्ट-ट्रॉमेटिक स्ट्रेस डिसऑर्डर (PTSD) किसके बाद होता है?"
+
+#: .\apps\quiz\views.py:1262
+msgid "Traumatic events"
+msgstr "दर्दनाक घटनाएं"
+
+#: .\apps\quiz\views.py:1264
+msgid "Diet change"
+msgstr "आहार परिवर्तन"
+
+#: .\apps\quiz\views.py:1265
+msgid "Vacation"
+msgstr "छुट्टी"
+
+#: .\apps\quiz\views.py:1268
+msgid "PTSD follows traumatic events."
+msgstr "PTSD दर्दनाक घटनाओं के बाद होता है।"
+
+#: .\apps\quiz\views.py:1272
+msgid "Positive thinking can?"
+msgstr "सकारात्मक सोच क्या कर सकती है?"
+
+#: .\apps\quiz\views.py:1274
+msgid "Improve mental well-being"
+msgstr "मानसिक कल्याण में सुधार करें"
+
+#: .\apps\quiz\views.py:1276
+msgid "Cause insomnia"
+msgstr "अनिद्रा का कारण बनें"
+
+#: .\apps\quiz\views.py:1277
+msgid "Cause anxiety"
+msgstr "चिंता का कारण बनें"
+
+#: .\apps\quiz\views.py:1280
+msgid "Positive thinking supports mental health."
+msgstr "सकारात्मक सोच मानसिक स्वास्थ्य का समर्थन करती है।"
+
+#: .\apps\quiz\views.py:1284
+msgid "Which is a professional mental health provider?"
+msgstr "कौन पेशेवर मानसिक स्वास्थ्य प्रदाता है?"
+
+#: .\apps\quiz\views.py:1286
+msgid "Psychologist"
+msgstr "मनोवैज्ञानिक"
+
+#: .\apps\quiz\views.py:1287
+msgid "Chef"
+msgstr "रसोइया"
+
+#: .\apps\quiz\views.py:1288
+msgid "Driver"
+msgstr "ड्राइवर"
+
+#: .\apps\quiz\views.py:1289
+msgid "Engineer"
+msgstr "इंजीनियर"
+
+#: .\apps\quiz\views.py:1292
+msgid "Psychologists specialize in mental health."
+msgstr "मनोवैज्ञानिक मानसिक स्वास्थ्य में विशेषज्ञ हैं।"
+
+#: .\apps\quiz\views.py:1296
+msgid "What is emotional burnout?"
+msgstr "भावनात्मक बर्नआउट क्या है?"
+
+#: .\apps\quiz\views.py:1298
+msgid "Emotional exhaustion"
+msgstr "भावनात्मक थकावट"
+
+#: .\apps\quiz\views.py:1299
+msgid "Happiness"
+msgstr "खुशी"
+
+#: .\apps\quiz\views.py:1300 .\apps\quiz\views.py:2355
+msgid "Energy boost"
+msgstr "ऊर्जा बढ़ाना"
+
+#: .\apps\quiz\views.py:1304
+msgid "Burnout involves emotional exhaustion."
+msgstr "बर्नआउट में भावनात्मक थकावट शामिल है।"
+
+#: .\apps\quiz\views.py:1308
+msgid "Which habit improves focus?"
+msgstr "कौन सी आदत फोकस में सुधार करती है?"
+
+#: .\apps\quiz\views.py:1310
+msgid "Adequate sleep"
+msgstr "पर्याप्त नींद"
+
+#: .\apps\quiz\views.py:1311
+msgid "Late-night scrolling"
+msgstr "देर रात स्क्रॉलिंग"
+
+#: .\apps\quiz\views.py:1316
+msgid "Sleep improves concentration."
+msgstr "नींद एकाग्रता में सुधार करती है।"
+
+#: .\apps\quiz\views.py:1320
+msgid "Which is NOT a healthy coping strategy?"
+msgstr "कौन सा स्वस्थ मुकाबला रणनीति नहीं है?"
+
+#: .\apps\quiz\views.py:1325
+msgid "Talking"
+msgstr "बात करना"
+
+#: .\apps\quiz\views.py:1328
+msgid "Substance abuse worsens mental health."
+msgstr "मादक द्रव्यों का दुरुपयोग मानसिक स्वास्थ्य को खराब करता है।"
+
+#: .\apps\quiz\views.py:1332
+msgid "Which is a relaxation method?"
+msgstr "कौन सा विश्राम विधि है?"
+
+#: .\apps\quiz\views.py:1340
+msgid "Yoga promotes relaxation."
+msgstr "योग विश्राम को बढ़ावा देता है।"
+
+#: .\apps\quiz\views.py:1344
+msgid "Loneliness can affect?"
+msgstr "अकेलापन क्या प्रभावित कर सकता है?"
+
+#: .\apps\quiz\views.py:1346
+msgid "Mental and physical health"
+msgstr "मानसिक और शारीरिक स्वास्थ्य"
+
+#: .\apps\quiz\views.py:1347
+msgid "Only teeth"
+msgstr "केवल दांत"
+
+#: .\apps\quiz\views.py:1348
+msgid "Only vision"
+msgstr "केवल दृष्टि"
+
+#: .\apps\quiz\views.py:1349
+msgid "Only hair"
+msgstr "केवल बाल"
+
+#: .\apps\quiz\views.py:1352
+msgid "Loneliness impacts overall health."
+msgstr "अकेलापन समग्र स्वास्थ्य को प्रभावित करता है।"
+
+#: .\apps\quiz\views.py:1356
+msgid "Which is a symptom of depression?"
+msgstr "अवसाद का लक्षण क्या है?"
+
+#: .\apps\quiz\views.py:1358
+msgid "Loss of interest"
+msgstr "रुचि की हानि"
+
+#: .\apps\quiz\views.py:1359
+msgid "High energy"
+msgstr "उच्च ऊर्जा"
+
+#: .\apps\quiz\views.py:1360
+msgid "Excitement"
+msgstr "उत्साह"
+
+#: .\apps\quiz\views.py:1361
+msgid "Confidence boost"
+msgstr "आत्मविश्वास बढ़ाना"
+
+#: .\apps\quiz\views.py:1364
+msgid "Loss of interest is a depression symptom."
+msgstr "रुचि की हानि अवसाद का लक्षण है।"
+
+#: .\apps\quiz\views.py:1368
+msgid "Which activity builds self-esteem?"
+msgstr "कौन सी गतिविधि आत्म-सम्मान बनाती है?"
+
+#: .\apps\quiz\views.py:1370
+msgid "Achieving goals"
+msgstr "लक्ष्य प्राप्त करना"
+
+#: .\apps\quiz\views.py:1371
+msgid "Constant criticism"
+msgstr "लगातार आलोचना"
+
+#: .\apps\quiz\views.py:1373
+msgid "Neglect"
+msgstr "उपेक्षा"
+
+#: .\apps\quiz\views.py:1376
+msgid "Achievement builds confidence."
+msgstr "उपलब्धि आत्मविश्वास बनाती है।"
+
+#: .\apps\quiz\views.py:1380
+msgid "Mental health awareness helps?"
+msgstr "मानसिक स्वास्थ्य जागरूकता मदद करती है?"
+
+#: .\apps\quiz\views.py:1382
+msgid "Reduce stigma"
+msgstr "कलंक कम करें"
+
+#: .\apps\quiz\views.py:1383
+msgid "Increase fear"
+msgstr "डर बढ़ाएं"
+
+#: .\apps\quiz\views.py:1384
+msgid "Cause stress"
+msgstr "तनाव का कारण बनें"
+
+#: .\apps\quiz\views.py:1385
+msgid "Promote isolation"
+msgstr "अलगाव को बढ़ावा दें"
+
+#: .\apps\quiz\views.py:1388
+msgid "Awareness reduces stigma."
+msgstr "जागरूकता कलंक को कम करती है।"
+
+#: .\apps\quiz\views.py:1392
+msgid "Which improves brain function?"
+msgstr "कौन मस्तिष्क के कार्य में सुधार करता है?"
+
+#: .\apps\quiz\views.py:1400
+msgid "Exercise boosts brain function."
+msgstr "व्यायाम मस्तिष्क के कार्य को बढ़ाता है।"
+
+#: .\apps\quiz\views.py:1404
+msgid "Seeking help for mental health is?"
+msgstr "मानसिक स्वास्थ्य के लिए मदद मांगना है?"
+
+#: .\apps\quiz\views.py:1406
+msgid "A sign of strength"
+msgstr "शक्ति का संकेत"
+
+#: .\apps\quiz\views.py:1407 .\apps\quiz\views.py:2386
+msgid "Weakness"
+msgstr "कमजोरी"
+
+#: .\apps\quiz\views.py:1408
+msgid "Unnecessary"
+msgstr "अनावश्यक"
+
+#: .\apps\quiz\views.py:1409
+msgid "Embarrassing"
+msgstr "शर्मनाक"
+
+#: .\apps\quiz\views.py:1412
+msgid "Seeking help shows strength."
+msgstr "मदद मांगना शक्ति दर्शाता है।"
+
+#: .\apps\quiz\views.py:1419
+msgid "What is the most effective way to prevent the spread of infectious diseases?"
+msgstr "संक्रामक रोगों के प्रसार को रोकने का सबसे प्रभावी तरीका क्या है?"
+
+#: .\apps\quiz\views.py:1421
+msgid "Wearing perfume"
+msgstr "परफ्यूम पहनना"
+
+#: .\apps\quiz\views.py:1422
+msgid "Regular handwashing"
+msgstr "नियमित हाथ धोना"
+
+#: .\apps\quiz\views.py:1423
+msgid "Drinking cold water"
+msgstr "ठंडा पानी पीना"
+
+#: .\apps\quiz\views.py:1424 .\apps\quiz\views.py:1748
+msgid "Sleeping less"
+msgstr "कम सोना"
+
+#: .\apps\quiz\views.py:1427
+msgid "Regular handwashing removes germs and prevents transmission."
+msgstr "नियमित हाथ धोना कीटाणुओं को हटाता है और संचरण को रोकता है।"
+
+#: .\apps\quiz\views.py:1431
+msgid "Vaccines help prevent diseases by:"
+msgstr "टीके रोगों को रोकने में मदद करते हैं:"
+
+#: .\apps\quiz\views.py:1433
+msgid "Killing all bacteria"
+msgstr "सभी बैक्टीरिया को मारना"
+
+#: .\apps\quiz\views.py:1434
+msgid "Boosting natural immunity"
+msgstr "प्राकृतिक प्रतिरक्षा को बढ़ावा देना"
+
+#: .\apps\quiz\views.py:1435
+msgid "Increasing fever"
+msgstr "बुखार बढ़ाना"
+
+#: .\apps\quiz\views.py:1436
+msgid "Replacing blood cells"
+msgstr "रक्त कोशिकाओं को बदलना"
+
+#: .\apps\quiz\views.py:1439
+msgid "Vaccines stimulate the immune system to recognize and fight infections."
+msgstr "टीके प्रतिरक्षा प्रणाली को संक्रमणों को पहचानने और लड़ने के लिए उत्तेजित करते हैं।"
+
+#: .\apps\quiz\views.py:1443
+msgid "How often should adults get a general health check-up?"
+msgstr "वयस्कों को सामान्य स्वास्थ्य जांच कितनी बार करानी चाहिए?"
+
+#: .\apps\quiz\views.py:1445
+msgid "Every 10 years"
+msgstr "हर 10 साल"
+
+#: .\apps\quiz\views.py:1446
+msgid "Only when sick"
+msgstr "केवल बीमार होने पर"
+
+#: .\apps\quiz\views.py:1447
+msgid "Once a year"
+msgstr "साल में एक बार"
+
+#: .\apps\quiz\views.py:1451
+msgid "Annual health check-ups help detect diseases early."
+msgstr "वार्षिक स्वास्थ्य जांच रोगों का जल्दी पता लगाने में मदद करती है।"
+
+#: .\apps\quiz\views.py:1455
+msgid "Which of the following helps prevent heart disease?"
+msgstr "निम्नलिखित में से कौन हृदय रोग को रोकने में मदद करता है?"
+
+#: .\apps\quiz\views.py:1457 .\apps\quiz\views.py:1639
+#: .\apps\quiz\views.py:1746 .\apps\quiz\views.py:1890
+#: .\apps\quiz\views.py:2164 .\apps\quiz\views.py:2235
+#: .\apps\quiz\views.py:2254 .\apps\quiz\views.py:2303
+msgid "Smoking"
+msgstr "धूम्रपान"
+
+#: .\apps\quiz\views.py:1458
+msgid "High salt diet"
+msgstr "उच्च नमक आहार"
+
+#: .\apps\quiz\views.py:1460
+msgid "Excess sugar intake"
+msgstr "अधिक चीनी का सेवन"
+
+#: .\apps\quiz\views.py:1463
+msgid "Regular physical activity reduces heart disease risk."
+msgstr "नियमित शारीरिक गतिविधि हृदय रोग के जोखिम को कम करती है।"
+
+#: .\apps\quiz\views.py:1467
+msgid "Which vitamin strengthens the immune system?"
+msgstr "कौन सा विटामिन प्रतिरक्षा प्रणाली को मजबूत करता है?"
+
+#: .\apps\quiz\views.py:1475
+msgid "Vitamin C supports immune defense."
+msgstr "विटामिन सी प्रतिरक्षा रक्षा का समर्थन करता है।"
+
+#: .\apps\quiz\views.py:1479
+msgid "Using mosquito nets helps prevent:"
+msgstr "मच्छरदानी का उपयोग रोकने में मदद करता है:"
+
+#: .\apps\quiz\views.py:1482 .\apps\quiz\views.py:1517
+msgid "Malaria"
+msgstr "मलेरिया"
+
+#: .\apps\quiz\views.py:1483 .\apps\quiz\views.py:1556
+#: .\apps\quiz\views.py:1579 .\apps\quiz\views.py:1662
+#: .\apps\quiz\views.py:1675 .\apps\quiz\views.py:1772
+#: .\apps\quiz\views.py:1856 .\apps\quiz\views.py:1867
+#: .\apps\quiz\views.py:1927 .\apps\quiz\views.py:1963
+msgid "Asthma"
+msgstr "अस्थमा"
+
+#: .\apps\quiz\views.py:1484 .\apps\quiz\views.py:1520
+#: .\apps\quiz\views.py:1568
+msgid "Arthritis"
+msgstr "गठिया"
+
+#: .\apps\quiz\views.py:1487
+msgid "Mosquito nets prevent malaria transmission."
+msgstr "मच्छरदानी मलेरिया के संचरण को रोकती है।"
+
+#: .\apps\quiz\views.py:1491
+msgid "Which disease can be prevented by HPV vaccination?"
+msgstr "एचपीवी टीकाकरण से कौन सा रोग रोका जा सकता है?"
+
+#: .\apps\quiz\views.py:1493 .\apps\quiz\views.py:1505
+msgid "Lung cancer"
+msgstr "फेफड़ों का कैंसर"
+
+#: .\apps\quiz\views.py:1494
+msgid "Cervical cancer"
+msgstr "गर्भाशय ग्रीवा कैंसर"
+
+#: .\apps\quiz\views.py:1496 .\apps\quiz\views.py:1565
+msgid "Tuberculosis"
+msgstr "तपेदिक"
+
+#: .\apps\quiz\views.py:1499
+msgid "HPV vaccine helps prevent cervical cancer."
+msgstr "एचपीवी टीका गर्भाशय ग्रीवा कैंसर को रोकने में मदद करता है।"
+
+#: .\apps\quiz\views.py:1503
+msgid "Quitting smoking reduces risk of:"
+msgstr "धूम्रपान छोड़ने से जोखिम कम होता है:"
+
+#: .\apps\quiz\views.py:1506 .\apps\quiz\views.py:1555
+#: .\apps\quiz\views.py:1674 .\apps\quiz\views.py:1687
+#: .\apps\quiz\views.py:2376
+msgid "Flu"
+msgstr "फ्लू"
+
+#: .\apps\quiz\views.py:1507 .\apps\quiz\views.py:1544
+#: .\apps\quiz\views.py:1614 .\apps\quiz\views.py:1663
+#: .\apps\quiz\views.py:1952
+msgid "Fractures"
+msgstr "फ्रैक्चर"
+
+#: .\apps\quiz\views.py:1508 .\apps\quiz\views.py:1688
+#: .\apps\quiz\views.py:1771 .\apps\quiz\views.py:1808
+#: .\apps\quiz\views.py:1879 .\apps\quiz\views.py:2012
+msgid "Migraine"
+msgstr "माइग्रेन"
+
+#: .\apps\quiz\views.py:1511
+msgid "Smoking is a major cause of lung cancer."
+msgstr "धूम्रपान फेफड़ों के कैंसर का एक प्रमुख कारण है।"
+
+#: .\apps\quiz\views.py:1515
+msgid "Safe drinking water prevents:"
+msgstr "सुरक्षित पेयजल रोकता है:"
+
+#: .\apps\quiz\views.py:1518
+msgid "Cholera"
+msgstr "हैजा"
+
+#: .\apps\quiz\views.py:1519 .\apps\quiz\views.py:1627
+#: .\apps\quiz\views.py:1664 .\apps\quiz\views.py:1783
+#: .\apps\quiz\views.py:1843 .\apps\quiz\views.py:1855
+#: .\apps\quiz\views.py:1998
+msgid "Cancer"
+msgstr "कैंसर"
+
+#: .\apps\quiz\views.py:1523
+msgid "Contaminated water spreads cholera."
+msgstr "दूषित पानी हैजा फैलाता है।"
+
+#: .\apps\quiz\views.py:1527
+msgid "Which test helps in early detection of breast cancer?"
+msgstr "कौन सा परीक्षण स्तन कैंसर के शुरुआती पता लगाने में मदद करता है?"
+
+#: .\apps\quiz\views.py:1529 .\apps\quiz\views.py:1592
+#: .\apps\quiz\views.py:1722 .\apps\quiz\views.py:1820
+#: .\apps\quiz\views.py:2123
+msgid "ECG"
+msgstr "ईसीजी"
+
+#: .\apps\quiz\views.py:1530
+msgid "Mammogram"
+msgstr "मैमोग्राम"
+
+#: .\apps\quiz\views.py:1531 .\apps\quiz\views.py:1724
+#: .\apps\quiz\views.py:2125
+msgid "X-ray"
+msgstr "एक्स-रे"
+
+#: .\apps\quiz\views.py:1532
+msgid "Blood sugar test"
+msgstr "रक्त शर्करा परीक्षण"
+
+#: .\apps\quiz\views.py:1535
+msgid "Mammograms detect early breast cancer."
+msgstr "मैमोग्राम शुरुआती स्तन कैंसर का पता लगाते हैं।"
+
+#: .\apps\quiz\views.py:1539
+msgid "Maintaining healthy weight prevents:"
+msgstr "स्वस्थ वजन बनाए रखना रोकता है:"
+
+#: .\apps\quiz\views.py:1541
+msgid "Obesity-related diseases"
+msgstr "मोटापे से संबंधित रोग"
+
+#: .\apps\quiz\views.py:1542 .\apps\quiz\views.py:2193
+msgid "Infections"
+msgstr "संक्रमण"
+
+#: .\apps\quiz\views.py:1543 .\apps\quiz\views.py:1554
+#: .\apps\quiz\views.py:1602 .\apps\quiz\views.py:1686
+#: .\apps\quiz\views.py:1710 .\apps\quiz\views.py:1770
+#: .\apps\quiz\views.py:1782 .\apps\quiz\views.py:1796
+#: .\apps\quiz\views.py:1806 .\apps\quiz\views.py:1830
+#: .\apps\quiz\views.py:1844 .\apps\quiz\views.py:1878
+#: .\apps\quiz\views.py:1926 .\apps\quiz\views.py:1938
+#: .\apps\quiz\views.py:1962 .\apps\quiz\views.py:1988
+#: .\apps\quiz\views.py:2375
+msgid "Cold"
+msgstr "सर्दी"
+
+#: .\apps\quiz\views.py:1547
+msgid "Healthy weight reduces diabetes and heart risk."
+msgstr "स्वस्थ वजन मधुमेह और हृदय जोखिम को कम करता है।"
+
+#: .\apps\quiz\views.py:1551
+msgid "Using sunscreen prevents:"
+msgstr "सनस्क्रीन का उपयोग रोकता है:"
+
+#: .\apps\quiz\views.py:1553
+msgid "Skin cancer"
+msgstr "त्वचा कैंसर"
+
+#: .\apps\quiz\views.py:1559
+msgid "Sunscreen protects against harmful UV rays."
+msgstr "सनस्क्रीन हानिकारक यूवी किरणों से बचाता है।"
+
+#: .\apps\quiz\views.py:1563
+msgid "Which disease spreads through airborne droplets?"
+msgstr "कौन सा रोग हवाई बूंदों के माध्यम से फैलता है?"
+
+#: .\apps\quiz\views.py:1567 .\apps\quiz\views.py:1628
+#: .\apps\quiz\views.py:1951
+msgid "Hypertension"
+msgstr "उच्च रक्तचाप"
+
+#: .\apps\quiz\views.py:1571
+msgid "TB spreads through air."
+msgstr "टीबी हवा के माध्यम से फैलता है।"
+
+#: .\apps\quiz\views.py:1575
+msgid "Brushing teeth daily prevents:"
+msgstr "दैनिक दांत ब्रश करना रोकता है:"
+
+#: .\apps\quiz\views.py:1577
+msgid "Tooth decay"
+msgstr "दांत सड़ना"
+
+#: .\apps\quiz\views.py:1580 .\apps\quiz\views.py:1937
+msgid "Heart attack"
+msgstr "दिल का दौरा"
+
+#: .\apps\quiz\views.py:1583
+msgid "Oral hygiene prevents cavities."
+msgstr "मौखिक स्वच्छता गुहाओं को रोकती है।"
+
+#: .\apps\quiz\views.py:1587
+msgid "Which screening detects colon cancer early?"
+msgstr "कौन सी स्क्रीनिंग कोलन कैंसर का जल्दी पता लगाती है?"
+
+#: .\apps\quiz\views.py:1589
+msgid "Colonoscopy"
+msgstr "कोलोनोस्कोपी"
+
+#: .\apps\quiz\views.py:1590 .\apps\quiz\views.py:1723
+#: .\apps\quiz\views.py:1818 .\apps\quiz\views.py:2126
+msgid "MRI"
+msgstr "एमआरआई"
+
+#: .\apps\quiz\views.py:1591
+msgid "CT scan"
+msgstr "सीटी स्कैन"
+
+#: .\apps\quiz\views.py:1595
+msgid "Colonoscopy detects early colon cancer."
+msgstr "कोलोनोस्कोपी शुरुआती कोलन कैंसर का पता लगाती है।"
+
+#: .\apps\quiz\views.py:1599
+msgid "Physical activity reduces risk of:"
+msgstr "शारीरिक गतिविधि जोखिम को कम करती है:"
+
+#: .\apps\quiz\views.py:1601
+msgid "Type 2 diabetes"
+msgstr "टाइप 2 मधुमेह"
+
+#: .\apps\quiz\views.py:1603 .\apps\quiz\views.py:1794
+#: .\apps\quiz\views.py:1868 .\apps\quiz\views.py:1928
+#: .\apps\quiz\views.py:1940
+msgid "Fracture"
+msgstr "फ्रैक्चर"
+
+#: .\apps\quiz\views.py:1607
+msgid "Exercise improves insulin sensitivity."
+msgstr "व्यायाम इंसुलिन संवेदनशीलता में सुधार करता है।"
+
+#: .\apps\quiz\views.py:1611
+msgid "Balanced diet helps prevent:"
+msgstr "संतुलित आहार रोकने में मदद करता है:"
+
+#: .\apps\quiz\views.py:1613
+msgid "Malnutrition"
+msgstr "कुपोषण"
+
+#: .\apps\quiz\views.py:1616 .\apps\quiz\views.py:1712
+#: .\apps\quiz\views.py:1795 .\apps\quiz\views.py:1832
+#: .\apps\quiz\views.py:1880 .\apps\quiz\views.py:1939
+#: .\apps\quiz\views.py:2011
+msgid "Burns"
+msgstr "जलन"
+
+#: .\apps\quiz\views.py:1619
+msgid "Balanced diet provides essential nutrients."
+msgstr "संतुलित आहार आवश्यक पोषक तत्व प्रदान करता है।"
+
+#: .\apps\quiz\views.py:1623
+msgid "Wearing masks helps prevent:"
+msgstr "मास्क पहनना रोकने में मदद करता है:"
+
+#: .\apps\quiz\views.py:1625
+msgid "COVID-19"
+msgstr "कोविड-19"
+
+#: .\apps\quiz\views.py:1631
+msgid "Masks reduce virus transmission."
+msgstr "मास्क वायरस संचरण को कम करते हैं।"
+
+#: .\apps\quiz\views.py:1635
+msgid "High blood pressure can be prevented by:"
+msgstr "उच्च रक्तचाप को रोका जा सकता है:"
+
+#: .\apps\quiz\views.py:1637
+msgid "Reducing salt intake"
+msgstr "नमक का सेवन कम करना"
+
+#: .\apps\quiz\views.py:1638
+msgid "Eating junk food"
+msgstr "जंक फूड खाना"
+
+#: .\apps\quiz\views.py:1643
+msgid "Low salt diet controls blood pressure."
+msgstr "कम नमक आहार रक्तचाप को नियंत्रित करता है।"
+
+#: .\apps\quiz\views.py:1647
+msgid "Which vaccine prevents tuberculosis?"
+msgstr "कौन सा टीका तपेदिक को रोकता है?"
+
+#: .\apps\quiz\views.py:1649
+msgid "BCG"
+msgstr "बीसीजी"
+
+#: .\apps\quiz\views.py:1650
+msgid "MMR"
+msgstr "एमएमआर"
+
+#: .\apps\quiz\views.py:1651 .\apps\quiz\views.py:1997
+msgid "Polio"
+msgstr "पोलियो"
+
+#: .\apps\quiz\views.py:1655
+msgid "BCG vaccine protects against TB."
+msgstr "बीसीजी टीका टीबी से बचाता है।"
+
+#: .\apps\quiz\views.py:1659
+msgid "Proper sanitation prevents:"
+msgstr "उचित स्वच्छता रोकती है:"
+
+#: .\apps\quiz\views.py:1661
+msgid "Diarrheal diseases"
+msgstr "दस्त की बीमारियां"
+
+#: .\apps\quiz\views.py:1667
+msgid "Sanitation reduces infection spread."
+msgstr "स्वच्छता संक्रमण के प्रसार को कम करती है।"
+
+#: .\apps\quiz\views.py:1671
+msgid "Regular eye checkups help prevent:"
+msgstr "नियमित नेत्र जांच रोकने में मदद करती है:"
+
+#: .\apps\quiz\views.py:1673
+msgid "Vision loss"
+msgstr "दृष्टि हानि"
+
+#: .\apps\quiz\views.py:1679
+msgid "Early detection prevents vision damage."
+msgstr "शुरुआती पता लगाने से दृष्टि क्षति को रोका जा सकता है।"
+
+#: .\apps\quiz\views.py:1683
+msgid "Which disease is prevented by insulin control?"
+msgstr "इंसुलिन नियंत्रण से कौन सा रोग रोका जाता है?"
+
+#: .\apps\quiz\views.py:1685
+msgid "Diabetes complications"
+msgstr "मधुमेह जटिलताएं"
+
+#: .\apps\quiz\views.py:1691
+msgid "Blood sugar control prevents complications."
+msgstr "रक्त शर्करा नियंत्रण जटिलताओं को रोकता है।"
+
+#: .\apps\quiz\views.py:1695
+msgid "Hepatitis B spreads through:"
+msgstr "हेपेटाइटिस बी फैलता है:"
+
+#: .\apps\quiz\views.py:1697
+msgid "Blood contact"
+msgstr "रक्त संपर्क"
+
+#: .\apps\quiz\views.py:1698
+msgid "Air"
+msgstr "हवा"
+
+#: .\apps\quiz\views.py:1699
+msgid "Sweat"
+msgstr "पसीना"
+
+#: .\apps\quiz\views.py:1700
+msgid "Sound"
+msgstr "आवाज़"
+
+#: .\apps\quiz\views.py:1703
+msgid "Hepatitis B spreads through infected blood."
+msgstr "हेपेटाइटिस बी संक्रमित रक्त के माध्यम से फैलता है।"
+
+#: .\apps\quiz\views.py:1707
+msgid "Avoiding junk food reduces risk of:"
+msgstr "जंक फूड से बचना जोखिम को कम करता है:"
+
+#: .\apps\quiz\views.py:1715
+msgid "Junk food increases obesity risk."
+msgstr "जंक फूड मोटापे का खतरा बढ़ाता है।"
+
+#: .\apps\quiz\views.py:1719
+msgid "Which test checks blood sugar?"
+msgstr "कौन सा परीक्षण रक्त शर्करा की जांच करता है?"
+
+#: .\apps\quiz\views.py:1721
+msgid "Glucose test"
+msgstr "ग्लूकोज परीक्षण"
+
+#: .\apps\quiz\views.py:1727
+msgid "Glucose test measures blood sugar levels."
+msgstr "ग्लूकोज परीक्षण रक्त शर्करा के स्तर को मापता है।"
+
+#: .\apps\quiz\views.py:1731
+msgid "Early cancer detection improves:"
+msgstr "शुरुआती कैंसर का पता लगाने से सुधार होता है:"
+
+#: .\apps\quiz\views.py:1733
+msgid "Survival rate"
+msgstr "जीवित रहने की दर"
+
+#: .\apps\quiz\views.py:1734 .\apps\quiz\views.py:1986
+msgid "Infection rate"
+msgstr "संक्रमण दर"
+
+#: .\apps\quiz\views.py:1735 .\apps\quiz\views.py:1987
+msgid "Pain"
+msgstr "दर्द"
+
+#: .\apps\quiz\views.py:1736 .\apps\quiz\views.py:1807
+msgid "Fever"
+msgstr "बुखार"
+
+#: .\apps\quiz\views.py:1739
+msgid "Early detection increases survival."
+msgstr "शुरुआती पता लगाने से जीवित रहने की दर बढ़ती है।"
+
+#: .\apps\quiz\views.py:1743
+msgid "Which habit prevents liver disease?"
+msgstr "कौन सी आदत यकृत रोग को रोकती है?"
+
+#: .\apps\quiz\views.py:1745
+msgid "Limiting alcohol"
+msgstr "शराब सीमित करना"
+
+#: .\apps\quiz\views.py:1751
+msgid "Alcohol damages liver."
+msgstr "शराब यकृत को नुकसान पहुंचाती है।"
+
+#: .\apps\quiz\views.py:1755
+msgid "Flu vaccine should be taken:"
+msgstr "फ्लू का टीका लेना चाहिए:"
+
+#: .\apps\quiz\views.py:1757
+msgid "Yearly"
+msgstr "वार्षिक"
+
+#: .\apps\quiz\views.py:1758
+msgid "Once in lifetime"
+msgstr "जीवन में एक बार"
+
+#: .\apps\quiz\views.py:1760
+msgid "Every month"
+msgstr "हर महीने"
+
+#: .\apps\quiz\views.py:1763
+msgid "Flu strains change yearly."
+msgstr "फ्लू के स्ट्रेन हर साल बदलते हैं।"
+
+#: .\apps\quiz\views.py:1767
+msgid "Safe sex practices prevent:"
+msgstr "सुरक्षित यौन प्रथाएं रोकती हैं:"
+
+#: .\apps\quiz\views.py:1769
+msgid "STDs"
+msgstr "एसटीडी"
+
+#: .\apps\quiz\views.py:1775
+msgid "Protection reduces STD transmission."
+msgstr "सुरक्षा एसटीडी संचरण को कम करती है।"
+
+#: .\apps\quiz\views.py:1779
+msgid "Drinking adequate water prevents:"
+msgstr "पर्याप्त पानी पीना रोकता है:"
+
+#: .\apps\quiz\views.py:1781
+msgid "Dehydration"
+msgstr "निर्जलीकरण"
+
+#: .\apps\quiz\views.py:1784 .\apps\quiz\views.py:1854
+#: .\apps\quiz\views.py:1999
+msgid "TB"
+msgstr "टीबी"
+
+#: .\apps\quiz\views.py:1787
+msgid "Water maintains hydration."
+msgstr "पानी हाइड्रेशन बनाए रखता है।"
+
+#: .\apps\quiz\views.py:1791
+msgid "Stress management helps prevent:"
+msgstr "तनाव प्रबंधन रोकने में मदद करता है:"
+
+#: .\apps\quiz\views.py:1799
+msgid "Chronic stress affects heart health."
+msgstr "पुराना तनाव हृदय स्वास्थ्य को प्रभावित करता है।"
+
+#: .\apps\quiz\views.py:1803
+msgid "Avoiding smoking prevents:"
+msgstr "धूम्रपान से बचना रोकता है:"
+
+#: .\apps\quiz\views.py:1805
+msgid "COPD"
+msgstr "सीओपीडी"
+
+#: .\apps\quiz\views.py:1811
+msgid "Smoking causes lung diseases."
+msgstr "धूम्रपान फेफड़ों की बीमारियों का कारण बनता है।"
+
+#: .\apps\quiz\views.py:1815
+msgid "Which test detects cervical cancer?"
+msgstr "कौन सा परीक्षण गर्भाशय ग्रीवा कैंसर का पता लगाता है?"
+
+#: .\apps\quiz\views.py:1817
+msgid "Pap smear"
+msgstr "पैप स्मीयर"
+
+#: .\apps\quiz\views.py:1819
+msgid "CT"
+msgstr "सीटी"
+
+#: .\apps\quiz\views.py:1823
+msgid "Pap smear detects abnormal cervical cells."
+msgstr "पैप स्मीयर असामान्य गर्भाशय ग्रीवा कोशिकाओं का पता लगाता है।"
+
+#: .\apps\quiz\views.py:1827
+msgid "Healthy sleep prevents:"
+msgstr "स्वस्थ नींद रोकती है:"
+
+#: .\apps\quiz\views.py:1829
+msgid "Weakened immunity"
+msgstr "कमजोर प्रतिरक्षा"
+
+#: .\apps\quiz\views.py:1835
+msgid "Sleep boosts immunity."
+msgstr "नींद प्रतिरक्षा को बढ़ावा देती है।"
+
+#: .\apps\quiz\views.py:1839
+msgid "Regular dental visits prevent:"
+msgstr "नियमित दंत चिकित्सा यात्राएं रोकती हैं:"
+
+#: .\apps\quiz\views.py:1841
+msgid "Gum disease"
+msgstr "मसूड़ों की बीमारी"
+
+#: .\apps\quiz\views.py:1847
+msgid "Dentists detect oral problems early."
+msgstr "दंत चिकित्सक मौखिक समस्याओं का जल्दी पता लगाते हैं।"
+
+#: .\apps\quiz\views.py:1851
+msgid "Which disease is prevented by measles vaccine?"
+msgstr "खसरा टीका किस बीमारी को रोकता है?"
+
+#: .\apps\quiz\views.py:1853
+msgid "Measles"
+msgstr "खसरा"
+
+#: .\apps\quiz\views.py:1859
+msgid "MMR vaccine protects from measles."
+msgstr "एमएमआर टीका खसरे से बचाता है।"
+
+#: .\apps\quiz\views.py:1863
+msgid "Avoiding contaminated food prevents:"
+msgstr "दूषित भोजन से बचना रोकता है:"
+
+#: .\apps\quiz\views.py:1865
+msgid "Food poisoning"
+msgstr "खाद्य विषाक्तता"
+
+#: .\apps\quiz\views.py:1871
+msgid "Contaminated food spreads infection."
+msgstr "दूषित भोजन संक्रमण फैलाता है।"
+
+#: .\apps\quiz\views.py:1875
+msgid "Routine blood pressure checks prevent:"
+msgstr "नियमित रक्तचाप जांच रोकती है:"
+
+#: .\apps\quiz\views.py:1877
+msgid "Stroke"
+msgstr "स्ट्रोक"
+
+#: .\apps\quiz\views.py:1883
+msgid "High BP leads to stroke."
+msgstr "उच्च रक्तचाप स्ट्रोक की ओर ले जाता है।"
+
+#: .\apps\quiz\views.py:1887
+msgid "Which helps prevent osteoporosis?"
+msgstr "कौन ऑस्टियोपोरोसिस को रोकने में मदद करता है?"
+
+#: .\apps\quiz\views.py:1889
+msgid "Calcium intake"
+msgstr "कैल्शियम का सेवन"
+
+#: .\apps\quiz\views.py:1891
+msgid "Alcohol"
+msgstr "शराब"
+
+#: .\apps\quiz\views.py:1892
+msgid "Junk food"
+msgstr "जंक फूड"
+
+#: .\apps\quiz\views.py:1895
+msgid "Calcium strengthens bones."
+msgstr "कैल्शियम हड्डियों को मजबूत करता है।"
+
+#: .\apps\quiz\views.py:1899
+msgid "Regular physical checkups help in:"
+msgstr "नियमित शारीरिक जांच मदद करती है:"
+
+#: .\apps\quiz\views.py:1901
+msgid "Early diagnosis"
+msgstr "शुरुआती निदान"
+
+#: .\apps\quiz\views.py:1902
+msgid "Late detection"
+msgstr "देर से पता लगाना"
+
+#: .\apps\quiz\views.py:1903
+msgid "Infection spread"
+msgstr "संक्रमण फैलाव"
+
+#: .\apps\quiz\views.py:1904
+msgid "Weight gain"
+msgstr "वजन बढ़ना"
+
+#: .\apps\quiz\views.py:1907 .\apps\quiz\views.py:2279
+msgid "Early detection improves treatment."
+msgstr "शुरुआती पता लगाने से उपचार में सुधार होता है।"
+
+#: .\apps\quiz\views.py:1911
+msgid "Hand sanitizers should contain at least:"
+msgstr "हैंड सैनिटाइज़र में कम से कम होना चाहिए:"
+
+#: .\apps\quiz\views.py:1913
+msgid "60% alcohol"
+msgstr "60% अल्कोहल"
+
+#: .\apps\quiz\views.py:1914
+msgid "10% sugar"
+msgstr "10% चीनी"
+
+#: .\apps\quiz\views.py:1915
+msgid "5% salt"
+msgstr "5% नमक"
+
+#: .\apps\quiz\views.py:1916
+msgid "1% water"
+msgstr "1% पानी"
+
+#: .\apps\quiz\views.py:1919
+msgid "60% alcohol kills germs effectively."
+msgstr "60% अल्कोहल कीटाणुओं को प्रभावी ढंग से मारता है।"
+
+#: .\apps\quiz\views.py:1923
+msgid "Which disease spreads via contaminated needles?"
+msgstr "कौन सा रोग दूषित सुइयों के माध्यम से फैलता है?"
+
+#: .\apps\quiz\views.py:1925
+msgid "HIV"
+msgstr "एचआईवी"
+
+#: .\apps\quiz\views.py:1931
+msgid "HIV spreads through infected blood."
+msgstr "एचआईवी संक्रमित रक्त के माध्यम से फैलता है।"
+
+#: .\apps\quiz\views.py:1935
+msgid "Healthy cholesterol levels prevent:"
+msgstr "स्वस्थ कोलेस्ट्रॉल स्तर रोकते हैं:"
+
+#: .\apps\quiz\views.py:1943
+msgid "High cholesterol causes heart disease."
+msgstr "उच्च कोलेस्ट्रॉल हृदय रोग का कारण बनता है।"
+
+#: .\apps\quiz\views.py:1947
+msgid "Proper ventilation reduces:"
+msgstr "उचित वेंटिलेशन कम करता है:"
+
+#: .\apps\quiz\views.py:1949
+msgid "Airborne infection"
+msgstr "हवाई संक्रमण"
+
+#: .\apps\quiz\views.py:1955
+msgid "Fresh air reduces germ concentration."
+msgstr "ताजा हवा कीटाणुओं की सांद्रता को कम करती है।"
+
+#: .\apps\quiz\views.py:1959
+msgid "Avoiding processed sugar reduces risk of:"
+msgstr "प्रसंस्कृत चीनी से बचना जोखिम को कम करता है:"
+
+#: .\apps\quiz\views.py:1967
+msgid "Sugar increases insulin resistance."
+msgstr "चीनी इंसुलिन प्रतिरोध को बढ़ाती है।"
+
+#: .\apps\quiz\views.py:1971
+msgid "Regular exercise improves:"
+msgstr "नियमित व्यायाम सुधार करता है:"
+
+#: .\apps\quiz\views.py:1973
+msgid "Immune function"
+msgstr "प्रतिरक्षा कार्य"
+
+#: .\apps\quiz\views.py:1974
+msgid "Virus growth"
+msgstr "वायरस वृद्धि"
+
+#: .\apps\quiz\views.py:1975
+msgid "Stress level"
+msgstr "तनाव स्तर"
+
+#: .\apps\quiz\views.py:1976 .\apps\quiz\views.py:2385
+msgid "Fatigue"
+msgstr "थकान"
+
+#: .\apps\quiz\views.py:1979
+msgid "Exercise strengthens immunity."
+msgstr "व्यायाम प्रतिरक्षा को मजबूत करता है।"
+
+#: .\apps\quiz\views.py:1983
+msgid "Early HIV detection improves:"
+msgstr "शुरुआती एचआईवी का पता लगाने से सुधार होता है:"
+
+#: .\apps\quiz\views.py:1985
+msgid "Treatment success"
+msgstr "उपचार सफलता"
+
+#: .\apps\quiz\views.py:1991
+msgid "Early treatment improves life expectancy."
+msgstr "शुरुआती उपचार जीवन प्रत्याशा में सुधार करता है।"
+
+#: .\apps\quiz\views.py:1995
+msgid "Which disease is prevented by polio vaccine?"
+msgstr "पोलियो टीका किस बीमारी को रोकता है?"
+
+#: .\apps\quiz\views.py:2003
+msgid "Polio vaccine protects against paralysis."
+msgstr "पोलियो टीका पक्षाघात से बचाता है।"
+
+#: .\apps\quiz\views.py:2007
+msgid "Maintaining hygiene prevents:"
+msgstr "स्वच्छता बनाए रखना रोकता है:"
+
+#: .\apps\quiz\views.py:2009
+msgid "Many infections"
+msgstr "कई संक्रमण"
+
+#: .\apps\quiz\views.py:2010
+msgid "Bone fracture"
+msgstr "हड्डी का फ्रैक्चर"
+
+#: .\apps\quiz\views.py:2015
+msgid "Good hygiene blocks infection spread."
+msgstr "अच्छी स्वच्छता संक्रमण के प्रसार को रोकती है।"
+
+
+#: .\apps\quiz\views.py:2021
+msgid "How many hours of sleep do adults need daily?"
+msgstr "वयस्कों को प्रतिदिन कितने घंटे की नींद की आवश्यकता होती है?"
+
+#: .\apps\quiz\views.py:2029
+msgid "Adults need 7-9 hours of sleep for proper health."
+msgstr "वयस्कों को उचित स्वास्थ्य के लिए 7-9 घंटे की नींद की आवश्यकता होती है।"
+
+#: .\apps\quiz\views.py:2031
+msgid "Drinking enough water helps to:"
+msgstr "पर्याप्त पानी पीने से मदद मिलती है:"
+
+#: .\apps\quiz\views.py:2033
+msgid "Cause fatigue"
+msgstr "थकान पैदा करना"
+
+#: .\apps\quiz\views.py:2034
+msgid "Improve digestion"
+msgstr "पाचन में सुधार"
+
+#: .\apps\quiz\views.py:2039
+msgid "Hydration improves digestion and overall health."
+msgstr "जलयोजन पाचन और समग्र स्वास्थ्य में सुधार करता है।"
+
+#: .\apps\quiz\views.py:2041
+msgid "Which organ pumps blood through the body?"
+msgstr "कौन सा अंग शरीर में रक्त पंप करता है?"
+
+#: .\apps\quiz\views.py:2043 .\apps\quiz\views.py:2105
+msgid "Lungs"
+msgstr "फेफड़े"
+
+#: .\apps\quiz\views.py:2044 .\apps\quiz\views.py:2106
+#: .\apps\quiz\views.py:2266
+msgid "Brain"
+msgstr "मस्तिष्क"
+
+#: .\apps\quiz\views.py:2045 .\apps\quiz\views.py:2103
+#: .\apps\quiz\views.py:2174 .\apps\quiz\views.py:2263
+msgid "Heart"
+msgstr "हृदय"
+
+#: .\apps\quiz\views.py:2046 .\apps\quiz\views.py:2264
+msgid "Kidney"
+msgstr "गुर्दा"
+
+#: .\apps\quiz\views.py:2049
+msgid "The heart pumps blood throughout the body."
+msgstr "हृदय पूरे शरीर में रक्त पंप करता है।"
+
+#: .\apps\quiz\views.py:2051
+msgid "What is a normal body temperature?"
+msgstr "सामान्य शरीर का तापमान क्या है?"
+
+#: .\apps\quiz\views.py:2053
+msgid "35°C"
+msgstr "35°C"
+
+#: .\apps\quiz\views.py:2054
+msgid "37°C"
+msgstr "37°C"
+
+#: .\apps\quiz\views.py:2055
+msgid "40°C"
+msgstr "40°C"
+
+#: .\apps\quiz\views.py:2056
+msgid "39°C"
+msgstr "39°C"
+
+#: .\apps\quiz\views.py:2059
+msgid "Normal body temperature is approximately 37°C."
+msgstr "सामान्य शरीर का तापमान लगभग 37°C होता है।"
+
+#: .\apps\quiz\views.py:2069
+msgid "Protein helps in muscle repair and growth."
+msgstr "प्रोटीन मांसपेशियों की मरम्मत और विकास में मदद करता है।"
+
+#: .\apps\quiz\views.py:2071
+msgid "BMI stands for:"
+msgstr "BMI का अर्थ है:"
+
+#: .\apps\quiz\views.py:2074
+msgid "Body Muscle Indicator"
+msgstr "शारीरिक मांसपेशी संकेतक"
+
+#: .\apps\quiz\views.py:2075
+msgid "Basic Metabolic Intake"
+msgstr "बुनियादी चयापचय सेवन"
+
+#: .\apps\quiz\views.py:2076
+msgid "Blood Measure Index"
+msgstr "रक्त माप सूचकांक"
+
+#: .\apps\quiz\views.py:2079
+msgid "BMI means Body Mass Index."
+msgstr "BMI का अर्थ है बॉडी मास इंडेक्स।"
+
+#: .\apps\quiz\views.py:2081
+msgid "Regular exercise helps reduce:"
+msgstr "नियमित व्यायाम कम करने में मदद करता है:"
+
+#: .\apps\quiz\views.py:2086
+msgid "Immunity"
+msgstr "प्रतिरक्षा"
+
+#: .\apps\quiz\views.py:2089
+msgid "Exercise reduces stress levels."
+msgstr "व्यायाम तनाव के स्तर को कम करता है।"
+
+#: .\apps\quiz\views.py:2091
+msgid "Which vitamin improves vision?"
+msgstr "कौन सा विटामिन दृष्टि में सुधार करता है?"
+
+#: .\apps\quiz\views.py:2099
+msgid "Vitamin A supports eye health."
+msgstr "विटामिन A आंखों के स्वास्थ्य का समर्थन करता है।"
+
+#: .\apps\quiz\views.py:2101
+msgid "Smoking mainly damages which organ?"
+msgstr "धूम्रपान मुख्य रूप से किस अंग को नुकसान पहुंचाता है?"
+
+#: .\apps\quiz\views.py:2104 .\apps\quiz\views.py:2313
+msgid "Liver"
+msgstr "यकृत"
+
+#: .\apps\quiz\views.py:2109
+msgid "Smoking primarily damages the lungs."
+msgstr "धूम्रपान मुख्य रूप से फेफड़ों को नुकसान पहुंचाता है।"
+
+#: .\apps\quiz\views.py:2111
+msgid "A balanced diet includes:"
+msgstr "संतुलित आहार में शामिल है:"
+
+#: .\apps\quiz\views.py:2113
+msgid "Only carbohydrates"
+msgstr "केवल कार्बोहाइड्रेट"
+
+#: .\apps\quiz\views.py:2114
+msgid "Only proteins"
+msgstr "केवल प्रोटीन"
+
+#: .\apps\quiz\views.py:2121
+msgid "Which test measures blood sugar?"
+msgstr "कौन सा परीक्षण रक्त शर्करा को मापता है?"
+
+#: .\apps\quiz\views.py:2124
+msgid "Blood Glucose Test"
+msgstr "रक्त ग्लूकोज परीक्षण"
+
+#: .\apps\quiz\views.py:2129
+msgid "Blood glucose test measures sugar levels."
+msgstr "रक्त ग्लूकोज परीक्षण शर्करा के स्तर को मापता है।"
+
+#: .\apps\quiz\views.py:2131
+msgid "Hypertension means:"
+msgstr "उच्च रक्तचाप का अर्थ है:"
+
+#: .\apps\quiz\views.py:2133 .\apps\quiz\views.py:2285
+msgid "Low sugar"
+msgstr "कम शर्करा"
+
+#: .\apps\quiz\views.py:2134
+msgid "High blood pressure"
+msgstr "उच्च रक्तचाप"
+
+#: .\apps\quiz\views.py:2136
+#, fuzzy
+#| msgid "High Risk"
+msgid "High sugar"
+msgstr "उच्च शर्करा"
+
+#: .\apps\quiz\views.py:2139
+msgid "Hypertension means high blood pressure."
+msgstr "उच्च रक्तचाप का अर्थ है उच्च रक्तचाप।"
+
+#: .\apps\quiz\views.py:2141
+msgid "Which mineral prevents anemia?"
+msgstr "कौन सा खनिज एनीमिया को रोकता है?"
+
+#: .\apps\quiz\views.py:2149
+msgid "Iron deficiency causes anemia."
+msgstr "आयरन की कमी से एनीमिया होता है।"
+
+#: .\apps\quiz\views.py:2151
+msgid "Excess sugar intake may lead to:"
+msgstr "अधिक शर्करा का सेवन हो सकता है:"
+
+#: .\apps\quiz\views.py:2154 .\apps\quiz\views.py:2226
+msgid "Improved vision"
+msgstr "बेहतर दृष्टि"
+
+#: .\apps\quiz\views.py:2159
+msgid "Too much sugar increases diabetes risk."
+msgstr "बहुत अधिक शर्करा मधुमेह के जोखिम को बढ़ाती है।"
+
+#: .\apps\quiz\views.py:2165 .\apps\quiz\views.py:2306
+msgid "Overeating"
+msgstr "अधिक भोजन करना"
+
+#: .\apps\quiz\views.py:2166 .\apps\quiz\views.py:2255
+msgid "Alcohol abuse"
+msgstr "शराब का दुरुपयोग"
+
+#: .\apps\quiz\views.py:2169
+msgid "Meditation improves mental wellness."
+msgstr "ध्यान मानसिक स्वास्थ्य में सुधार करता है।"
+
+#: .\apps\quiz\views.py:2171
+msgid "Cholesterol mainly affects:"
+msgstr "कोलेस्ट्रॉल मुख्य रूप से प्रभावित करता है:"
+
+#: .\apps\quiz\views.py:2173
+msgid "Bones"
+msgstr "हड्डियाँ"
+
+#: .\apps\quiz\views.py:2175 .\apps\quiz\views.py:2315
+msgid "Hair"
+msgstr "बाल"
+
+#: .\apps\quiz\views.py:2176
+msgid "Skin"
+msgstr "त्वचा"
+
+#: .\apps\quiz\views.py:2179
+msgid "High cholesterol affects heart health."
+msgstr "उच्च कोलेस्ट्रॉल हृदय स्वास्थ्य को प्रभावित करता है।"
+
+#: .\apps\quiz\views.py:2181
+#, fuzzy
+#| msgid "Vaccine Name"
+msgid "Vaccines help by:"
+msgstr "टीके मदद करते हैं:"
+
+#: .\apps\quiz\views.py:2183
+msgid "Causing disease"
+msgstr "बीमारी पैदा करना"
+
+#: .\apps\quiz\views.py:2184
+#, fuzzy
+#| msgid "Prevention"
+msgid "Preventing disease"
+msgstr "बीमारी को रोकना"
+
+#: .\apps\quiz\views.py:2185
+msgid "Reducing sleep"
+msgstr "नींद कम करना"
+
+#: .\apps\quiz\views.py:2186
+msgid "Lowering oxygen"
+msgstr "ऑक्सीजन कम करना"
+
+#: .\apps\quiz\views.py:2189
+msgid "Vaccines prevent diseases."
+msgstr "टीके बीमारियों को रोकते हैं।"
+
+#: .\apps\quiz\views.py:2191
+msgid "Hand washing prevents:"
+msgstr "हाथ धोना रोकता है:"
+
+#: .\apps\quiz\views.py:2195
+msgid "Hunger"
+msgstr "भूख"
+
+#: .\apps\quiz\views.py:2199
+msgid "Hand washing reduces infection risk."
+msgstr "हाथ धोना संक्रमण के जोखिम को कम करता है।"
+
+#: .\apps\quiz\views.py:2201
+msgid "Stress can affect:"
+msgstr "तनाव प्रभावित कर सकता है:"
+
+#: .\apps\quiz\views.py:2203
+msgid "Only brain"
+msgstr "केवल मस्तिष्क"
+
+#: .\apps\quiz\views.py:2204
+msgid "Only heart"
+msgstr "केवल हृदय"
+
+#: .\apps\quiz\views.py:2205
+msgid "Whole body"
+msgstr "पूरा शरीर"
+
+#: .\apps\quiz\views.py:2206
+msgid "Nothing"
+msgstr "कुछ नहीं"
+
+#: .\apps\quiz\views.py:2209
+msgid "Stress impacts the whole body."
+msgstr "तनाव पूरे शरीर को प्रभावित करता है।"
+
+#: .\apps\quiz\views.py:2211
+msgid "Fiber helps in:"
+msgstr "फाइबर में मदद करता है:"
+
+#: .\apps\quiz\views.py:2219
+msgid "Fiber improves digestion."
+msgstr "फाइबर पाचन में सुधार करता है।"
+
+#: .\apps\quiz\views.py:2221
+msgid "Obesity increases risk of:"
+msgstr "मोटापा बढ़ाता है जोखिम को:"
+
+#: .\apps\quiz\views.py:2224
+msgid "Stronger immunity"
+msgstr "मजबूत प्रतिरक्षा"
+
+#: .\apps\quiz\views.py:2229
+msgid "Obesity increases heart disease risk."
+msgstr "मोटापा हृदय रोग के जोखिम को बढ़ाता है।"
+
+#: .\apps\quiz\views.py:2231
+msgid "Which is good for heart health?"
+msgstr "हृदय स्वास्थ्य के लिए क्या अच्छा है?"
+
+#: .\apps\quiz\views.py:2233
+msgid "Fried food"
+msgstr "तला हुआ भोजन"
+
+#: .\apps\quiz\views.py:2236
+msgid "Sugary drinks"
+msgstr "मीठे पेय"
+
+#: .\apps\quiz\views.py:2239
+msgid "Exercise strengthens the heart."
+msgstr "व्यायाम हृदय को मजबूत करता है।"
+
+#: .\apps\quiz\views.py:2241
+msgid "Water makes up about what % of body?"
+msgstr "शरीर का लगभग कितना प्रतिशत पानी है?"
+
+#: .\apps\quiz\views.py:2243
+msgid "20%"
+msgstr "20%"
+
+#: .\apps\quiz\views.py:2244
+msgid "40%"
+msgstr "40%"
+
+#: .\apps\quiz\views.py:2245
+msgid "60%"
+msgstr "60%"
+
+#: .\apps\quiz\views.py:2246
+msgid "90%"
+msgstr "90%"
+
+#: .\apps\quiz\views.py:2249
+msgid "About 60% of the body is water."
+msgstr "शरीर का लगभग 60% पानी है।"
+
+#: .\apps\quiz\views.py:2251
+msgid "Which habit boosts immunity?"
+msgstr "कौन सी आदत प्रतिरक्षा को बढ़ावा देती है?"
+
+#: .\apps\quiz\views.py:2253
+msgid "Proper sleep"
+msgstr "उचित नींद"
+
+#: .\apps\quiz\views.py:2259
+msgid "Good sleep strengthens immunity."
+msgstr "अच्छी नींद प्रतिरक्षा को मजबूत करती है।"
+
+#: .\apps\quiz\views.py:2261
+msgid "Which organ filters blood?"
+msgstr "कौन सा अंग रक्त को फ़िल्टर करता है?"
+
+#: .\apps\quiz\views.py:2265
+msgid "Lung"
+msgstr "फेफड़ा"
+
+#: .\apps\quiz\views.py:2269
+msgid "Kidneys filter waste from blood."
+msgstr "गुर्दे रक्त से अपशिष्ट को फ़िल्टर करते हैं।"
+
+#: .\apps\quiz\views.py:2271
+msgid "Regular health checkups help to:"
+msgstr "नियमित स्वास्थ्य जांच में मदद करती है:"
+
+#: .\apps\quiz\views.py:2273
+#, fuzzy
+#| msgid "Disease Library"
+msgid "Detect diseases early"
+msgstr "बीमारियों का जल्दी पता लगाना"
+
+#: .\apps\quiz\views.py:2274
+#, fuzzy
+#| msgid "Check Disease"
+msgid "Cause disease"
+msgstr "बीमारी पैदा करना"
+
+#: .\apps\quiz\views.py:2275
+msgid "Reduce height"
+msgstr "ऊंचाई कम करना"
+
+#: .\apps\quiz\views.py:2281
+msgid "Too much salt may cause:"
+msgstr "बहुत अधिक नमक हो सकता है:"
+
+#: .\apps\quiz\views.py:2286
+msgid "Anemia"
+msgstr "एनीमिया"
+
+#: .\apps\quiz\views.py:2289
+msgid "High salt increases blood pressure."
+msgstr "अधिक नमक रक्तचाप बढ़ाता है।"
+
+#: .\apps\quiz\views.py:2291
+msgid "Sun exposure gives:"
+msgstr "सूर्य के संपर्क से मिलता है:"
+
+#: .\apps\quiz\views.py:2299
+msgid "Sunlight helps produce Vitamin D."
+msgstr "सूर्य का प्रकाश विटामिन D के उत्पादन में मदद करता है।"
+
+#: .\apps\quiz\views.py:2301
+msgid "Which activity improves lung capacity?"
+msgstr "कौन सी गतिविधि फेफड़ों की क्षमता में सुधार करती है?"
+
+#: .\apps\quiz\views.py:2309
+msgid "Breathing exercises improve lung function."
+msgstr "श्वास व्यायाम फेफड़ों के कार्य में सुधार करते हैं।"
+
+#: .\apps\quiz\views.py:2311
+msgid "Alcohol mainly affects:"
+msgstr "शराब मुख्य रूप से प्रभावित करती है:"
+
+#: .\apps\quiz\views.py:2314
+msgid "Eyes"
+msgstr "आँखें"
+
+#: .\apps\quiz\views.py:2316
+msgid "Teeth"
+msgstr "दांत"
+
+#: .\apps\quiz\views.py:2319
+msgid "Alcohol damages the liver."
+msgstr "शराब यकृत को नुकसान पहुंचाती है।"
+
+#: .\apps\quiz\views.py:2321
+msgid "Healthy weight reduces risk of:"
+msgstr "स्वस्थ वजन जोखिम को कम करता है:"
+
+#: .\apps\quiz\views.py:2324 .\apps\quiz\views.py:2404
+msgid "Height growth"
+msgstr "ऊंचाई वृद्धि"
+
+#: .\apps\quiz\views.py:2325
+msgid "Better hair"
+msgstr "बेहतर बाल"
+
+#: .\apps\quiz\views.py:2326
+msgid "Eye color change"
+msgstr "आंखों के रंग में परिवर्तन"
+
+#: .\apps\quiz\views.py:2329
+msgid "Healthy weight lowers disease risk."
+msgstr "स्वस्थ वजन बीमारी के जोखिम को कम करता है।"
+
+#: .\apps\quiz\views.py:2331
+msgid "Daily physical activity should be at least:"
+msgstr "दैनिक शारीरिक गतिविधि कम से कम होनी चाहिए:"
+
+#: .\apps\quiz\views.py:2333
+#, fuzzy
+#| msgid "⏱️ 10 min"
+msgid "10 min"
+msgstr "10 मिनट"
+
+#: .\apps\quiz\views.py:2334
+msgid "30 min"
+msgstr "30 मिनट"
+
+#: .\apps\quiz\views.py:2335
+msgid "2 hrs"
+msgstr "2 घंटे"
+
+#: .\apps\quiz\views.py:2336
+msgid "5 hrs"
+msgstr "5 घंटे"
+
+#: .\apps\quiz\views.py:2339
+msgid "At least 30 minutes daily."
+msgstr "प्रतिदिन कम से कम 30 मिनट।"
+
+#: .\apps\quiz\views.py:2341
+msgid "Which vitamin boosts immunity?"
+msgstr "कौन सा विटामिन प्रतिरक्षा को बढ़ावा देता है?"
+
+#: .\apps\quiz\views.py:2349
+msgid "Vitamin C supports immunity."
+msgstr "विटामिन C प्रतिरक्षा का समर्थन करता है।"
+
+#: .\apps\quiz\views.py:2351
+msgid "Dehydration can cause:"
+msgstr "निर्जलीकरण हो सकता है:"
+
+#: .\apps\quiz\views.py:2353
+msgid "Headache"
+msgstr "सिरदर्द"
+
+#: .\apps\quiz\views.py:2359
+msgid "Lack of water causes headaches."
+msgstr "पानी की कमी से सिरदर्द होता है।"
+
+#: .\apps\quiz\views.py:2361
+msgid "Balanced meals should include:"
+msgstr "संतुलित भोजन में शामिल होना चाहिए:"
+
+#: .\apps\quiz\views.py:2363
+msgid "Protein, carbs, fats"
+msgstr "प्रोटीन, कार्ब्स, वसा"
+
+#: .\apps\quiz\views.py:2365
+msgid "Only sugar"
+msgstr "केवल शर्करा"
+
+#: .\apps\quiz\views.py:2369
+msgid "All macronutrients are needed."
+msgstr "सभी मैक्रोन्यूट्रिएंट्स की आवश्यकता है।"
+
+#: .\apps\quiz\views.py:2371
+msgid "Good posture prevents:"
+msgstr "अच्छी मुद्रा रोकती है:"
+
+#: .\apps\quiz\views.py:2373
+#, fuzzy
+#| msgid "Back"
+msgid "Back pain"
+msgstr "पीठ दर्द"
+
+#: .\apps\quiz\views.py:2379
+msgid "Proper posture prevents back pain."
+msgstr "उचित मुद्रा पीठ दर्द को रोकती है।"
+
+#: .\apps\quiz\views.py:2381
+msgid "Walking improves:"
+msgstr "चलना सुधार करता है:"
+
+#: .\apps\quiz\views.py:2389
+msgid "Walking improves heart health."
+msgstr "चलना हृदय स्वास्थ्य में सुधार करता है।"
+
+#: .\apps\quiz\views.py:2391
+msgid "Which is a healthy snack?"
+msgstr "कौन सा स्वस्थ नाश्ता है?"
+
+#: .\apps\quiz\views.py:2393
+msgid "Fruits"
+msgstr "फल"
+
+#: .\apps\quiz\views.py:2394
+msgid "Chips"
+msgstr "चिप्स"
+
+#: .\apps\quiz\views.py:2399
+msgid "Fruits are healthy snacks."
+msgstr "फल स्वस्थ नाश्ते हैं।"
+
+#: .\apps\quiz\views.py:2401
+msgid "Meditation helps with:"
+msgstr "ध्यान में मदद करता है:"
+
+#: .\apps\quiz\views.py:2403
+msgid "Stress reduction"
+msgstr "तनाव में कमी"
+
+#: .\apps\quiz\views.py:2409
+msgid "Meditation reduces stress."
+msgstr "ध्यान तनाव को कम करता है।"
+
+#: .\apps\quiz\views.py:2411
+msgid "Which reduces infection risk?"
+msgstr "कौन संक्रमण के जोखिम को कम करता है?"
+
+#: .\apps\quiz\views.py:2413
+msgid "Hand sanitizer"
+msgstr "हैंड सैनिटाइज़र"
+
+#: .\apps\quiz\views.py:2414
+msgid "Sharing bottles"
+msgstr "बोतलें साझा करना"
+
+#: .\apps\quiz\views.py:2415
+msgid "Skipping bath"
+msgstr "स्नान छोड़ना"
+
+#: .\apps\quiz\views.py:2416
+msgid "Not washing hands"
+msgstr "हाथ न धोना"
+
+#: .\apps\quiz\views.py:2419
+msgid "Sanitizer reduces germs."
+msgstr "सैनिटाइज़र कीटाणुओं को कम करता है।"
+
+#: .\apps\quiz\views.py:2424
+msgid "What should you do first in an emergency?"
+msgstr "आपातकाल में आपको सबसे पहले क्या करना चाहिए?"
+
+#: .\apps\quiz\views.py:2426
+msgid "Panic"
+msgstr "घबराना"
+
+#: .\apps\quiz\views.py:2427
+msgid "Ensure safety"
+msgstr "सुरक्षा सुनिश्चित करें"
+
+#: .\apps\quiz\views.py:2428
+msgid "Run away"
+msgstr "भाग जाना"
+
+#: .\apps\quiz\views.py:2429 .\apps\quiz\views.py:2459
+#: .\apps\quiz\views.py:2478 .\apps\quiz\views.py:2489
+#: .\apps\quiz\views.py:2498 .\apps\quiz\views.py:2519
+#: .\apps\quiz\views.py:2538 .\apps\quiz\views.py:2549
+#: .\apps\quiz\views.py:2558 .\apps\quiz\views.py:2568
+msgid "Ignore"
+msgstr "अनदेखा करना"
+
+#: .\apps\quiz\views.py:2432
+msgid "Always ensure scene safety first."
+msgstr "हमेशा पहले दृश्य सुरक्षा सुनिश्चित करें।"
+
+#: .\apps\quiz\views.py:2434
+msgid "For minor burns, use:"
+msgstr "मामूली जलन के लिए, उपयोग करें:"
+
+#: .\apps\quiz\views.py:2436
+msgid "Ice directly"
+msgstr "सीधे बर्फ"
+
+#: .\apps\quiz\views.py:2437
+msgid "Cold running water"
+msgstr "ठंडा बहता पानी"
+
+#: .\apps\quiz\views.py:2439
+msgid "Toothpaste"
+msgstr "टूथपेस्ट"
+
+#: .\apps\quiz\views.py:2442
+msgid "Cool running water soothes burns."
+msgstr "ठंडा बहता पानी जलन को शांत करता है।"
+
+#: .\apps\quiz\views.py:2444
+msgid "CPR stands for:"
+msgstr "CPR का अर्थ है:"
+
+#: .\apps\quiz\views.py:2446
+msgid "Cardio Pulmonary Resuscitation"
+msgstr "कार्डियो पल्मोनरी रिससिटेशन"
+
+#: .\apps\quiz\views.py:2447
+msgid "Cardiac Pressure Response"
+msgstr "कार्डियक प्रेशर रिस्पांस"
+
+#: .\apps\quiz\views.py:2448
+msgid "Chest Pump Rescue"
+msgstr "चेस्ट पंप रेस्क्यू"
+
+#: .\apps\quiz\views.py:2449
+msgid "Critical Pulse Recovery"
+msgstr "क्रिटिकल पल्स रिकवरी"
+
+#: .\apps\quiz\views.py:2452
+msgid "CPR means Cardio Pulmonary Resuscitation."
+msgstr "CPR का अर्थ है कार्डियो पल्मोनरी रिससिटेशन।"
+
+#: .\apps\quiz\views.py:2454
+msgid "For nosebleed, you should:"
+msgstr "नाक से खून बहने के लिए, आपको चाहिए:"
+
+#: .\apps\quiz\views.py:2456
+msgid "Tilt head back"
+msgstr "सिर पीछे झुकाएं"
+
+#: .\apps\quiz\views.py:2457
+msgid "Lean forward"
+msgstr "आगे झुकें"
+
+#: .\apps\quiz\views.py:2458
+msgid "Lie down"
+msgstr "लेट जाएं"
+
+#: .\apps\quiz\views.py:2462
+msgid "Lean forward to avoid swallowing blood."
+msgstr "खून निगलने से बचने के लिए आगे झुकें।"
+
+#: .\apps\quiz\views.py:2464
+msgid "If someone is choking, perform:"
+msgstr "यदि कोई घुट रहा है, तो करें:"
+
+#: .\apps\quiz\views.py:2466
+msgid "Heimlich maneuver"
+msgstr "हेमलिच युक्ति"
+
+#: .\apps\quiz\views.py:2467
+msgid "CPR immediately"
+msgstr "तुरंत CPR"
+
+#: .\apps\quiz\views.py:2468
+msgid "Water therapy"
+msgstr "जल चिकित्सा"
+
+#: .\apps\quiz\views.py:2469 .\apps\quiz\views.py:2548
+msgid "Massage"
+msgstr "मालिश"
+
+#: .\apps\quiz\views.py:2472
+msgid "Heimlich maneuver helps remove obstruction."
+msgstr "हेमलिच युक्ति रुकावट को हटाने में मदद करती है।"
+
+#: .\apps\quiz\views.py:2474
+msgid "For cuts, first step:"
+msgstr "कटने के लिए, पहला कदम:"
+
+#: .\apps\quiz\views.py:2476
+msgid "Wash with clean water"
+msgstr "साफ पानी से धोएं"
+
+#: .\apps\quiz\views.py:2477
+msgid "Apply mud"
+msgstr "कीचड़ लगाएं"
+
+#: .\apps\quiz\views.py:2479
+msgid "Use dirty cloth"
+msgstr "गंदे कपड़े का उपयोग करें"
+
+#: .\apps\quiz\views.py:2482
+msgid "Clean wound with water."
+msgstr "घाव को पानी से साफ करें।"
+
+#: .\apps\quiz\views.py:2484
+msgid "If someone faints, you should:"
+msgstr "यदि कोई बेहोश हो जाए, तो आपको चाहिए:"
+
+#: .\apps\quiz\views.py:2486
+msgid "Lay them flat"
+msgstr "उन्हें सपाट लिटाएं"
+
+#: .\apps\quiz\views.py:2487
+msgid "Shake violently"
+msgstr "जोर से हिलाएं"
+
+#: .\apps\quiz\views.py:2488
+msgid "Throw water"
+msgstr "पानी फेंकें"
+
+#: .\apps\quiz\views.py:2492
+msgid "Lay flat and elevate legs."
+msgstr "सपाट लिटाएं और पैरों को ऊपर उठाएं।"
+
+#: .\apps\quiz\views.py:2494
+msgid "For sprain, use:"
+msgstr "मोच के लिए, उपयोग करें:"
+
+#: .\apps\quiz\views.py:2496
+msgid "RICE method"
+msgstr "RICE विधि"
+
+#: .\apps\quiz\views.py:2497
+msgid "Heat immediately"
+msgstr "तुरंत गर्म करें"
+
+#: .\apps\quiz\views.py:2499
+msgid "Massage hard"
+msgstr "जोर से मालिश करें"
+
+#: .\apps\quiz\views.py:2502
+msgid "Rest, Ice, Compression, Elevation."
+msgstr "आराम, बर्फ, संपीड़न, ऊंचाई।"
+
+#: .\apps\quiz\views.py:2504
+msgid "Emergency number in India is:"
+msgstr "भारत में आपातकालीन नंबर है:"
+
+#: .\apps\quiz\views.py:2506
+msgid "100"
+msgstr "100"
+
+#: .\apps\quiz\views.py:2507
+msgid "108"
+msgstr "108"
+
+#: .\apps\quiz\views.py:2508
+msgid "101"
+msgstr "101"
+
+#: .\apps\quiz\views.py:2509
+msgid "112"
+msgstr "112"
+
+#: .\apps\quiz\views.py:2512
+msgid "112 is national emergency helpline."
+msgstr "112 राष्ट्रीय आपातकालीन हेल्पलाइन है।"
+
+#: .\apps\quiz\views.py:2514
+msgid "If electric shock occurs:"
+msgstr "यदि बिजली का झटका लगे:"
+
+#: .\apps\quiz\views.py:2516
+msgid "Touch directly"
+msgstr "सीधे स्पर्श करें"
+
+#: .\apps\quiz\views.py:2517
+msgid "Switch off power first"
+msgstr "पहले बिजली बंद करें"
+
+#: .\apps\quiz\views.py:2518
+msgid "Pour water"
+msgstr "पानी डालें"
+
+#: .\apps\quiz\views.py:2522
+msgid "Turn off power before touching victim."
+msgstr "पीड़ित को छूने से पहले बिजली बंद करें।"
+
+#: .\apps\quiz\views.py:2524
+msgid "For snake bite, you should:"
+msgstr "सांप के काटने के लिए, आपको चाहिए:"
+
+#: .\apps\quiz\views.py:2526
+msgid "Suck venom"
+msgstr "जहर चूसें"
+
+#: .\apps\quiz\views.py:2527
+msgid "Keep person calm"
+msgstr "व्यक्ति को शांत रखें"
+
+#: .\apps\quiz\views.py:2528
+msgid "Cut wound"
+msgstr "घाव काटें"
+
+#: .\apps\quiz\views.py:2529
+msgid "Apply ice"
+msgstr "बर्फ लगाएं"
+
+#: .\apps\quiz\views.py:2532
+msgid "Keep calm and seek medical help."
+msgstr "शांत रहें और चिकित्सा सहायता लें।"
+
+#: .\apps\quiz\views.py:2534
+msgid "For eye injury, you should:"
+msgstr "आंख की चोट के लिए, आपको चाहिए:"
+
+#: .\apps\quiz\views.py:2536
+msgid "Rub eye"
+msgstr "आंख रगड़ें"
+
+#: .\apps\quiz\views.py:2537
+msgid "Rinse gently"
+msgstr "धीरे से धोएं"
+
+#: .\apps\quiz\views.py:2539
+msgid "Apply oil"
+msgstr "तेल लगाएं"
+
+#: .\apps\quiz\views.py:2542
+msgid "Rinse gently with clean water."
+msgstr "साफ पानी से धीरे से धोएं।"
+
+#: .\apps\quiz\views.py:2544
+msgid "If fracture suspected:"
+msgstr "यदि फ्रैक्चर का संदेह हो:"
+
+#: .\apps\quiz\views.py:2546
+msgid "Move limb"
+msgstr "अंग हिलाएं"
+
+#: .\apps\quiz\views.py:2547
+msgid "Immobilize"
+msgstr "स्थिर करें"
+
+#: .\apps\quiz\views.py:2552
+msgid "Keep limb still and supported."
+msgstr "अंग को स्थिर और सहारे में रखें।"
+
+#: .\apps\quiz\views.py:2554
+msgid "For heat stroke:"
+msgstr "हीट स्ट्रोक के लिए:"
+
+#: .\apps\quiz\views.py:2556
+msgid "Cool the person"
+msgstr "व्यक्ति को ठंडा करें"
+
+#: .\apps\quiz\views.py:2557
+msgid "Give alcohol"
+msgstr "शराब दें"
+
+#: .\apps\quiz\views.py:2559
+msgid "Wrap blanket"
+msgstr "कंबल लपेटें"
+
+#: .\apps\quiz\views.py:2562
+msgid "Cool body immediately."
+msgstr "शरीर को तुरंत ठंडा करें।"
+
+#: .\apps\quiz\views.py:2564
+msgid "For poisoning:"
+msgstr "जहर के लिए:"
+
+#: .\apps\quiz\views.py:2566
+msgid "Induce vomiting always"
+msgstr "हमेशा उल्टी कराएं"
+
+#: .\apps\quiz\views.py:2567
+msgid "Call emergency"
+msgstr "आपातकालीन कॉल करें"
+
+#: .\apps\quiz\views.py:2569
+msgid "Give soda"
+msgstr "सोडा दें"
+
+#: .\apps\quiz\views.py:2572
+msgid "Call emergency services immediately."
+msgstr "तुरंत आपातकालीन सेवाओं को कॉल करें।"
+
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:532
 msgid " 🔍 AI Symptom Checker"
-msgstr ""
+msgstr "🔍 एआई लक्षण जांचकर्ता"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:533
 msgid "Select your symptoms and get AI-powered health insights instantly"
-msgstr ""
+msgstr "अपने लक्षणों का चयन करें और तुरंत एआई-संचालित स्वास्थ्य अंतर्दृष्टि प्राप्त करें"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:543
 msgid "Select Symptoms"
-msgstr ""
+msgstr "लक्षण चुनें"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:557
 #: .\apps\vaccination\templates\vaccination\vaccination.html:836
 #: .\notifications\templates\notifications\notification_list.html:355
 msgid "All"
-msgstr ""
+msgstr "सभी"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:560
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:574
 msgid "Check Disease"
-msgstr ""
+msgstr "रोग की जांच करें"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:582
 msgid "🤖 AI Clinical Report"
-msgstr ""
+msgstr "🤖 एआई नैदानिक रिपोर्ट"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:583
 msgid "Based on your selected symptoms"
-msgstr ""
+msgstr "आपके चयनित लक्षणों के आधार पर"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:593
 msgid "Risk Assessment"
-msgstr ""
+msgstr "जोखिम मूल्यांकन"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:600
 msgid "Low Risk"
-msgstr ""
+msgstr "कम जोखिम"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:601
 msgid "Medium Risk"
-msgstr ""
+msgstr "मध्यम जोखिम"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:602
 msgid "High Risk"
-msgstr ""
+msgstr "उच्च जोखिम"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:608
 msgid "Recommended Care"
-msgstr ""
+msgstr "अनुशंसित देखभाल"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:617
 msgid "Lifestyle Changes"
-msgstr ""
+msgstr "जीवनशैली में बदलाव"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:628
 msgid "Important Notice"
-msgstr ""
+msgstr "महत्वपूर्ण सूचना"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:635
 msgid "Emergency Alert"
-msgstr ""
+msgstr "आपातकालीन चेतावनी"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:636
 msgid ""
 "  Please consult a doctor immediately! Your symptoms indicate a high-risk "
 "condition that requires urgent medical attention."
 msgstr ""
+"कृपया तुरंत डॉक्टर से परामर्श लें! आपके लक्षण एक उच्च जोखिम वाली स्थिति का संकेत देते हैं जिसके "
+"लिए तत्काल चिकित्सा ध्यान की आवश्यकता है।"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:643
 msgid "No Analysis Yet"
-msgstr ""
+msgstr "अभी तक कोई विश्लेषण नहीं"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:644
 msgid "Select your symptoms and click \\"
-msgstr ""
+msgstr "अपने लक्षण चुनें और क्लिक करें \\"
 
 #: .\apps\vaccination\templates\vaccination\add_vaccination.html:134
 #: .\apps\vaccination\templates\vaccination\vaccination.html:917
 msgid "Dose Number"
-msgstr ""
+msgstr "खुराक संख्या"
 
 #: .\apps\vaccination\templates\vaccination\add_vaccination.html:146
 msgid "Notes (Optional)"
-msgstr ""
+msgstr "नोट्स (वैकल्पिक)"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:783
 msgid "HealthAI"
-msgstr ""
+msgstr "हेल्थएआई"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:794
 msgid ""
 "Keep track of your vaccinations and never miss an important dose. Protect "
 "yourself and your community."
 msgstr ""
+"अपने टीकाकरण का ट्रैक रखें और कभी भी एक महत्वपूर्ण खुराक न चूकें। अपनी और अपने समुदाय की "
+"रक्षा करें।"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:802
 msgid "Total Vaccines"
-msgstr ""
+msgstr "कुल टीके"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:809
 #: .\apps\vaccination\templates\vaccination\vaccination.html:837
 msgid "Completed"
-msgstr ""
+msgstr "पूर्ण"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:816
 #: .\apps\vaccination\templates\vaccination\vaccination.html:838
 msgid "Upcoming"
-msgstr ""
+msgstr "आगामी"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:823
 #: .\apps\vaccination\templates\vaccination\vaccination.html:839
 msgid "Overdue"
-msgstr ""
+msgstr "अतिदेय"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:831
 msgid "My Vaccinations"
-msgstr ""
+msgstr "मेरे टीकाकरण"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:832
 msgid "Add Vaccine"
-msgstr ""
+msgstr "टीका जोड़ें"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:847
 msgid "Upcoming Reminders"
-msgstr ""
+msgstr "आगामी अनुस्मारक"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:850
 msgid "COVID-19 Booster"
-msgstr ""
+msgstr "कोविड-19 बूस्टर"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:851
 msgid "Due in 15 days • Feb 5, 2026"
-msgstr ""
+msgstr "15 दिनों में देय • 5 फरवरी, 2026"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:854
 msgid "Influenza"
-msgstr ""
+msgstr "इन्फ्लूएंजा"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:855
 msgid "Due in 30 days • Feb 20, 2026"
-msgstr ""
+msgstr "30 दिनों में देय • 20 फरवरी, 2026"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:861
 msgid "Government Recommended"
-msgstr ""
+msgstr "सरकार द्वारा अनुशंसित"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:863
 msgid "COVID-19 Vaccination"
-msgstr ""
+msgstr "कोविड-19 टीकाकरण"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:864
 msgid ""
 "Essential for preventing severe illness and reducing transmission in the "
 "community."
-msgstr ""
+msgstr "गंभीर बीमारी को रोकने और समुदाय में संचरण को कम करने के लिए आवश्यक।"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:867
 msgid "Annual Influenza Vaccine"
-msgstr ""
+msgstr "वार्षिक इन्फ्लूएंजा टीका"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:868
 msgid ""
 "Recommended yearly, especially for elderly and immunocompromised individuals."
-msgstr ""
-
-#: .\apps\vaccination\templates\vaccination\vaccination.html:871
-msgid "Hepatitis B"
-msgstr ""
+msgstr "वार्षिक रूप से अनुशंसित, विशेष रूप से बुजुर्गों और प्रतिरक्षाविहीन व्यक्तियों के लिए।"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:872
 msgid "Critical for healthcare workers and those at higher risk of infection."
-msgstr ""
+msgstr "स्वास्थ्य कर्मियों और संक्रमण के उच्च जोखिम वाले लोगों के लिए महत्वपूर्ण।"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:877
 msgid "Vaccination Tips"
-msgstr ""
+msgstr "टीकाकरण युक्तियाँ"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:881
 msgid "Keep your vaccination card in a safe, accessible place"
-msgstr ""
+msgstr "अपने टीकाकरण कार्ड को एक सुरक्षित, सुलभ स्थान पर रखें"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:885
 msgid "Set reminders for upcoming vaccine appointments"
-msgstr ""
+msgstr "आगामी टीका नियुक्तियों के लिए अनुस्मारक सेट करें"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:889
 msgid "Consult your doctor about vaccines specific to your health needs"
-msgstr ""
+msgstr "अपनी स्वास्थ्य आवश्यकताओं के लिए विशिष्ट टीकों के बारे में अपने डॉक्टर से परामर्श करें"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:893
 msgid "Check travel vaccination requirements before international trips"
-msgstr ""
+msgstr "अंतरराष्ट्रीय यात्राओं से पहले यात्रा टीकाकरण आवश्यकताओं की जांच करें"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:897
 msgid "Follow recommended childhood immunization schedules"
-msgstr ""
+msgstr "अनुशंसित बचपन के टीकाकरण समय-सारणी का पालन करें"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:913
 msgid "Vaccine Name"
-msgstr ""
+msgstr "टीके का नाम"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:921
 msgid "Scheduled Date"
-msgstr ""
+msgstr "निर्धारित तिथि"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:925
 msgid "Location/Provider"
-msgstr ""
+msgstr "स्थान/प्रदाता"
 
 #: .\apps\vaccination\templates\vaccination\vaccination.html:929
 msgid "Notes"
-msgstr ""
+msgstr "नोट्स"
 
 #: .\notifications\templates\notifications\notification_list.html:351
 msgid "Notifications"
-msgstr ""
+msgstr "सूचनाएं"
 
 #: .\notifications\templates\notifications\notification_list.html:356
 msgid "Unread"
-msgstr ""
+msgstr "अपठित"
 
 #: .\notifications\templates\notifications\notification_list.html:357
 msgid "Read"
-msgstr ""
+msgstr "पढ़ा गया"
 
 #: .\notifications\templates\notifications\notification_list.html:358
 msgid "Mark All as Read"
-msgstr ""
+msgstr "सभी को पढ़ा हुआ चिह्नित करें"
 
 #: .\notifications\templates\notifications\notification_list.html:389
 msgid "Mark as Read"
-msgstr ""
+msgstr "पढ़ा हुआ चिह्नित करें"
 
 #: .\notifications\templates\notifications\notification_list.html:391
 msgid "Delete"
-msgstr ""
+msgstr "हटाएं"
 
 #: .\notifications\templates\notifications\notification_list.html:400
 msgid "No Notifications"
-msgstr ""
+msgstr "कोई सूचनाएं नहीं"
 
 #: .\notifications\templates\notifications\notification_list.html:401
 msgid "You're all caught up! Check back later for updates."
-msgstr ""
+msgstr "आप सब कुछ देख चुके हैं! अपडेट के लिए बाद में फिर से जांचें।"
