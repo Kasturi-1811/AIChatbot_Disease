@@ -1,13 +1,16 @@
-from google import genai
 from django.conf import settings
+import google.genai as genai
 
-client = genai.Client(api_key=settings.GEMINI_API_KEY)
+
+def get_gemini_client():
+    return genai.Client(api_key=settings.GEMINI_API_KEY)
+
 
 def translate_text(text, target_language):
     if not text:
         return ""
 
-    # 🚨 Prevent unnecessary English → English calls
+    # 🚫 Avoid English → English translation
     if target_language.lower() in ["en", "english"]:
         return text
 
@@ -25,11 +28,15 @@ Text:
 """
 
     try:
+        client = get_gemini_client()
+
         response = client.models.generate_content(
-            model="gemini-2.5-flash-lite",
-            contents=prompt,
+            model="gemini-1.5-flash",
+            contents=prompt
         )
+
         return response.text.strip()
+
     except Exception:
-        # If quota exceeded, return original English
+        # If API fails, return original text
         return text

@@ -40,12 +40,28 @@ class DiseaseAlertAdmin(admin.ModelAdmin):
             )
 
             for user in users:
+
+    # Detect user preferred language
+                if user.preferred_language == 'te':
+                    title = alert.title_te or alert.title_en
+                    message = alert.description_te or alert.description_en
+
+                elif user.preferred_language == 'hi':
+                    title = alert.title_hi or alert.title_en
+                    message = alert.description_hi or alert.description_en
+
+                else:  # default English
+                    title = alert.title_en
+                    message = alert.description_en
+
                 create_notification(
                     user=user,
-                    title_en=f"🚨 Disease Alert: {alert.title_en}",
-                    message_en=alert.description_en,
+                    title=f"🚨 Disease Alert: {title}",
+                    message=message,
                     notification_type='alert'
                 )
+
+
 
     approve_disease_alerts.short_description = "Approve disease alerts & notify users"
 

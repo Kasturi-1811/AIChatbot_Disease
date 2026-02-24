@@ -38,22 +38,8 @@ class Notification(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
 
     def save(self, *args, **kwargs):
-
-    # 🔹 Translate title
-        if self.title_en and not self.title_te:
-            self.title_te = translate_text(self.title_en, "Telugu")
-
-        if self.title_en and not self.title_hi:
-            self.title_hi = translate_text(self.title_en, "Hindi")
-
-        # 🔹 Translate message
-        if self.message_en and not self.message_te:
-            self.message_te = translate_text(self.message_en, "Telugu")
-
-        if self.message_en and not self.message_hi:
-            self.message_hi = translate_text(self.message_en, "Hindi")
-
         super().save(*args, **kwargs)
+
     
 
     def get_title(self):

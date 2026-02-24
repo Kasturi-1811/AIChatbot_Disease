@@ -1,15 +1,96 @@
 {% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Disease</title>
+    <style>
+        body { font-family: Arial; padding: 40px; }
 
-<h2>{% trans "Add Disease" %}</h2>
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            background: #f1f1f1;
+        }
+
+        .tab.active {
+            background: white;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Add Disease</h2>
 
 <form method="POST">
     {% csrf_token %}
 
-    <input type="text" name="name" placeholder="{% trans "Disease Name" %}" required><br><br>
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('en')">English</div>
+        <div class="tab" onclick="showTab('hi')">Hindi</div>
+        <div class="tab" onclick="showTab('te')">Telugu</div>
+    </div>
 
-    <!-- ✅ CATEGORY ADDED HERE -->
+    <!-- English -->
+    <div id="en" class="tab-content active">
+        <input type="text" name="name_en" placeholder="Disease Name (English)" required>
+        <textarea name="causes_en" placeholder="Causes (English)" required></textarea>
+        <textarea name="symptoms_en" placeholder="Symptoms (English)" required></textarea>
+        <textarea name="treatment_en" placeholder="Treatment (English)" required></textarea>
+    </div>
+
+    <!-- Hindi -->
+    <div id="hi" class="tab-content">
+        <input type="text" name="name_hi" placeholder="Disease Name (Hindi)" required>
+        <textarea name="causes_hi" placeholder="Causes (Hindi)" required></textarea>
+        <textarea name="symptoms_hi" placeholder="Symptoms (Hindi)" required></textarea>
+        <textarea name="treatment_hi" placeholder="Treatment (Hindi)" required></textarea>
+    </div>
+
+    <!-- Telugu -->
+    <div id="te" class="tab-content">
+        <input type="text" name="name_te" placeholder="Disease Name (Telugu)" required>
+        <textarea name="causes_te" placeholder="Causes (Telugu)" required></textarea>
+        <textarea name="symptoms_te" placeholder="Symptoms (Telugu)" required></textarea>
+        <textarea name="treatment_te" placeholder="Treatment (Telugu)" required></textarea>
+    </div>
+
+    <br>
+
+    <!-- Common Fields -->
     <select name="category" required>
-        <option value="">Select Category</option>
         <option value="viral">Viral</option>
         <option value="bacterial">Bacterial</option>
         <option value="fungal">Fungal</option>
@@ -17,31 +98,24 @@
         <option value="chronic">Chronic</option>
         <option value="skin">Skin</option>
         <option value="other">Other</option>
-    </select><br><br>
+    </select>
 
-    <input type="text" name="body_system" placeholder="{% trans "Body System" %}"><br><br>
-
-    <textarea name="history" placeholder="{% trans "History / Origin" %}"></textarea><br><br>
-
-    <textarea name="causes" placeholder="{% trans "Causes" %}"></textarea><br><br>
-
-    <textarea name="symptoms" placeholder="{% trans "Symptoms" %}"></textarea><br><br>
-
-    <textarea name="treatment" placeholder="{% trans "Treatment" %}"></textarea><br><br>
-
-    <textarea name="home_remedies" placeholder="{% trans "Home Remedies" %}"></textarea><br><br>
-
-    <textarea name="prevention" placeholder="{% trans "Prevention" %}"></textarea><br><br>
-
-    <input type="text" name="specialist_required" placeholder="{% trans "Specialist Doctor (e.g., Dermatologist)" %}"><br><br>
-
-    <input type="text" name="hospital_phone"
-       placeholder="{% trans "Hospital Phone Number" %}"><br><br>
-
-    <select name="is_contagious">
-        <option value="True">{% trans "Contagious" %}</option>
-        <option value="False">{% trans "Not Contagious" %}</option>
-    </select><br><br>
-
-    <button type="submit">{% trans "Submit" %}</button>
+    <button type="submit">Submit</button>
 </form>
+
+<script>
+function showTab(lang, element) {
+    let tabs = document.querySelectorAll('.tab');
+    let contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => content.classList.remove('active'));
+
+    document.getElementById(lang).classList.add('active');
+    element.classList.add('active');
+}
+</script>
+
+
+</body>
+</html>

@@ -1,3 +1,6 @@
+{% load i18n %}
+{% load disease_extras %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -668,24 +671,27 @@
             <ul class="disease-list" id="diseaseList">
                 {% for disease in diseases %}
                <li class="disease-item"
-    data-name="{{ disease.get_name }}"
+    data-name="{{ disease|get_lang_field:'name' }}"
     data-category="{{ disease.category }}"
-    data-body="{{ disease.get_body_system }}"
+    data-body="{{ disease|get_lang_field:'body_system' }}"
     data-severity="{{ disease.severity }}"
-    data-causes="{{ disease.get_causes }}"
-    data-symptoms="{{ disease.get_symptoms }}"
-    data-risk="{{ disease.risk_factors_en }}"
-    data-complications="{{ disease.complications_en }}"
-    data-treatment="{{ disease.get_treatment }}"
-    data-medicines="{{ disease.medicines_en }}"
-    data-home="{{ disease.home_remedies_en }}"
-    data-prevention="{{ disease.get_prevention }}"
-    data-specialist="{{ disease.specialist_required_en }}"
+    data-causes="{{ disease|get_lang_field:'causes' }}"
+    data-symptoms="{{ disease|get_lang_field:'symptoms' }}"
+    data-risk="{{ disease|get_lang_field:'risk_factors' }}"
+    data-complications="{{ disease|get_lang_field:'complications' }}"
+    data-treatment="{{ disease|get_lang_field:'treatment' }}"
+    data-medicines="{{ disease|get_lang_field:'medicines' }}"
+    data-home="{{ disease|get_lang_field:'home_remedies' }}"
+    data-prevention="{{ disease|get_lang_field:'prevention' }}"
+    data-specialist="{{ disease|get_lang_field:'specialist_required' }}"
     data-phone="{{ disease.hospital_phone }}"
 >
     <span class="disease-icon">🦠</span>
-    <span class="disease-name">{{ disease.get_name }}</span>
+    <span class="disease-name">
+        {{ disease|get_lang_field:'name' }}
+    </span>
 </li>
+
 
 
                 {% empty %}
