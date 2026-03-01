@@ -128,14 +128,7 @@
             <input type="text" class="search-input" placeholder="{% trans 'Search for diseases...' %}" id="searchInput">
             <span class="search-icon">🔍</span>
         </div>
-        <div class="filter-tabs">
-            <button class="filter-tab active" data-category="all">{% trans "All Diseases" %}</button>
-            <button class="filter-tab" data-category="respiratory">{% trans "Respiratory" %}</button>
-            <button class="filter-tab" data-category="cardiac">{% trans "Cardiac" %}</button>
-            <button class="filter-tab" data-category="digestive">{% trans "Digestive" %}</button>
-            <button class="filter-tab" data-category="neurological">{% trans "Neurological" %}</button>
-            <button class="filter-tab" data-category="infectious">{% trans "Infectious" %}</button>
-        </div>
+        
     </div>
 
     <div class="main-container">
@@ -150,15 +143,14 @@
                 <li class="disease-item"
                     data-name="{{ disease|get_lang_field:'name' }}"
                     data-category="{{ disease.category }}"
-                    data-body="{{ disease|get_lang_field:'body_system' }}"
+                   
                     data-severity="{{ disease.severity }}"
                     data-causes="{{ disease|get_lang_field:'causes' }}"
                     data-symptoms="{{ disease|get_lang_field:'symptoms' }}"
                     data-treatment="{{ disease|get_lang_field:'treatment' }}"
                     data-prevention="{{ disease|get_lang_field:'prevention' }}"
                     data-home="{{ disease|get_lang_field:'home_remedies' }}"
-                    data-specialist="{{ disease|get_lang_field:'specialist_required' }}"
-                    data-phone="{{ disease.hospital_phone }}">
+                    >
                     <span class="disease-icon">🦠</span>
                     <span class="disease-name">{{ disease|get_lang_field:'name' }}</span>
                 </li>
