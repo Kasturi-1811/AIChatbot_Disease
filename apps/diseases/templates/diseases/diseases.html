@@ -112,11 +112,9 @@
                 <a href="{% url 'home' %}">{% trans "Home" %}</a>
                 <a href="#">← {% trans "Back" %}</a>
                 {% if user.role == 'DOCTOR' and user.is_approved %}
-                    <a href="{% url 'add_disease' %}" class="btn-danger">{% trans "Add Disease" %}</a>
+                    <a href="{% url 'add_library_disease' %}" class="btn-danger">{% trans "Add Disease" %}</a>
                 {% endif %}
-                {% if user.role == 'DOCTOR' and user.is_approved %}
-                    <a href="{% url 'add_library_disease' %}">+ {% trans "Add Disease (Library)" %}</a>
-                {% endif %}
+                
             </div>
         </div>
     </nav>
