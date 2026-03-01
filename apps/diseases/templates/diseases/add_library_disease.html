@@ -1,121 +1,191 @@
 {% load i18n %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Add Disease</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Disease - HealthAI</title>
     <style>
-        body { font-family: Arial; padding: 40px; }
-
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-
-        .tab {
-            padding: 10px 20px;
-            border: 1px solid #ccc;
-            border-bottom: none;
-            background: #f1f1f1;
-        }
-
-        .tab.active {
-            background: white;
-            font-weight: bold;
-        }
-
-        .tab-content {
-            border: 1px solid #ccc;
-            padding: 20px;
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 40px 20px; }
+        .page-wrapper { max-width: 860px; margin: 0 auto; }
+        .page-title { font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; }
+        .page-subtitle { color: #718096; margin-bottom: 30px; font-size: 1rem; }
+        .form-card { background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); overflow: hidden; }
+        .lang-tabs { display: flex; background: #f7fafc; border-bottom: 2px solid #e2e8f0; }
+        .lang-tab { flex: 1; padding: 16px; text-align: center; font-weight: 600; font-size: 1rem; cursor: pointer; color: #718096; border: none; background: transparent; font-family: 'Poppins', sans-serif; transition: all 0.3s; border-bottom: 3px solid transparent; }
+        .lang-tab.active { color: #667eea; background: white; border-bottom-color: #667eea; }
+        .lang-tab:hover:not(.active) { color: #667eea; background: rgba(102,126,234,0.05); }
+        .form-body { padding: 40px; }
+        .lang-panel { display: none; }
+        .lang-panel.active { display: block; }
+        .section-header { font-size: 1rem; font-weight: 700; color: #2d3748; padding: 10px 16px; background: linear-gradient(135deg, rgba(102,126,234,0.08) 0%, rgba(118,75,162,0.08) 100%); border-left: 4px solid #667eea; border-radius: 8px; margin: 28px 0 16px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 600; color: #4a5568; margin-bottom: 7px; font-size: 0.95rem; }
+        label .required { color: #f5576c; margin-left: 3px; }
+        input[type="text"], textarea, select { width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 0.95rem; font-family: 'Poppins', sans-serif; color: #2d3748; transition: all 0.3s; background: #fafafa; }
+        input[type="text"]:focus, textarea:focus, select:focus { outline: none; border-color: #667eea; background: white; box-shadow: 0 0 0 4px rgba(102,126,234,0.1); }
+        textarea { resize: vertical; min-height: 110px; line-height: 1.7; }
+        .hint { font-size: 0.82rem; color: #a0aec0; margin-top: 5px; }
+        .common-section { border-top: 2px solid #f0f0f0; padding-top: 30px; margin-top: 10px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-footer { padding: 25px 40px; background: #f7fafc; border-top: 2px solid #e2e8f0; display: flex; justify-content: flex-end; gap: 15px; }
+        .btn-cancel { padding: 12px 28px; border: 2px solid #e2e8f0; border-radius: 10px; background: white; color: #718096; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-block; }
+        .btn-cancel:hover { border-color: #667eea; color: #667eea; }
+        .btn-submit { padding: 12px 36px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 700; font-family: 'Poppins', sans-serif; cursor: pointer; box-shadow: 0 5px 15px rgba(102,126,234,0.3); transition: all 0.3s; }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(102,126,234,0.4); }
+        @media (max-width: 640px) { .form-body { padding: 25px 20px; } .two-col { grid-template-columns: 1fr; } .form-footer { flex-direction: column; padding: 20px; } .btn-submit, .btn-cancel { width: 100%; text-align: center; } }
     </style>
 </head>
 <body>
+<div class="page-wrapper">
 
-<h2>Add Disease</h2>
+    <p class="page-title">{% trans "Add Disease" %}</p>
+    <p class="page-subtitle">{% trans "Help keep your community informed and safe" %}</p>
 
-<form method="POST">
-    {% csrf_token %}
+    <form method="POST" class="form-card">
+        {% csrf_token %}
 
-    <!-- Tabs -->
-    <div class="tabs">
-        <div class="tab active" onclick="showTab('en')">English</div>
-        <div class="tab" onclick="showTab('hi')">Hindi</div>
-        <div class="tab" onclick="showTab('te')">Telugu</div>
-    </div>
+        <div class="lang-tabs">
+            <button type="button" class="lang-tab active" onclick="switchLang('en', this)">🇬🇧 English</button>
+            <button type="button" class="lang-tab"        onclick="switchLang('hi', this)">🇮🇳 हिंदी</button>
+            <button type="button" class="lang-tab"        onclick="switchLang('te', this)">🇮🇳 తెలుగు</button>
+        </div>
 
-    <!-- English -->
-    <div id="en" class="tab-content active">
-        <input type="text" name="name_en" placeholder="Disease Name (English)" required>
-        <textarea name="causes_en" placeholder="Causes (English)" required></textarea>
-        <textarea name="symptoms_en" placeholder="Symptoms (English)" required></textarea>
-        <textarea name="treatment_en" placeholder="Treatment (English)" required></textarea>
-    </div>
+        <div class="form-body">
 
-    <!-- Hindi -->
-    <div id="hi" class="tab-content">
-        <input type="text" name="name_hi" placeholder="Disease Name (Hindi)" required>
-        <textarea name="causes_hi" placeholder="Causes (Hindi)" required></textarea>
-        <textarea name="symptoms_hi" placeholder="Symptoms (Hindi)" required></textarea>
-        <textarea name="treatment_hi" placeholder="Treatment (Hindi)" required></textarea>
-    </div>
+            <!-- ══ ENGLISH ══ -->
+            <div class="lang-panel active" id="panel-en">
+                <div class="form-group">
+                    <label>Disease Name <span class="required">*</span></label>
+                    <input type="text" name="name_en" placeholder="e.g. Diabetes" required>
+                </div>
+                <div class="form-group">
+                    <label>Causes <span class="required">*</span></label>
+                    <textarea name="causes_en" placeholder="List causes, one per line or separated by •" required></textarea>
+                    <p class="hint">Tip: Use a new line or • between each point</p>
+                </div>
+                <div class="form-group">
+                    <label>Symptoms <span class="required">*</span></label>
+                    <textarea name="symptoms_en" placeholder="List symptoms, one per line or separated by •" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Treatment <span class="required">*</span></label>
+                    <textarea name="treatment_en" placeholder="Describe medical treatments..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Prevention</label>
+                    <textarea name="prevention_en" placeholder="List prevention steps..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Home Remedies</label>
+                    <textarea name="home_remedies_en" placeholder="e.g. Bitter gourd juice, Fenugreek seeds..."></textarea>
+                </div>
+            </div>
 
-    <!-- Telugu -->
-    <div id="te" class="tab-content">
-        <input type="text" name="name_te" placeholder="Disease Name (Telugu)" required>
-        <textarea name="causes_te" placeholder="Causes (Telugu)" required></textarea>
-        <textarea name="symptoms_te" placeholder="Symptoms (Telugu)" required></textarea>
-        <textarea name="treatment_te" placeholder="Treatment (Telugu)" required></textarea>
-    </div>
+            <!-- ══ HINDI ══ -->
+            <div class="lang-panel" id="panel-hi">
+                <div class="form-group">
+                    <label>रोग का नाम</label>
+                    <input type="text" name="name_hi" placeholder="जैसे मधुमेह">
+                </div>
+                <div class="form-group">
+                    <label>कारण</label>
+                    <textarea name="causes_hi" placeholder="प्रत्येक कारण अलग पंक्ति में लिखें..."></textarea>
+                    <p class="hint">सुझाव: प्रत्येक बिंदु के बीच नई पंक्ति या • का उपयोग करें</p>
+                </div>
+                <div class="form-group">
+                    <label>लक्षण</label>
+                    <textarea name="symptoms_hi" placeholder="प्रत्येक लक्षण अलग पंक्ति में लिखें..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>उपचार</label>
+                    <textarea name="treatment_hi" placeholder="चिकित्सा उपचार का वर्णन करें..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>रोकथाम</label>
+                    <textarea name="prevention_hi" placeholder="रोकथाम के उपाय लिखें..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>घरेलू उपचार</label>
+                    <textarea name="home_remedies_hi" placeholder="जैसे करेले का रस, मेथी के बीज..."></textarea>
+                </div>
+            </div>
 
-    <br>
+            <!-- ══ TELUGU ══ -->
+            <div class="lang-panel" id="panel-te">
+                <div class="form-group">
+                    <label>వ్యాధి పేరు</label>
+                    <input type="text" name="name_te" placeholder="ఉదా. మధుమేహం">
+                </div>
+                <div class="form-group">
+                    <label>కారణాలు</label>
+                    <textarea name="causes_te" placeholder="ప్రతి కారణాన్ని కొత్త వరుసలో రాయండి..."></textarea>
+                    <p class="hint">సూచన: ప్రతి అంశానికి మధ్య కొత్త వరుస లేదా • వాడండి</p>
+                </div>
+                <div class="form-group">
+                    <label>లక్షణాలు</label>
+                    <textarea name="symptoms_te" placeholder="ప్రతి లక్షణాన్ని కొత్త వరుసలో రాయండి..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>చికిత్స</label>
+                    <textarea name="treatment_te" placeholder="వైద్య చికిత్సను వివరించండి..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>నివారణ</label>
+                    <textarea name="prevention_te" placeholder="నివారణ చర్యలు రాయండి..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>ఇంట్లో చేసే చికిత్సలు</label>
+                    <textarea name="home_remedies_te" placeholder="ఉదా. కారెళ్ళ రసం, మేథి విత్తనాలు..."></textarea>
+                </div>
+            </div>
 
-    <!-- Common Fields -->
-    <select name="category" required>
-        <option value="viral">Viral</option>
-        <option value="bacterial">Bacterial</option>
-        <option value="fungal">Fungal</option>
-        <option value="genetic">Genetic</option>
-        <option value="chronic">Chronic</option>
-        <option value="skin">Skin</option>
-        <option value="other">Other</option>
-    </select>
+            <!-- ══ COMMON ══ -->
+            <div class="common-section">
+                <div class="section-header">⚙️ Common Settings</div>
+                <div class="two-col">
+                    <div class="form-group">
+                        <label>Category <span class="required">*</span></label>
+                        <select name="category" required>
+                            <option value="">-- Select --</option>
+                            <option value="viral">Viral</option>
+                            <option value="bacterial">Bacterial</option>
+                            <option value="fungal">Fungal</option>
+                            <option value="genetic">Genetic</option>
+                            <option value="chronic">Chronic</option>
+                            <option value="skin">Skin</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Severity</label>
+                        <select name="severity">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-    <button type="submit">Submit</button>
-</form>
+        </div>
+
+        <div class="form-footer">
+            <a href="{% url 'diseases' %}" class="btn-cancel">Cancel</a>
+            <button type="submit" class="btn-submit">{% trans "Submit" %} ✓</button>
+        </div>
+    </form>
+</div>
 
 <script>
-function showTab(lang, element) {
-    let tabs = document.querySelectorAll('.tab');
-    let contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => tab.classList.remove('active'));
-    contents.forEach(content => content.classList.remove('active'));
-
-    document.getElementById(lang).classList.add('active');
-    element.classList.add('active');
-}
+    function switchLang(lang, el) {
+        document.querySelectorAll('.lang-panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById('panel-' + lang).classList.add('active');
+        el.classList.add('active');
+    }
 </script>
-
-
 </body>
 </html>

@@ -260,14 +260,7 @@
                 if (d.prevention)
                     content += `<div class="content-section"><h3>🛡 ${L.labelPrevention}</h3>${formatPoints(d.prevention)}</div>`;
 
-                if (d.specialist)
-                    content += `
-                        <div class="content-section">
-                            <h3>👨‍⚕️ ${L.labelSpecialist}</h3>
-                            <p><strong>${L.labelSpecialist}:</strong> ${d.specialist}</p>
-                            ${d.phone ? `<p><strong>${L.labelPhone}:</strong> 📞 ${d.phone}</p>` : ""}
-                        </div>`;
-
+                
                 detailsDiv.innerHTML = content;
             });
         });
