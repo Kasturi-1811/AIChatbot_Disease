@@ -9,619 +9,101 @@
     <title>Disease Library - HealthAI</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 20px 5%;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #2d3748;
-            font-weight: 500;
-            transition: all 0.3s;
-            padding: 8px 16px;
-            border-radius: 8px;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-            background: rgba(102, 126, 234, 0.1);
-        }
-
-        .nav-links .btn-danger {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
-        }
-
-        .nav-links .btn-danger:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
-        }
-
-        /* Header Section */
-        .page-header {
-            max-width: 1400px;
-            margin: 50px auto 40px;
-            padding: 0 5%;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 3rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .page-header p {
-            font-size: 1.15rem;
-            color: #718096;
-            max-width: 650px;
-            margin: 0 auto 35px;
-            line-height: 1.6;
-        }
-
-        /* Search Bar */
-        .search-container {
-            max-width: 650px;
-            margin: 0 auto 40px;
-            position: relative;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 18px 55px 18px 25px;
-            border: 2px solid white;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s;
-            background: white;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 5px 25px rgba(102, 126, 234, 0.2);
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 25px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.3rem;
-            color: #a0aec0;
-        }
-
-        /* Filter Tabs */
-        .filter-tabs {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
-
-        .filter-tab {
-            padding: 12px 28px;
-            background: white;
-            border: 2px solid white;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #4a5568;
-            transition: all 0.3s;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .filter-tab:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-            border-color: #667eea;
-            color: #667eea;
-        }
-
-        .filter-tab.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: transparent;
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        /* Main Container */
-        .main-container {
-            max-width: 1400px;
-            margin: 0 auto 60px;
-            padding: 0 5%;
-            display: grid;
-            grid-template-columns: 340px 1fr;
-            gap: 35px;
-        }
-
-        /* Sidebar - Disease List */
-        .disease-sidebar {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            height: fit-content;
-            max-height: calc(100vh - 200px);
-            overflow-y: auto;
-            position: sticky;
-            top: 120px;
-        }
-
-        .sidebar-header {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #f7fafc;
-        }
-
-        .sidebar-header h3 {
-            font-size: 1.3rem;
-            color: #2d3748;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .disease-list {
-            list-style: none;
-        }
-
-        .disease-item {
-            padding: 16px 18px;
-            margin-bottom: 10px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border: 2px solid transparent;
-        }
-
-        .disease-item:hover {
-            background: rgba(102, 126, 234, 0.05);
-            transform: translateX(8px);
-            border-color: #667eea;
-        }
-
-        .disease-item.active {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            border-left: 4px solid #667eea;
-            transform: translateX(5px);
-        }
-
-        .disease-icon {
-            font-size: 1.8rem;
-            min-width: 35px;
-        }
-
-        .disease-name {
-            font-weight: 600;
-            color: #2d3748;
-            font-size: 0.95rem;
-        }
-
-        /* Scrollbar Styling */
-        .disease-sidebar::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .disease-sidebar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-
-        .disease-sidebar::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
-        }
-
-        /* Disease Details */
-        .disease-details {
-            background: white;
-            border-radius: 20px;
-            padding: 45px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .disease-header {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            margin-bottom: 35px;
-            padding-bottom: 30px;
-            border-bottom: 3px solid #f7fafc;
-        }
-
-        .disease-header-icon {
-            width: 90px;
-            height: 90px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-        }
-
-        .disease-header-info h2 {
-            font-size: 2.5rem;
-            color: #2d3748;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .disease-header-info p {
-            color: #718096;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        /* Age Selector */
-        .age-selector {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 35px;
-            border: 2px solid rgba(102, 126, 234, 0.1);
-        }
-
-        .age-selector h4 {
-            font-size: 1.1rem;
-            color: #2d3748;
-            margin-bottom: 18px;
-            font-weight: 600;
-        }
-
-        .age-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .age-btn {
-            padding: 12px 24px;
-            background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #4a5568;
-            transition: all 0.3s;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.95rem;
-        }
-
-        .age-btn:hover {
-            border-color: #667eea;
-            color: #667eea;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-        }
-
-        .age-btn.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: transparent;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        /* Content Sections */
-        .content-section {
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 1.6rem;
-            color: #2d3748;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 700;
-        }
-
-        .section-icon {
-            font-size: 2rem;
-        }
-
-        .section-content {
-            color: #4a5568;
-            line-height: 1.9;
-            font-size: 1.05rem;
-        }
-
-        .section-content ul {
-            margin-left: 20px;
-            margin-top: 12px;
-        }
-
-        .section-content li {
-            margin-bottom: 10px;
-        }
-
-        /* Info Cards */
-        .info-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .info-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
-            transition: all 0.3s;
-        }
-
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .info-card h5 {
-            color: #2d3748;
-            margin-bottom: 12px;
-            font-size: 1.15rem;
-            font-weight: 700;
-        }
-
-        .info-card p {
-            color: #4a5568;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        /* Remedies Grid */
-        .remedies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .remedy-card {
-            background: linear-gradient(135deg, rgba(67, 233, 123, 0.08) 0%, rgba(56, 249, 215, 0.08) 100%);
-            padding: 28px;
-            border-radius: 15px;
-            transition: all 0.3s;
-            border: 2px solid rgba(67, 233, 123, 0.2);
-        }
-
-        .remedy-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(67, 233, 123, 0.15);
-            border-color: rgba(67, 233, 123, 0.4);
-        }
-
-        .remedy-icon {
-            font-size: 2.5rem;
-            margin-bottom: 18px;
-        }
-
-        .remedy-card h5 {
-            color: #2d3748;
-            margin-bottom: 12px;
-            font-size: 1.15rem;
-            font-weight: 700;
-        }
-
-        .remedy-card p {
-            color: #4a5568;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Doctor Cards */
-        .doctors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .doctor-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .doctor-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-            border-color: #667eea;
-        }
-
-        .doctor-avatar {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            margin: 0 auto 18px;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
-        }
-
-        .doctor-name {
-            font-size: 1.3rem;
-            color: #2d3748;
-            margin-bottom: 6px;
-            font-weight: 700;
-        }
-
-        .doctor-specialty {
-            color: #667eea;
-            font-size: 1rem;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .doctor-info {
-            color: #718096;
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
-
-        .contact-btn {
-            margin-top: 18px;
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-family: 'Poppins', sans-serif;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-        }
-
-        /* Empty State */
-        .empty-state {
-            text-align: center;
-            padding: 60px 30px;
-            color: #718096;
-        }
-
-        .empty-state-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            opacity: 0.5;
-        }
-
-        .empty-state-text {
-            font-size: 1.1rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .main-container {
-                grid-template-columns: 1fr;
-            }
-
-            .disease-sidebar {
-                max-height: 350px;
-                position: relative;
-                top: 0;
-            }
-
-            .page-header h1 {
-                font-size: 2.2rem;
-            }
-
-            .disease-details {
-                padding: 30px;
-            }
-
-            .disease-header-icon {
-                width: 70px;
-                height: 70px;
-                font-size: 2.5rem;
-            }
-
-            .disease-header-info h2 {
-                font-size: 2rem;
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .page-header h1 {
-                font-size: 1.8rem;
-            }
-
-            .filter-tabs {
-                gap: 8px;
-            }
-
-            .filter-tab {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-
-            .disease-details {
-                padding: 25px 20px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; }
+        nav { background: white; padding: 20px 5%; box-shadow: 0 5px 20px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        nav .container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.6rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .nav-links { display: flex; align-items: center; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #2d3748; font-weight: 500; transition: all 0.3s; padding: 8px 16px; border-radius: 8px; }
+        .nav-links a:hover { color: #667eea; background: rgba(102,126,234,0.1); }
+        .nav-links .btn-danger { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 10px 20px; border-radius: 25px; font-weight: 600; box-shadow: 0 4px 15px rgba(245,87,108,0.3); }
+        .page-header { max-width: 1400px; margin: 50px auto 40px; padding: 0 5%; text-align: center; }
+        .page-header h1 { font-size: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; font-weight: 700; }
+        .page-header p { font-size: 1.15rem; color: #718096; max-width: 650px; margin: 0 auto 35px; line-height: 1.6; }
+        .search-container { max-width: 650px; margin: 0 auto 40px; position: relative; }
+        .search-input { width: 100%; padding: 18px 55px 18px 25px; border: 2px solid white; border-radius: 50px; font-size: 1rem; font-family: 'Poppins', sans-serif; transition: all 0.3s; background: white; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .search-input:focus { outline: none; border-color: #667eea; box-shadow: 0 5px 25px rgba(102,126,234,0.2); }
+        .search-icon { position: absolute; right: 25px; top: 50%; transform: translateY(-50%); font-size: 1.3rem; color: #a0aec0; }
+        .filter-tabs { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px; }
+        .filter-tab { padding: 12px 28px; background: white; border: 2px solid white; border-radius: 30px; cursor: pointer; font-weight: 600; color: #4a5568; transition: all 0.3s; box-shadow: 0 3px 10px rgba(0,0,0,0.05); font-family: 'Poppins', sans-serif; }
+        .filter-tab:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(102,126,234,0.2); border-color: #667eea; color: #667eea; }
+        .filter-tab.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-color: transparent; box-shadow: 0 5px 20px rgba(102,126,234,0.3); }
+        .main-container { max-width: 1400px; margin: 0 auto 60px; padding: 0 5%; display: grid; grid-template-columns: 340px 1fr; gap: 35px; }
+        .disease-sidebar { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); height: fit-content; max-height: calc(100vh - 200px); overflow-y: auto; position: sticky; top: 120px; }
+        .sidebar-header { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 2px solid #f7fafc; }
+        .sidebar-header h3 { font-size: 1.3rem; color: #2d3748; display: flex; align-items: center; gap: 10px; }
+        .disease-list { list-style: none; }
+        .disease-item { padding: 16px 18px; margin-bottom: 10px; background: #f8f9fa; border-radius: 12px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; gap: 15px; border: 2px solid transparent; }
+        .disease-item:hover { background: rgba(102,126,234,0.05); transform: translateX(8px); border-color: #667eea; }
+        .disease-item.active { background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); border-left: 4px solid #667eea; transform: translateX(5px); }
+        .disease-icon { font-size: 1.8rem; min-width: 35px; }
+        .disease-name { font-weight: 600; color: #2d3748; font-size: 0.95rem; }
+        .disease-sidebar::-webkit-scrollbar { width: 6px; }
+        .disease-sidebar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .disease-sidebar::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; }
+        .disease-details { background: white; border-radius: 20px; padding: 45px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .disease-header { display: flex; align-items: center; gap: 25px; margin-bottom: 35px; padding-bottom: 30px; border-bottom: 3px solid #f7fafc; }
+        .disease-header-icon { width: 90px; height: 90px; border-radius: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 8px 25px rgba(102,126,234,0.3); }
+        .disease-header-info h2 { font-size: 2.5rem; color: #2d3748; margin-bottom: 8px; font-weight: 700; }
+        .disease-header-info p { color: #718096; font-size: 1.1rem; font-weight: 500; }
+        .age-selector { background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%); padding: 25px; border-radius: 15px; margin-bottom: 35px; border: 2px solid rgba(102,126,234,0.1); }
+        .age-selector h4 { font-size: 1.1rem; color: #2d3748; margin-bottom: 18px; font-weight: 600; }
+        .age-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+        .age-btn { padding: 12px 24px; background: white; border: 2px solid #e2e8f0; border-radius: 12px; cursor: pointer; font-weight: 600; color: #4a5568; transition: all 0.3s; font-family: 'Poppins', sans-serif; font-size: 0.95rem; }
+        .age-btn:hover { border-color: #667eea; color: #667eea; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(102,126,234,0.15); }
+        .age-btn.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-color: transparent; box-shadow: 0 4px 15px rgba(102,126,234,0.3); }
+        .content-section { margin-bottom: 40px; }
+        .section-title { font-size: 1.6rem; color: #2d3748; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; font-weight: 700; }
+        .section-icon { font-size: 2rem; }
+        .section-content { color: #4a5568; line-height: 1.9; font-size: 1.05rem; }
+        .section-content ul { margin-left: 20px; margin-top: 12px; }
+        .section-content li { margin-bottom: 10px; }
+        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .info-card { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 25px; border-radius: 15px; border-left: 5px solid #667eea; transition: all 0.3s; }
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .info-card h5 { color: #2d3748; margin-bottom: 12px; font-size: 1.15rem; font-weight: 700; }
+        .info-card p { color: #4a5568; font-size: 1rem; line-height: 1.7; }
+        .remedies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .remedy-card { background: linear-gradient(135deg, rgba(67,233,123,0.08) 0%, rgba(56,249,215,0.08) 100%); padding: 28px; border-radius: 15px; transition: all 0.3s; border: 2px solid rgba(67,233,123,0.2); }
+        .remedy-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(67,233,123,0.15); border-color: rgba(67,233,123,0.4); }
+        .remedy-icon { font-size: 2.5rem; margin-bottom: 18px; }
+        .remedy-card h5 { color: #2d3748; margin-bottom: 12px; font-size: 1.15rem; font-weight: 700; }
+        .remedy-card p { color: #4a5568; font-size: 0.95rem; line-height: 1.7; }
+        .doctors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px; }
+        .doctor-card { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 15px; text-align: center; transition: all 0.3s; border: 2px solid transparent; }
+        .doctor-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); border-color: #667eea; }
+        .doctor-avatar { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 18px; box-shadow: 0 8px 20px rgba(102,126,234,0.25); }
+        .doctor-name { font-size: 1.3rem; color: #2d3748; margin-bottom: 6px; font-weight: 700; }
+        .doctor-specialty { color: #667eea; font-size: 1rem; margin-bottom: 12px; font-weight: 600; }
+        .doctor-info { color: #718096; font-size: 0.9rem; line-height: 1.8; }
+        .contact-btn { margin-top: 18px; padding: 12px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s; font-family: 'Poppins', sans-serif; box-shadow: 0 5px 15px rgba(102,126,234,0.3); }
+        .contact-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(102,126,234,0.4); }
+        .empty-state { text-align: center; padding: 60px 30px; color: #718096; }
+        .empty-state-icon { font-size: 4rem; margin-bottom: 20px; opacity: 0.5; }
+        .empty-state-text { font-size: 1.1rem; }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .disease-sidebar { max-height: 350px; position: relative; top: 0; } .page-header h1 { font-size: 2.2rem; } .disease-details { padding: 30px; } .disease-header-icon { width: 70px; height: 70px; font-size: 2.5rem; } .disease-header-info h2 { font-size: 2rem; } .nav-links { flex-wrap: wrap; gap: 15px; } }
+        @media (max-width: 640px) { .page-header h1 { font-size: 1.8rem; } .filter-tabs { gap: 8px; } .filter-tab { padding: 10px 20px; font-size: 0.9rem; } .disease-details { padding: 25px 20px; } }
     </style>
 </head>
 <body>
-    {% load i18n %}
+
+    {# ── All labels that JavaScript needs, translated by Django ── #}
+    <div id="js-labels"
+        data-label-category="{% trans 'Category' %}"
+        data-label-body="{% trans 'Body System' %}"
+        data-label-severity="{% trans 'Severity' %}"
+        data-label-causes="{% trans 'Causes' %}"
+        data-label-symptoms="{% trans 'Symptoms' %}"
+        data-label-treatment="{% trans 'Treatment' %}"
+        data-label-home="{% trans 'Home Remedies' %}"
+        data-label-prevention="{% trans 'Prevention' %}"
+        data-label-specialist="{% trans 'Specialist Required' %}"
+        data-label-phone="{% trans 'Hospital Phone' %}"
+        data-label-select="{% trans 'Select a Disease' %}"
+        data-label-choose="{% trans 'Choose a disease from the sidebar' %}"
+        style="display:none">
+    </div>
 
     <nav>
         <div class="container">
@@ -630,14 +112,10 @@
                 <a href="{% url 'home' %}">{% trans "Home" %}</a>
                 <a href="#">← {% trans "Back" %}</a>
                 {% if user.role == 'DOCTOR' and user.is_approved %}
-                    <a href="{% url 'add_disease' %}" class="btn-danger">
-                       {% trans "Add Disease" %} 
-                    </a>
+                    <a href="{% url 'add_disease' %}" class="btn-danger">{% trans "Add Disease" %}</a>
                 {% endif %}
                 {% if user.role == 'DOCTOR' and user.is_approved %}
-                    <a href="{% url 'add_library_disease' %}">
-                        + {% trans "Add Disease (Library)" %}
-                    </a>
+                    <a href="{% url 'add_library_disease' %}">+ {% trans "Add Disease (Library)" %}</a>
                 {% endif %}
             </div>
         </div>
@@ -646,12 +124,10 @@
     <div class="page-header">
         <h1>{% trans "📚 Disease Library" %}</h1>
         <p>{% trans "Comprehensive health information about diseases, symptoms, treatments, and prevention strategies for better health awareness" %}</p>
-        
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search for diseases..." id="searchInput">
+            <input type="text" class="search-input" placeholder="{% trans 'Search for diseases...' %}" id="searchInput">
             <span class="search-icon">🔍</span>
         </div>
-
         <div class="filter-tabs">
             <button class="filter-tab active" data-category="all">{% trans "All Diseases" %}</button>
             <button class="filter-tab" data-category="respiratory">{% trans "Respiratory" %}</button>
@@ -663,37 +139,29 @@
     </div>
 
     <div class="main-container">
-        <!-- Disease Sidebar -->
+
+        <!-- Sidebar -->
         <div class="disease-sidebar">
             <div class="sidebar-header">
                 <h3>{% trans "📋 Browse Diseases" %}</h3>
             </div>
             <ul class="disease-list" id="diseaseList">
                 {% for disease in diseases %}
-               <li class="disease-item"
-    data-name="{{ disease|get_lang_field:'name' }}"
-    data-category="{{ disease.category }}"
-    data-body="{{ disease|get_lang_field:'body_system' }}"
-    data-severity="{{ disease.severity }}"
-    data-causes="{{ disease|get_lang_field:'causes' }}"
-    data-symptoms="{{ disease|get_lang_field:'symptoms' }}"
-    data-risk="{{ disease|get_lang_field:'risk_factors' }}"
-    data-complications="{{ disease|get_lang_field:'complications' }}"
-    data-treatment="{{ disease|get_lang_field:'treatment' }}"
-    data-medicines="{{ disease|get_lang_field:'medicines' }}"
-    data-home="{{ disease|get_lang_field:'home_remedies' }}"
-    data-prevention="{{ disease|get_lang_field:'prevention' }}"
-    data-specialist="{{ disease|get_lang_field:'specialist_required' }}"
-    data-phone="{{ disease.hospital_phone }}"
->
-    <span class="disease-icon">🦠</span>
-    <span class="disease-name">
-        {{ disease|get_lang_field:'name' }}
-    </span>
-</li>
-
-
-
+                <li class="disease-item"
+                    data-name="{{ disease|get_lang_field:'name' }}"
+                    data-category="{{ disease.category }}"
+                    data-body="{{ disease|get_lang_field:'body_system' }}"
+                    data-severity="{{ disease.severity }}"
+                    data-causes="{{ disease|get_lang_field:'causes' }}"
+                    data-symptoms="{{ disease|get_lang_field:'symptoms' }}"
+                    data-treatment="{{ disease|get_lang_field:'treatment' }}"
+                    data-prevention="{{ disease|get_lang_field:'prevention' }}"
+                    data-home="{{ disease|get_lang_field:'home_remedies' }}"
+                    data-specialist="{{ disease|get_lang_field:'specialist_required' }}"
+                    data-phone="{{ disease.hospital_phone }}">
+                    <span class="disease-icon">🦠</span>
+                    <span class="disease-name">{{ disease|get_lang_field:'name' }}</span>
+                </li>
                 {% empty %}
                 <div class="empty-state">
                     <div class="empty-state-icon">📭</div>
@@ -703,38 +171,35 @@
             </ul>
         </div>
 
-        <!-- Disease Details -->
+        <!-- Detail Panel -->
         <div class="disease-details" id="diseaseDetails">
-            <div class="disease-details" id="diseaseDetails">
-    <div class="empty-state" id="defaultState">
-        <div class="empty-state-icon">🔍</div>
-        <h3>{% trans "Select a Disease" %}</h3>
-        <div class="empty-state-text">
-            {% trans "Choose a disease from the sidebar" %}
+            <div class="empty-state" id="defaultState">
+                <div class="empty-state-icon">🔍</div>
+                <h3 id="label-select-text"></h3>
+                <div class="empty-state-text" id="label-choose-text"></div>
+            </div>
         </div>
-    </div>
-</div>
 
-        </div>
     </div>
 
     <script>
-        // Search functionality
+        // ── Read all translated labels from the hidden div ──
+        const L = document.getElementById('js-labels').dataset;
+
+        // Set default state text from translated labels
+        document.getElementById('label-select-text').textContent = L.labelSelect;
+        document.getElementById('label-choose-text').textContent = L.labelChoose;
+
+        // ── Search ──
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
-            const diseaseItems = document.querySelectorAll('.disease-item');
-            
-            diseaseItems.forEach(item => {
+            document.querySelectorAll('.disease-item').forEach(item => {
                 const diseaseName = item.querySelector('.disease-name').textContent.toLowerCase();
-                if (diseaseName.includes(searchTerm)) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
+                item.style.display = diseaseName.includes(searchTerm) ? 'flex' : 'none';
             });
         });
 
-        // Age button click
+        // ── Age button click ──
         document.querySelectorAll('.age-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.age-btn').forEach(b => b.classList.remove('active'));
@@ -742,7 +207,7 @@
             });
         });
 
-        // Filter tabs
+        // ── Filter tabs ──
         document.querySelectorAll('.filter-tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
@@ -750,80 +215,62 @@
             });
         });
 
-        // Disease item active state
+        // ── Format bullet points ──
         function formatPoints(text) {
-    if (!text) return "";
+            if (!text) return "";
+            let items = text.split(/•|,|\n/).filter(item => item.trim() !== "");
+            return `<ul>${items.map(item => `<li>${item.trim()}</li>`).join("")}</ul>`;
+        }
 
-    // Split by bullet symbol or comma
-    let items = text.split(/•|,|\n/).filter(item => item.trim() !== "");
+        // ── Disease item click ──
+        document.querySelectorAll('.disease-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.disease-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
 
-    return `
-        <ul>
-            ${items.map(item => `<li>${item.trim()}</li>`).join("")}
-        </ul>
-    `;
-}
+                const d = item.dataset;
+                const detailsDiv = document.getElementById('diseaseDetails');
 
-document.querySelectorAll('.disease-item').forEach(item => {
-    item.addEventListener('click', () => {
+                // Header — uses translated label strings from L
+                let content = `
+                    <div class="disease-header">
+                        <div class="disease-header-icon">🦠</div>
+                        <div class="disease-header-info">
+                            <h2>${d.name}</h2>
+                            ${d.category ? `<p><strong>${L.labelCategory}:</strong> ${d.category}</p>` : ""}
+                            ${d.body      ? `<p><strong>${L.labelBody}:</strong> ${d.body}</p>`           : ""}
+                            ${d.severity  ? `<p><strong>${L.labelSeverity}:</strong> ${d.severity}</p>`   : ""}
+                        </div>
+                    </div>
+                `;
 
-        document.querySelectorAll('.disease-item')
-            .forEach(i => i.classList.remove('active'));
+                // Content sections — labels come from L (translated)
+                if (d.causes)
+                    content += `<div class="content-section"><h3>🧬 ${L.labelCauses}</h3>${formatPoints(d.causes)}</div>`;
 
-        item.classList.add('active');
+                if (d.symptoms)
+                    content += `<div class="content-section"><h3>🤒 ${L.labelSymptoms}</h3>${formatPoints(d.symptoms)}</div>`;
 
-        const d = item.dataset;
-        const detailsDiv = document.getElementById('diseaseDetails');
+                if (d.treatment)
+                    content += `<div class="content-section"><h3>💊 ${L.labelTreatment}</h3>${formatPoints(d.treatment)}</div>`;
 
-        let content = `
-            <div class="disease-header">
-                <div class="disease-header-icon">🦠</div>
-                <div class="disease-header-info">
-                    <h2>${d.name}</h2>
-                    ${d.category ? `<p><strong>Category:</strong> ${d.category}</p>` : ""}
-                    ${d.body ? `<p><strong>Body System:</strong> ${d.body}</p>` : ""}
-                    ${d.severity ? `<p><strong>Severity:</strong> ${d.severity}</p>` : ""}
-                </div>
-            </div>
-        `;
+                if (d.home)
+                    content += `<div class="content-section"><h3>🏠 ${L.labelHome}</h3>${formatPoints(d.home)}</div>`;
 
-        if (d.causes)
-            content += `<div class="content-section"><h3>🧬 Causes</h3>${formatPoints(d.causes)}</div>`;
+                if (d.prevention)
+                    content += `<div class="content-section"><h3>🛡 ${L.labelPrevention}</h3>${formatPoints(d.prevention)}</div>`;
 
-        if (d.symptoms)
-            content += `<div class="content-section"><h3>🤒 Symptoms</h3>${formatPoints(d.symptoms)}</div>`;
+                if (d.specialist)
+                    content += `
+                        <div class="content-section">
+                            <h3>👨‍⚕️ ${L.labelSpecialist}</h3>
+                            <p><strong>${L.labelSpecialist}:</strong> ${d.specialist}</p>
+                            ${d.phone ? `<p><strong>${L.labelPhone}:</strong> 📞 ${d.phone}</p>` : ""}
+                        </div>`;
 
-        if (d.risk)
-            content += `<div class="content-section"><h3>⚠ Risk Factors</h3>${formatPoints(d.risk)}</div>`;
-
-        if (d.complications)
-            content += `<div class="content-section"><h3>🚨 Complications</h3>${formatPoints(d.complications)}</div>`;
-
-        if (d.treatment)
-            content += `<div class="content-section"><h3>💊 Treatment</h3>${formatPoints(d.treatment)}</div>`;
-
-        if (d.medicines)
-            content += `<div class="content-section"><h3>💊 Medicines</h3>${formatPoints(d.medicines)}</div>`;
-
-        if (d.home)
-            content += `<div class="content-section"><h3>🏠 Home Remedies</h3>${formatPoints(d.home)}</div>`;
-
-        if (d.prevention)
-            content += `<div class="content-section"><h3>🛡 Prevention</h3>${formatPoints(d.prevention)}</div>`;
-        if (d.specialist)
-    content += `
-        <div class="content-section">
-            <h3>👨‍⚕ Specialist Required</h3>
-            <p><strong>Specialist:</strong> ${d.specialist}</p>
-            ${d.phone ? `<p><strong>Hospital Phone:</strong> 📞 ${d.phone}</p>` : ""}
-        </div>
-    `;
-
-
-        detailsDiv.innerHTML = content;
-    });
-});
-
+                detailsDiv.innerHTML = content;
+            });
+        });
     </script>
 
 </body>

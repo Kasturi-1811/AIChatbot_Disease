@@ -65,59 +65,34 @@ def add_library_disease(request):
 
     if request.method == "POST":
         disease = Disease.objects.create(
+            # ── English (required) ──
             name_en=request.POST.get("name_en"),
-            alternative_names_en=request.POST.get("alternative_names_en"),
-            category=request.POST.get("category") or "other",
-            body_system_en=request.POST.get("body_system_en"),
-            origin_en=request.POST.get("origin_en"),
             causes_en=request.POST.get("causes_en"),
             symptoms_en=request.POST.get("symptoms_en"),
-            risk_factors_en=request.POST.get("risk_factors_en"),
-            complications_en=request.POST.get("complications_en"),
-            transmission_type_en=request.POST.get("transmission_type_en"),
-            incubation_period_en=request.POST.get("incubation_period_en"),
-            severity=request.POST.get("severity") or "medium",
             treatment_en=request.POST.get("treatment_en"),
-            medicines_en=request.POST.get("medicines_en"),
-            home_remedies_en=request.POST.get("home_remedies_en"),
             prevention_en=request.POST.get("prevention_en"),
-            lifestyle_changes_en=request.POST.get("lifestyle_changes_en"),
-            specialist_required_en=request.POST.get("specialist_required_en"),
+            home_remedies_en=request.POST.get("home_remedies_en"),
+
+            # ── Hindi ──
             name_hi=request.POST.get("name_hi"),
-            alternative_names_hi=request.POST.get("alternative_names_hi"),
-            body_system_hi=request.POST.get("body_system_hi"),
-            origin_hi=request.POST.get("origin_hi"),
             causes_hi=request.POST.get("causes_hi"),
             symptoms_hi=request.POST.get("symptoms_hi"),
-            risk_factors_hi=request.POST.get("risk_factors_hi"),
-            complications_hi=request.POST.get("complications_hi"),
-            transmission_type_hi=request.POST.get("transmission_type_hi"),
-            incubation_period_hi=request.POST.get("incubation_period_hi"),
             treatment_hi=request.POST.get("treatment_hi"),
-            medicines_hi=request.POST.get("medicines_hi"),
-            home_remedies_hi=request.POST.get("home_remedies_hi"),
             prevention_hi=request.POST.get("prevention_hi"),
-            lifestyle_changes_hi=request.POST.get("lifestyle_changes_hi"),
-            specialist_required_hi=request.POST.get("specialist_required_hi"),
+            home_remedies_hi=request.POST.get("home_remedies_hi"),
+
+            # ── Telugu ──
             name_te=request.POST.get("name_te"),
-            alternative_names_te=request.POST.get("alternative_names_te"),
-            body_system_te=request.POST.get("body_system_te"),
-            origin_te=request.POST.get("origin_te"),
             causes_te=request.POST.get("causes_te"),
             symptoms_te=request.POST.get("symptoms_te"),
-            risk_factors_te=request.POST.get("risk_factors_te"),
-            complications_te=request.POST.get("complications_te"),
-            transmission_type_te=request.POST.get("transmission_type_te"),
-            incubation_period_te=request.POST.get("incubation_period_te"),
             treatment_te=request.POST.get("treatment_te"),
-            medicines_te=request.POST.get("medicines_te"),
-            home_remedies_te=request.POST.get("home_remedies_te"),
             prevention_te=request.POST.get("prevention_te"),
-            lifestyle_changes_te=request.POST.get("lifestyle_changes_te"),
-            specialist_required_te=request.POST.get("specialist_required_te"),
-            hospital_phone=request.POST.get("hospital_phone"),
-            is_vaccine_available=request.POST.get("is_vaccine_available") == "True",
-            is_contagious=request.POST.get("is_contagious") == "True",
+            home_remedies_te=request.POST.get("home_remedies_te"),
+
+            # ── Common ──
+            category=request.POST.get("category") or "other",
+            severity=request.POST.get("severity") or "medium",
+
             is_approved=False,
             created_by=request.user
         )
