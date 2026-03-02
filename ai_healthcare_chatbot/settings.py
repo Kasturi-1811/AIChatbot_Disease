@@ -160,8 +160,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 # Login settings
 LOGIN_URL = 'login'  # Redirect here if @login_required fails
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'home'  # Redirect here after successful login
+LOGOUT_REDIRECT_URL = 'home'  # Redirect here after logout
 
 from dotenv import load_dotenv
 import os
