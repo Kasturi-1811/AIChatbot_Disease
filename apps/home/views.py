@@ -18,5 +18,3 @@ def home(request):
             'unread_notifications': unread_count
         }
     )
-def about(request):
-    return render(request, 'home/about.html')
