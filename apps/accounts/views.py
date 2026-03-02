@@ -78,7 +78,13 @@ def profile(request):
 
 
 # ---------------- LOGOUT ----------------
+from django.utils import translation
+from django.shortcuts import redirect
+from django.contrib.auth import logout
+
 def custom_logout(request):
     logout(request)
-    messages.info(request, "You have successfully logged out.")
-    return redirect('home')
+    translation.activate('en')
+    response = redirect('/')
+    response.set_cookie('django_language', 'en')
+    return response

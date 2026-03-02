@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-13 22:55+0530\n"
+"POT-Creation-Date: 2026-03-02 14:21+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\ai_healthcare_chatbot\settings.py:132
+#: .\ai_healthcare_chatbot\settings.py:131
 #: .\apps\accounts\templates\accounts\profile.html:521
 msgid "English"
 msgstr "अंग्रेज़ी"
 
-#: .\ai_healthcare_chatbot\settings.py:133
+#: .\ai_healthcare_chatbot\settings.py:132
 #: .\apps\accounts\templates\accounts\profile.html:522
 msgid "Hindi"
 msgstr "हिंदी"
 
-#: .\ai_healthcare_chatbot\settings.py:134
+#: .\ai_healthcare_chatbot\settings.py:133
 #: .\apps\accounts\templates\accounts\profile.html:523
 msgid "Telugu"
 msgstr "तेलुगु"
@@ -101,7 +101,6 @@ msgid "Email Address"
 msgstr "ईमेल पता"
 
 #: .\apps\accounts\templates\accounts\profile.html:501
-#: .\apps\diseases\templates\diseases\add_disease.html:196
 #: .\apps\vaccination\templates\vaccination\add_vaccination.html:142
 msgid "Location"
 msgstr "स्थान"
@@ -190,7 +189,7 @@ msgid "←"
 msgstr "←"
 
 #: .\apps\chatbot\templates\chatbot\chatbot.html:491
-#: .\apps\diseases\templates\diseases\diseases.html:625
+#: .\apps\diseases\templates\diseases\diseases.html:110
 #: .\apps\history\templates\history\history.html:347
 #: .\apps\quiz\templates\quiz\quiz.html:410
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:522
@@ -198,7 +197,7 @@ msgid "🏥 HealthAI"
 msgstr "🏥 हेल्थएआई"
 
 #: .\apps\chatbot\templates\chatbot\chatbot.html:495
-#: .\apps\diseases\templates\diseases\diseases.html:627
+#: .\apps\diseases\templates\diseases\diseases.html:112
 #: .\apps\history\templates\history\history.html:349
 #: .\apps\quiz\templates\quiz\quiz.html:412
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:524
@@ -233,97 +232,16 @@ msgid ""
 msgstr ""
 "अपने स्वास्थ्य, लक्षणों या चिकित्सा स्थितियों के बारे में कुछ भी पूछें। मैं मदद के लिए यहाँ हूँ!"
 
-#: .\apps\diseases\templates\diseases\add_disease.html:169
-msgid "Add Disease Alert"
-msgstr "रोग अलर्ट जोड़ें"
-
-#: .\apps\diseases\templates\diseases\add_disease.html:171
-msgid "Help keep your community informed and safe"
-msgstr "अपने समुदाय को सूचित और सुरक्षित रखने में मदद करें"
-
-#: .\apps\diseases\templates\diseases\add_disease.html:180
-msgid "Disease Title"
-msgstr "रोग का शीर्षक"
-
-#: .\apps\diseases\templates\diseases\add_disease.html:182
-msgid "e.g., Dengue Outbreak"
-msgstr "जैसे, डेंगू का प्रकोप"
-
-#: .\apps\diseases\templates\diseases\add_disease.html:188
-msgid "Description"
-msgstr "विवरण"
-
-#: .\apps\diseases\templates\diseases\add_disease.html:190
-msgid "Provide detailed information about the disease alert..."
-msgstr "रोग अलर्ट के बारे में विस्तृत जानकारी प्रदान करें..."
-
-#: .\apps\diseases\templates\diseases\add_disease.html:198
-msgid "e.g., Guntur, Andhra Pradesh"
-msgstr "जैसे, गुंटूर, आंध्र प्रदेश"
-
-#: .\apps\diseases\templates\diseases\add_disease.html:201
-msgid "Send Alert"
-msgstr "अलर्ट भेजें"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:3
-#: .\apps\diseases\templates\diseases\diseases.html:631
+#: .\apps\diseases\templates\diseases\add_library_disease.html:44
+#: .\apps\diseases\templates\diseases\diseases.html:115
 msgid "Add Disease"
 msgstr "रोग जोड़ें"
 
-#: .\apps\diseases\templates\diseases\add_library_disease.html:8
-msgid "Disease Name"
-msgstr "रोग का नाम"
+#: .\apps\diseases\templates\diseases\add_library_disease.html:45
+msgid "Help keep your community informed and safe"
+msgstr "अपने समुदाय को सूचित और सुरक्षित रखने में मदद करें"
 
-#: .\apps\diseases\templates\diseases\add_library_disease.html:10
-msgid "Body System"
-msgstr "शरीर प्रणाली"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:12
-msgid "History / Origin"
-msgstr "इतिहास / उत्पत्ति"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:14
-#: .\apps\diseases\templates\diseases\detail.html:7
-msgid "Causes"
-msgstr "कारण"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:16
-#: .\apps\diseases\templates\diseases\detail.html:10
-msgid "Symptoms"
-msgstr "लक्षण"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:18
-#: .\apps\diseases\templates\diseases\detail.html:13
-msgid "Treatment"
-msgstr "उपचार"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:20
-#: .\apps\diseases\templates\diseases\detail.html:16
-msgid "Home Remedies"
-msgstr "घरेलू उपचार"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:22
-#: .\apps\diseases\templates\diseases\detail.html:19
-msgid "Prevention"
-msgstr "रोकथाम"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:24
-msgid "Specialist Doctor (e.g., Dermatologist)"
-msgstr "विशेषज्ञ डॉक्टर (जैसे, त्वचा रोग विशेषज्ञ)"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:27
-msgid "Hospital Phone Number"
-msgstr "अस्पताल फोन नंबर"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:30
-msgid "Contagious"
-msgstr "संक्रामक"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:31
-msgid "Not Contagious"
-msgstr "गैर-संक्रामक"
-
-#: .\apps\diseases\templates\diseases\add_library_disease.html:34
+#: .\apps\diseases\templates\diseases\add_library_disease.html:177
 msgid "Submit"
 msgstr "जमा करें"
 
@@ -335,25 +253,77 @@ msgstr "श्रेणी:"
 msgid "Body System:"
 msgstr "शरीर प्रणाली:"
 
+#: .\apps\diseases\templates\diseases\detail.html:7
+#: .\apps\diseases\templates\diseases\diseases.html:96
+msgid "Causes"
+msgstr "कारण"
+
+#: .\apps\diseases\templates\diseases\detail.html:10
+#: .\apps\diseases\templates\diseases\diseases.html:97
+msgid "Symptoms"
+msgstr "लक्षण"
+
+#: .\apps\diseases\templates\diseases\detail.html:13
+#: .\apps\diseases\templates\diseases\diseases.html:98
+msgid "Treatment"
+msgstr "उपचार"
+
+#: .\apps\diseases\templates\diseases\detail.html:16
+#: .\apps\diseases\templates\diseases\diseases.html:99
+msgid "Home Remedies"
+msgstr "घरेलू उपचार"
+
+#: .\apps\diseases\templates\diseases\detail.html:19
+#: .\apps\diseases\templates\diseases\diseases.html:100
+msgid "Prevention"
+msgstr "रोकथाम"
+
 #: .\apps\diseases\templates\diseases\detail.html:22
+#: .\apps\diseases\templates\diseases\diseases.html:101
 msgid "Specialist Required"
 msgstr "विशेषज्ञ की आवश्यकता"
 
-#: .\apps\diseases\templates\diseases\diseases.html:628
+#: .\apps\diseases\templates\diseases\diseases.html:93
+#, fuzzy
+#| msgid "Category:"
+msgid "Category"
+msgstr "श्रेणी:"
+
+#: .\apps\diseases\templates\diseases\diseases.html:94
+msgid "Body System"
+msgstr "शरीर प्रणाली"
+
+#: .\apps\diseases\templates\diseases\diseases.html:95
+#, fuzzy
+#| msgid "Never"
+msgid "Severity"
+msgstr "कभी नहीं"
+
+#: .\apps\diseases\templates\diseases\diseases.html:102
+#, fuzzy
+#| msgid "Hospital Phone Number"
+msgid "Hospital Phone"
+msgstr "अस्पताल फोन नंबर"
+
+#: .\apps\diseases\templates\diseases\diseases.html:103
+msgid "Select a Disease"
+msgstr "एक रोग चुनें"
+
+#: .\apps\diseases\templates\diseases\diseases.html:104
+msgid "Choose a disease from the sidebar"
+msgstr "साइडबार से एक रोग चुनें"
+
+#: .\apps\diseases\templates\diseases\diseases.html:113
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:525
 #: .\apps\vaccination\templates\vaccination\vaccination.html:786
 msgid "Back"
 msgstr "वापस"
 
-#: .\apps\diseases\templates\diseases\diseases.html:636
-msgid "Add Disease (Library)"
-msgstr "रोग जोड़ें (पुस्तकालय)"
-
-#: .\apps\diseases\templates\diseases\diseases.html:644
+#: .\apps\diseases\templates\diseases\diseases.html:123
 msgid "📚 Disease Library"
 msgstr "📚 रोग पुस्तकालय"
 
-#: .\apps\diseases\templates\diseases\diseases.html:645
+#: .\apps\diseases\templates\diseases\diseases.html:124
 msgid ""
 "Comprehensive health information about diseases, symptoms, treatments, and "
 "prevention strategies for better health awareness"
@@ -361,47 +331,19 @@ msgstr ""
 "बेहतर स्वास्थ्य जागरूकता के लिए रोगों, लक्षणों, उपचारों और रोकथाम रणनीतियों के बारे में "
 "व्यापक स्वास्थ्य जानकारी"
 
-#: .\apps\diseases\templates\diseases\diseases.html:653
-msgid "All Diseases"
-msgstr "सभी रोग"
+#: .\apps\diseases\templates\diseases\diseases.html:126
+#, fuzzy
+#| msgid "Heart disease"
+msgid "Search for diseases..."
+msgstr "हृदय रोग"
 
-#: .\apps\diseases\templates\diseases\diseases.html:654
-#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:558
-msgid "Respiratory"
-msgstr "श्वसन संबंधी"
-
-#: .\apps\diseases\templates\diseases\diseases.html:655
-msgid "Cardiac"
-msgstr "हृदय संबंधी"
-
-#: .\apps\diseases\templates\diseases\diseases.html:656
-#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:559
-msgid "Digestive"
-msgstr "पाचन संबंधी"
-
-#: .\apps\diseases\templates\diseases\diseases.html:657
-msgid "Neurological"
-msgstr "तंत्रिका संबंधी"
-
-#: .\apps\diseases\templates\diseases\diseases.html:658
-msgid "Infectious"
-msgstr "संक्रामक"
-
-#: .\apps\diseases\templates\diseases\diseases.html:666
+#: .\apps\diseases\templates\diseases\diseases.html:137
 msgid "📋 Browse Diseases"
 msgstr "📋 रोग ब्राउज़ करें"
 
-#: .\apps\diseases\templates\diseases\diseases.html:694
+#: .\apps\diseases\templates\diseases\diseases.html:158
 msgid "No diseases added yet."
 msgstr "अभी तक कोई रोग नहीं जोड़ा गया।"
-
-#: .\apps\diseases\templates\diseases\diseases.html:705
-msgid "Select a Disease"
-msgstr "एक रोग चुनें"
-
-#: .\apps\diseases\templates\diseases\diseases.html:707
-msgid "Choose a disease from the sidebar"
-msgstr "साइडबार से एक रोग चुनें"
 
 #: .\apps\history\templates\history\history.html:350
 #: .\apps\quiz\templates\quiz\quiz.html:413
@@ -423,6 +365,331 @@ msgstr "पहले"
 #: .\apps\history\templates\history\history.html:380
 msgid "No history yet"
 msgstr "अभी तक कोई इतिहास नहीं"
+
+#: .\apps\home\templates\home\about.html:344
+msgid "About Our Platform"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:345
+#, fuzzy
+#| msgid "AI Disease Awareness System"
+msgid "Disease Awareness,"
+msgstr "एआई रोग जागरूकता प्रणाली"
+
+#: .\apps\home\templates\home\about.html:345
+msgid "Reimagined"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:346
+msgid ""
+"An AI-powered health platform that speaks your language — literally. "
+"Bridging healthcare knowledge with accessibility for everyone, everywhere."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:350
+#, fuzzy
+#| msgid "Language"
+msgid "Languages"
+msgstr "भाषा"
+
+#: .\apps\home\templates\home\about.html:354
+#, fuzzy
+#| msgid "Disease Name"
+msgid "Diseases Tracked"
+msgstr "रोग का नाम"
+
+#: .\apps\home\templates\home\about.html:358
+msgid "AI Support"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:366
+#, fuzzy
+#| msgid "Only vision"
+msgid "Our Mission"
+msgstr "केवल दृष्टि"
+
+#: .\apps\home\templates\home\about.html:367
+msgid ""
+"Making health awareness accessible, multilingual, and meaningful for every "
+"person."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:372
+#, fuzzy
+#| msgid "HealthAI"
+msgid "Health for"
+msgstr "हेल्थएआई"
+
+#: .\apps\home\templates\home\about.html:372
+#, fuzzy
+#| msgid "Every month"
+msgid "Everyone"
+msgstr "हर महीने"
+
+#: .\apps\home\templates\home\about.html:373
+msgid ""
+"We believe healthcare information should have no language barrier. Our "
+"platform serves communities in their native tongue, making awareness "
+"universal and removing the gap between health knowledge and those who need "
+"it most."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:379
+#, fuzzy
+#| msgid "Account Information"
+msgid "Accessible Information"
+msgstr "खाता जानकारी"
+
+#: .\apps\home\templates\home\about.html:380
+msgid ""
+"Breaking language barriers so every person can understand their health, "
+"regardless of where they come from."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:386
+msgid "Doctor Collaboration"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:387
+msgid ""
+"Healthcare professionals update the disease database in real-time, keeping "
+"information current and reliable."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:393
+#, fuzzy
+#| msgid "Prevent soreness"
+msgid "Preventive Awareness"
+msgstr "दर्द रोकें"
+
+#: .\apps\home\templates\home\about.html:394
+msgid ""
+"Empowering communities with early symptom recognition and health education "
+"to prevent the spread of disease."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:404
+#: .\apps\home\templates\home\home.html:521
+msgid "Everything You Need"
+msgstr "वह सब कुछ जो आपको चाहिए"
+
+#: .\apps\home\templates\home\about.html:405
+msgid ""
+"Six powerful features designed to make health awareness simple, personal, "
+"and actionable."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:410
+msgid "Multilingual AI Chatbot"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:411
+msgid ""
+"Chat naturally in your preferred language. The AI auto-detects and responds "
+"fluently — no setup needed."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:415
+#: .\apps\home\templates\home\home.html:540
+msgid "Symptom Checker"
+msgstr "लक्षण जांचकर्ता"
+
+#: .\apps\home\templates\home\about.html:416
+msgid ""
+"Enter your symptoms and instantly get a list of possible conditions with "
+"detailed information and next steps."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:420
+#: .\apps\home\templates\home\about.html:480
+#: .\apps\home\templates\home\home.html:548
+msgid "Disease Library"
+msgstr "रोग पुस्तकालय"
+
+#: .\apps\home\templates\home\about.html:421
+msgid ""
+"Doctors add and update disease records when new cases emerge, keeping the "
+"community informed and prepared."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:425
+#: .\apps\home\templates\home\home.html:579
+msgid "Health Quizzes"
+msgstr "स्वास्थ्य प्रश्नोत्तरी"
+
+#: .\apps\home\templates\home\about.html:426
+msgid ""
+"Test and expand your health knowledge through interactive quizzes covering "
+"diseases and prevention tips."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:430
+msgid "Activity History"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:431
+msgid ""
+"View your complete interaction history — past chats, symptom checks, and "
+"quiz results all in one place."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:435
+#, fuzzy
+#| msgid "Language"
+msgid "Profile & Language"
+msgstr "भाषा"
+
+#: .\apps\home\templates\home\about.html:436
+msgid ""
+"Customize your preferred language, notification settings, and profile "
+"details from your personal dashboard."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:445
+msgid "How It Works"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:446
+msgid ""
+"A simple, seamless flow from sign-up to getting the health insights you need."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:453
+msgid "Onboarding"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:454
+#, fuzzy
+#| msgid "Create My Account"
+msgid "Create Your Account"
+msgstr "मेरा खाता बनाएं"
+
+#: .\apps\home\templates\home\about.html:455
+msgid ""
+"Sign up and set your preferred language in your profile. The platform "
+"instantly adapts — all pages, chatbot responses, and notifications appear in "
+"your chosen language automatically."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:462
+#, fuzzy
+#| msgid "AI Chatbot Ready"
+msgid "AI Chatbot"
+msgstr "एआई चैटबॉट तैयार"
+
+#: .\apps\home\templates\home\about.html:463
+msgid "Chat in Your Language"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:464
+msgid ""
+"Open the chat and type your health query in any language. Our AI "
+"automatically detects your language and responds fluently. Ask about "
+"diseases, symptoms, medications, and more."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:471
+#, fuzzy
+#| msgid "Symptom Checker"
+msgid "Symptom Check"
+msgstr "लक्षण जांचकर्ता"
+
+#: .\apps\home\templates\home\about.html:472
+msgid "Identify Possible Conditions"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:473
+msgid ""
+"Go to the Symptoms page and select or type what you're experiencing. The "
+"system cross-references a doctor-maintained database and returns a ranked "
+"list of possible diseases with descriptions."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:481
+msgid "Stay Updated on New Cases"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:482
+msgid ""
+"Doctors and admins add new diseases when case counts rise in a region. Users "
+"can browse the full database, filter by category, and read detailed profiles "
+"on each disease."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:489
+msgid "Quiz"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:490
+#, fuzzy
+#| msgid "🎯 Health Knowledge Quiz"
+msgid "Test Your Health Knowledge"
+msgstr "🎯 स्वास्थ्य ज्ञान प्रश्नोत्तरी"
+
+#: .\apps\home\templates\home\about.html:491
+msgid ""
+"Take interactive quizzes on diseases, hygiene, and prevention. Earn scores, "
+"track improvement over time, and see how you rank — making health education "
+"engaging and measurable."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:498
+#, fuzzy
+#| msgid "History / Origin"
+msgid "History & Profile"
+msgstr "इतिहास / उत्पत्ति"
+
+#: .\apps\home\templates\home\about.html:499
+msgid "Track Everything, Anytime"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:500
+msgid ""
+"Your History page logs every chat, symptom search, and quiz attempt with "
+"timestamps. Your Profile Dashboard lets you update your language preference "
+"and review all your health activity at a glance."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:513
+#, fuzzy
+#| msgid "Cervical cancer"
+msgid "Medical Disclaimer"
+msgstr "गर्भाशय ग्रीवा कैंसर"
+
+#: .\apps\home\templates\home\about.html:514
+msgid ""
+"This platform provides general health awareness information only and is not "
+"a substitute for professional medical advice. Disease information and "
+"symptom analysis are for educational purposes only. Always consult a "
+"certified healthcare professional for diagnosis, treatment, or any medical "
+"concern."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:523
+msgid "Ready to Get"
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:523
+#, fuzzy
+#| msgid "Get Started"
+msgid "Started?"
+msgstr "शुरू करें"
+
+#: .\apps\home\templates\home\about.html:524
+msgid "Join thousands using our platform to stay informed and healthy."
+msgstr ""
+
+#: .\apps\home\templates\home\about.html:525
+#, fuzzy
+#| msgid "Back to home"
+msgid "Back to Home"
+msgstr "होम पर वापस जाएं"
+
+#: .\apps\home\templates\home\about.html:526
+#, fuzzy
+#| msgid "Smart Chatbot"
+msgid "Try the Chatbot"
+msgstr "स्मार्ट चैटबॉट"
 
 #: .\apps\home\templates\home\home.html:7
 msgid "AI Disease Awareness System"
@@ -513,10 +780,6 @@ msgstr "स्वास्थ्य विश्लेषण"
 msgid "Track your progress over time"
 msgstr "समय के साथ अपनी प्रगति को ट्रैक करें"
 
-#: .\apps\home\templates\home\home.html:521
-msgid "Everything You Need"
-msgstr "वह सब कुछ जो आपको चाहिए"
-
 #: .\apps\home\templates\home\home.html:522
 msgid "Comprehensive tools to manage and understand your health better"
 msgstr "अपने स्वास्थ्य को बेहतर ढंग से प्रबंधित और समझने के लिए व्यापक उपकरण"
@@ -529,17 +792,9 @@ msgstr "स्मार्ट चैटबॉट"
 msgid "Chat with our AI assistant for instant health advice"
 msgstr "तुरंत स्वास्थ्य सलाह के लिए हमारे एआई सहायक के साथ चैट करें"
 
-#: .\apps\home\templates\home\home.html:540
-msgid "Symptom Checker"
-msgstr "लक्षण जांचकर्ता"
-
 #: .\apps\home\templates\home\home.html:541
 msgid "Describe symptoms and get assessments"
 msgstr "लक्षणों का वर्णन करें और मूल्यांकन प्राप्त करें"
-
-#: .\apps\home\templates\home\home.html:548
-msgid "Disease Library"
-msgstr "रोग पुस्तकालय"
 
 #: .\apps\home\templates\home\home.html:549
 msgid "Learn about health conditions"
@@ -564,10 +819,6 @@ msgstr "टीकाकरण जोड़ें"
 #: .\apps\home\templates\home\home.html:570
 msgid "Publish vaccination drives"
 msgstr "टीकाकरण अभियान प्रकाशित करें"
-
-#: .\apps\home\templates\home\home.html:579
-msgid "Health Quizzes"
-msgstr "स्वास्थ्य प्रश्नोत्तरी"
 
 #: .\apps\home\templates\home\home.html:580
 msgid "Test and expand your medical knowledge with fun quizzes"
@@ -1257,7 +1508,8 @@ msgstr "आवश्यकता नहीं"
 
 #: .\apps\quiz\views.py:291
 msgid "A 5–10 minute warm-up prepares muscles and reduces injury risk."
-msgstr "5-10 मिनट का वार्म-अप मांसपेशियों को तैयार करता है और चोट के जोखिम को कम करता है।"
+msgstr ""
+"5-10 मिनट का वार्म-अप मांसपेशियों को तैयार करता है और चोट के जोखिम को कम करता है।"
 
 #: .\apps\quiz\views.py:295
 msgid "Which nutrient helps muscle recovery?"
@@ -2429,8 +2681,6 @@ msgstr "लोगों से बचना"
 msgid "Journaling helps process emotions."
 msgstr "जर्नलिंग भावनाओं को संसाधित करने में मदद करती है।"
 
-
-
 #: .\apps\quiz\views.py:1008
 msgid "Which mental illness includes mood swings between high and low?"
 msgstr "कौन सी मानसिक बीमारी में उच्च और निम्न के बीच मूड स्विंग शामिल हैं?"
@@ -3010,7 +3260,8 @@ msgid "Seeking help shows strength."
 msgstr "मदद मांगना शक्ति दर्शाता है।"
 
 #: .\apps\quiz\views.py:1419
-msgid "What is the most effective way to prevent the spread of infectious diseases?"
+msgid ""
+"What is the most effective way to prevent the spread of infectious diseases?"
 msgstr "संक्रामक रोगों के प्रसार को रोकने का सबसे प्रभावी तरीका क्या है?"
 
 #: .\apps\quiz\views.py:1421
@@ -3395,6 +3646,11 @@ msgstr "एमएमआर"
 #: .\apps\quiz\views.py:1651 .\apps\quiz\views.py:1997
 msgid "Polio"
 msgstr "पोलियो"
+
+#: .\apps\quiz\views.py:1652
+#: .\apps\vaccination\templates\vaccination\vaccination.html:871
+msgid "Hepatitis B"
+msgstr ""
 
 #: .\apps\quiz\views.py:1655
 msgid "BCG vaccine protects against TB."
@@ -3828,7 +4084,6 @@ msgstr "हड्डी का फ्रैक्चर"
 #: .\apps\quiz\views.py:2015
 msgid "Good hygiene blocks infection spread."
 msgstr "अच्छी स्वच्छता संक्रमण के प्रसार को रोकती है।"
-
 
 #: .\apps\quiz\views.py:2021
 msgid "How many hours of sleep do adults need daily?"
@@ -4746,7 +5001,6 @@ msgstr "सोडा दें"
 msgid "Call emergency services immediately."
 msgstr "तुरंत आपातकालीन सेवाओं को कॉल करें।"
 
-
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:532
 msgid " 🔍 AI Symptom Checker"
 msgstr "🔍 एआई लक्षण जांचकर्ता"
@@ -4764,6 +5018,14 @@ msgstr "लक्षण चुनें"
 #: .\notifications\templates\notifications\notification_list.html:355
 msgid "All"
 msgstr "सभी"
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:558
+msgid "Respiratory"
+msgstr "श्वसन संबंधी"
+
+#: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:559
+msgid "Digestive"
+msgstr "पाचन संबंधी"
 
 #: .\apps\symptom_checker\templates\symptom_checker\symptom_checker.html:560
 msgid "General"
@@ -4980,18 +5242,63 @@ msgstr "पढ़ा गया"
 msgid "Mark All as Read"
 msgstr "सभी को पढ़ा हुआ चिह्नित करें"
 
-#: .\notifications\templates\notifications\notification_list.html:389
+#: .\notifications\templates\notifications\notification_list.html:390
 msgid "Mark as Read"
 msgstr "पढ़ा हुआ चिह्नित करें"
 
-#: .\notifications\templates\notifications\notification_list.html:391
+#: .\notifications\templates\notifications\notification_list.html:392
 msgid "Delete"
 msgstr "हटाएं"
 
-#: .\notifications\templates\notifications\notification_list.html:400
+#: .\notifications\templates\notifications\notification_list.html:401
 msgid "No Notifications"
 msgstr "कोई सूचनाएं नहीं"
 
-#: .\notifications\templates\notifications\notification_list.html:401
+#: .\notifications\templates\notifications\notification_list.html:402
 msgid "You're all caught up! Check back later for updates."
 msgstr "आप सब कुछ देख चुके हैं! अपडेट के लिए बाद में फिर से जांचें।"
+
+#~ msgid "Add Disease Alert"
+#~ msgstr "रोग अलर्ट जोड़ें"
+
+#~ msgid "Disease Title"
+#~ msgstr "रोग का शीर्षक"
+
+#~ msgid "e.g., Dengue Outbreak"
+#~ msgstr "जैसे, डेंगू का प्रकोप"
+
+#~ msgid "Description"
+#~ msgstr "विवरण"
+
+#~ msgid "Provide detailed information about the disease alert..."
+#~ msgstr "रोग अलर्ट के बारे में विस्तृत जानकारी प्रदान करें..."
+
+#~ msgid "e.g., Guntur, Andhra Pradesh"
+#~ msgstr "जैसे, गुंटूर, आंध्र प्रदेश"
+
+#~ msgid "Send Alert"
+#~ msgstr "अलर्ट भेजें"
+
+#~ msgid "Specialist Doctor (e.g., Dermatologist)"
+#~ msgstr "विशेषज्ञ डॉक्टर (जैसे, त्वचा रोग विशेषज्ञ)"
+
+#~ msgid "Contagious"
+#~ msgstr "संक्रामक"
+
+#~ msgid "Not Contagious"
+#~ msgstr "गैर-संक्रामक"
+
+#~ msgid "Add Disease (Library)"
+#~ msgstr "रोग जोड़ें (पुस्तकालय)"
+
+#~ msgid "All Diseases"
+#~ msgstr "सभी रोग"
+
+#~ msgid "Cardiac"
+#~ msgstr "हृदय संबंधी"
+
+#~ msgid "Neurological"
+#~ msgstr "तंत्रिका संबंधी"
+
+#~ msgid "Infectious"
+#~ msgstr "संक्रामक"

@@ -438,7 +438,7 @@
             <div class="nav-links">
                 <a href="#features">{% trans "Features" %}</a>
 
-                <a href="#about">{% trans "About" %}    </a>
+                <a href="{% url 'about' %}">{% trans "About" %}</a>
                 {% if user.is_authenticated %}
 
 <!-- 🔔 Notification Bell -->

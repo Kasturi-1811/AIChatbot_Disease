@@ -1,0 +1,529 @@
+{% load i18n %}
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #f4f7fc;
+        overflow-x: hidden;
+    }
+
+    .bg-shapes {
+        position: fixed;
+        width: 100%; height: 100%;
+        z-index: 0; overflow: hidden;
+        pointer-events: none;
+    }
+    .shape {
+        position: absolute;
+        border-radius: 43% 57% 48% 52% / 59% 41% 59% 41%;
+        opacity: 0.15;
+    }
+    .shape1 {
+        width: 500px; height: 500px;
+        background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+        top: -100px; right: -100px;
+        animation: float 20s ease-in-out infinite;
+    }
+    .shape2 {
+        width: 350px; height: 350px;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        bottom: -80px; left: -80px;
+        animation: float 15s ease-in-out infinite reverse;
+    }
+    .shape3 {
+        width: 280px; height: 280px;
+        background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+        top: 50%; left: 10%;
+        animation: float 18s ease-in-out infinite;
+    }
+    @keyframes float {
+        0%, 100% { transform: translate(0,0) rotate(0deg); }
+        33% { transform: translate(30px,-30px) rotate(120deg); }
+        66% { transform: translate(-20px,20px) rotate(240deg); }
+    }
+
+    .about-page { position: relative; z-index: 1; }
+
+    /* ── HERO ── */
+    .about-hero {
+        max-width: 1200px;
+        margin: 80px auto 60px;
+        padding: 0 5%;
+        text-align: center;
+    }
+    .about-hero .badge {
+        display: inline-block;
+        background: linear-gradient(135deg, rgba(79,172,254,0.12), rgba(0,242,254,0.12));
+        border: 1px solid rgba(79,172,254,0.35);
+        color: #4facfe;
+        padding: 6px 20px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .about-hero h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #1a202c;
+        line-height: 1.2;
+        margin-bottom: 18px;
+    }
+    .about-hero h1 .highlight {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .about-hero > p {
+        font-size: 1.1rem;
+        color: #718096;
+        max-width: 580px;
+        margin: 0 auto 50px;
+        line-height: 1.7;
+    }
+    .stats-row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .stat-card {
+        background: white;
+        border-radius: 20px;
+        padding: 28px 44px;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: floatCard 4s ease-in-out infinite;
+    }
+    .stat-card:nth-child(2) { animation-delay: 0.4s; }
+    .stat-card:nth-child(3) { animation-delay: 0.8s; }
+    @keyframes floatCard {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+    }
+    .stat-card:hover { transform: translateY(-14px); box-shadow: 0 15px 50px rgba(79,172,254,0.15); }
+    .stat-num {
+        font-size: 2.4rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+    .stat-label { font-size: 0.85rem; color: #718096; font-weight: 500; }
+
+    /* ── SHARED SECTION ── */
+    .section-block {
+        max-width: 1200px;
+        margin: 80px auto;
+        padding: 0 5%;
+    }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h2 { font-size: 2.3rem; font-weight: 700; color: #1a202c; margin-bottom: 12px; }
+    .section-header p { font-size: 1rem; color: #718096; }
+
+    /* ── MISSION ── */
+    .mission-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        align-items: start;
+    }
+    .mission-main {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+    .mission-main .big-icon { font-size: 3.8rem; margin-bottom: 16px; }
+    .mission-main h3 { font-size: 1.5rem; font-weight: 700; color: #2d3748; margin-bottom: 14px; }
+    .mission-main h3 span {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .mission-main p { color: #718096; line-height: 1.7; font-size: 0.95rem; }
+    .mission-points { display: flex; flex-direction: column; gap: 16px; }
+    .mpoint {
+        background: white;
+        border-radius: 16px;
+        padding: 22px 24px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        border-left: 4px solid #4facfe;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .mpoint:hover { transform: translateX(6px); box-shadow: 0 8px 30px rgba(79,172,254,0.12); }
+    .mpoint-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .mpoint h4 { font-size: 0.95rem; font-weight: 600; color: #2d3748; margin-bottom: 4px; }
+    .mpoint p { font-size: 0.83rem; color: #718096; line-height: 1.5; }
+
+    /* ── FEATURES — same as home ── */
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .feature-item {
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+    }
+    .feature-icon {
+        width: 70px; height: 70px;
+        border-radius: 15px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .feature-item:nth-child(1) .feature-icon { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .feature-item:nth-child(2) .feature-icon { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .feature-item:nth-child(3) .feature-icon { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .feature-item:nth-child(4) .feature-icon { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+    .feature-item:nth-child(5) .feature-icon { background: linear-gradient(135deg, #fa709a, #fee140); }
+    .feature-item:nth-child(6) .feature-icon { background: linear-gradient(135deg, #30cfd0, #330867); }
+    .feature-item h3 { font-size: 1.15rem; font-weight: 600; color: #2d3748; margin-bottom: 10px; }
+    .feature-item p { color: #718096; line-height: 1.6; font-size: 0.9rem; }
+
+    /* ── HOW IT WORKS ── */
+    .hiw-wrap { max-width: 1200px; margin: 0 auto 80px; padding: 0 5%; }
+    .hiw-inner {
+        background: white;
+        border-radius: 24px;
+        padding: 60px 5%;
+        box-shadow: 0 5px 40px rgba(0,0,0,0.07);
+    }
+    .steps-list {
+        max-width: 740px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .step-row {
+        display: grid;
+        grid-template-columns: 68px 1fr;
+        gap: 20px;
+        align-items: flex-start;
+        position: relative;
+    }
+    .step-left { display: flex; flex-direction: column; align-items: center; position: relative; }
+    .step-row:not(:last-child) .step-left::after {
+        content: '';
+        position: absolute;
+        left: 50%; top: 52px;
+        transform: translateX(-50%);
+        width: 2px;
+        height: calc(100%);
+        background: linear-gradient(to bottom, rgba(79,172,254,0.4), transparent);
+    }
+    .step-num {
+        width: 50px; height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 4px 16px rgba(79,172,254,0.4);
+        z-index: 1;
+    }
+    .step-body {
+        background: #f7fafc;
+        border-radius: 16px;
+        padding: 22px 26px;
+        margin-bottom: 16px;
+        border: 1px solid #e2e8f0;
+        transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .step-body:hover { transform: translateX(4px); box-shadow: 0 8px 30px rgba(79,172,254,0.1); }
+    .step-tag {
+        display: inline-block;
+        background: linear-gradient(135deg, rgba(79,172,254,0.12), rgba(0,242,254,0.12));
+        color: #4facfe;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 3px 12px;
+        border-radius: 10px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .step-body h4 { font-size: 1rem; font-weight: 600; color: #2d3748; margin-bottom: 6px; }
+    .step-body p { font-size: 0.875rem; color: #718096; line-height: 1.65; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer-wrap { max-width: 1200px; margin: 0 auto 80px; padding: 0 5%; }
+    .disclaimer-box {
+        background: linear-gradient(135deg, #fffbeb, #fef3c7);
+        border: 1.5px solid #fbbf24;
+        border-radius: 20px;
+        padding: 32px 36px;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .disc-icon { font-size: 2rem; flex-shrink: 0; }
+    .disclaimer-box h4 { font-size: 1rem; font-weight: 700; color: #92400e; margin-bottom: 8px; }
+    .disclaimer-box p { font-size: 0.9rem; color: #78350f; line-height: 1.65; }
+
+    /* ── CTA ── */
+    .cta-section {
+        background: linear-gradient(135deg, #1a202c 0%, #0f4c45 100%);
+        text-align: center;
+        padding: 80px 20px;
+        color: white;
+    }
+    .cta-section h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 14px; }
+    .cta-section h2 .highlight {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .cta-section p { color: #94a3b8; font-size: 1rem; margin-bottom: 32px; }
+    .btn-primary {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        color: white; padding: 15px 35px;
+        border-radius: 30px; text-decoration: none;
+        font-weight: 600; display: inline-block; margin: 0 8px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(79,172,254,0.35); color: white; }
+    .btn-secondary {
+        background: transparent; color: #94a3b8;
+        padding: 14px 35px; border-radius: 30px;
+        text-decoration: none; font-weight: 600;
+        border: 2px solid #475569; display: inline-block; margin: 0 8px;
+        transition: all 0.3s;
+    }
+    .btn-secondary:hover { border-color: #4facfe; color: white; }
+
+    @media (max-width: 968px) {
+        .about-hero h1 { font-size: 2.4rem; }
+        .mission-grid { grid-template-columns: 1fr; }
+        .features-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 640px) {
+        .about-hero h1 { font-size: 2rem; }
+        .features-grid { grid-template-columns: 1fr; }
+        .stats-row { gap: 16px; }
+        .disclaimer-box { flex-direction: column; }
+    }
+</style>
+
+<div class="bg-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+</div>
+
+<div class="about-page">
+
+    <!-- HERO -->
+    <div class="about-hero">
+        <div class="badge">{% trans "About Our Platform" %}</div>
+        <h1>{% trans "Disease Awareness," %} <span class="highlight">{% trans "Reimagined" %}</span></h1>
+        <p>{% trans "An AI-powered health platform that speaks your language — literally. Bridging healthcare knowledge with accessibility for everyone, everywhere." %}</p>
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-num">20+</div>
+                <div class="stat-label">{% trans "Languages" %}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">500+</div>
+                <div class="stat-label">{% trans "Diseases Tracked" %}</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">24/7</div>
+                <div class="stat-label">{% trans "AI Support" %}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MISSION -->
+    <div class="section-block">
+        <div class="section-header">
+            <h2>{% trans "Our Mission" %}</h2>
+            <p>{% trans "Making health awareness accessible, multilingual, and meaningful for every person." %}</p>
+        </div>
+        <div class="mission-grid">
+            <div class="mission-main">
+                <div class="big-icon">🌍</div>
+                <h3>{% trans "Health for" %} <span>{% trans "Everyone" %}</span></h3>
+                <p>{% trans "We believe healthcare information should have no language barrier. Our platform serves communities in their native tongue, making awareness universal and removing the gap between health knowledge and those who need it most." %}</p>
+            </div>
+            <div class="mission-points">
+                <div class="mpoint">
+                    <span class="mpoint-icon">🎯</span>
+                    <div>
+                        <h4>{% trans "Accessible Information" %}</h4>
+                        <p>{% trans "Breaking language barriers so every person can understand their health, regardless of where they come from." %}</p>
+                    </div>
+                </div>
+                <div class="mpoint">
+                    <span class="mpoint-icon">🤝</span>
+                    <div>
+                        <h4>{% trans "Doctor Collaboration" %}</h4>
+                        <p>{% trans "Healthcare professionals update the disease database in real-time, keeping information current and reliable." %}</p>
+                    </div>
+                </div>
+                <div class="mpoint">
+                    <span class="mpoint-icon">📈</span>
+                    <div>
+                        <h4>{% trans "Preventive Awareness" %}</h4>
+                        <p>{% trans "Empowering communities with early symptom recognition and health education to prevent the spread of disease." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="section-block" style="margin-top: 0;">
+        <div class="section-header">
+            <h2>{% trans "Everything You Need" %}</h2>
+            <p>{% trans "Six powerful features designed to make health awareness simple, personal, and actionable." %}</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🤖</div>
+                <h3>{% trans "Multilingual AI Chatbot" %}</h3>
+                <p>{% trans "Chat naturally in your preferred language. The AI auto-detects and responds fluently — no setup needed." %}</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <h3>{% trans "Symptom Checker" %}</h3>
+                <p>{% trans "Enter your symptoms and instantly get a list of possible conditions with detailed information and next steps." %}</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📚</div>
+                <h3>{% trans "Disease Library" %}</h3>
+                <p>{% trans "Doctors add and update disease records when new cases emerge, keeping the community informed and prepared." %}</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📝</div>
+                <h3>{% trans "Health Quizzes" %}</h3>
+                <p>{% trans "Test and expand your health knowledge through interactive quizzes covering diseases and prevention tips." %}</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <h3>{% trans "Activity History" %}</h3>
+                <p>{% trans "View your complete interaction history — past chats, symptom checks, and quiz results all in one place." %}</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚙️</div>
+                <h3>{% trans "Profile & Language" %}</h3>
+                <p>{% trans "Customize your preferred language, notification settings, and profile details from your personal dashboard." %}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="hiw-wrap">
+        <div class="hiw-inner">
+            <div class="section-header">
+                <h2>{% trans "How It Works" %}</h2>
+                <p>{% trans "A simple, seamless flow from sign-up to getting the health insights you need." %}</p>
+            </div>
+            <div class="steps-list">
+
+                <div class="step-row">
+                    <div class="step-left"><div class="step-num">1</div></div>
+                    <div class="step-body">
+                        <span class="step-tag">{% trans "Onboarding" %}</span>
+                        <h4>{% trans "Create Your Account" %}</h4>
+                        <p>{% trans "Sign up and set your preferred language in your profile. The platform instantly adapts — all pages, chatbot responses, and notifications appear in your chosen language automatically." %}</p>
+                    </div>
+                </div>
+
+                <div class="step-row">
+                    <div class="step-left"><div class="step-num">2</div></div>
+                    <div class="step-body">
+                        <span class="step-tag">{% trans "AI Chatbot" %}</span>
+                        <h4>{% trans "Chat in Your Language" %}</h4>
+                        <p>{% trans "Open the chat and type your health query in any language. Our AI automatically detects your language and responds fluently. Ask about diseases, symptoms, medications, and more." %}</p>
+                    </div>
+                </div>
+
+                <div class="step-row">
+                    <div class="step-left"><div class="step-num">3</div></div>
+                    <div class="step-body">
+                        <span class="step-tag">{% trans "Symptom Check" %}</span>
+                        <h4>{% trans "Identify Possible Conditions" %}</h4>
+                        <p>{% trans "Go to the Symptoms page and select or type what you're experiencing. The system cross-references a doctor-maintained database and returns a ranked list of possible diseases with descriptions." %}</p>
+                    </div>
+                </div>
+
+                <div class="step-row">
+                    <div class="step-left"><div class="step-num">4</div></div>
+                    <div class="step-body">
+                        <span class="step-tag">{% trans "Disease Library" %}</span>
+                        <h4>{% trans "Stay Updated on New Cases" %}</h4>
+                        <p>{% trans "Doctors and admins add new diseases when case counts rise in a region. Users can browse the full database, filter by category, and read detailed profiles on each disease." %}</p>
+                    </div>
+                </div>
+
+                <div class="step-row">
+                    <div class="step-left"><div class="step-num">5</div></div>
+                    <div class="step-body">
+                        <span class="step-tag">{% trans "Quiz" %}</span>
+                        <h4>{% trans "Test Your Health Knowledge" %}</h4>
+                        <p>{% trans "Take interactive quizzes on diseases, hygiene, and prevention. Earn scores, track improvement over time, and see how you rank — making health education engaging and measurable." %}</p>
+                    </div>
+                </div>
+
+                <div class="step-row">
+                    <div class="step-left"><div class="step-num">6</div></div>
+                    <div class="step-body">
+                        <span class="step-tag">{% trans "History & Profile" %}</span>
+                        <h4>{% trans "Track Everything, Anytime" %}</h4>
+                        <p>{% trans "Your History page logs every chat, symptom search, and quiz attempt with timestamps. Your Profile Dashboard lets you update your language preference and review all your health activity at a glance." %}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer-wrap">
+        <div class="disclaimer-box">
+            <span class="disc-icon">⚠️</span>
+            <div>
+                <h4>{% trans "Medical Disclaimer" %}</h4>
+                <p>{% trans "This platform provides general health awareness information only and is not a substitute for professional medical advice. Disease information and symptom analysis are for educational purposes only. Always consult a certified healthcare professional for diagnosis, treatment, or any medical concern." %}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+    <h2>{% trans "Ready to Get" %} <span class="highlight">{% trans "Started?" %}</span></h2>
+    <p>{% trans "Join thousands using our platform to stay informed and healthy." %}</p>
+    <a href="/" class="btn-primary">{% trans "Back to Home" %}</a>
+    <a href="{% url 'chatbot:chatbot' %}" class="btn-secondary">{% trans "Try the Chatbot" %}</a>
+</div>
+
+{% endblock %}
