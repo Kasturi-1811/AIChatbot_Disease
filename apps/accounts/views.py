@@ -55,8 +55,7 @@ def custom_login(request):
                 return redirect('login')
 
             login(request, user)
-            lang = user.language if user.language else 'en'
-            return redirect(f'/{lang}/')
+            return redirect('home')
     else:
         form = AuthenticationForm()
 
@@ -79,13 +78,7 @@ def profile(request):
 
 
 # ---------------- LOGOUT ----------------
-from django.utils import translation
-from django.shortcuts import redirect
-from django.contrib.auth import logout
-
 def custom_logout(request):
     logout(request)
-    translation.activate('en')
-    response = redirect('/en/')
-    response.set_cookie('django_language', 'en')
-    return response
+    messages.info(request, "You have successfully logged out.")
+    return redirect('home')
