@@ -34,5 +34,6 @@ urlpatterns += i18n_patterns(
     path('chatbot/', include('apps.chatbot.urls')),
     path('symptom-checker/', include('apps.symptom_checker.urls')),
     prefix_default_language=False,
+    
 
 )
