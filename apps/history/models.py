@@ -9,6 +9,7 @@ class UserActivity(models.Model):
         ('disease_added', 'Disease Added'),
         ('vaccination_added', 'Vaccination Added'),
         ('vaccination_completed', 'Vaccination Completed'),
+        ('symptom_check', 'Symptom Check'),
         ('quiz_attempted', 'Quiz Attempted'),
         ('quiz_created', 'Quiz Created'),
         ('chatbot_chat', 'Chatbot Interaction'),
