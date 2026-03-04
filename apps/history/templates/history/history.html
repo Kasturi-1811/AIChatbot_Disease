@@ -369,7 +369,7 @@
       </span>
 
       <div class="activity-title">{{ a.title }}</div>
-      <div class="activity-description">{{ a.description }}</div>
+      <div class="activity-description">{{ a.description|linebreaksbr }}</div>
 
       <div class="activity-footer">
         🕒 {{ a.created_at|timesince }} {% trans "ago" %}
