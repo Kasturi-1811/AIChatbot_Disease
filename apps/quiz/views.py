@@ -2599,33 +2599,3 @@ def quiz(request):
         "questions": selected_questions,
         "selected_category": category
     })
-
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-import json
-from apps.history.models import UserActivity
-
-@csrf_exempt
-def save_quiz_result(request):
-    if request.method == "POST":
-        if not request.user.is_authenticated:
-            return JsonResponse({"error": "User not logged in"}, status=403)
-
-        data = json.loads(request.body)
-
-        category = data.get("category")
-        score = data.get("score")
-        total = data.get("total")
-        percentage = data.get("percentage")
-
-        UserActivity.objects.create(
-            user=request.user,
-            activity_type="quiz_attempted",
-            title=f"Quiz Attempted: {category}",
-            description=f"Score: {score}/{total} ({percentage}%)",
-            related_app="quiz"
-        )
-
-        return JsonResponse({"success": True})
-
-    return JsonResponse({"error": "Invalid request"}, status=400)
